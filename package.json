@@ -5,16 +5,6 @@
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.15.4",
-  "dependencies": {
-    "@testing-library/jest-dom": "^6.4.6",
-    "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^14.0.0",
-    "react": "^18.2.0",
-    "react-confetti": "^6.1.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.24.0",
-    "web-vitals": "^4.0.0"
-  },
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -25,11 +15,36 @@
     "e2e:ui": "playwright test --ui",
     "e2e:ci": "playwright test",
     "lint": "eslint .",
-    "pretty-quick": "pretty-quick",
     "fix-style": "pnpm run lint --fix",
     "lint-style": "prettier --list-different .",
-    "format": "prettier --write \"**/*.{ts,tsx,json}\"",
-    "prepare": "husky install"
+    "format": "prettier --write \"**/*.{ts,tsx,json}\""
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "react": "^18.3.1",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.30.0",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^20.17.27",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.4",
+    "happy-dom": "^17.4.4",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vite": "^5.4.15",
+    "vitest": "^2.1.9"
   },
   "eslintConfig": {
     "extends": [
@@ -49,34 +64,13 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@playwright/test": "^1.45.3",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.0.4",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-react": "^7.34.3",
-    "happy-dom": "^14.12.3",
-    "husky": "^9.0.0",
-    "lint-staged": "^15.0.0",
-    "prettier": "^3.0.0",
-    "pretty-quick": "^4.0.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.2",
-    "vite-tsconfig-paths": "^4.2.2",
-    "vitest": "^2.0.0"
-  },
-  "lint-staged": {
-    "*.ts": "eslint",
-    "*.tsx": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
+  "pnpm": {
+    "overrides": {
+      "happy-dom@<15.10.2": ">=15.10.2",
+      "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
+      "esbuild@<=0.24.2": ">=0.25.0",
+      "@babel/runtime@<7.26.10": ">=7.26.10",
+      "@babel/helpers@<7.26.10": ">=7.26.10"
     }
   }
 }
