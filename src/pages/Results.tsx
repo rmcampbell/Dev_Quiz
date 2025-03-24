@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { PointTotals } from "../types";
 
@@ -60,17 +60,6 @@ const Results: React.FC<PointTotals> = ({
         {points === totalQuestions ? "Wow! Perfect Score!" : "You received"}{" "}
         {points} out of {totalQuestions} points
       </h2>
-      <p className="results-text">
-        Wanna learn how to code? Download the free:&nbsp;
-        <a
-          className="results-rpg-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.freecodecamp.org/news/learn-to-code-rpg/"
-        >
-          RPG game
-        </a>
-      </p>
 
       <button onClick={resetQuiz} className="results-btn">
         Play again?

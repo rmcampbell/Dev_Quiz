@@ -46,23 +46,9 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             Learn more with this helpful resource
           </a>
           <br />
-          <br />
-          <p>
-            Wanna learn how to code? <br /> Download the free{" "}
-            <a
-              className="modal-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.freecodecamp.org/news/learn-to-code-rpg/"
-            >
-              Learn to Code RPG game
-            </a>
-          </p>
         </div>
         <div className="modal-footer">
-          <button className="modal-btn" onClick={QuizQuestion.nextQuestion}>
-            Next Question
-          </button>
+          <button className="modal-btn" onClick={QuizQuestion.nextQuestion}>Next Question</button>
         </div>
       </div>
     </dialog>

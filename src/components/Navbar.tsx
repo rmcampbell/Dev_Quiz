@@ -1,26 +1,20 @@
 import "../stylesheets/Navbar.css";
-import fccLogo from "../images/fcc_primary_large.webp";
 import React from "react";
+import fccLogo from "../images/fcc_primary_large.webp";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
-    <>
-      <header>
-        <nav className="homepage-navbar">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.freecodecamp.org/"
-          >
-            <img
-              className="website-logo"
-              src={fccLogo}
-              alt="freeCodeCamp logo"
-            />
-          </a>
-        </nav>
-      </header>
-    </>
+    <header>
+      <nav className="homepage-navbar">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.rosscampbell.dev/"
+        >
+          <img className="website-logo" src={fccLogo} alt="Ross Campbell logo" />
+        </a>
+      </nav>
+    </header>
   );
 };
 
