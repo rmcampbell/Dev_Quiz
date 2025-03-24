@@ -8,7 +8,7 @@ test("should render the page correctly", async ({ page }) => {
   await expect(page).toHaveTitle(/Developer Quiz/);
 
   const startButton = page.getByRole("link", {
-    name: "Get started (it's free)"
+    name: "Test Your Knowledge!"
   });
   await expect(startButton).toBeVisible();
   await expect(startButton).toHaveAttribute("href", "#/quizzes");
