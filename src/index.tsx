@@ -14,4 +14,4 @@ createRoot(root || document.createElement("div")).render(
   </React.StrictMode>
 );
 
-reportWebVitals();
+reportWebVitals(console.log);
