@@ -26,4 +26,5 @@ const SelectCategory: React.FC<SelectCategoryProps> = SelectCategoryProps => {
     </div>
   );
 };
+
 export default SelectCategory;

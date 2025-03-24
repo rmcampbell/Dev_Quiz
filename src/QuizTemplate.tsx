@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import SelectQuestionsTotal from "./pages/SelectQuestionsTotal";
-import SelectCategory from "./pages/SelectCategory";
-import { ALL_CATEGORIES, QUESTION_NUMS } from "./constants";
-import Results from "./pages/Results";
-import shuffle from "./shuffle-arr";
+import React, { useEffect, useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import ButtonLink from "./components/ButtonLink";
 
 import FCCLogo from "./components/FCCLogo";
-import Questions from "./pages/Questions";
-import "./stylesheets/App.css";
+import { ALL_CATEGORIES, QUESTION_NUMS } from "./constants";
 import {
   correctModalResponses,
   incorrectModalResponses
 } from "./data/modal-responses";
-import ButtonLink from "./components/ButtonLink";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import Questions from "./pages/Questions";
+import "./stylesheets/App.css";
+import Results from "./pages/Results";
+import SelectCategory from "./pages/SelectCategory";
+import SelectQuestionsTotal from "./pages/SelectQuestionsTotal";
+import shuffle from "./shuffle-arr";
 
 const Main: React.FC = () => {
   const navigate = useNavigate();
@@ -37,9 +37,7 @@ const Main: React.FC = () => {
   //detects if the user tries the refresh the page in the middle of the quiz
   useEffect(() => {
     window.addEventListener("beforeunload", alertUser);
-    return () => {
-      window.removeEventListener("beforeunload", alertUser);
-    };
+    return () => window.removeEventListener("beforeunload", alertUser);
   }, []);
 
   const alertUser = (e: {
@@ -55,6 +53,7 @@ const Main: React.FC = () => {
   const selectQuiz = (category: string, index: number) => {
     setSelectedCategory(category);
     setSelectedQuiz(QUESTION_NUMS[index]);
+
     // Filter questions based on the selected category
     const filteredQuiz = ALL_CATEGORIES.filter(q => q.Category === category);
     setFilteredQuestions(filteredQuiz);
@@ -87,9 +86,12 @@ const Main: React.FC = () => {
 
   // Function to start a random quiz
   const startRandomQuiz = () => {
-    setSelectedCategory("Random"); // Set the selected category to "Random"
+    // Set the selected category to "Random"
+    setSelectedCategory("Random");
+
     const randomIndex = Math.floor(Math.random() * QUESTION_NUMS.length);
     setSelectedQuiz(QUESTION_NUMS[randomIndex]);
+
     // Generate a random set of questions
     const randomQuestions = shuffle(ALL_CATEGORIES).slice(
       0,
@@ -107,15 +109,15 @@ const Main: React.FC = () => {
     setQuestionNumber(curr => curr + 1);
     setChooseAnswer(false);
     navigate(
-      `/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${
-        quiz.length
-      }`
+      `/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`
     );
   };
 
   const resetQuiz = () => {
-    setSelectedCategory(""); // Reset selected category
-    setSelectedQuiz(0); // Reset selected quiz
+    // Reset selected category
+    setSelectedCategory("");
+    // Reset selected quiz
+    setSelectedQuiz(0);
     setShowModal(false);
     setChooseAnswer(false);
     setPoints(0);

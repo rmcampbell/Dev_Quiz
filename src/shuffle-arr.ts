@@ -1,16 +1,13 @@
 //fisher yates shuffle
 function shuffle<Type>(array: Type[]): Type[] {
-  let currentIndex = array.length,
-    randomIndex: number;
+  let curInd = array.length,
+    randInd: number;
 
-  while (currentIndex > 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+  while (curInd > 0) {
+    randInd = Math.floor(Math.random() * curInd);
+    curInd--;
 
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex]
-    ];
+    [array[curInd], array[randInd]] = [array[randInd], array[curInd]];
   }
 
   return array;
