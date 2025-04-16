@@ -1,15 +1,15 @@
 const securityQuiz = [
   {
-    Question: "What is server side request forgery (SSRF)?",
-    Answer: "A technique to manipulate the server into making requests on behalf of the server.",
+    Question: 'What is server side request forgery (SSRF)?',
+    Answer: 'A technique to manipulate the server into making requests on behalf of the server.',
     Distractors: [
-      "The client tricks the web browser into making server requests",
-      "Malicious actors forging information to leak sensitive data",
-      "A type of DDoS attack"
+      'The client tricks the web browser into making server requests',
+      'Malicious actors forging information to leak sensitive data',
+      'A type of DDoS attack'
     ],
-    Explanation: "SSRF is a security vulnerability that permits malicious actors to make the server send unintended requests to itself.",
-    Link: "https://www.freecodecamp.org/news/defending-against-ssrf-attacks/"
-  },
+    Explanation: 'SSRF is a security vulnerability that permits malicious actors to make the server send unintended requests to itself.',
+    Link: 'https://www.freecodecamp.org/news/defending-against-ssrf-attacks/'
+  }
 //   {
 //     Question: "Which of the following is an example of a denial-of-service (DoS) attack?",
 //     Answer: "Sending massive traffic to disrupt cloud services",
