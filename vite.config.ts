@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
-import { configDefaults } from 'vitest/config';
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+// import { configDefaults } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
 
 export default defineConfig({
@@ -14,18 +14,18 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: "./dist",
+    outDir: './dist',
     emptyOutDir: true
-  },
-  test: {
-    ...configDefaults,
-    globals: true,
-    environment: "happy-dom",
-    setupFiles: "./testSetup.ts",
-    exclude: [
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/e2e/*" /* do not include playwright files */
-    ]
   }
+  // test: {
+  //   ...configDefaults,
+  //   globals: true,
+  //   environment: "happy-dom",
+  //   setupFiles: "./testSetup.ts",
+  //   exclude: [
+  //     "**/node_modules/**",
+  //     "**/dist/**",
+  //     "**/e2e/*" /* do not include playwright files */
+  //   ]
+  // }
 });

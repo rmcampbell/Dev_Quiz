@@ -1,7 +1,7 @@
-import React from "react";
-import HeroSection from "../components/HeroSection";
-import "../stylesheets/HomepageRow.css";
-import Navbar from "../components/Navbar";
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import '../stylesheets/HomepageRow.css';
+import Navbar from '../components/Navbar';
 
 const WelcomePage: React.FC = () => {
   return (

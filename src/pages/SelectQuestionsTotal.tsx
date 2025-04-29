@@ -1,6 +1,6 @@
-import React from "react";
-import { QUESTION_NUMS } from "../constants";
-import { SelectQuestionsTotalProps } from "../types";
+import React from 'react';
+import { QUESTION_NUMS } from '../constants';
+import { SelectQuestionsTotalProps } from '../types';
 
 const SelectQuestionsTotal: React.FC<SelectQuestionsTotalProps> = ({
   totalQuestions,

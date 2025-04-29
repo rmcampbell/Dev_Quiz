@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
-import "../stylesheets/Modal.css";
-import { QuizQuestion } from "../types";
+import React, { useRef } from 'react';
+import '../stylesheets/Modal.css';
+import { QuizQuestion } from '../types';
 
 const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const lightBulbUnicode = "\uD83D\uDCA1";
-  const sadFaceUnicode = "\uD83D\uDE14";
+  const lightBulbUnicode = '\uD83D\uDCA1';
+  const sadFaceUnicode = '\uD83D\uDE14';
   const answerIcon = QuizQuestion.correct ? lightBulbUnicode : sadFaceUnicode;
 
   // Open/close the dialog using the dialog element's built-in methods

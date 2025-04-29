@@ -1,5 +1,5 @@
-import { MouseEventHandler } from "react";
-import { NavLinkProps } from "react-router-dom";
+import { MouseEventHandler } from 'react';
+import { NavLinkProps } from 'react-router-dom';
 
 export interface ButtonProps {
   text: string;

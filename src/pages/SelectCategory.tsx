@@ -1,6 +1,6 @@
-import React from "react";
-import { CATEGORIES } from "../constants";
-import { SelectCategoryProps } from "../types";
+import React from 'react';
+import { CATEGORIES } from '../constants';
+import { SelectCategoryProps } from '../types';
 
 const SelectCategory: React.FC<SelectCategoryProps> = SelectCategoryProps => {
   return (
@@ -16,10 +16,7 @@ const SelectCategory: React.FC<SelectCategoryProps> = SelectCategoryProps => {
             {category}
           </button>
         ))}
-        <button
-          className="select-btns"
-          onClick={SelectCategoryProps.startRandomQuiz}
-        >
+        <button className="select-btns" onClick={SelectCategoryProps.startRandomQuiz}>
           Random
         </button>
       </div>
