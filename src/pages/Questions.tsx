@@ -1,16 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import QuizModal from "../components/QuizModal";
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import QuizModal from '../components/QuizModal';
 
-import { QuizProps } from "../types";
+import { QuizProps } from '../types';
 
 const Questions: React.FC<QuizProps> = QuizProps => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!QuizProps.choicesArr.length) {
-      navigate("/quizzes");
+      navigate('/quizzes');
     }
-  }, [QuizProps.choicesArr]);
+  }, [QuizProps.choicesArr, navigate]);
   return (
     <>
       <div className="quiz-text">
@@ -26,9 +26,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
         ) : (
           <fieldset className="quiz-answers-div">
             <legend>
-              <span className="sr-only">
-                Question {QuizProps.questionNumber}
-              </span>
+              <span className="sr-only">Question {QuizProps.questionNumber}</span>
               {QuizProps.currQuestion.Question}
             </legend>
             <ul>
@@ -37,7 +35,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
                   (choice: string, index: number) => (
                     <li key={index}>
                       <button
-                        className={`answers-btns ${choice === QuizProps.selectedOption ? `answers-btns--selected` : ``}`}
+                        className={`answers-btns ${choice === QuizProps.selectedOption ? 'answers-btns--selected' : ''}`}
                         onClick={() => QuizProps.selectOption(choice)}
                       >
                         {choice}

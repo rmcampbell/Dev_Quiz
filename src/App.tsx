@@ -1,7 +1,7 @@
-import WelcomePage from "./pages/WelcomePage";
-import QuizTemplate from "./QuizTemplate";
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import WelcomePage from './pages/WelcomePage';
+import QuizTemplate from './QuizTemplate';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (

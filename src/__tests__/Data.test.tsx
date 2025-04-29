@@ -1,21 +1,21 @@
-import { ALL_CATEGORIES } from "../constants";
-import { test, expect, describe } from "vitest";
+import { ALL_CATEGORIES } from '../constants';
+import { test, expect, describe } from 'vitest';
 
-describe("Every question is valid", () => {
+describe('Every question is valid', () => {
   test.each(ALL_CATEGORIES)(
-    "Every question has an answer, explanation, a link and three distractions",
+    'Every question has an answer, explanation, a link and three distractions',
     input => {
-      expect(input).toHaveProperty("Question");
-      expect(input).toHaveProperty("Answer");
-      expect(input).toHaveProperty("Distractor1");
-      expect(input).toHaveProperty("Distractor2");
-      expect(input).toHaveProperty("Distractor3");
-      expect(input).toHaveProperty("Explanation");
-      expect(input).toHaveProperty("Link");
+      expect(input).toHaveProperty('Question');
+      expect(input).toHaveProperty('Answer');
+      expect(input).toHaveProperty('Distractor1');
+      expect(input).toHaveProperty('Distractor2');
+      expect(input).toHaveProperty('Distractor3');
+      expect(input).toHaveProperty('Explanation');
+      expect(input).toHaveProperty('Link');
     }
   );
   test.each(ALL_CATEGORIES)(
-    "There are no empty answers, explanations,links or distractions.",
+    'There are no empty answers, explanations,links or distractions.',
     input => {
       expect(input.Question.length).toBeGreaterThan(0);
       expect(input.Answer.length).toBeGreaterThan(0);
