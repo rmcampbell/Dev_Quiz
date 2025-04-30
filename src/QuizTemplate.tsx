@@ -1,31 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import ButtonLink from "./components/ButtonLink";
+import React, { useEffect, useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import ButtonLink from './components/ButtonLink';
 
-import FCCLogo from "./components/FCCLogo";
-import { ALL_CATEGORIES, QUESTION_NUMS } from "./constants";
-import {
-  correctModalResponses,
-  incorrectModalResponses
-} from "./data/modal-responses";
-import Questions from "./pages/Questions";
-import "./stylesheets/App.css";
-import Results from "./pages/Results";
-import SelectCategory from "./pages/SelectCategory";
-import SelectQuestionsTotal from "./pages/SelectQuestionsTotal";
-import shuffle from "./shuffle-arr";
+// import FCCLogo from "./components/FCCLogo";
+import { ALL_CATEGORIES, QUESTION_NUMS } from './constants';
+import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses.ts';
+import Questions from './pages/Questions';
+import './stylesheets/App.css';
+import Results from './pages/Results';
+import SelectCategory from './pages/SelectCategory';
+import SelectQuestionsTotal from './pages/SelectQuestionsTotal';
+import shuffle from './shuffle-arr';
 
 const Main: React.FC = () => {
   const navigate = useNavigate();
   const [quiz, setQuiz] = useState(ALL_CATEGORIES);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [points, setPoints] = useState(0);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [correct, setCorrect] = useState(false);
-  const [displayExplanation, setDisplayExplanation] = useState("");
-  const [showReference, setShowReference] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
-  const [chosenAnswer, setChosenAnswer] = useState("");
+  const [displayExplanation, setDisplayExplanation] = useState('');
+  const [showReference, setShowReference] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
+  const [chosenAnswer, setChosenAnswer] = useState('');
   const [chooseAnswer, setChooseAnswer] = useState(false);
   const [show, setShowModal] = useState(false);
 
@@ -36,8 +33,8 @@ const Main: React.FC = () => {
 
   //detects if the user tries the refresh the page in the middle of the quiz
   useEffect(() => {
-    window.addEventListener("beforeunload", alertUser);
-    return () => window.removeEventListener("beforeunload", alertUser);
+    window.addEventListener('beforeunload', alertUser);
+    return () => window.removeEventListener('beforeunload', alertUser);
   }, []);
 
   const alertUser = (e: {
@@ -45,9 +42,9 @@ const Main: React.FC = () => {
     returnValue: string;
   }) => {
     e.preventDefault();
-    e.returnValue = "";
+    e.returnValue = '';
   };
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [, setSelectedQuiz] = useState(0);
 
   const selectQuiz = (category: string, index: number) => {
@@ -61,44 +58,36 @@ const Main: React.FC = () => {
   };
 
   const startQuiz = (quizQuestionsCount: number) => {
-    const shuffledQuiz = shuffle(filteredQuestions).slice(
-      0,
-      quizQuestionsCount
-    );
+    const validQuestions = filteredQuestions.filter((q) => {
+      const hasValidAnswer = q.Answer && q.Answer.trim().length > 0;
+      const validDistractors = Array.isArray(q.Distractors) && q.Distractors.filter((d: string) => d.trim().length > 0).length > 0;
+      return hasValidAnswer && validDistractors;
+    });
 
-    // Shuffle the answer options
-    const choicesArr: string[][] = shuffledQuiz.map(obj => {
-      const arr = [
-        obj.Answer,
-        obj.Distractor1,
-        obj.Distractor2,
-        obj.Distractor3
-      ];
-      return shuffle<string>(arr);
+    const shuffledQuiz = shuffle(validQuestions).slice(0, quizQuestionsCount);
+
+    const choicesArr: string[][] = shuffledQuiz.map((obj) => {
+      const validDistractors = obj.Distractors.filter((str: string) => str.trim().length > 0);
+      return shuffle<string>([obj.Answer, ...validDistractors]);
     });
 
     setQuiz(shuffledQuiz);
     setChoicesArr(choicesArr);
-    navigate(
-      `/quizzes/${selectedCategory}/questions/1/of/${quizQuestionsCount}`
-    );
+    navigate(`/quizzes/${selectedCategory}/questions/1/of/${quizQuestionsCount}`);
   };
 
   // Function to start a random quiz
   const startRandomQuiz = () => {
     // Set the selected category to "Random"
-    setSelectedCategory("Random");
+    setSelectedCategory('Random');
 
     const randomIndex = Math.floor(Math.random() * QUESTION_NUMS.length);
     setSelectedQuiz(QUESTION_NUMS[randomIndex]);
 
     // Generate a random set of questions
-    const randomQuestions = shuffle(ALL_CATEGORIES).slice(
-      0,
-      QUESTION_NUMS[randomIndex]
-    );
+    const randomQuestions = shuffle(ALL_CATEGORIES).slice(0, QUESTION_NUMS[randomIndex]);
     setQuiz(randomQuestions);
-    navigate(`/quizzes/Random/questionsTotal`);
+    navigate('/quizzes/Random/questionsTotal');
   };
 
   const nextQuestion = () => {
@@ -108,21 +97,20 @@ const Main: React.FC = () => {
     }
     setQuestionNumber(curr => curr + 1);
     setChooseAnswer(false);
-    navigate(
-      `/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`
-    );
+    navigate(`/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`);
   };
 
   const resetQuiz = () => {
-    // Reset selected category
-    setSelectedCategory("");
+    // Reset the selected category
+    setSelectedCategory('');
+
     // Reset selected quiz
     setSelectedQuiz(0);
     setShowModal(false);
     setChooseAnswer(false);
     setPoints(0);
     setQuestionNumber(1);
-    navigate(`/quizzes`);
+    navigate('/quizzes');
   };
 
   const shuffleModalResponses = (responses: string[]) => {
@@ -140,7 +128,7 @@ const Main: React.FC = () => {
       return;
     }
 
-    setSelectedOption("");
+    setSelectedOption('');
     setChooseAnswer(true);
     setChosenAnswer(userAnswer);
     if (userAnswer !== currQuestion.Answer) {
@@ -192,7 +180,7 @@ const Main: React.FC = () => {
   return (
     <>
       <ButtonLink to="/">Home</ButtonLink>
-      <FCCLogo />
+      {/*<FCCLogo />*/}
       <Routes>
         <Route
           path="/"
@@ -213,11 +201,11 @@ const Main: React.FC = () => {
           }
         />
         <Route
-          path={"/:category/questions/:currentQuestion/of/:total"}
+          path={'/:category/questions/:currentQuestion/of/:total'}
           element={<Questions {...questionProps} {...modalProps} />}
         />
         <Route
-          path={"/:category/results"}
+          path={'/:category/results'}
           element={<Results {...resultsProps} />}
         />
       </Routes>
