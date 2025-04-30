@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import QuizModal from '../components/QuizModal';
 
 import { QuizProps } from '../types';
@@ -27,7 +28,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
           <fieldset className="quiz-answers-div">
             <legend>
               <span className="sr-only">Question {QuizProps.questionNumber}</span>
-              {QuizProps.currQuestion.Question}
+              <MarkdownRenderer content={QuizProps.currQuestion.Question} />
             </legend>
             <ul>
               {QuizProps.choicesArr.length > 0 &&
