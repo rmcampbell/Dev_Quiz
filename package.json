@@ -1,16 +1,15 @@
 {
-  "name": "rpg_quiz_site",
+  "name": "developer-quiz",
   "homepage": "https://developerquiz.org",
-  "description": "This is a free quiz site made for developers by freeCodeCamp",
-  "version": "0.1.0",
+  "description": "This is a free quiz",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.15.4",
   "type": "module",
   "scripts": {
     "start": "vite",
     "preview": "vite preview",
     "start:local-docker": "docker container run --rm -it -p 3000:3000 developer-quiz-site",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "test": "vitest",
     "e2e:ui": "playwright test --ui",
     "e2e:ci": "playwright test",
@@ -21,30 +20,36 @@
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "react": "^18.3.1",
+    "@testing-library/react": "^16.3.0",
+    "react": "^19.1.0",
     "react-confetti": "^6.4.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^6.30.0",
+    "react-router-dom": "^7.5.0",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@playwright/test": "^1.51.1",
-    "@types/node": "^20.17.27",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.5",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
+    "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react": "^7.37.4",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
     "happy-dom": "^17.4.4",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2",
-    "vite": "^5.4.15",
-    "vitest": "^2.1.9"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vitest": "^3.1.1"
   },
   "eslintConfig": {
     "extends": [
@@ -63,14 +68,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "pnpm": {
-    "overrides": {
-      "happy-dom@<15.10.2": ">=15.10.2",
-      "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
-      "esbuild@<=0.24.2": ">=0.25.0",
-      "@babel/runtime@<7.26.10": ">=7.26.10",
-      "@babel/helpers@<7.26.10": ">=7.26.10"
-    }
   }
 }
