@@ -114,6 +114,11 @@ hr {
   margin: 1rem 0;
   opacity: 0.25;
 }
+
+.perspective {
+  perspective: 1000px;
+}
+
 .quiz-btn {
   position: absolute;
   top: 0;

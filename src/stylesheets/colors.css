@@ -1,7 +1,7 @@
 :root {
   --white: #ffffff;
-  --bg-primary: #0a0a23;
-  --bg-primary-transparent: #0a0a23f2;
+  --bg-primary: #191b23;
+  --bg-primary-transparent: #191b23f2;
   --bg-button: #acd157;
   --bg-transparent-hover: var(--white);
   --bg-gradient-start: #fecc4c;
