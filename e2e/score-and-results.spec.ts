@@ -6,9 +6,9 @@ import {
 } from '../src/data/quizzes/modal-responses';
 
 interface QuizQuestion {
-  Question: string;
-  Answer: string;
-  Distractors: string[]; // Optional distractor, if present
+  question: string;
+  answer: string;
+  distractors: string[]; // Optional distractor, if present
 }
 
 type ModalResponses = string[];
@@ -27,8 +27,8 @@ async function selectQuizCategory(page: Page, category: string, questionCount: s
   await expect(page.getByText('Points: 0')).toBeVisible();
 }
 
-async function getQuestionData(question: string): Promise<QuizQuestion> {
-  const questionData = htmlQuizQuestions.find(({ Question }) => question.includes(Question));
+async function getQuestionData(q: string): Promise<QuizQuestion> {
+  const questionData = htmlQuizQuestions.questions.find(({ question }) => question.includes(q));
   if (!isDefined(questionData)) {
     throw new Error('Question not found in the quiz data.');
   }
@@ -52,7 +52,7 @@ test('should show \'success\' modal after selecting the correct option', async (
   const question = await page.locator('legend').textContent();
   const questionData = await getQuestionData(question || '');
 
-  const answer = questionData.Answer;
+  const answer = questionData.answer;
   await page.getByRole('button', { name: answer }).click();
   await page.getByRole('button', { name: 'Submit', exact: true }).click();
 
@@ -67,7 +67,7 @@ test('should show \'failure\' modal after selecting the wrong option', async ({
   const question = await page.locator('legend').textContent();
   const questionData = await getQuestionData(question || '');
 
-  const [distractor] = questionData.Distractors;
+  const [distractor] = questionData.distractors;
   await page.getByRole('button', { name: distractor, exact: true }).click();
   await page.getByRole('button', { name: 'Submit', exact: true }).click();
 

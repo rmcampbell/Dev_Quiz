@@ -2,9 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/#/quizzes');
-
   await page.getByRole('button', { name: 'HTML' }).click();
-
   await page.getByRole('button', { name: '10', exact: true }).click();
 });
 

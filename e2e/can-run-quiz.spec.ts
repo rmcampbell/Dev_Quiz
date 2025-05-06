@@ -15,9 +15,7 @@ test('should display a list of categories', async ({ page }) => {
 
 test('should allow selecting the number of questions', async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
-
   await page.waitForURL('#/quizzes/HTML/questionsTotal');
-
   await expect(page.getByRole('heading', { name: 'Choose a length for the Quiz' })).toBeVisible();
 
   for (let i = 0; i < QUESTION_NUMS.length; i++) {
