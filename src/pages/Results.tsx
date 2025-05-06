@@ -36,17 +36,15 @@ const Results: React.FC<PointTotals> = ({ points, totalQuestions, resetQuiz }: P
 
   return (
     <div className="results-div">
-      <h1 className="results-heading">Results</h1><br/><br/>
-      {showConfetti && (
-        <Confetti width={windowSize.width} height={windowSize.height} />
-      )}
+      <h1 className="results-heading">Results</h1><br/>
+      {showConfetti && (<Confetti width={windowSize.width} height={windowSize.height} />)}
       <h2>
-        {points === totalQuestions ? 'Wow! Perfect Score!' : 'You received'}{' '}
-      </h2><br/>
-      <h2>{points} out of {totalQuestions} points: {totalPercentageCorrect}%</h2>
+        {points === totalQuestions ? 'Wow! Perfect Score!' : <>{points} / {totalQuestions} points: {totalPercentageCorrect}%</>}
+      </h2>
       <br/>
       <button onClick={resetQuiz} className="results-btn">Play again?</button>
     </div>
   );
 };
+
 export default Results;

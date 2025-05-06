@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import ButtonLink from './components/ButtonLink';
 
-// import FCCLogo from "./components/FCCLogo";
+import DQLogo from './components/DQLogo';
 import { ALL_CATEGORIES, QUESTION_NUMS } from './constants';
 import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses.ts';
 import Questions from './pages/Questions';
@@ -52,23 +52,17 @@ const Main: React.FC = () => {
     setSelectedQuiz(QUESTION_NUMS[index]);
 
     // Filter questions based on the selected category
-    const filteredQuiz = ALL_CATEGORIES.filter(q => q.Category === category);
+    const filteredQuiz = ALL_CATEGORIES.filter(q => q.category === category);
     setFilteredQuestions(filteredQuiz);
     navigate(`/quizzes/${category}/questionsTotal`);
   };
 
   const startQuiz = (quizQuestionsCount: number) => {
-    const validQuestions = filteredQuestions.filter((q) => {
-      const hasValidAnswer = q.Answer && q.Answer.trim().length > 0;
-      const validDistractors = Array.isArray(q.Distractors) && q.Distractors.filter((d: string) => d.trim().length > 0).length > 0;
-      return hasValidAnswer && validDistractors;
-    });
-
-    const shuffledQuiz = shuffle(validQuestions).slice(0, quizQuestionsCount);
+    const shuffledQuiz = shuffle(filteredQuestions).slice(0, quizQuestionsCount);
 
     const choicesArr: string[][] = shuffledQuiz.map((obj) => {
-      const validDistractors = obj.Distractors.filter((str: string) => str.trim().length > 0);
-      return shuffle<string>([obj.Answer, ...validDistractors]);
+      const validDistractors = obj.distractors.filter((str: string) => str.trim().length > 0);
+      return shuffle<string>([obj.answer, ...validDistractors]);
     });
 
     setQuiz(shuffledQuiz);
@@ -123,7 +117,7 @@ const Main: React.FC = () => {
   const checkAnswer = () => {
     const userAnswer = selectedOption;
 
-    // Ensure option was selected before checking answer
+    // Ensure option was selected before checking the answer
     if (!userAnswer) {
       return;
     }
@@ -131,18 +125,18 @@ const Main: React.FC = () => {
     setSelectedOption('');
     setChooseAnswer(true);
     setChosenAnswer(userAnswer);
-    if (userAnswer !== currQuestion.Answer) {
+    if (userAnswer !== currQuestion.answer) {
       setCorrect(false);
       setMessage(shuffleModalResponses(incorrectModalResponses));
-      setDisplayExplanation(currQuestion.Explanation);
-      setShowReference(currQuestion.Link);
+      setDisplayExplanation(currQuestion?.explanation || '');
+      setShowReference(currQuestion?.link || '');
       setShowModal(true);
     } else {
       setCorrect(true);
       setPoints(curr => curr + 1);
       setMessage(shuffleModalResponses(correctModalResponses));
-      setDisplayExplanation(currQuestion.Explanation);
-      setShowReference(currQuestion.Link);
+      setDisplayExplanation(currQuestion?.explanation || '');
+      setShowReference(currQuestion?.link || '');
       setShowModal(true);
     }
   };
@@ -180,16 +174,11 @@ const Main: React.FC = () => {
   return (
     <>
       <ButtonLink to="/">Home</ButtonLink>
-      {/*<FCCLogo />*/}
+      <DQLogo />
       <Routes>
         <Route
           path="/"
-          element={
-            <SelectCategory
-              selectQuiz={selectQuiz}
-              startRandomQuiz={startRandomQuiz}
-            />
-          }
+          element={<SelectCategory selectQuiz={selectQuiz} startRandomQuiz={startRandomQuiz} />}
         />
         <Route
           path="/:category/questionsTotal"

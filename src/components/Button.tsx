@@ -1,6 +1,7 @@
 import '../stylesheets/Button.css';
 import React, { useMemo } from 'react';
 import { ButtonProps } from '../types';
+
 const Button: React.FC<ButtonProps> = ButtonProps => {
   const getButtonClasses = useMemo(() => {
     let classes = 'btn-default';

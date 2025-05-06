@@ -33,25 +33,36 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             <b>Your Answer:</b>
           </p>
           <p>{QuizQuestion.chosenAnswer}</p>
-          <p>
-            <b>Answer:</b>
-          </p>
-          <p>{QuizQuestion.displayExplanation}</p>
-          <a
-            className="modal-link"
-            href={QuizQuestion.showReference}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn more with this helpful resource
-          </a>
+          <>
+            {QuizQuestion?.displayExplanation ? (
+              <>
+                <p>
+                  <b>Explanation:</b>
+                </p>
+                <p>{QuizQuestion.displayExplanation}</p>
+              </>
+            ) : ('')}
+          </>
+
+          {/* TODO: Display conditionally */}
+          {/*<a*/}
+          {/*  className="modal-link"*/}
+          {/*  href={QuizQuestion.showReference}*/}
+          {/*  target="_blank"*/}
+          {/*  rel="noopener noreferrer"*/}
+          {/*>*/}
+          {/*  Learn more with this helpful resource*/}
+          {/*</a>*/}
           <br />
         </div>
         <div className="modal-footer">
-          <button className="modal-btn" onClick={QuizQuestion.nextQuestion}>Next Question</button>
+          <button className="modal-btn" onClick={QuizQuestion.nextQuestion}>
+            Next Question
+          </button>
         </div>
       </div>
     </dialog>
   );
 };
+
 export default QuizModal;

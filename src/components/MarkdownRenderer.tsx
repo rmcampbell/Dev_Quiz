@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-interface MarkdownRendererProps {
-  content: string;
-}
+import { MarkdownRendererProps } from '../types.tsx';
+
 
 const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => <ReactMarkdown>{content}</ReactMarkdown>;
 

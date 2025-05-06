@@ -6,10 +6,8 @@ const QuizBtn: React.FC<{ handleClick: MouseEventHandler; text: string }> = ({
   text
 }) => {
   return (
-    <button className="quiz-btn" onClick={handleClick}>
-      {' '}
-      {text}
-    </button>
+    <button className="quiz-btn" onClick={handleClick}>{' '}{text}</button>
   );
 };
+
 export default QuizBtn;

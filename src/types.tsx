@@ -12,6 +12,33 @@ export interface ButtonLinkProps extends NavLinkProps {
   size?: string;
 }
 
+export interface FlashcardProps {
+  front: string;
+  back: string;
+  trackProgress?: boolean;
+  known?: boolean;
+  onToggleKnown?: () => void;
+}
+
+export interface MarkdownRendererProps {
+  content: string;
+}
+
+export interface Quiz {
+  category: string;
+  questions: Question[];
+}
+
+export interface Question {
+  question: string;
+  answer: string;
+  distractors: string[];
+  explanation: string;
+  questionNumber?: number;
+  link?: string;
+}
+
+// TODO: Fix this type
 export interface QuizQuestion {
   message: string;
   points: number;
@@ -23,8 +50,9 @@ export interface QuizQuestion {
   show: boolean;
 }
 
+// TODO: Fix this type
 export interface QuizProps {
-  currQuestion: { Question: string };
+  currQuestion: { question: string };
   questionNumber: number;
   totalQuestions: number;
   modalProps: QuizQuestion;
