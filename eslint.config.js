@@ -27,7 +27,7 @@ export default tseslint.config(
       '@stylistic/ts/comma-dangle': ['error', 'never'],
       '@stylistic/ts/quote-props': ['error', 'as-needed'],
       '@stylistic/ts/semi': ['error', 'always'],
-      '@stylistic/ts/quotes': ['error', 'single'],
+      "@stylistic/ts/quotes": ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
       '@stylistic/ts/no-extra-semi': 'error'
     },
     ignores: ['dist/*']
