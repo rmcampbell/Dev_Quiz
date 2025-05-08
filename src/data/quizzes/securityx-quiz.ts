@@ -23,7 +23,7 @@ const securityQuiz = {
         'The OS was a valid version, but the MDM agent was not installed, triggering a true positive.',
         'The OS version was higher than 11, and the MDM agent was running, triggering a true negative.'
       ],
-      explanation: '',
+      explanation: '1',
       questionNumber: 1
     },
     {
@@ -36,7 +36,7 @@ const securityQuiz = {
         'Utilize mandatory vacations for all developers.',
         'Review all access to production systems on a quarterly basis.'
       ],
-      explanation: '',
+      explanation: '2',
       questionNumber: 2
     },
     {
@@ -50,7 +50,7 @@ const securityQuiz = {
         'Escape character blocking',
         'URL encoding'
       ],
-      explanation: '',
+      explanation: '3',
       questionNumber: 3
     },
     {
@@ -64,7 +64,7 @@ const securityQuiz = {
         'Update the state: present module to state: absent in the main.yml file.',
         'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file.'
       ],
-      explanation: '',
+      explanation: '4',
       questionNumber: 4
     },
     {
@@ -75,7 +75,7 @@ const securityQuiz = {
         'The CSP',
         'The regulatory body'
       ],
-      explanation: '',
+      explanation: '5',
       questionNumber: 5
     },
     {
@@ -86,7 +86,7 @@ const securityQuiz = {
         'Ensure hot, warm, and mobile disaster recovery sites are available, and give an update to the companies\' leadership teams.',
         `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA.`
       ],
-      explanation: '',
+      explanation: '6',
       questionNumber: 6
     },
     // {
@@ -115,7 +115,7 @@ const securityQuiz = {
         'Wireless network auto joining',
         '802.1X with mutual authentication'
       ],
-      explanation: '',
+      explanation: '8',
       questionNumber: 8
     },
     {
@@ -126,7 +126,7 @@ const securityQuiz = {
         'Classify the incident as a true positive.',
         'Classify the incident as a true negative.'
       ],
-      explanation: '',
+      explanation: '9',
       questionNumber: 9
     },
     {
@@ -138,7 +138,7 @@ const securityQuiz = {
         'Sender authentication',
         'Chain of custody'
       ],
-      explanation: 'Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.',
+      explanation: '(10) Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.',
       questionNumber: 10
     },
     {
@@ -233,7 +233,7 @@ const securityQuiz = {
         'Database connection over encrypted channels'
       ],
       explanation: '',
-      link: 'Topic: 19'
+      questionNumber: 19
     },
     {
       question: 'A senior cybersecurity engineer is solving a digital certificate issue in which the CA denied certificate issuance due to failed subject identity validation. At which of the following steps within the PKI enrollment process would the denial have occurred?',
@@ -1346,7 +1346,7 @@ const securityQuiz = {
     },
     {
       question: 'A security professional is investigating a trend in vulnerability findings for newly deployed cloud systems. Given the following output:\n\n\n' +
-        `![Question 109](${imgPath(109)})\n\n\n` +
+        `![Question 135](${imgPath(135)})\n\n\n` +
         'Which of the following actions would address the root cause of this issue?',
       answer: 'Automating the patching system to update base images',
       distractors: [
@@ -1496,10 +1496,10 @@ const securityQuiz = {
       questionNumber: 148
     },
     {
-      question: 'A security analyst received a report that an internal web page is down after a company-wide update to the web browser. Given the following error message:\n' +
-      'Your connection is not private.\n' +
-      'Attackers might be trying to steal your information for www. internalwebsite.company.com.\n' +
-      '"NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM"\n' +
+      question: 'A security analyst received a report that an internal web page is down after a company-wide update to the web browser. Given the following error message:\n\n\n' +
+      'Your connection is not private.\n\n' +
+      'Attackers might be trying to steal your information for www. internalwebsite.company.com.\n\n' +
+      '"NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM"\n\n\n' +
       'Which of the following is the best way to fix this issue?',
       answer: 'Disabling all deprecated ciphers',
       distractors: [
@@ -2280,7 +2280,7 @@ const securityQuiz = {
     {
       question: 'A security analyst is troubleshooting the reason a specific user is having difficulty accessing company resources.\n\n' +
         'The analyst reviews the following information:\n' +
-        `![Question 217](${imgPath(217)})\n\n` +
+        `![Question 217](${imgPath(217)})\n\n\n` +
         'Which of the following is most likely the cause of the issue?',
       answer: 'A network geolocation is being misidentified by the authentication server.',
       distractors: [
