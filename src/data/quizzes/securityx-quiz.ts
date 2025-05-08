@@ -2568,10 +2568,10 @@ const securityQuiz = {
       questionNumber: 241
     },
     {
-      question: 'To prevent data breaches, security leaders at a company decide to expand user education to:\n' +
-        'Create a healthy security culture.\n' +
-        'Comply with regulatory requirements\n' +
-        'Improve incident reporting\n' +
+      question: 'To prevent data breaches, security leaders at a company decide to expand user education to:\n\n' +
+        'Create a healthy security culture.\n\n' +
+        'Comply with regulatory requirements\n\n' +
+        'Improve incident reporting\n\n\n' +
         'Which of the following would best meet their objective?',
       answer: 'Simulating a phishing campaign',
       distractors: [
