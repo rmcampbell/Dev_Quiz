@@ -315,7 +315,12 @@ const securityQuiz = {
     //   questionNumber: 28
     // },
     {
-      question: 'An organization wants to implement an access control system based on its data classification policy that includes the following data types: \n\n"Confidential"\n"Restricted"\n"Internal"\n"Public Flag for Review".\n\nThe access control system should support SSO federation to map users into groups. Each group should only access systems that process and store data at the classification assigned to the group. Which of the following should the organization implement to enforce its requirements with a minimal impact to systems and resources?',
+      question: 'An organization wants to implement an access control system based on its data classification policy that includes the following data types: \n\n' +
+        '`Confidential`\n\n' +
+        '`Restricted`\n\n' +
+        '`Internal`\n\n' +
+        '`Public Flag for Review`\n\n\n' +
+        'The access control system should support SSO federation to map users into groups. Each group should only access systems that process and store data at the classification assigned to the group. Which of the following should the organization implement to enforce its requirements with a minimal impact to systems and resources?',
       answer: 'A tagging strategy in which all resources are assigned a tag based on the data classification type, and a system that enforces attribute-based access control',
       distractors: [
         'Role-based access control that maps data types to internal roles, which are defined in the human resources department\'s source of truth system',
@@ -1337,7 +1342,7 @@ const securityQuiz = {
       question: 'A security operations engineer needs to prevent inadvertent data disclosure when encrypted SSDs are reused within an enterprise. Which of the following is the most secure way to achieve this goal?',
       answer: 'Securely deleting the encryption keys used by the SSD',
       distractors: [
-        'A security operations engineer needs to prevent inadvertent data disclosure when encrypted SSDs are reused within an enterprise. Which of the following is the most secure way to achieve this goal?',
+        'Executing a script that deletes and overwrites all data on the SSD three times',
         'Wiping the SSD through degaussing',
         'Writing non-zero, random data to all cells of the SSD'
       ],
@@ -2456,7 +2461,7 @@ const securityQuiz = {
     },
     {
       question: 'Audit findings indicate several user endpoints are not utilizing full disk encryption. During the remediation process, a compliance analyst reviews the testing details for the endpoints and notes the endpoint device configuration does not support full disk encryption. Which of the following is the most likely reason the device must be replaced?',
-      answer: 'D. The motherboard was not configured with a TPM from the OEM supplier',
+      answer: 'The motherboard was not configured with a TPM from the OEM supplier',
       distractors: [
         'The HSM is outdated and no longer supported by the manufacturer',
         'The vTPM was not properly initialized and is corrupt.',
