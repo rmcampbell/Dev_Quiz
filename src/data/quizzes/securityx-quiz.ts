@@ -15,7 +15,7 @@ const securityQuiz = {
   questions: [
     {
       question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n\n' +
-        `![Alt text](${imgPath(1)})\n\n` +
+        `![Question](${imgPath(1)})\n\n` +
         'Which of the following most likely occurred when the employee connected a personally owned Windows laptop and was allowed on the network?',
       answer: 'The OS was running a Windows version below 10 and triggered a false negative.',
       distractors: [
@@ -55,7 +55,7 @@ const securityQuiz = {
     },
     {
       question: 'A security architect needs to enable a container orchestrator for DevSecOps and SOAR initiatives. The engineer has discovered that several Ansible YAML files used for the automation of configuration management have the following content:\n\n\n' +
-        `![Alt text](${imgPath(4)})\n\n\n` +
+        `![Question](${imgPath(4)})\n\n\n` +
         'Which of the following should the engineer do to correct the security issues presented within this content?',
       answer: 'Update or remove the ansible.cfg file.',
       distractors: [
@@ -70,11 +70,7 @@ const securityQuiz = {
     {
       question: 'A CRM company leverages a CSP PaaS service to host and publish Its SaaS product. Recently, a large customer requested that all infrastructure components must meet strict regulatory requirements, including configuration management, patch management, and life-cycle management. Which of the following organizations is responsible for ensuring those regulatory requirements are met?',
       answer: 'The CRM company',
-      distractors: [
-        `The CRM company's customer`,
-        'The CSP',
-        'The regulatory body'
-      ],
+      distractors: [`The CRM company's customer`, 'The CSP', 'The regulatory body'],
       explanation: '5',
       questionNumber: 5
     },
@@ -89,22 +85,22 @@ const securityQuiz = {
       explanation: '6',
       questionNumber: 6
     },
-    // {
-    //   question: 'The results of an internal audit indicate several employees reused passwords that were previously included in a published list of compromised passwords.\n' +
-    //     'The company has the following employee password policy:\n\n' +
-    //     `![Alt text](${imgPath(7)})\n\n\n` +
-    //     'Which of the following should be implemented to best address the password reuse issue? (Choose two.)',
-    //   answer: ['Increase the minimum age to two days.', 'Increase the history to 20.'],
-    //   distractors: [
-    //     'Increase the character length to 12.',
-    //     'Add case-sensitive requirements to character class.',
-    //     'Decrease the maximum age to 30 days.',
-    //     'Remove the complexity requirements.',
-    //     'Increase the maximum age to 120 days.'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 7
-    // },
+    {
+      question: 'The results of an internal audit indicate several employees reused passwords that were previously included in a published list of compromised passwords.\n' +
+        'The company has the following employee password policy:\n\n' +
+        `![Question](${imgPath(7)})\n\n\n` +
+        'Which of the following should be implemented to best address the password reuse issue?',
+      answer: ['Increase the minimum age to two days.', 'Increase the history to 20.'],
+      distractors: [
+        'Increase the character length to 12.',
+        'Add case-sensitive requirements to character class.',
+        'Decrease the maximum age to 30 days.',
+        'Remove the complexity requirements.',
+        'Increase the maximum age to 120 days.'
+      ],
+      explanation: '',
+      questionNumber: 7
+    },
     {
       question: 'A mobile administrator is reviewing the following mobile device DHCP logs to ensure the proper mobile settings are applied to managed devices:\n\n' +
         `![Question 8](${imgPath(8)})\n\n\n` +
@@ -148,21 +144,21 @@ const securityQuiz = {
       explanation: 'Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.',
       questionNumber: 11
     },
-    // {
-    //   question: 'While performing mandatory monthly patch updates on a production application server, the security analyst reports an instance of buffer overflow for a new application that was migrated to the cloud and is also publicly exposed. Security policy requires that only internal users have access to the application. Which of the following should the analyst implement to mitigate the issues reported? (Choose two.)',
-    //   answer: [
-    //     'Configure firewall rules to block all external traffic.',
-    //     'Enable input validation for all fields.'
-    //   ],
-    //   distractors: [
-    //     'Enable automatic updates to be installed on all servers.',
-    //     'Configure the security group to enable external traffic.',
-    //     'Set up a DLP policy to alert for exfiltration on all application servers.',
-    //     'Enable nightly vulnerability scans.'
-    //   ],
-    //   explanation: 'A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
-    //   questionNumber: 12
-    // },
+    {
+      question: 'While performing mandatory monthly patch updates on a production application server, the security analyst reports an instance of buffer overflow for a new application that was migrated to the cloud and is also publicly exposed. Security policy requires that only internal users have access to the application. Which of the following should the analyst implement to mitigate the issues reported?',
+      answer: [
+        'Configure firewall rules to block all external traffic.',
+        'Enable input validation for all fields.'
+      ],
+      distractors: [
+        'Enable automatic updates to be installed on all servers.',
+        'Configure the security group to enable external traffic.',
+        'Set up a DLP policy to alert for exfiltration on all application servers.',
+        'Enable nightly vulnerability scans.'
+      ],
+      explanation: 'A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
+      questionNumber: 12
+    },
     {
       question: 'PKI can be used to support security requirements in the change management process. Which of the following capabilities does PKI provide for messages?',
       answer: 'Non-repudiation',
@@ -184,18 +180,18 @@ const securityQuiz = {
       explanation: 'The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
       questionNumber: 15
     },
-    // {
-    //   question: 'Which of the following best explain why organizations prefer to utilize code that is digitally signed? (Choose two.)',
-    //   answer: ['It provides origin assurance.', 'It verifies integrity.'],
-    //   distractors: [
-    //     'It provides increased confidentiality.',
-    //     'It integrates with DRMs.',
-    //     'It verifies the recipient\'s identity.',
-    //     'It ensures the code is free of malware.'
-    //   ],
-    //   explanation: 'Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
-    //   questionNumber: 16
-    // },
+    {
+      question: 'Which of the following best explain why organizations prefer to utilize code that is digitally signed?',
+      answer: ['It provides origin assurance.', 'It verifies integrity.'],
+      distractors: [
+        'It provides increased confidentiality.',
+        'It integrates with DRMs.',
+        `It verifies the recipient's identity.`,
+        'It ensures the code is free of malware.'
+      ],
+      explanation: 'Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
+      questionNumber: 16
+    },
     {
       question: 'A security engineer receives reports through the organization\'s bug bounty program about remote code execution in a specific component in a custom application. Management wants to properly secure the component and proactively avoid similar issues. Which of the following is the best approach to uncover additional vulnerable paths in the application?',
       answer: 'Use fuzz testing to uncover potential vulnerabilities in the application.',
@@ -299,21 +295,21 @@ const securityQuiz = {
       explanation: 'UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
       questionNumber: 27
     },
-    // {
-    //   question: 'A company that provides services to clients who work with highly sensitive data would like to provide assurance that the data\'s confidentiality is maintained in a dynamic, low-risk environment. Which of the following would best achieve this goal? (Choose two.)',
-    //   answer: [
-    //     'Encrypt all data and files at rest, in transit, and in use.',
-    //     'Implement file integrity monitoring.'
-    //   ],
-    //   distractors: [
-    //     'Install a SOAR on all endpoints.',
-    //     'Hash all files.',
-    //     'Install SIEM within a SOC.',
-    //     'Configure SOAR to monitor and intercept files and data leaving the network.'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 28
-    // },
+    {
+      question: 'A company that provides services to clients who work with highly sensitive data would like to provide assurance that the data\'s confidentiality is maintained in a dynamic, low-risk environment. Which of the following would best achieve this goal?',
+      answer: [
+        'Encrypt all data and files at rest, in transit, and in use.',
+        'Implement file integrity monitoring.'
+      ],
+      distractors: [
+        'Install a SOAR on all endpoints.',
+        'Hash all files.',
+        'Install SIEM within a SOC.',
+        'Configure SOAR to monitor and intercept files and data leaving the network.'
+      ],
+      explanation: '',
+      questionNumber: 28
+    },
     {
       question: 'An organization wants to implement an access control system based on its data classification policy that includes the following data types: \n\n' +
         '`Confidential`\n\n' +
@@ -362,21 +358,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 33
     },
-    // {
-    //   question: 'An incident response team completed recovery from offline backup for several workstations. The workstations were subjected to a ransomware attack after users fell victim to a spear-phishing campaign, despite a robust training program. Which of the following questions should be considered during the lessons-learned phase to most likely reduce the risk of reoccurrence? (Choose two.)',
-    //   answer: [
-    //     'What measurable user behaviors were exhibited that contributed to the compromise?',
-    //     'Which technical controls, if implemented, would provide defense when user training fails?'
-    //   ],
-    //   distractors: [
-    //     'Are there opportunities for legal recourse against the originators of the spear-phishing campaign?',
-    //     'What internal and external stakeholders need to be notified of the breach?',
-    //     'Which methods can be implemented to increase speed of offline backup recovery?',
-    //     'Which user roles are most often targeted by spear phishing attacks?'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 34
-    // },
+    {
+      question: 'An incident response team completed recovery from offline backup for several workstations. The workstations were subjected to a ransomware attack after users fell victim to a spear-phishing campaign, despite a robust training program. Which of the following questions should be considered during the lessons-learned phase to most likely reduce the risk of reoccurrence?',
+      answer: [
+        'What measurable user behaviors were exhibited that contributed to the compromise?',
+        'Which technical controls, if implemented, would provide defense when user training fails?'
+      ],
+      distractors: [
+        'Are there opportunities for legal recourse against the originators of the spear-phishing campaign?',
+        'What internal and external stakeholders need to be notified of the breach?',
+        'Which methods can be implemented to increase speed of offline backup recovery?',
+        'Which user roles are most often targeted by spear phishing attacks?'
+      ],
+      explanation: '',
+      questionNumber: 34
+    },
     {
       question: 'Two companies that recently merged would like to unify application access between the companies, without initially merging internal authentication stores. Which of the following technical strategies would best meet this objective?',
       answer: 'Federation',
@@ -502,19 +498,19 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 49
     },
-    // {
-    //   question: 'A security analyst is using data provided from a recent penetration test to calculate CVSS scores to prioritize remediation. Which of the following metric groups would the analyst need to determine to get the overall scores? (Choose three.)',
-    //   answer: ['Temporal', 'Base', 'Environmental'],
-    //   distractors: [
-    //     'Availability',
-    //     'Integrity',
-    //     'Confidentiality',
-    //     'Impact',
-    //     'Attack vector'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 50
-    // },
+    {
+      question: 'A security analyst is using data provided from a recent penetration test to calculate CVSS scores to prioritize remediation. Which of the following metric groups would the analyst need to determine to get the overall scores?',
+      answer: ['Temporal', 'Base', 'Environmental'],
+      distractors: [
+        'Availability',
+        'Integrity',
+        'Confidentiality',
+        'Impact',
+        'Attack vector'
+      ],
+      explanation: '',
+      questionNumber: 50
+    },
     {
       question: 'Which of the following describes how a risk assessment is performed when an organization has a critical vendor that provides multiple products?',
       answer: 'At the individual product level',
@@ -559,7 +555,7 @@ const securityQuiz = {
     //     '99.99% uptime\n' +
     //     'Load time in 3 seconds\n' +
     //     'Response time = <1.0 seconds\n\n' +
-    //     'Starting with the computing environment, which of the following should a security engineer recommend to best meet the requirements? (Choose three.)',
+    //     'Starting with the computing environment, which of the following should a security engineer recommend to best meet the requirements?',
     //   answer: [
     //     'Deploying a content delivery network',
     //     'Lowering storage input/output',
@@ -627,13 +623,20 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 61
     },
-    // {
-    //   question: '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 62
-    // },
+    {
+      question: 'A security analyst received the following finding from a cloud security assessment tool:\n' +
+        'Virtual Machine Data Disk is encrypted with the default encryption key.\n' +
+        'Because the organization hosts highly sensitive data files, regulations dictate it must be encrypted so It is unreadable to the CSP. Which of the following should be implemented to remediate the finding and meet the regulatory requirement?',
+      answer: ['Disk encryption with customer-provided keys', 'File-level encryption with customer-provided keys'],
+      distractors: [
+        'Disk encryption with keys from a third party',
+        'Row-level encryption with a key escrow',
+        'File-level encryption with cloud vendor-provided keys',
+        'Disk-level encryption with a cross-signed certificate'
+      ],
+      explanation: '',
+      questionNumber: 62
+    },
     {
       question: 'A security analyst discovers a new device on the company\'s dedicated IoT subnet during the most recent vulnerability scan. The scan results show numerous open ports and insecure protocols in addition to default usernames and passwords. A camera needs to transmit video to the security server in the IoT subnet. Which of the following should the security analyst recommend to securely operate the camera?',
       answer: 'Harden the camera configuration.',
@@ -652,13 +655,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 64
     },
-    // {
-    //   question: '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 65
-    // },
+    {
+      question: 'A security engineer would like to control configurations on mobile devices while fulfilling the following requirements:\n' +
+        'Support and control Apple and Android devices.\n\n\n' +
+        'The device must be corporate-owned.\n\n\n' +
+        'Which of the following would enable the engineer to meet these requirements?',
+      answer: ['Implement an MDM solution.', 'Update policy to prohibit the use of BYOD devices.'],
+      distractors: [
+        'Create a group policy to lock down mobile devices.',
+        'Update verbiage in the acceptable use policy for the internet.',
+        'Implement a captive portal solution.',
+        'Implement a RADIUS solution.'
+      ],
+      explanation: '',
+      questionNumber: 65
+    },
     {
       question: 'A pharmaceutical company uses a cloud provider to host thousands of independent resources in object storage. The company needs a practical and effective means of discovering data, monitoring changes, and identifying suspicious activity. Which of the following would best meet these requirements?',
       answer: 'A machine-learning-based data security service',
@@ -720,16 +731,16 @@ const securityQuiz = {
       questionNumber: 73
     },
     {
-      question: 'A help desk technician is troubleshooting an issue with an employee\'s laptop that will not boot into its operating system. The employee reported the laptop had been stolen but then found it one day later. The employee has asked the technician for help recovering important data. The technician has identified the following:\n' +
-      'The laptop operating system was not configured with BitLocker.\n' +
-      'The hard drive has no hardware failures.\n' +
-      'Data is present and readable on the hard drive, although it appears to be illegible.\n' +
+      question: `A help desk technician is troubleshooting an issue with an employee's laptop that will not boot into its operating system. The employee reported the laptop had been stolen but then found it one day later. The employee has asked the technician for help recovering important data. The technician has identified the following:\n\n\n` +
+      'The laptop operating system was not configured with BitLocker.\n\n\n' +
+      'The hard drive has no hardware failures.\n\n\n' +
+      'Data is present and readable on the hard drive, although it appears to be illegible.\n\n\n' +
       'Which of the following is the most likely reason the technician is unable to retrieve legible data from the hard drive?',
       answer: 'The hard drive experienced crypto-shredding.',
       distractors: [
         'The technician is using the incorrect cipher to read the data.',
         'The PKI certificate was revoked, and a new one must be installed.',
-        'he employee\'s password was changed, and the new password needs to be used.'
+        `The employee's password was changed, and the new password needs to be used.`
       ],
       explanation: '',
       questionNumber: 74
@@ -778,13 +789,13 @@ const securityQuiz = {
     //   explanation: '',
     //   questionNumber: 80
     // },
-    // {
-    //   question: '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 81
-    // },
+    {
+      question: 'A financial technology firm works collaboratively with business partners in the industry to share threat intelligence within a central platform. This collaboration gives partner organizations the ability to obtain and share data associated with emerging threats from a variety of adversaries. Which of the following should the organization most likely leverage to facilitate this activity?',
+      answer: ['STIX', 'TAXII'],
+      distractors: ['CWPP', 'YARA', 'ATT&CK', 'JTAG'],
+      explanation: '',
+      questionNumber: 81
+    },
     {
       question: 'A company wants to invest in research capabilities with the goal to operationalize the research output. Which of the following is the best option for a security architect to recommend?',
       answer: 'Threat intelligence platform',
@@ -873,13 +884,21 @@ const securityQuiz = {
       explanation: 'Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually. Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually.',
       questionNumber: 91
     },
-    // {
-    //   question: '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 92
-    // },
+    {
+      question: `During a gap assessment, an organization notes that BYOD usage is a significant risk. The organization implemented administrative policies prohibiting BYOD usage. However, the organization has not implemented technical controls to prevent the unauthorized use of BYOD assets when accessing the organization's resources. Which of the following solutions should the organization implement to best reduce the risk of BYOD devices?`,
+      answer: [
+        'Conditional access, to enforce user-to-device binding',
+        'NAC, to enforce device configuration requirements'
+      ],
+      distractors: [
+        'Cloud IAM, to enforce the use of token-based MFA',
+        'PAM, to enforce local password policies',
+        'SD-WAN, to enforce web content filtering through external proxies',
+        'DLP, to enforce data protection capabilities'
+      ],
+      explanation: '',
+      questionNumber: 92
+    },
     {
       question: 'An organization has several systems deployed in a public cloud and wants to confirm that when data retention periods are reached, the data is properly disposed of. Which of the following best meets the organization\'s needs?',
       answer: 'Encrypting the data with customer-managed keys and then deleting both the encryption key and the volume',
@@ -1003,22 +1022,24 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 104
     },
-    // {
-    //   question: 'A company hired an email service provider called my-email.com to deliver company emails. The company started having several issues during the migration. A security engineer is troubleshooting and observes the following configuration snippet: IMAGE',
-    //   answer: [
-    //     'The email CNAME record must be changed to a type A record pointing to 192.168.1.10',
-    //     'The TXT record must be changed to "v=spf ip4:192.168.1.10 include:my-email.com ~all"'
-    //   ],
-    //   distractors: [
-    //     'The email CNAME record must be changed to a type A record pointing to 192.168.1.11',
-    //     'The TXT record must be changed to "v=dmarc ip4:192.168.1.10 include:my-email.com ~all"',
-    //     'The srv01 A record must be changed to a type CNAME record pointing to the email server',
-    //     'The TXT record must be changed to "v=dkim ip4:192.168.1.11 include:my-email.com ~all"',
-    //     'The srv01 A record must be changed to a type CNAME record pointing to the web01 server'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 105
-    // },
+    {
+      question: 'A company hired an email service provider called my-email.com to deliver company emails. The company started having several issues during the migration. A security engineer is troubleshooting and observes the following configuration snippet:\n\n\n' +
+        `![Question 105](${imgPath(105)})\n\n` +
+        'Which of the following should the security engineer modify to fix the issue?',
+      answer: [
+        'The email CNAME record must be changed to a type A record pointing to 192.168.1.10',
+        'The TXT record must be changed to "v=spf ip4:192.168.1.10 include:my-email.com ~all"'
+      ],
+      distractors: [
+        'The email CNAME record must be changed to a type A record pointing to 192.168.1.11',
+        'The TXT record must be changed to "v=dmarc ip4:192.168.1.10 include:my-email.com ~all"',
+        'The srv01 A record must be changed to a type CNAME record pointing to the email server',
+        'The TXT record must be changed to "v=dkim ip4:192.168.1.11 include:my-email.com ~all"',
+        'The srv01 A record must be changed to a type CNAME record pointing to the web01 server'
+      ],
+      explanation: '',
+      questionNumber: 105
+    },
     {
       question: 'After a company discovered a zero-day vulnerability in its VPN solution, the company plans to deploy cloud-hosted resources to replace its current on-premises systems. An engineer must find an appropriate solution to facilitate trusted connectivity. Which of the following capabilities is the most relevant?',
       answer: 'Secure access service edge',
@@ -1289,18 +1310,23 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 129
     },
-    // {
-    //   question: '\n\n\n' +
-    //     `![Question 130](${imgPath(130)})\n\n\n` +
-    //     '',
-    //   answer: '',
-    //   distractors: [
-    //     '',
-    //     ''
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 130
-    // },
+    {
+      question: 'A vulnerability scan on a web server identified the following:\n\n\n' +
+        `![Question 130](${imgPath(130)})\n\n\n` +
+        'Which of the following actions would most likely eliminate on-path decryption attacks?',
+      answer: [
+        'Removing support for CBC-based key exchange and signing algorithms',
+        'Adding `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA256`'
+      ],
+      distractors: [
+        'Disallowing cipher suites that use ephemeral modes of operation for key agreement',
+        'Implementing HIPS rules to identify and block BEAST attack attempts',
+        'Restricting cipher suites to only allow `TLS_RSA_WITH_AES_128_CBC_SHA`',
+        'Increasing the key length to 256 for `TLS_RSA_WITH_AES_128_CBC_SHA`'
+      ],
+      explanation: '',
+      questionNumber: 130
+    },
     {
       question: 'A company’s help desk is experiencing a large number of calls from the finance department stating access issues to www.bank.com. The security operations center reviewed the following security logs:\n\n\n' +
         `![Question 131](${imgPath(131)})\n\n\n` +
@@ -1406,13 +1432,13 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 139
     },
-    // {
-    //   question: 'Emails that the marketing department is sending to customers are going to the customers’ spam folders. The security team is investigating the issue and discovers that the certificates used by the email server were reissued, but DNS records had not been updated. Which of the following should the security team update in order to fix this issue? (Choose three.)',
-    //   answer: ['DMARC', 'SPF', 'DKIM'],
-    //   distractors: ['DNSSEC', 'SASE', 'SAN', 'SOA', 'MX'],
-    //   explanation: '',
-    //   questionNumber: 140
-    // },
+    {
+      question: 'Emails that the marketing department is sending to customers are going to the customers’ spam folders. The security team is investigating the issue and discovers that the certificates used by the email server were reissued, but DNS records had not been updated. Which of the following should the security team update in order to fix this issue?',
+      answer: ['DMARC', 'SPF', 'DKIM'],
+      distractors: ['DNSSEC', 'SASE', 'SAN', 'SOA', 'MX'],
+      explanation: '',
+      questionNumber: 140
+    },
     {
       question: 'A security engineer performed a code scan that resulted in many false positives. The security engineer must find a solution that improves the quality of scanning results before application deployment. Which of the following is the best solution?',
       answer: 'Limiting the tool to a specific coding language and tuning the rule set',
@@ -1777,21 +1803,21 @@ const securityQuiz = {
     //   explanation: '',
     //   questionNumber: 171
     // },
-    // {
-    //   question: 'A compliance officer is facilitating a business impact analysis and wants business unit leaders to collect meaningful data. Several business unit leaders want more information about the types of data the officer needs. Which of the following data types would be the most beneficial for the compliance officer? (Choose two.)',
-    //   answer: [
-    //     'Costs associated with downtime',
-    //     'Critical processes'
-    //   ],
-    //   distractors: [
-    //     'Inventory details',
-    //     'Applicable contract obligations',
-    //     'Network diagrams',
-    //     'Contingency plans'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 172
-    // },
+    {
+      question: 'A compliance officer is facilitating a business impact analysis and wants business unit leaders to collect meaningful data. Several business unit leaders want more information about the types of data the officer needs. Which of the following data types would be the most beneficial for the compliance officer?',
+      answer: [
+        'Costs associated with downtime',
+        'Critical processes'
+      ],
+      distractors: [
+        'Inventory details',
+        'Applicable contract obligations',
+        'Network diagrams',
+        'Contingency plans'
+      ],
+      explanation: '',
+      questionNumber: 172
+    },
     // {
     //   question: 'An ISAC supplied recent threat intelligence information about pictures used on social media that provide reconnaissance of systems in use in secure facilities. In response, the Chief Information Security Officer (CISO) wants several configuration changes implemented via the MDM to ensure the following:' +
     //     '\n- Camera functions and location services are blocked for corporate mobile devices.' +
@@ -2063,20 +2089,20 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 196
     },
-    // {
-    //   question: 'The material findings from a recent compliance audit indicate a company has an issue with excessive permissions. The findings show that employees changing roles or departments results in privilege creep. Which of the following solutions are the best ways to mitigate this issue? (Choose two.)',
-    //   answer: ['Implementing a role-based access policy', 'Performing periodic access reviews'],
-    //   distractors: [
-    //     'Setting different access controls defined by business area',
-    //     'Implementing a role-based access policy',
-    //     'Designing a least-needed privilege policy',
-    //     'Establishing a mandatory vacation policy',
-    //     'Performing periodic access reviews',
-    //     'Requiring periodic job rotation'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 197
-    // },
+    {
+      question: 'The material findings from a recent compliance audit indicate a company has an issue with excessive permissions. The findings show that employees changing roles or departments results in privilege creep. Which of the following solutions are the best ways to mitigate this issue?',
+      answer: ['Implementing a role-based access policy', 'Performing periodic access reviews'],
+      distractors: [
+        'Setting different access controls defined by business area',
+        'Implementing a role-based access policy',
+        'Designing a least-needed privilege policy',
+        'Establishing a mandatory vacation policy',
+        'Performing periodic access reviews',
+        'Requiring periodic job rotation'
+      ],
+      explanation: '',
+      questionNumber: 197
+    },
     {
       question: 'A security analyst is reviewing a SIEM and generates the following report:\n\n\n' +
         `![Question 198](${imgPath(198)})\n\n\n` +
@@ -2098,7 +2124,7 @@ const securityQuiz = {
     //     '- Password policies\n' +
     //     '- Application allow listing\n' +
     //     '- Zero Trust application access\n' +
-    //     'Which of the following solutions best addresses the requirements? (Choose two.)',
+    //     'Which of the following solutions best addresses the requirements?',
     //   answer: ['MDM', 'SCAP'],
     //   distractors: ['MDM', 'CASB', 'SBoM', 'SCAP', 'SASE', 'HIDS'],
     //   explanation: '',
@@ -2221,21 +2247,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 211
     },
-    // {
-    //   question: 'A security architect is onboarding a new EDR agent on servers that traditionally do not have internet access. In order for the agent to receive updates and report back to the management console, some changes must be made. Which of the following should the architect do to best accomplish this requirement? (Choose two.)',
-    //   answer: [
-    //     'Create a firewall rule to only allow traffic from the subnet to the internet via a proxy.',
-    //     'Configure a proxy policy that allows only fully qualified domain names needed to communicate to a portal'
-    //   ],
-    //   distractors: [
-    //     'Configure a proxy policy that blocks all traffic on port 443',
-    //     'Create a firewall rule to only allow traffic from the subnet to the internet via port 443.',
-    //     'Create a firewall rule to only allow traffic from the subnet to the internet to fully qualified names that are not identified as malicious by the firewall vendor',
-    //     'Configure a proxy policy that blocks only lists of known-bad fully qualified domain names'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 212
-    // },
+    {
+      question: 'A security architect is onboarding a new EDR agent on servers that traditionally do not have internet access. In order for the agent to receive updates and report back to the management console, some changes must be made. Which of the following should the architect do to best accomplish this requirement?',
+      answer: [
+        'Create a firewall rule to only allow traffic from the subnet to the internet via a proxy.',
+        'Configure a proxy policy that allows only fully qualified domain names needed to communicate to a portal'
+      ],
+      distractors: [
+        'Configure a proxy policy that blocks all traffic on port 443',
+        'Create a firewall rule to only allow traffic from the subnet to the internet via port 443.',
+        'Create a firewall rule to only allow traffic from the subnet to the internet to fully qualified names that are not identified as malicious by the firewall vendor',
+        'Configure a proxy policy that blocks only lists of known-bad fully qualified domain names'
+      ],
+      explanation: '',
+      questionNumber: 212
+    },
     {
       question: 'Due to an infrastructure optimization plan, a company has moved from a unified architecture to a federated architecture divided by region. Long-term employees now have a better experience, but new employees are experiencing major performance issues when traveling between regions. The company is reviewing the following information:\n\n\n' +
         `![Question 213](${imgPath(213)})\n\n\n` +
@@ -2330,21 +2356,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 221
     },
-    // {
-    //   question: 'Company A acquired Company В and needs to determine how the acquisition will impact the attack surface of the organization as a whole. Which of the following is the best way to achieve this goal? (Choose two.)',
-    //   answer: [
-    //     `Documenting third-party connections used by Company В`,
-    //     `Performing an architectural review of Company B's network`,
-    //   ],
-    //   distractors: [
-    //     `Implementing DLP controls preventing sensitive data from leaving Company B's network`,
-    //     'Reviewing the privacy policies currently adopted by Company В',
-    //     'Requiring data sensitivity labeling for all files shared with Company В',
-    //     `Forcing a password reset requiring more stringent passwords for users on Company B's network`
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 222
-    // },
+    {
+      question: 'Company A acquired Company В and needs to determine how the acquisition will impact the attack surface of the organization as a whole. Which of the following is the best way to achieve this goal?',
+      answer: [
+        `Documenting third-party connections used by Company В`,
+        `Performing an architectural review of Company B's network`
+      ],
+      distractors: [
+        `Implementing DLP controls preventing sensitive data from leaving Company B's network`,
+        'Reviewing the privacy policies currently adopted by Company В',
+        'Requiring data sensitivity labeling for all files shared with Company В',
+        `Forcing a password reset requiring more stringent passwords for users on Company B's network`
+      ],
+      explanation: '',
+      questionNumber: 222
+    },
     // {
     //   question: 'After an incident occurred, a team reported during the lessons-learned review that the team:\n' +
     //     '- Lost important information for further analysis.\n' +
@@ -2378,7 +2404,7 @@ const securityQuiz = {
     //     '- Exfiltration of intellectual property\n' +
     //     '- Unencrypted files\n' +
     //     '- Weak user passwords\n' +
-    //     'Which of the following is the best way to mitigate these vulnerabilities? (Choose two.)',
+    //     'Which of the following is the best way to mitigate these vulnerabilities?',
     //   answer: [
     //     'Implementing data loss prevention',
     //     'Deploying directory-based group policies'
@@ -2524,21 +2550,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 237
     },
-    // {
-    //   question: 'A security engineer is given the following requirements:\n' +
-    //     '- An endpoint must only execute internally signed applications.\n' +
-    //     '- Administrator accounts cannot install unauthorized software\n' +
-    //     '- Attempts to run unauthorized software must be logged\n' +
-    //     'Which of the following best meets these requirements?',
-    //   answer: 'Configuring application control with blocked hashes and enterprise-trusted root certificates',
-    //   distractors: [
-    //     'Maintaining appropriate account access through directory management and controls',
-    //     'Implementing a CSPM platform to monitor updates being pushed to applications',
-    //     'Deploying an EDR solution to monitor and respond to software installation attempts'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 238
-    // },
+    {
+      question: 'A security engineer is given the following requirements:\n\n\n' +
+        '+ An endpoint must only execute internally signed applications.\n\n' +
+        '+ Administrator accounts cannot install unauthorized software\n\n' +
+        '+ Attempts to run unauthorized software must be logged\n\n' +
+        'Which of the following best meets these requirements?',
+      answer: 'Configuring application control with blocked hashes and enterprise-trusted root certificates',
+      distractors: [
+        'Maintaining appropriate account access through directory management and controls',
+        'Implementing a CSPM platform to monitor updates being pushed to applications',
+        'Deploying an EDR solution to monitor and respond to software installation attempts'
+      ],
+      explanation: '',
+      questionNumber: 238
+    },
     {
       question: 'After an organization met with its ISAC, the organization decided to test the resiliency of its security controls against a small number of advanced threat actors. Which of the following will enable the security administrator to accomplish this task?',
       answer: 'Adversary emulation',
