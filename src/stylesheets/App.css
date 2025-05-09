@@ -84,6 +84,21 @@ a:hover {
   background-color: var(--bg-answer-selected);
 }
 
+.checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-primary);
+  border-radius: 4px;
+  margin-left: 5px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 16px;
+  font-weight: bold;
+  color: var(--text-primary);
+  background-color: transparent;
+}
+
 .quiz-btn,
 .results-btn,
 .modal-btn {

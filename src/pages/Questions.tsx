@@ -36,10 +36,21 @@ const Questions: React.FC<QuizProps> = QuizProps => {
                   (choice: string, index: number) => (
                     <li key={index}>
                       <button
-                        className={`answers-btns ${choice === QuizProps.selectedOption ? 'answers-btns--selected' : ''}`}
+                        className={`answers-btns ${
+                          Array.isArray(QuizProps.selectedOption)
+                            ? QuizProps.selectedOption.includes(choice) ? 'answers-btns--selected' : ''
+                            : choice === QuizProps.selectedOption ? 'answers-btns--selected' : ''
+                        }`}
                         onClick={() => QuizProps.selectOption(choice)}
                       >
-                        {choice}
+                        <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                          {Array.isArray(QuizProps.currQuestion.answer) ? (
+                            <span className="checkbox">
+                              {Array.isArray(QuizProps.selectedOption) && QuizProps.selectedOption.includes(choice) ? '✓' : ''}
+                            </span>
+                          ) : null}
+                          <span style={{ flexGrow: 1, textAlign: 'center' }}>{choice}</span>
+                        </div>
                       </button>
                     </li>
                   )
@@ -48,10 +59,20 @@ const Questions: React.FC<QuizProps> = QuizProps => {
             <hr />
             <button
               className="select-btns submit-btn"
-              style={{ opacity: QuizProps.selectedOption ? 1 : 0.5 }}
+              style={{
+                opacity: Array.isArray(QuizProps.currQuestion.answer)
+                  ? (Array.isArray(QuizProps.selectedOption) && QuizProps.selectedOption.length === QuizProps.currQuestion.answer.length) ? 1 : 0.5
+                  : QuizProps.selectedOption ? 1 : 0.5
+              }}
+              disabled={Array.isArray(QuizProps.currQuestion.answer)
+                ? !(Array.isArray(QuizProps.selectedOption) && QuizProps.selectedOption.length === QuizProps.currQuestion.answer.length)
+                : !QuizProps.selectedOption
+              }
               onClick={() => QuizProps.checkAnswer()}
             >
-              Submit
+              {Array.isArray(QuizProps.currQuestion.answer)
+                ? `Submit (Choose ${QuizProps.currQuestion.answer.length})`
+                : 'Submit'}
             </button>
           </fieldset>
         )}

@@ -32,7 +32,11 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
           <p>
             <b>Your Answer:</b>
           </p>
-          <p>{QuizQuestion.chosenAnswer}</p>
+          <p>
+            {Array.isArray(QuizQuestion.chosenAnswer)
+              ? QuizQuestion.chosenAnswer.join(', ')
+              : QuizQuestion.chosenAnswer}
+          </p>
           <>
             {QuizQuestion?.displayExplanation ? (
               <>
@@ -44,16 +48,20 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             ) : ('')}
           </>
 
-          {/* TODO: Display conditionally */}
-          {/*<a*/}
-          {/*  className="modal-link"*/}
-          {/*  href={QuizQuestion.showReference}*/}
-          {/*  target="_blank"*/}
-          {/*  rel="noopener noreferrer"*/}
-          {/*>*/}
-          {/*  Learn more with this helpful resource*/}
-          {/*</a>*/}
-          <br />
+          {/* Display reference link only if one exists */}
+          {QuizQuestion.showReference && (
+            <>
+              <a
+                className="modal-link"
+                href={QuizQuestion.showReference}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more with this helpful resource
+              </a>
+              <br />
+            </>
+          )}
         </div>
         <div className="modal-footer">
           <button className="modal-btn" onClick={QuizQuestion.nextQuestion}>

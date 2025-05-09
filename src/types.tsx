@@ -31,7 +31,7 @@ export interface Quiz {
 
 export interface Question {
   question: string;
-  answer: string;
+  answer: string | string[];
   distractors: string[];
   explanation: string;
   questionNumber?: number;
@@ -42,7 +42,7 @@ export interface Question {
 export interface QuizQuestion {
   message: string;
   points: number;
-  chosenAnswer: string;
+  chosenAnswer: string | string[];
   correct: boolean;
   displayExplanation: string;
   showReference: string;
@@ -52,14 +52,16 @@ export interface QuizQuestion {
 
 // TODO: Fix this type
 export interface QuizProps {
-  currQuestion: { question: string };
+  currQuestion: {
+    question: string; answer: string | string[]
+  };
   questionNumber: number;
   totalQuestions: number;
   modalProps: QuizQuestion;
   chooseAnswer: boolean;
   points: number;
   choicesArr: string[][];
-  selectedOption: string;
+  selectedOption: string | string[];
   selectOption: (option: string) => void;
   checkAnswer: () => void;
 }

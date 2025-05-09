@@ -21,8 +21,8 @@ const Main: React.FC = () => {
   const [correct, setCorrect] = useState(false);
   const [displayExplanation, setDisplayExplanation] = useState('');
   const [showReference, setShowReference] = useState('');
-  const [selectedOption, setSelectedOption] = useState('');
-  const [chosenAnswer, setChosenAnswer] = useState('');
+  const [selectedOption, setSelectedOption] = useState<string | string[]>('');
+  const [chosenAnswer, setChosenAnswer] = useState<string | string[]>('');
   const [chooseAnswer, setChooseAnswer] = useState(false);
   const [show, setShowModal] = useState(false);
 
@@ -62,7 +62,13 @@ const Main: React.FC = () => {
 
     const choicesArr: string[][] = shuffledQuiz.map((obj) => {
       const validDistractors = obj.distractors.filter((str: string) => str.trim().length > 0);
-      return shuffle<string>([obj.answer, ...validDistractors]);
+      if (Array.isArray(obj.answer)) {
+        // For multi-select questions, include all answers and distractors
+        return shuffle<string>([...obj.answer, ...validDistractors]);
+      } else {
+        // For single-select questions, include the answer and distractors
+        return shuffle<string>([obj.answer, ...validDistractors]);
+      }
     });
 
     setQuiz(shuffledQuiz);
@@ -112,33 +118,72 @@ const Main: React.FC = () => {
     return shuffleModalArr[0];
   };
 
-  const selectOption = (option: string) => setSelectedOption(option);
+  const selectOption = (option: string) => {
+    if (Array.isArray(currQuestion.answer)) {
+      // For multi-select questions
+      setSelectedOption(prevSelected => {
+        if (Array.isArray(prevSelected)) {
+          // If the option is already selected, remove it
+          if (prevSelected.includes(option)) {
+            return prevSelected.filter(item => item !== option);
+          }
+          // If we haven't reached the maximum number of selections, add the option
+          else if (prevSelected.length < currQuestion.answer.length) {
+            return [...prevSelected, option];
+          }
+          // If we've reached the maximum, replace the first selected option
+          else {
+            return [...prevSelected.slice(1), option];
+          }
+        } else {
+          // Initialize the array with the first selection
+          return [option];
+        }
+      });
+    } else {
+      // For single-select questions
+      setSelectedOption(option);
+    }
+  };
 
   const checkAnswer = () => {
     const userAnswer = selectedOption;
 
     // Ensure option was selected before checking the answer
-    if (!userAnswer) {
+    if (!userAnswer || (Array.isArray(userAnswer) && userAnswer.length === 0)) {
       return;
     }
 
-    setSelectedOption('');
+    setSelectedOption(Array.isArray(currQuestion.answer) ? [] : '');
     setChooseAnswer(true);
     setChosenAnswer(userAnswer);
-    if (userAnswer !== currQuestion.answer) {
-      setCorrect(false);
-      setMessage(shuffleModalResponses(incorrectModalResponses));
-      setDisplayExplanation(currQuestion?.explanation || '');
-      setShowReference(currQuestion?.link || '');
-      setShowModal(true);
-    } else {
+
+    let isCorrect = false;
+
+    if (Array.isArray(currQuestion.answer) && Array.isArray(userAnswer)) {
+      // For multi-select questions
+      // Check if the user selected the correct number of answers
+      if (userAnswer.length === currQuestion.answer.length) {
+        // Check if all selected answers are correct
+        isCorrect = currQuestion.answer.every(answer => userAnswer.includes(answer));
+      }
+    } else if (!Array.isArray(currQuestion.answer) && !Array.isArray(userAnswer)) {
+      // For single-select questions
+      isCorrect = userAnswer === currQuestion.answer;
+    }
+
+    if (isCorrect) {
       setCorrect(true);
       setPoints(curr => curr + 1);
       setMessage(shuffleModalResponses(correctModalResponses));
-      setDisplayExplanation(currQuestion?.explanation || '');
-      setShowReference(currQuestion?.link || '');
-      setShowModal(true);
+    } else {
+      setCorrect(false);
+      setMessage(shuffleModalResponses(incorrectModalResponses));
     }
+
+    setDisplayExplanation(currQuestion?.explanation || '');
+    setShowReference(currQuestion?.link || '');
+    setShowModal(true);
   };
 
   const modalProps = {

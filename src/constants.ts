@@ -12,10 +12,10 @@
 // import pythonQuiz from './data/quizzes/python-quiz';
 // import qualityAssuranceQuiz from './data/quizzes/quality-assurance-quiz';
 // import regexQuiz from './data/quizzes/regex-quiz';
-// import securityQuiz from './data/quizzes/security-quiz.ts';
-import securityXQuiz from './data/quizzes/securityx-quiz.ts';
+// import securityQuiz from './data/quizzes/security-quiz';
+import securityXQuiz from './data/quizzes/securityx-quiz';
 // import sqlQuiz from './data/quizzes/sql-quiz';
-import { Quiz } from './types.tsx';
+import { Quiz } from './types';
 
 const quizzes: Quiz[] = [
   // accessibilityQuiz,
@@ -39,7 +39,11 @@ const quizzes: Quiz[] = [
 
 const mapQuizCategory = (quiz: Quiz) => {
   const validQuestions = quiz.questions.filter((q) => {
-    const hasValidAnswer = q.answer && q.answer.trim().length > 0;
+    const hasValidAnswer = q.answer && (
+      Array.isArray(q.answer)
+        ? q.answer.length > 0 && q.answer.every(a => a?.trim()?.length > 0)
+        : q.answer?.trim().length > 0
+    );
     const validDistractors = Array.isArray(q.distractors) && q.distractors.filter((d: string) => d.trim().length > 0).length > 0;
     return hasValidAnswer && validDistractors;
   });
