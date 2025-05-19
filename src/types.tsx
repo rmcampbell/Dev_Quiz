@@ -44,6 +44,7 @@ export interface QuizQuestion {
   points: number;
   chosenAnswer: string | string[];
   correct: boolean;
+  correctAnswer?: string | string[];
   displayExplanation: string;
   showReference: string;
   nextQuestion: MouseEventHandler;
