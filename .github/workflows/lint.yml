@@ -24,8 +24,8 @@ jobs:
 
       - name: Setup npm
         uses: actions/setup-node@v4
-          with:
-            node-version: 20
+          #          with:
+          #  node-version: 20
         # - uses: actions/checkout@v4
 
       - name: Lint Source Files
