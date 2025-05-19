@@ -1,13 +1,13 @@
 # -------------------------------------------------
-
-# Here are the reviewers for this project
+* @rmcampbell
 
 # -------------------------------------------------
+# Project reviewers
+# -------------------------------------------------
 
-- @jdwilkin4
-- @JoyShaheb
+- @rmcampbell
 
 # --- Owned by none (negate rule above) ---
 
-package.json
-package-lock.json
+<!-- package.json -->
+<!-- package-lock.json -->

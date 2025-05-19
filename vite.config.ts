@@ -5,9 +5,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: 'dev_quiz/',
   server: {
     watch: {
-      usePolling: true // required for container hot reloading
+      // required for container hot reloading
+      usePolling: true
     },
     port: 3000,
     host: true, // fixes container xdg-open issues

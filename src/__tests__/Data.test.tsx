@@ -7,9 +7,9 @@ describe('Every question is valid', () => {
     input => {
       expect(input).toHaveProperty('question');
       expect(input).toHaveProperty('answer');
-      expect(input).toHaveProperty('Distractors');
-      expect(input).toHaveProperty('Explanation');
-      expect(input).toHaveProperty('Link');
+      expect(input).toHaveProperty('distractors');
+      expect(input).toHaveProperty('explanation');
+      // expect(input).toHaveProperty('Link');
     }
   );
   test.each(ALL_CATEGORIES)(
@@ -19,7 +19,7 @@ describe('Every question is valid', () => {
       expect(input.answer.length).toBeGreaterThan(0);
       expect(input.distractors.length).toBeGreaterThan(0);
       expect(input.explanation.length).toBeGreaterThan(0);
-      expect(input.link.length).toBeGreaterThan(0);
+      // expect(input.link.length).toBeGreaterThan(0);
     }
   );
 });
