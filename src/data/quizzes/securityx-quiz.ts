@@ -14,27 +14,27 @@ const securityQuiz = {
   category: 'SecurityX',
   questions: [
     {
-      question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n\n' +
+      question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n' +
         `![Question](${imgPath(1)})\n\n` +
         'Which of the following most likely occurred when the employee connected a personally owned Windows laptop and was allowed on the network?',
-      answer: 'The OS was running a Windows version below 10 and triggered a false negative.',
+      answer: 'The OS was running a Windows version below 10 and triggered a false negative',
       distractors: [
-        'The agent was not running on the laptop, which triggered a false positive.',
-        'The OS was a valid version, but the MDM agent was not installed, triggering a true positive.',
-        'The OS version was higher than 11, and the MDM agent was running, triggering a true negative.'
+        'The agent was not running on the laptop, which triggered a false positive',
+        'The OS was a valid version, but the MDM agent was not installed, triggering a true positive',
+        'The OS version was higher than 11, and the MDM agent was running, triggering a true negative'
       ],
-      explanation: '1',
+      explanation: '',
       questionNumber: 1
     },
     {
       question: 'An organization is working to secure its development process to ensure developers cannot deploy artifacts directly into the production environment. Which of the following security practice recommendations would be the best to accomplish this objective?',
-      answer: 'Set up policies and systems with separation of duties.',
+      answer: 'Set up policies and systems with separation of duties',
       distractors: [
-        'Implement least privilege access to all systems.',
-        'Roll out security awareness training for all users.',
-        'Enforce job rotations for all developers and administrators.',
-        'Utilize mandatory vacations for all developers.',
-        'Review all access to production systems on a quarterly basis.'
+        'Implement least privilege access to all systems',
+        'Roll out security awareness training for all users',
+        'Enforce job rotations for all developers and administrators',
+        'Utilize mandatory vacations for all developers',
+        'Review all access to production systems on a quarterly basis'
       ],
       explanation: '2',
       questionNumber: 2
@@ -54,15 +54,15 @@ const securityQuiz = {
       questionNumber: 3
     },
     {
-      question: 'A security architect needs to enable a container orchestrator for DevSecOps and SOAR initiatives. The engineer has discovered that several Ansible YAML files used for the automation of configuration management have the following content:\n\n\n' +
-        `![Question](${imgPath(4)})\n\n\n` +
+      question: 'A security architect needs to enable a container orchestrator for DevSecOps and SOAR initiatives. The engineer has discovered that several Ansible YAML files used for the automation of configuration management have the following content:\n\n' +
+        `![Question](${imgPath(4)})\n\n` +
         'Which of the following should the engineer do to correct the security issues presented within this content?',
-      answer: 'Update or remove the ansible.cfg file.',
+      answer: 'Update or remove the ansible.cfg file',
       distractors: [
-        'Update the kubernetes.core.k8s module to kubernetes.core.k8s_service in the main.yml file.',
-        'Update the COMPTIA001 hostname to localhost using the hostnamectl command.',
-        'Update the state: present module to state: absent in the main.yml file.',
-        'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file.'
+        'Update the kubernetes.core.k8s module to kubernetes.core.k8s_service in the main.yml file',
+        'Update the COMPTIA001 hostname to localhost using the hostnamectl command',
+        'Update the state: present module to state: absent in the main.yml file',
+        'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file'
       ],
       explanation: '4',
       questionNumber: 4
@@ -76,11 +76,11 @@ const securityQuiz = {
     },
     {
       question: 'Company A is merging with Company B. Company A is a small, local company. Company B has a large, global presence. The two companies have a lot of duplication in their IT systems, processes, and procedures. On the new Chief Information Officer\'s (CIO\'s) first day, a fire breaks out at Company B\'s main data center. Which of the following actions should the CIO take first?',
-      answer: 'Review the incident response plans, and engage the disaster recovery plan while relying on the IT leaders from both companies.',
+      answer: 'Review the incident response plans, and engage the disaster recovery plan while relying on the IT leaders from both companies',
       distractors: [
-        'Determine whether the incident response plan has been tested at both companies, and use it to respond.',
-        'Ensure hot, warm, and mobile disaster recovery sites are available, and give an update to the companies\' leadership teams.',
-        `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA.`
+        'Determine whether the incident response plan has been tested at both companies, and use it to respond',
+        `Ensure hot, warm, and mobile disaster recovery sites are available, and give an update to the companies' leadership teams`,
+        `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA`
       ],
       explanation: '6',
       questionNumber: 6
@@ -88,22 +88,22 @@ const securityQuiz = {
     {
       question: 'The results of an internal audit indicate several employees reused passwords that were previously included in a published list of compromised passwords.\n' +
         'The company has the following employee password policy:\n\n' +
-        `![Question](${imgPath(7)})\n\n\n` +
+        `![Question](${imgPath(7)})\n\n` +
         'Which of the following should be implemented to best address the password reuse issue?',
-      answer: ['Increase the minimum age to two days.', 'Increase the history to 20.'],
+      answer: ['Increase the minimum age to two days', 'Increase the history to 20'],
       distractors: [
-        'Increase the character length to 12.',
-        'Add case-sensitive requirements to character class.',
-        'Decrease the maximum age to 30 days.',
-        'Remove the complexity requirements.',
-        'Increase the maximum age to 120 days.'
+        'Increase the character length to 12',
+        'Add case-sensitive requirements to character class',
+        'Decrease the maximum age to 30 days',
+        'Remove the complexity requirements',
+        'Increase the maximum age to 120 days'
       ],
       explanation: '',
       questionNumber: 7
     },
     {
       question: 'A mobile administrator is reviewing the following mobile device DHCP logs to ensure the proper mobile settings are applied to managed devices:\n\n' +
-        `![Question 8](${imgPath(8)})\n\n\n` +
+        `![Question 8](${imgPath(8)})\n\n` +
         'Which of the following mobile configuration settings is the mobile administrator verifying?',
       answer: 'Association MAC address randomization',
       distractors: [
@@ -116,11 +116,11 @@ const securityQuiz = {
     },
     {
       question: 'A security analyst is investigating a possible insider threat incident that involves the use of an unauthorized USB from a shared account to exfiltrate data. The event did not create an alert. The analyst has confirmed the USB hardware ID is not on the device allow list, but has not yet confirmed the owner of the USB device. Which of the following actions should the analyst take next?',
-      answer: 'Classify the incident as a false negative.',
+      answer: 'Classify the incident as a false negative',
       distractors: [
-        'Classify the incident as a false positive.',
-        'Classify the incident as a true positive.',
-        'Classify the incident as a true negative.'
+        'Classify the incident as a false positive',
+        'Classify the incident as a true positive',
+        'Classify the incident as a true negative'
       ],
       explanation: '9',
       questionNumber: 9
@@ -147,14 +147,14 @@ const securityQuiz = {
     {
       question: 'While performing mandatory monthly patch updates on a production application server, the security analyst reports an instance of buffer overflow for a new application that was migrated to the cloud and is also publicly exposed. Security policy requires that only internal users have access to the application. Which of the following should the analyst implement to mitigate the issues reported?',
       answer: [
-        'Configure firewall rules to block all external traffic.',
-        'Enable input validation for all fields.'
+        'Configure firewall rules to block all external traffic',
+        'Enable input validation for all fields'
       ],
       distractors: [
-        'Enable automatic updates to be installed on all servers.',
-        'Configure the security group to enable external traffic.',
-        'Set up a DLP policy to alert for exfiltration on all application servers.',
-        'Enable nightly vulnerability scans.'
+        'Enable automatic updates to be installed on all servers',
+        'Configure the security group to enable external traffic',
+        'Set up a DLP policy to alert for exfiltration on all application servers',
+        'Enable nightly vulnerability scans'
       ],
       explanation: 'A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
       questionNumber: 12
@@ -182,24 +182,24 @@ const securityQuiz = {
     },
     {
       question: 'Which of the following best explain why organizations prefer to utilize code that is digitally signed?',
-      answer: ['It provides origin assurance.', 'It verifies integrity.'],
+      answer: ['It provides origin assurance', 'It verifies integrity'],
       distractors: [
-        'It provides increased confidentiality.',
-        'It integrates with DRMs.',
-        `It verifies the recipient's identity.`,
-        'It ensures the code is free of malware.'
+        'It provides increased confidentiality',
+        'It integrates with DRMs',
+        `It verifies the recipient's identity`,
+        'It ensures the code is free of malware'
       ],
       explanation: 'Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
       questionNumber: 16
     },
     {
-      question: 'A security engineer receives reports through the organization\'s bug bounty program about remote code execution in a specific component in a custom application. Management wants to properly secure the component and proactively avoid similar issues. Which of the following is the best approach to uncover additional vulnerable paths in the application?',
-      answer: 'Use fuzz testing to uncover potential vulnerabilities in the application.',
+      question: `A security engineer receives reports through the organization's bug bounty program about remote code execution in a specific component in a custom application. Management wants to properly secure the component and proactively avoid similar issues. Which of the following is the best approach to uncover additional vulnerable paths in the application?`,
+      answer: 'Use fuzz testing to uncover potential vulnerabilities in the application',
       distractors: [
-        'Leverage an exploitation framework to uncover vulnerabilities.',
-        'Utilize a software composition analysis tool to report known vulnerabilities.',
-        'Reverse engineer the application to look for vulnerable code paths.',
-        'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues.'
+        'Leverage an exploitation framework to uncover vulnerabilities',
+        'Utilize a software composition analysis tool to report known vulnerabilities',
+        'Reverse engineer the application to look for vulnerable code paths',
+        'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
       explanation: 'Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
       questionNumber: 17
@@ -208,10 +208,10 @@ const securityQuiz = {
       question: 'A security technician is investigating a system that tracks inventory via a batch update each night. The technician is concerned that the system poses a risk to the business, as errors are occasionally generated and reported inventory appears incorrect. The following output log is provided:\n\n' +
         `![Question 18](${imgPath(18)})\n\n` +
         'The technician reviews the output of the batch job and discovers that the inventory was never less than zero, and the final inventory was 100 rather than 60. Which of the following should the technician do to resolve this issue?',
-      answer: 'Require the developers to include exception handlers to accommodate out-of-bounds results.',
+      answer: 'Require the developers to include exception handlers to accommodate out-of-bounds results',
       distractors: [
-        'Ensure that the application is using memory-safe functions to prevent integer overflows.',
-        'Recommend thread-safe processes in the code to eliminate race conditions.',
+        'Ensure that the application is using memory-safe functions to prevent integer overflows',
+        'Recommend thread-safe processes in the code to eliminate race conditions',
         'Move the batch processing from client side to server side to remove client processing inconsistencies'
       ],
       explanation: '',
@@ -240,11 +240,11 @@ const securityQuiz = {
     },
     {
       question: 'An internal user can send encrypted emails successfully to all recipients, except one. at an external organization. When the internal user attempts to send encrypted emails to this external recipient, a security error message appears. The issue does not affect unencrypted emails. The external recipient can send encrypted emails to internal users. Which of the following is the most likely cause of the issue?',
-      answer: `The external recipient's email address and the email address associated with the external recipient's public key are mismatched.`,
+      answer: `The external recipient's email address and the email address associated with the external recipient's public key are mismatched`,
       distractors: [
-        'The validity dates of the external recipient’s private key do not match the SSH keys with which the internal user is accessing the system.',
-        'The external recipient has an expired public/private key pair that has not been revoked by the CA.',
-        `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings.`
+        'The validity dates of the external recipient’s private key do not match the SSH keys with which the internal user is accessing the system',
+        'The external recipient has an expired public/private key pair that has not been revoked by the CA',
+        `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
       explanation: '',
       questionNumber: 21
@@ -272,11 +272,11 @@ const securityQuiz = {
     },
     {
       question: 'A systems administrator is working with the SOC to identify potential intrusions associated with ransomware. The SOC wants the systems administrator to perform network-level analysis to identify outbound traffic from any infected machines. Which of the following is the most appropriate action for the systems administrator to take?',
-      answer: 'Review NetFlow logs for unexpected increases in egress traffic.',
+      answer: 'Review NetFlow logs for unexpected increases in egress traffic',
       distractors: [
-        'Monitor for IoCs associated with C&C communications.',
-        'Tune alerts to Identify changes to administrative groups.',
-        'Perform binary hash comparisons to identify infected devices.'
+        'Monitor for IoCs associated with C&C communications',
+        'Tune alerts to Identify changes to administrative groups',
+        'Perform binary hash comparisons to identify infected devices'
       ],
       explanation: 'NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
       questionNumber: 25
@@ -298,28 +298,29 @@ const securityQuiz = {
     {
       question: 'A company that provides services to clients who work with highly sensitive data would like to provide assurance that the data\'s confidentiality is maintained in a dynamic, low-risk environment. Which of the following would best achieve this goal?',
       answer: [
-        'Encrypt all data and files at rest, in transit, and in use.',
-        'Implement file integrity monitoring.'
+        'Encrypt all data and files at rest, in transit, and in use',
+        'Implement file integrity monitoring'
       ],
       distractors: [
-        'Install a SOAR on all endpoints.',
-        'Hash all files.',
-        'Install SIEM within a SOC.',
-        'Configure SOAR to monitor and intercept files and data leaving the network.'
+        'Install a SOAR on all endpoints',
+        'Hash all files',
+        'Install SIEM within a SOC',
+        'Configure SOAR to monitor and intercept files and data leaving the network'
       ],
       explanation: '',
       questionNumber: 28
     },
     {
       question: 'An organization wants to implement an access control system based on its data classification policy that includes the following data types: \n\n' +
-        '`Confidential`\n\n' +
-        '`Restricted`\n\n' +
-        '`Internal`\n\n' +
-        '`Public Flag for Review`\n\n\n' +
-        'The access control system should support SSO federation to map users into groups. Each group should only access systems that process and store data at the classification assigned to the group. Which of the following should the organization implement to enforce its requirements with a minimal impact to systems and resources?',
+        '- `Confidential`\n\n' +
+        '- `Restricted`\n\n' +
+        '- `Internal`\n\n' +
+        '- `Public Flag for Review`\n\n' +
+        'The access control system should support SSO federation to map users into groups. Each group should only access systems that process and store data at the classification assigned to the group.\n\n' +
+        'Which of the following should the organization implement to enforce its requirements with a minimal impact to systems and resources?',
       answer: 'A tagging strategy in which all resources are assigned a tag based on the data classification type, and a system that enforces attribute-based access control',
       distractors: [
-        'Role-based access control that maps data types to internal roles, which are defined in the human resources department\'s source of truth system',
+        `Role-based access control that maps data types to internal roles, which are defined in the human resources department's source of truth system`,
         'Network microsegmentation based on data types, and a network access control system enforcing mandatory access control based on the user principal',
         'A rule-based access control strategy enforced by the SSO system with rules managed by the internal LDAP and applied on a per-system basis'
       ],
@@ -424,8 +425,8 @@ const securityQuiz = {
     },
     {
       question: 'Which of the following is the reason why security engineers often cannot upgrade the security of embedded facility automation systems?',
-      answer: 'They are constrained by available compute.',
-      distractors: ['They lack x86-64 processors.', 'They lack EEPROM.', 'They are not logic-bearing devices.'],
+      answer: 'They are constrained by available compute',
+      distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
       explanation: '',
       questionNumber: 42
     },
@@ -442,11 +443,11 @@ const securityQuiz = {
     },
     {
       question: `A security architect wants to ensure a remote host's identity and decides that pinning the X.509 certificate to the device is the most effective solution. Which of the following must happen first?`,
-      answer: 'Use an out-of-band method to obtain the certificate.',
+      answer: 'Use an out-of-band method to obtain the certificate',
       distractors: [
-        'Use Distinguished Encoding Rules (DER) for the certificate.',
-        'Extract the private key from the certificate.',
-        'Compare the retrieved certificate with the embedded certificate.'
+        'Use Distinguished Encoding Rules (DER) for the certificate',
+        'Extract the private key from the certificate',
+        'Compare the retrieved certificate with the embedded certificate'
       ],
       explanation: '',
       questionNumber: 44
@@ -460,22 +461,22 @@ const securityQuiz = {
     },
     {
       question: 'A security officer is requiring all personnel working on a special project to obtain a security clearance requisite with the level of all information being accessed. Data on this network must be protected at the same level of each clearance holder. The need to know must be verified by the data owner. Which of the following should the security officer do to meet these requirements?',
-      answer: 'Assign labels to the files and require formal access authorization.',
+      answer: 'Assign labels to the files and require formal access authorization',
       distractors: [
-        'Create a rule to authorize personnel only from certain IPs to access the files.',
-        'Assign attributes to each file and allow authorized users to share the files.',
-        'Assign roles to users and authorize access to files based on the roles.'
+        'Create a rule to authorize personnel only from certain IPs to access the files',
+        'Assign attributes to each file and allow authorized users to share the files',
+        'Assign roles to users and authorize access to files based on the roles'
       ],
       explanation: '',
       questionNumber: 46
     },
     {
       question: 'A security team receives alerts regarding impossible travel and possible brute-force attacks after normal business hours. After reviewing more logs, the team determines that specific users were targeted and attempts were made to transfer data to an unknown site. Which of the following should the team do to help mitigate these issues?',
-      answer: 'Restrict uploading activity to only authorized sites.',
+      answer: 'Restrict uploading activity to only authorized sites',
       distractors: [
-        'Create a firewall rule to prevent those users from accessing sensitive data.',
-        'Enable packet captures to continue to run for the source and destination related to the file transfer.',
-        'Disable login activity for those users after business hours.'
+        'Create a firewall rule to prevent those users from accessing sensitive data',
+        'Enable packet captures to continue to run for the source and destination related to the file transfer',
+        'Disable login activity for those users after business hours'
       ],
       explanation: '',
       questionNumber: 47
@@ -524,12 +525,8 @@ const securityQuiz = {
     },
     {
       question: 'A security engineer is performing a vulnerability management scan on multihomed Linux systems. The engineer notices that the vulnerability count is high due to the fact that each vulnerability is multiplied by the number of NICs on each system. Which of the following should the engineer do to deduplicate the vulnerabilities and to associate the vulnerabilities with a particular host?',
-      answer: 'Deploy an agent.',
-      distractors: [
-        'Use a SCAP scanner.',
-        'Initiate a discovery scan.',
-        'Perform an Nmap scan.'
-      ],
+      answer: 'Deploy an agent',
+      distractors: ['Use a SCAP scanner', 'Initiate a discovery scan', 'Perform an Nmap scan'],
       explanation: '',
       questionNumber: 52
     },
@@ -541,35 +538,35 @@ const securityQuiz = {
       questionNumber: 53
     },
     {
-      question: 'The principal security analyst for a global manufacturer is investigating a security incident related to abnormal behavior in the ICS network. A controller was restarted as part of the troubleshooting process, and the following issue was identified when the controller was restarted:\n' +
-      'SECURE BOOT FAILED:\n' +
-      'FIRMWARE MISMATCH EXPECTED UXFDC479 ACTUAL 0x79F31B\n' +
-      'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum. Which of the following stages of the MITRE ATT&CK framework for ICS includes this technique?',
+      question: 'The principal security analyst for a global manufacturer is investigating a security incident related to abnormal behavior in the ICS network. A controller was restarted as part of the troubleshooting process, and the following issue was identified when the controller was restarted:\n\n' +
+      '- `SECURE BOOT FAILED:`\n\n' +
+      '- `FIRMWARE MISMATCH EXPECTED UXFDC479 ACTUAL 0x79F31B`\n\n' +
+      'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\nWhich of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
       explanation: '',
       questionNumber: 54
     },
-    // {
-    //   question: 'A web service provider has just taken on a very large contract that comes with requirements that are currently not being implemented. In order to meet contractual requirements, the company must achieve the following thresholds:\n\n' +
-    //     '99.99% uptime\n' +
-    //     'Load time in 3 seconds\n' +
-    //     'Response time = <1.0 seconds\n\n' +
-    //     'Starting with the computing environment, which of the following should a security engineer recommend to best meet the requirements?',
-    //   answer: [
-    //     'Deploying a content delivery network',
-    //     'Lowering storage input/output',
-    //     'Implementing server clusters'
-    //   ],
-    //   distractors: [
-    //     'Installing a firewall at corporate headquarters',
-    //     'Employing bare-metal loading of applications',
-    //     'Implementing RAID on the backup servers',
-    //     'Utilizing redundant power for all developer workstations'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 55
-    // },
+    {
+      question: 'A web service provider has just taken on a very large contract that comes with requirements that are currently not being implemented. In order to meet contractual requirements, the company must achieve the following thresholds:\n\n' +
+        '- 99.99% uptime\n\n' +
+        '- Load time in 3 seconds\n\n' +
+        '- Response time = <1.0 seconds\n\n' +
+        'Starting with the computing environment, which of the following should a security engineer recommend to best meet the requirements?',
+      answer: [
+        'Deploying a content delivery network',
+        'Lowering storage input/output',
+        'Implementing server clusters'
+      ],
+      distractors: [
+        'Installing a firewall at corporate headquarters',
+        'Employing bare-metal loading of applications',
+        'Implementing RAID on the backup servers',
+        'Utilizing redundant power for all developer workstations'
+      ],
+      explanation: '55',
+      questionNumber: 55
+    },
     {
       question: 'An analyst is working to address a potential compromise of a corporate endpoint and discovers the attacker accessed a user\'s credentials. However, it is unclear if the system baseline was modified to achieve persistence. Which of the following would most likely support forensic activities in this scenario?',
       answer: 'Bit-level disk duplication',
@@ -614,18 +611,18 @@ const securityQuiz = {
       question: 'A security technician is trying to connect a remote site to the central office over a site-to-site VPN. The technician has verified the source and destination IP addresses are correct, but the technician is unable to get the remote site to connect. The following error message keeps repeating:\n' +
       'An error has occurred during Phase 1 handshake. Deleting keys and retrying...\n' +
       'Which of the following is most likely the reason the connection is failing?',
-      answer: 'The IKE hashing algorithm uses different key lengths on each VPN device.',
+      answer: 'The IKE hashing algorithm uses different key lengths on each VPN device',
       distractors: [
-        'The remote VPN is attempting to connect with a protocol other than SSL/TLS.',
-        'The IPSec settings allow more than one cipher suite on both devices.',
-        'The Diffie-Hellman group on both sides matches but is a legacy group.'
+        'The remote VPN is attempting to connect with a protocol other than SSL/TLS',
+        'The IPSec settings allow more than one cipher suite on both devices',
+        'The Diffie-Hellman group on both sides matches but is a legacy group'
       ],
       explanation: '',
       questionNumber: 61
     },
     {
-      question: 'A security analyst received the following finding from a cloud security assessment tool:\n' +
-        'Virtual Machine Data Disk is encrypted with the default encryption key.\n' +
+      question: 'A security analyst received the following finding from a cloud security assessment tool:\n\n' +
+        '- Virtual Machine Data Disk is encrypted with the default encryption key.\n\n' +
         'Because the organization hosts highly sensitive data files, regulations dictate it must be encrypted so It is unreadable to the CSP. Which of the following should be implemented to remediate the finding and meet the regulatory requirement?',
       answer: ['Disk encryption with customer-provided keys', 'File-level encryption with customer-provided keys'],
       distractors: [
@@ -638,10 +635,10 @@ const securityQuiz = {
       questionNumber: 62
     },
     {
-      question: 'A security analyst discovers a new device on the company\'s dedicated IoT subnet during the most recent vulnerability scan. The scan results show numerous open ports and insecure protocols in addition to default usernames and passwords. A camera needs to transmit video to the security server in the IoT subnet. Which of the following should the security analyst recommend to securely operate the camera?',
-      answer: 'Harden the camera configuration.',
-      distractors: ['Send camera logs to the SIEM.', 'Encrypt the camera\'s video stream.', 'Place the camera on an isolated segment.'],
-      explanation: '',
+      question: `A security analyst discovers a new device on the company's dedicated IoT subnet during the most recent vulnerability scan. The scan results show numerous open ports and insecure protocols in addition to default usernames and passwords. A camera needs to transmit video to the security server in the IoT subnet. Which of the following should the security analyst recommend to securely operate the camera?`,
+      answer: 'Harden the camera configuration',
+      distractors: ['Send camera logs to the SIEM', `Encrypt the camera's video stream`, 'Place the camera on an isolated segment'],
+      explanation: '63',
       questionNumber: 63
     },
     {
@@ -656,16 +653,16 @@ const securityQuiz = {
       questionNumber: 64
     },
     {
-      question: 'A security engineer would like to control configurations on mobile devices while fulfilling the following requirements:\n' +
-        'Support and control Apple and Android devices.\n\n\n' +
-        'The device must be corporate-owned.\n\n\n' +
+      question: 'A security engineer would like to control configurations on mobile devices while fulfilling the following requirements:\n\n' +
+        '- Support and control Apple and Android devices.\n\n' +
+        '- The device must be corporate-owned.\n\n' +
         'Which of the following would enable the engineer to meet these requirements?',
-      answer: ['Implement an MDM solution.', 'Update policy to prohibit the use of BYOD devices.'],
+      answer: ['Implement an MDM solution', 'Update policy to prohibit the use of BYOD devices'],
       distractors: [
-        'Create a group policy to lock down mobile devices.',
-        'Update verbiage in the acceptable use policy for the internet.',
-        'Implement a captive portal solution.',
-        'Implement a RADIUS solution.'
+        'Create a group policy to lock down mobile devices',
+        'Update verbiage in the acceptable use policy for the internet',
+        'Implement a captive portal solution',
+        'Implement a RADIUS solution'
       ],
       explanation: '',
       questionNumber: 65
@@ -693,8 +690,8 @@ const securityQuiz = {
     },
     {
       question: 'A regulated company is in the process of refreshing its entire infrastructure. The company has a business-critical process running on an old 2008 Windows server. If this server fails, the company would lose millions of dollars in revenue. Which of the following actions should the company should take?',
-      answer: 'Create an organizational risk register for project prioritization.',
-      distractors: ['Accept the risk as the cost of doing business.', 'Purchase insurance to offset the cost if a failure occurred.', 'Implement network compensating controls.'],
+      answer: 'Create an organizational risk register for project prioritization',
+      distractors: ['Accept the risk as the cost of doing business', 'Purchase insurance to offset the cost if a failure occurred', 'Implement network compensating controls'],
       explanation: '',
       questionNumber: 69
     },
@@ -706,9 +703,9 @@ const securityQuiz = {
       questionNumber: 70
     },
     {
-      question: 'A security architect recommends replacing the company\'s monolithic software application with a containerized solution. Historically, secrets have been stored in the application\'s configuration files. Which of the following changes should the security architect make in the new system?',
-      answer: 'Use a secrets management tool.',
-      distractors: ['Save secrets in key escrow.', 'Store the secrets inside the Dockerfiles.', 'Run all Dockerfiles in a randomized namespace.'],
+      question: `A security architect recommends replacing the company's monolithic software application with a containerized solution. Historically, secrets have been stored in the application's configuration files. Which of the following changes should the security architect make in the new system?`,
+      answer: 'Use a secrets management tool',
+      distractors: ['Save secrets in key escrow', 'Store the secrets inside the Dockerfiles', 'Run all Dockerfiles in a randomized namespace'],
       explanation: '',
       questionNumber: 71
     },
@@ -731,18 +728,18 @@ const securityQuiz = {
       questionNumber: 73
     },
     {
-      question: `A help desk technician is troubleshooting an issue with an employee's laptop that will not boot into its operating system. The employee reported the laptop had been stolen but then found it one day later. The employee has asked the technician for help recovering important data. The technician has identified the following:\n\n\n` +
-      'The laptop operating system was not configured with BitLocker.\n\n\n' +
-      'The hard drive has no hardware failures.\n\n\n' +
-      'Data is present and readable on the hard drive, although it appears to be illegible.\n\n\n' +
+      question: `A help desk technician is troubleshooting an issue with an employee's laptop that will not boot into its operating system. The employee reported the laptop had been stolen but then found it one day later. The employee has asked the technician for help recovering important data. The technician has identified the following:\n\n` +
+      'The laptop operating system was not configured with BitLocker.\n\n' +
+      'The hard drive has no hardware failures.\n\n' +
+      'Data is present and readable on the hard drive, although it appears to be illegible.\n\n' +
       'Which of the following is the most likely reason the technician is unable to retrieve legible data from the hard drive?',
-      answer: 'The hard drive experienced crypto-shredding.',
+      answer: 'The hard drive experienced crypto-shredding',
       distractors: [
-        'The technician is using the incorrect cipher to read the data.',
-        'The PKI certificate was revoked, and a new one must be installed.',
-        `The employee's password was changed, and the new password needs to be used.`
+        'The technician is using the incorrect cipher to read the data',
+        'The PKI certificate was revoked, and a new one must be installed',
+        `The employee's password was changed, and the new password needs to be used`
       ],
-      explanation: '',
+      explanation: '74',
       questionNumber: 74
     },
     // {
@@ -780,15 +777,19 @@ const securityQuiz = {
     //   explanation: '',
     //   questionNumber: 79
     // },
-    // {
-    //   question: '\n\n\n' +
-    //     `![Question 80](${imgPath(80)})\n\n\n` +
-    //     '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 80
-    // },
+    {
+      question: 'A security administrator needs to automate alerting. The server generates structured log files that need to be parsed to determine whether an alarm has been triggered. Given the following code function:\n\n' +
+        `![Question 80](${imgPath(80)})\n\n` +
+        'Which of the following is most likely the log input that the code will parse?',
+      answer: '["error_log"] ["system_1"] ["InAlarmState": True]',
+      distractors: [
+        '<"error_log"><"system_1">',
+        'error_log: - system_1: InAlarmState: True',
+        '<"error_log": {"system_1": {"InAlarmState": True }}}'
+      ],
+      explanation: '80',
+      questionNumber: 80
+    },
     {
       question: 'A financial technology firm works collaboratively with business partners in the industry to share threat intelligence within a central platform. This collaboration gives partner organizations the ability to obtain and share data associated with emerging threats from a variety of adversaries. Which of the following should the organization most likely leverage to facilitate this activity?',
       answer: ['STIX', 'TAXII'],
@@ -816,7 +817,7 @@ const securityQuiz = {
         'Which of the following assessments is the analyst performing?',
       answer: 'Supply chain',
       distractors: ['System', 'Quantitative', 'Organizational'],
-      explanation: '',
+      explanation: '84',
       questionNumber: 84
     },
     {
@@ -827,32 +828,44 @@ const securityQuiz = {
         'Implementing pair programming to improve development capabilities',
         'Implementing canary protection in an earlier life-cycle stage'
       ],
-      explanation: '',
+      explanation: '85',
       questionNumber: 85
     },
-    // {
-    //   question: '',
-    //   answer: '',
-    //   distractors: [],
-    //   explanation: '',
-    //   questionNumber: 86
-    // },
     {
-      question: 'A network engineer recorded the following test results:\n\n\n' +
-        `![Question 87](${imgPath('087_1')})\n\n\n` +
-        'After a new network security appliance was deployed, the results of the network test are as follows:\n\n\n' +
-        `![Question 87](${imgPath('087_2')})\n\n\n` +
+      question: 'Users are experiencing a variety of issues when trying to access corporate resources. Examples include:\n\n' +
+        '- Connectivity issues between local computers and file servers between branch offices\n\n' +
+        '- Inability to download corporate applications on mobile endpoints while working remotely\n\n' +
+        '- Certificate errors when accessing internal web applications\n\n' +
+        'Which of the following actions are the most relevant when troubleshooting the reported issues?',
+      answer: [
+        'Review VPN throughput',
+        'Validate MDM asset compliance'
+      ],
+      distractors: [
+        'Check IDS rules',
+        'Restore static content on the CDN',
+        'Enable secure authentication using NAC',
+        'Implement advanced WAF rules'
+      ],
+      explanation: '86',
+      questionNumber: 86
+    },
+    {
+      question: 'A network engineer recorded the following test results:\n\n' +
+        `![Question 87](${imgPath('087_1')})\n\n` +
+        'After a new network security appliance was deployed, the results of the network test are as follows:\n\n' +
+        `![Question 87](${imgPath('087_2')})\n\n` +
         'Which of the following network infrastructure components most likely produced these results?',
       answer: 'IPS',
       distractors: ['CDN', 'VPN', 'IDS'],
-      explanation: '',
+      explanation: '87',
       questionNumber: 87
     },
     {
       question: 'A developer needs to improve the cryptographic strength of a password-storage component in a web application without completely replacing the crypto-module. Which of the following is the most appropriate technique?',
       answer: 'Key stretching',
       distractors: ['Key encryption', 'Key rotation', 'Key escrow', 'Key splitting'],
-      explanation: '',
+      explanation: '88',
       questionNumber: 88
     },
     {
@@ -864,22 +877,22 @@ const securityQuiz = {
     },
     {
       question: 'Which of the following is the main reason quantum computing advancements are leading companies and countries to deploy new encryption algorithms?',
-      answer: 'Encryption systems based on large prime numbers will be vulnerable to exploitation.',
+      answer: 'Encryption systems based on large prime numbers will be vulnerable to exploitation',
       distractors: [
-        'Quantum computers will enable malicious actors to capture IP traffic in real time.',
-        'Zero Trust security architectures will require homomorphic encryption.',
-        'Perfect forward secrecy will prevent deployment of advanced firewall monitoring techniques.'
+        'Quantum computers will enable malicious actors to capture IP traffic in real time',
+        'Zero Trust security architectures will require homomorphic encryption',
+        'Perfect forward secrecy will prevent deployment of advanced firewall monitoring techniques'
       ],
-      explanation: '',
+      explanation: '90',
       questionNumber: 90
     },
     {
       question: 'A company is adopting microservice architecture in order to quickly remediate vulnerabilities and deploy to production. All of the microservices run on the same Linux platform. Significant time was spent updating the base OS before deploying code. Which of the following should the company do to make the process efficient?',
-      answer: 'Use Terraform scripts while creating golden images.',
+      answer: 'Use Terraform scripts while creating golden images',
       distractors: [
-        'Create a cron job to run apt-update every 30 days.',
-        'Deploy a centralized update server.',
-        'Use snapshots to deploy code to existing compute instances.'
+        'Create a cron job to run apt-update every 30 days',
+        'Deploy a centralized update server',
+        'Use snapshots to deploy code to existing compute instances'
       ],
       explanation: 'Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually. Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually.',
       questionNumber: 91
@@ -896,7 +909,7 @@ const securityQuiz = {
         'SD-WAN, to enforce web content filtering through external proxies',
         'DLP, to enforce data protection capabilities'
       ],
-      explanation: '',
+      explanation: '92',
       questionNumber: 92
     },
     {
@@ -907,7 +920,7 @@ const securityQuiz = {
         'Utilizing a data-wiping software to overwrite the existing data',
         'Asking the cloud provider for copies of certificates of destruction'
       ],
-      explanation: '',
+      explanation: '93',
       questionNumber: 93
     },
     {
@@ -918,7 +931,7 @@ const securityQuiz = {
         'To enable log correlation using machine learning',
         'To orchestrate additional reporting for the security operations center'
       ],
-      explanation: '',
+      explanation: '94',
       questionNumber: 94
     },
     {
@@ -934,11 +947,11 @@ const securityQuiz = {
     },
     {
       question: 'A systems engineer is configuring SSO for a business that will be using SaaS applications for its remote-only workforce. Privileged actions in SaaS applications must be allowed only from corporate mobile devices that meet minimum security requirements, but BYOD must also be permitted for other activity. Which of the following would best meet this objective?',
-      answer: 'Configure device attestations and continuous authorization controls.',
+      answer: 'Configure device attestations and continuous authorization controls',
       distractors: [
-        'Deploy application protection policies using a corporate, cloud-based MDM solution.',
-        `Block any connections from outside the business's network security boundary.`,
-        'Install machine certificates on corporate devices and perform checks against the clients.'
+        'Deploy application protection policies using a corporate, cloud-based MDM solution',
+        `Block any connections from outside the business's network security boundary`,
+        'Install machine certificates on corporate devices and perform checks against the clients'
       ],
       explanation: 'Device attestation ensures that only approved corporate devices can perform privileged actions by validating security posture, ownership, and compliance. Continuous authorization controls dynamically assess security risk, preventing unauthorized access even if credentials are compromised. This approach supports BYOD for non-privileged tasks while enforcing strict security for sensitive operations.',
       questionNumber: 96
@@ -952,28 +965,28 @@ const securityQuiz = {
     },
     {
       question: 'A network engineer must ensure that always-on VPN access is enabled but restricted to company assets. Which of the following best describes what the engineer needs to do?',
-      answer: 'Generate device certificates using the specific template settings needed.',
+      answer: 'Generate device certificates using the specific template settings needed',
       distractors: [
-        'Modify signing certificates in order to support IKE version 2.',
-        'Create a wildcard certificate for connections from public networks.',
-        'Add the VPN hostname as a SAN entry on the root certificate.'
+        'Modify signing certificates in order to support IKE version 2',
+        'Create a wildcard certificate for connections from public networks',
+        'Add the VPN hostname as a SAN entry on the root certificate'
       ],
       explanation: 'Device certificates uniquely identify company-owned assets, allowing the VPN to restrict access only to authorized devices. Certificate-based authentication ensures that only approved machines can connect, preventing unauthorized external devices from accessing the corporate network. This approach is commonly used in enterprise environments to enforce security policies without relying solely on usernames and passwords.',
       questionNumber: 98
     },
     {
-      question: 'A security administrator is reviewing the following code snippet from a website component:\n\n\n' +
-        `![Question 99](${imgPath(99)})\n\n\n` +
+      question: 'A security administrator is reviewing the following code snippet from a website component:\n\n' +
+        `![Question 99](${imgPath(99)})\n\n` +
         'A review of the inc.tmp file shows the following:\n\n' +
-        '214875925793253420385093450834534324525234352353455234532423534245234534523453896276563857932578395378543620382630532804508325\n\n' +
+        '`214875925793253420385093450834534324525234352353455234532423534245234534523453896276563857932578395378543620382630532804508325`\n\n' +
         'Which of the following is most likely the reason for inaccuracies?',
-      answer: 'A content management solution plug-in has been exploited.',
+      answer: 'A content management solution plug-in has been exploited',
       distractors: [
-        `A search engine's bots are being blocked at the firewall.`,
-        'The relevant stylesheet has become corrupted.',
-        'The WAF is configured to be in transparent mode.'
+        `A search engine's bots are being blocked at the firewall`,
+        'The relevant stylesheet has become corrupted',
+        'The WAF is configured to be in transparent mode'
       ],
-      explanation: '',
+      explanation: '99',
       questionNumber: 99
     },
     {
@@ -987,43 +1000,43 @@ const securityQuiz = {
       question: 'Which of the following best explains why AI output could be inaccurate?',
       answer: 'Model poisoning',
       distractors: ['Social engineering', 'Output handling', 'Prompt injections'],
-      explanation: '',
+      explanation: '101',
       questionNumber: 101
     },
-    // {
-    //   question: 'A company runs a DAST scan on a web application. The tool outputs the following recommendations:\n' +
-    //   '• Use Cookie prefixes.\n' +
-    //   '• "Content Security Policy - SameSite=strict" is not set.\n' +
-    //   'Which of the following vulnerabilities has the tool identified?',
-    //   answer: 'CSRF',
-    //   distractors: ['RCE', 'XSS', 'TOCTOU'],
-    //   explanation: '',
-    //   questionNumber: 102
-    // },
+    {
+      question: 'A company runs a DAST scan on a web application. The tool outputs the following recommendations:\n\n' +
+      '- Use Cookie prefixes.\n\n' +
+      '- `Content Security Policy - SameSite=strict` is not set.\n\n' +
+      'Which of the following vulnerabilities has the tool identified?',
+      answer: 'CSRF',
+      distractors: ['RCE', 'XSS', 'TOCTOU'],
+      explanation: '102',
+      questionNumber: 102
+    },
     {
       question: 'Which of the following best describes the reason a network architect would enable forward secrecy on all VPN tunnels?',
-      answer: 'This process reduces the success of attackers performing cryptanalysis.',
+      answer: 'This process reduces the success of attackers performing cryptanalysis',
       distractors: [
-        'This process is a requirement to enable hardware-accelerated cryptography.',
-        'The business requirements state that confidentiality is a critical success factor.',
-        'Modern cryptographic protocols list this process as a prerequisite for use.'
+        'This process is a requirement to enable hardware-accelerated cryptography',
+        'The business requirements state that confidentiality is a critical success factor',
+        'Modern cryptographic protocols list this process as a prerequisite for use'
       ],
-      explanation: '',
+      explanation: '103',
       questionNumber: 103
     },
     {
       question: 'Which of the following best explains the importance of determining organizational risk appetite when operating with a constrained budget?',
-      answer: 'Risk appetite directly impacts acceptance of high-impact, low-likelihood events.',
+      answer: 'Risk appetite directly impacts acceptance of high-impact, low-likelihood events',
       distractors: [
-        'Organizational risk appetite varies from organization to organization.',
-        'Budgetary pressure drives risk mitigation planning in all companies.',
-        'Risk appetite directly influences which breaches are disclosed publicly.'
+        'Organizational risk appetite varies from organization to organization',
+        'Budgetary pressure drives risk mitigation planning in all companies',
+        'Risk appetite directly influences which breaches are disclosed publicly'
       ],
       explanation: '',
       questionNumber: 104
     },
     {
-      question: 'A company hired an email service provider called my-email.com to deliver company emails. The company started having several issues during the migration. A security engineer is troubleshooting and observes the following configuration snippet:\n\n\n' +
+      question: 'A company hired an email service provider called my-email.com to deliver company emails. The company started having several issues during the migration. A security engineer is troubleshooting and observes the following configuration snippet:\n\n' +
         `![Question 105](${imgPath(105)})\n\n` +
         'Which of the following should the security engineer modify to fix the issue?',
       answer: [
@@ -1037,7 +1050,7 @@ const securityQuiz = {
         'The TXT record must be changed to "v=dkim ip4:192.168.1.11 include:my-email.com ~all"',
         'The srv01 A record must be changed to a type CNAME record pointing to the web01 server'
       ],
-      explanation: '',
+      explanation: '105',
       questionNumber: 105
     },
     {
@@ -1052,7 +1065,7 @@ const securityQuiz = {
       questionNumber: 106
     },
     {
-      question: 'Recent reports indicate that a software tool is being exploited. Attackers were able to bypass user access controls and load a database. A security analyst needs to find the vulnerability and recommend a mitigation. The analyst generates the following output:\n\n\n' +
+      question: 'Recent reports indicate that a software tool is being exploited. Attackers were able to bypass user access controls and load a database. A security analyst needs to find the vulnerability and recommend a mitigation. The analyst generates the following output:\n\n' +
         `![Question 107](${imgPath(107)})\n\n` +
         'Which of the following would the analyst most likely recommend?',
       answer: 'Removing hard-coded credentials from the source code',
@@ -1067,41 +1080,41 @@ const securityQuiz = {
     },
     {
       question: 'The identity and access management team is sending logs to the SIEM for continuous monitoring. The deployed log collector is forwarding logs to the SIEM. However, only false positive alerts are being generated. Which of the following is the most likely reason for the inaccurate alerts?',
-      answer: 'The data is not being properly parsed.',
+      answer: 'The data is not being properly parsed',
       distractors: [
-        'The compute resources are insufficient to support the SIEM.',
-        'The SIEM indexes are too large.',
-        'The retention policy is not properly configured.'
+        'The compute resources are insufficient to support the SIEM',
+        'The SIEM indexes are too large',
+        'The retention policy is not properly configured'
       ],
       explanation: '',
       questionNumber: 108
     },
     {
-      question: 'The security team is receiving escalated support tickets stating that one of the company\'s publicly available websites is not loading as expected. Given the following observations:\n\n\n' +
-        `![Question 109](${imgPath(109)})\n\n\n` +
+      question: `The security team is receiving escalated support tickets stating that one of the company's publicly available websites is not loading as expected. Given the following observations:\n\n` +
+        `![Question 109](${imgPath(109)})\n\n` +
         'Which of the following is most likely the root cause?',
-      answer: 'A certificate signed by a global root certification authority has expired.',
+      answer: 'A certificate signed by a global root certification authority has expired',
       distractors: [
-        'A protocol mismatch error is expected to occur when using outdated browsers.',
-        'One certificate is being bound to multiple websites on the same server.',
-        'Subject alternative names were not used appropriately for subdomains.'
+        'A protocol mismatch error is expected to occur when using outdated browsers',
+        'One certificate is being bound to multiple websites on the same server',
+        'Subject alternative names were not used appropriately for subdomains'
       ],
       explanation: '',
       questionNumber: 109
     },
-    // {
-    //   question: 'A company acquires a location with a large infrastructure of legacy devices. Because of the hardware\'s age and the legacy software\'s limitations, the OS cannot be upgraded, and the machines cannot be virtualized. These machines are not publicly facing, but they do have internet access. The following controls are currently in place:\n' +
-    //   '• "EDR"\n' +
-    //   '• "Anti-malware"\n' +
-    //   '• "Logging and monitoring"\n' +
-    //   '• "Host-based firewall"\n' +
-    //   '• "Proxied internet access"\n' +
-    //   'A security architect needs to supplement the existing control strategy with one that restricts unauthorized software. Which of the following controls should the architect recommend to best supplement the existing environment?',
-    //   answer: 'Application control',
-    //   distractors: ['SIEM', 'Isolation', 'Conditional access'],
-    //   explanation: '',
-    //   questionNumber: 110
-    // },
+    {
+      question: `A company acquires a location with a large infrastructure of legacy devices. Because of the hardware's age and the legacy software's limitations, the OS cannot be upgraded, and the machines cannot be virtualized. These machines are not publicly facing, but they do have internet access. The following controls are currently in place:\n\n` +
+      '- EDR\n\n' +
+      '- Anti-malware\n\n' +
+      '- Logging and monitoring\n\n' +
+      '- Host-based firewall\n\n' +
+      '- Proxied internet access\n\n' +
+      'A security architect needs to supplement the existing control strategy with one that restricts unauthorized software. Which of the following controls should the architect recommend to best supplement the existing environment?',
+      answer: 'Application control',
+      distractors: ['SIEM', 'Isolation', 'Conditional access'],
+      explanation: '110',
+      questionNumber: 110
+    },
     {
       question: 'An organization wants to create a threat model to identify vulnerabilities in its infrastructure. Which of the following should be prioritized first?',
       answer: 'External-facing infrastructure with known exploited vulnerabilities',
@@ -1125,25 +1138,25 @@ const securityQuiz = {
       questionNumber: 112
     },
     {
-      question: 'A security operations analyst is reviewing network traffic baselines for nightly database backups. Given the following information:\n\n\n' +
-            `![Question 113](${imgPath(113)})\n\n\n` +
+      question: 'A security operations analyst is reviewing network traffic baselines for nightly database backups. Given the following information:\n\n' +
+            `![Question 113](${imgPath(113)})\n\n` +
             'Which of the following should the security analyst do next?',
-      answer: 'Refer to the incident response playbook for the proper response.',
+      answer: 'Refer to the incident response playbook for the proper response',
       distractors: [
-        'Consult with a network engineer to determine the impact of bandwidth usage.',
-        'Quarantine PRDDB01 and then alert the database engineers.',
-        'Review all the network logs for further data exfiltration.'
+        'Consult with a network engineer to determine the impact of bandwidth usage',
+        'Quarantine PRDDB01 and then alert the database engineers',
+        'Review all the network logs for further data exfiltration'
       ],
       explanation: '',
       questionNumber: 113
     },
     {
       question: 'A company has a requirement in customer contracts that states applications must undergo external audits to identify vulnerabilities. Which of the following is the best action for the company to complete before hiring an external auditor?',
-      answer: 'Conduct an internal audit assessment.',
+      answer: 'Conduct an internal audit assessment',
       distractors: [
-        'Gather evidence for the audit.',
-        'Identify lessons learned from the audit.',
-        'Select samples for audit testing.'
+        'Gather evidence for the audit',
+        'Identify lessons learned from the audit',
+        'Select samples for audit testing'
       ],
       explanation: '',
       questionNumber: 114
@@ -1160,8 +1173,8 @@ const securityQuiz = {
       questionNumber: 115
     },
     {
-      question: `A company's SIEM is designed to associate the company’s asset inventory with user events. Given the following report:\n\n\n` +
-        `![Question 116](${imgPath(116)})\n\n\n` +
+      question: `A company's SIEM is designed to associate the company’s asset inventory with user events. Given the following report:\n\n` +
+        `![Question 116](${imgPath(116)})\n\n` +
         'Which of the following should a security engineer investigate first as part of a log audit?',
       answer: 'Unauthorized usage attempts of the administrator account',
       distractors: [
@@ -1172,19 +1185,19 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 116
     },
-    // {
-    //   question: 'A developer receives feedback about code quality and efficiency. The developer needs to identify and resolve the following coding issues before submitting the code changes for peer review:\n' +
-    //   '• "Indexing beyond arrays", \n' +
-    //   '• "Dereferencing null pointers", \n' +
-    //   '• "Potentially dangerous data type combos", \n' +
-    //   '• "Unreachable code", \n' +
-    //   '• "Non-portable constructs":\n' +
-    //   'Which of the following would be most appropriate for the developer to use in this situation?',
-    //   answer: 'Linting',
-    //   distractors: ['SBoM', 'DAST', 'Branch protection', 'Software composition analysis'],
-    //   explanation: '',
-    //   questionNumber: 117
-    // },
+    {
+      question: 'A developer receives feedback about code quality and efficiency. The developer needs to identify and resolve the following coding issues before submitting the code changes for peer review:\n\n' +
+      '- Indexing beyond arrays\n\n' +
+      '- Dereferencing null pointers\n\n' +
+      '- Potentially dangerous data type combos\n\n' +
+      '- Unreachable code\n\n' +
+      '- Non-portable constructs\n\n' +
+      'Which of the following would be most appropriate for the developer to use in this situation?',
+      answer: 'Linting',
+      distractors: ['SBoM', 'DAST', 'Branch protection', 'Software composition analysis'],
+      explanation: '117',
+      questionNumber: 117
+    },
     {
       question: 'A company wants to improve and automate the compliance of its cloud environments to meet industry standards. Which of the following resources should the company use to best achieve this goal?',
       answer: 'Ansible',
@@ -1206,22 +1219,22 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 120
     },
-    // {
-    //   question: 'A manufacturing plant is updating its IT services. During discussions, the senior management team created the following list of considerations:\n' +
-    //   '- "Staff turnover is high and seasonal", \n' +
-    //   '- "Extreme conditions often damage endpoints, "\n' +
-    //   '- "Losses from downtime must be minimized", \n' +
-    //   '- "Regulatory data retention requirements exist" => \n' +
-    //   'Which of the following best addresses the considerations?',
-    //   answer: 'Using a non-persistent virtual desktop interface with thin clients',
-    //   distractors: [
-    //     'Establishing further environmental controls to limit equipment damage',
-    //     'Deploying redundant file servers and configuring database journaling',
-    //     'Maintaining an inventory of spare endpoints for rapid deployment'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 121
-    // },
+    {
+      question: 'A manufacturing plant is updating its IT services. During discussions, the senior management team created the following list of considerations:\n\n' +
+      '- Staff turnover is high and seasonal\n\n' +
+      '- Extreme conditions often damage endpoints\n\n' +
+      '- Losses from downtime must be minimized\n\n' +
+      '- Regulatory data retention requirements exist\n\n' +
+      'Which of the following best addresses the considerations?',
+      answer: 'Using a non-persistent virtual desktop interface with thin clients',
+      distractors: [
+        'Establishing further environmental controls to limit equipment damage',
+        'Deploying redundant file servers and configuring database journaling',
+        'Maintaining an inventory of spare endpoints for rapid deployment'
+      ],
+      explanation: '121',
+      questionNumber: 121
+    },
     {
       question: 'A software vendor provides routine functionality and security updates to its global customer base. The vendor would like to ensure distributed updates are authorized, originate from only the company, and have not been modified by others. Which of the following solutions best supports these objectives?',
       answer: 'Code signing',
@@ -1231,26 +1244,26 @@ const securityQuiz = {
     },
     {
       question: 'A security analyst detects a possible RAT infection on a computer in the internal network. After reviewing the details of the alert, the analyst identifies the initial vector of the attack was an email that was forwarded to multiple recipients in the same organizational unit. Which of the following should the analyst do first to minimize this type of threat in the future?',
-      answer: 'Implement a security awareness program in the organization.',
+      answer: 'Implement a security awareness program in the organization',
       distractors: [
-        'Move from an anti-malware software to an EDR solution.',
-        'Perform a penetration test to detect technology gaps on the anti-spam solution.',
-        'Configure an IPS solution in the internal network to mitigate infections.'
+        'Move from an anti-malware software to an EDR solution',
+        'Perform a penetration test to detect technology gaps on the anti-spam solution',
+        'Configure an IPS solution in the internal network to mitigate infections'
       ],
       explanation: '',
       questionNumber: 123
     },
-    // {
-    //   question: 'A cloud engineer needs to identify appropriate solutions to: \n=n' +
-    //   '- "Provide secure access to internal and external cloud resources.", \n' +
-    //   '- "Eliminate split-tunnel traffic flows.", \n' +
-    //   '- "Enable identity and access management capabilities." => \n' +
-    //   'Which of the following solutions is the most appropriate?',
-    //   answer: 'SASE',
-    //   distractors: ['Micro-segmentation', 'PAM', 'SD-WAN'],
-    //   explanation: '',
-    //   questionNumber: 124
-    // },
+    {
+      question: 'A cloud engineer needs to identify appropriate solutions to: \n\n' +
+      '- Provide secure access to internal and external cloud resources\n\n' +
+      '- Eliminate split-tunnel traffic flows\n\n' +
+      '- Enable identity and access management capabilities\n\n' +
+      'Which of the following solutions is the most appropriate?',
+      answer: 'SASE',
+      distractors: ['Micro-segmentation', 'PAM', 'SD-WAN'],
+      explanation: '124',
+      questionNumber: 124
+    },
     {
       question: 'A security engineer is building a solution to disable weak CBC configurations for remote access connections to Linux systems. Which of the following should the security engineer modify?',
       answer: 'The /etc/sshd/ssh_config file, updating the ciphers',
@@ -1276,14 +1289,14 @@ const securityQuiz = {
       questionNumber: 126
     },
     {
-      question: 'An analyst reviews a SIEM and generates the following report:\n\n\n' +
-        `![Question 127](${imgPath(127)})\n\n\n` +
+      question: 'An analyst reviews a SIEM and generates the following report:\n\n' +
+        `![Question 127](${imgPath(127)})\n\n` +
         'Only HOST002 is authorized for internet traffic. Which of the following statements is accurate?',
-      answer: 'The VM002 host is misconfigured and needs to be revised by the network team.',
+      answer: 'The VM002 host is misconfigured and needs to be revised by the network team',
       distractors: [
-        'The HOST002 host is under attack, and a security incident should be declared.',
-        'The SIEM platform is reporting multiple false positives on the alerts.',
-        'The network connection activity is unusual, and a network infection is highly possible.'
+        'The HOST002 host is under attack, and a security incident should be declared',
+        'The SIEM platform is reporting multiple false positives on the alerts',
+        'The network connection activity is unusual, and a network infection is highly possible'
       ],
       explanation: '',
       questionNumber: 127
@@ -1311,8 +1324,8 @@ const securityQuiz = {
       questionNumber: 129
     },
     {
-      question: 'A vulnerability scan on a web server identified the following:\n\n\n' +
-        `![Question 130](${imgPath(130)})\n\n\n` +
+      question: 'A vulnerability scan on a web server identified the following:\n\n' +
+        `![Question 130](${imgPath(130)})\n\n` +
         'Which of the following actions would most likely eliminate on-path decryption attacks?',
       answer: [
         'Removing support for CBC-based key exchange and signing algorithms',
@@ -1328,14 +1341,14 @@ const securityQuiz = {
       questionNumber: 130
     },
     {
-      question: 'A company’s help desk is experiencing a large number of calls from the finance department stating access issues to www.bank.com. The security operations center reviewed the following security logs:\n\n\n' +
-        `![Question 131](${imgPath(131)})\n\n\n` +
+      question: 'A company’s help desk is experiencing a large number of calls from the finance department stating access issues to www.bank.com. The security operations center reviewed the following security logs:\n\n' +
+        `![Question 131](${imgPath(131)})\n\n` +
         'Which of the following is most likely the cause of the issue?',
-      answer: 'The DNS record has been poisoned.',
+      answer: 'The DNS record has been poisoned',
       distractors: [
-        'Recursive DNS resolution is failing.',
-        'DNS traffic is being sinkholed.',
-        'The DNS was set up incorrectly.'
+        'Recursive DNS resolution is failing',
+        'DNS traffic is being sinkholed',
+        'The DNS was set up incorrectly'
       ],
       explanation: '',
       questionNumber: 131
@@ -1352,8 +1365,8 @@ const securityQuiz = {
       questionNumber: 132
     },
     {
-      question: 'A security analyst is reviewing the following log:\n\n\n' +
-        `![Question 133](${imgPath(133)})\n\n\n` +
+      question: 'A security analyst is reviewing the following log:\n\n' +
+        `![Question 133](${imgPath(133)})\n\n` +
         'Which of the following possible events should the security analyst investigate further?',
       answer: 'A malicious file that was run in this environment',
       distractors: [
@@ -1376,14 +1389,14 @@ const securityQuiz = {
       questionNumber: 134
     },
     {
-      question: 'A security professional is investigating a trend in vulnerability findings for newly deployed cloud systems. Given the following output:\n\n\n' +
-        `![Question 135](${imgPath(135)})\n\n\n` +
+      question: 'A security professional is investigating a trend in vulnerability findings for newly deployed cloud systems. Given the following output:\n\n' +
+        `![Question 135](${imgPath(135)})\n\n` +
         'Which of the following actions would address the root cause of this issue?',
       answer: 'Automating the patching system to update base images',
       distractors: [
         'Recompiling the affected programs with the most current patches',
         'Disabling unused/unneeded ports on all servers',
-        'Deploying a WAF with virtual patching upstream of the affected systems.'
+        'Deploying a WAF with virtual patching upstream of the affected systems'
       ],
       explanation: '',
       questionNumber: 135
@@ -1401,11 +1414,11 @@ const securityQuiz = {
     },
     {
       question: 'An organization receives OSINT reports about an increase in ransomware targeting fileshares at peer companies. The organization wants to deploy hardening policies to its servers and workstations in order to contain potential ransomware. Which of the following should an engineer do to best achieve this goal?',
-      answer: 'Allow only interactive log-in for users on workstations and restrict port 445 traffic to fileshares.',
+      answer: 'Allow only interactive log-in for users on workstations and restrict port 445 traffic to fileshares',
       distractors: [
-        'Enable biometric authentication mechanisms on user workstations and block port 53 traffic.',
-        'Instruct users to use a password manager when generating new credentials and secure port 443 traffic.',
-        'Give users permission to rotate administrator passwords and deny port 80 traffic.'
+        'Enable biometric authentication mechanisms on user workstations and block port 53 traffic',
+        'Instruct users to use a password manager when generating new credentials and secure port 443 traffic',
+        'Give users permission to rotate administrator passwords and deny port 80 traffic'
       ],
       explanation: '',
       questionNumber: 137
@@ -1455,38 +1468,38 @@ const securityQuiz = {
       'VPN client routing:\n' +
       '"0.0.0.0/0 eth1"\n\n' +
       'Which of the following solutions should the analyst use to fix this issue?',
-      answer: 'Enable split tunneling.',
-      distractors: ['Move the servers to a screened subnet.', 'Configure an NAC solution.', 'Implement DNS over HTTPS.'],
+      answer: 'Enable split tunneling',
+      distractors: ['Move the servers to a screened subnet', 'Configure an NAC solution', 'Implement DNS over HTTPS'],
       explanation: '',
       questionNumber: 142
     },
     {
-      question: 'A security analyst is reviewing suspicious log-in activity and sees the following data in the SIEM:\n\n\n' +
-        `![Question 143](${imgPath(143)})\n\n\n` +
+      question: 'A security analyst is reviewing suspicious log-in activity and sees the following data in the SIEM:\n\n' +
+        `![Question 143](${imgPath(143)})\n\n` +
         'Which of the following is the most appropriate action for the analyst to take?',
-      answer: 'Implement automation to disable accounts that have been associated with high-risk activity.',
+      answer: 'Implement automation to disable accounts that have been associated with high-risk activity',
       distractors: [
-        'Update the log configuration settings on the directory server that is not being captured properly.',
-        'Have the admin account owner change their password to avoid credential stuffing.',
-        'Block employees from logging in to applications that are not part of their business area.'
+        'Update the log configuration settings on the directory server that is not being captured properly',
+        'Have the admin account owner change their password to avoid credential stuffing',
+        'Block employees from logging in to applications that are not part of their business area'
       ],
       explanation: '',
       questionNumber: 143
     },
     {
       question: 'An organization determined its preparedness for a ransomware attack is inadequate. A security administrator is working on ways to improve and monitor the organization\'s response to ransomware attacks. Which of the following is the best action for the administrator to take?',
-      answer: 'Conduct backup testing.',
+      answer: 'Conduct backup testing',
       distractors: [
-        'Define the recovery point objective.',
-        'Perform a business impact analysis.',
-        'Verify the encryption key length.'
+        'Define the recovery point objective',
+        'Perform a business impact analysis',
+        'Verify the encryption key length'
       ],
       explanation: '',
       questionNumber: 144
     },
     {
-      question: 'A security engineer receives an alert from the SIEM platform indicating a possible malicious action on the internal network. The engineer generates a report that outputs the logs associated with the incident:\n\n\n' +
-        `![Question 145](${imgPath(145)})\n\n\n` +
+      question: 'A security engineer receives an alert from the SIEM platform indicating a possible malicious action on the internal network. The engineer generates a report that outputs the logs associated with the incident:\n\n' +
+        `![Question 145](${imgPath(145)})\n\n` +
         'Which of the following actions best enables the engineer to investigate further?',
       answer: 'Reviewing audit logs from privileged actions',
       distractors: [
@@ -1510,11 +1523,11 @@ const securityQuiz = {
     },
     {
       question: 'An organization is developing an AI-enabled digital worker to help employees complete common tasks, such as template development, editing, research, and scheduling. As part of the AI workload, the organization wants to implement guardrails within the platform. Which of the following should the company do to secure the AI environment?',
-      answer: `Limit the platform's abilities to only non-sensitive functions.`,
+      answer: `Limit the platform's abilities to only non-sensitive functions`,
       distractors: [
-        `Enhance the training model's effectiveness.`,
-        'Grant the system the ability to self-govern.',
-        'Require end-user acknowledgement of organizational policies.'
+        `Enhance the training model's effectiveness`,
+        'Grant the system the ability to self-govern',
+        'Require end-user acknowledgement of organizational policies'
       ],
       explanation: '',
       questionNumber: 147
@@ -1527,10 +1540,10 @@ const securityQuiz = {
       questionNumber: 148
     },
     {
-      question: 'A security analyst received a report that an internal web page is down after a company-wide update to the web browser. Given the following error message:\n\n\n' +
+      question: 'A security analyst received a report that an internal web page is down after a company-wide update to the web browser. Given the following error message:\n\n' +
       'Your connection is not private.\n\n' +
       'Attackers might be trying to steal your information for www. internalwebsite.company.com.\n\n' +
-      '"NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM"\n\n\n' +
+      '"NET::ERR_CERT_WEAK_SIGNATURE_ALGORITHM"\n\n' +
       'Which of the following is the best way to fix this issue?',
       answer: 'Disabling all deprecated ciphers',
       distractors: [
@@ -1554,11 +1567,11 @@ const securityQuiz = {
     },
     {
       question: 'A company implemented a new NAC solution based on 802.1X. However, the IT support team notices that some devices are not being enrolled in the new policies, causing access disruptions for key users. Which of the following solutions will most likely solve this issue and prevent reoccurrence?',
-      answer: 'Include the monitoring agent and digital certificate as part of the patching/updating program, keeping all the corporate devices updated and enrolled.',
+      answer: 'Include the monitoring agent and digital certificate as part of the patching/updating program, keeping all the corporate devices updated and enrolled',
       distractors: [
-        'Check whether the certificate is signed by a certification authority and manually deployed to each device.',
-        'Check all the devices without proper access, enrolling them via the solution agent and authenticating to the network.',
-        'Implement default credentials to automate RADIUS authentication and grant access to the network if the device owner is an employee.'
+        'Check whether the certificate is signed by a certification authority and manually deployed to each device',
+        'Check all the devices without proper access, enrolling them via the solution agent and authenticating to the network',
+        'Implement default credentials to automate RADIUS authentication and grant access to the network if the device owner is an employee'
       ],
       explanation: '',
       questionNumber: 151
@@ -1577,21 +1590,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 153
     },
-    // {
-    //   question: 'A security engineer wants to enhance the security posture of end-user systems in a zero trust environment. Given the following requirements:\n' +
-    //   '• Reduce the ability for potentially compromised endpoints to contact C2 infrastructure.\n' +
-    //   '• Track the requests that the malware makes to the IPs.\n' +
-    //   '• Avoid the download of additional payloads.\n' +
-    //   'Which of the following should the engineer deploy to meet these requirements?',
-    //   answer: 'DNS sinkholing',
-    //   distractors: [
-    //     'Browser isolation',
-    //     'Zone transfer protection',
-    //     'HIDS'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 154
-    // },
+    {
+      question: 'A security engineer wants to enhance the security posture of end-user systems in a zero trust environment. Given the following requirements:\n\n' +
+      '- Reduce the ability for potentially compromised endpoints to contact C2 infrastructure\n\n' +
+      '- Track the requests that the malware makes to the IPs\n\n' +
+      '- Avoid the download of additional payloads\n\n' +
+      'Which of the following should the engineer deploy to meet these requirements?',
+      answer: 'DNS sinkholing',
+      distractors: [
+        'Browser isolation',
+        'Zone transfer protection',
+        'HIDS'
+      ],
+      explanation: '154',
+      questionNumber: 154
+    },
     {
       question: 'Developers have been creating and managing cryptographic material on their personal laptops for use in the production environment. A security engineer needs to initiate a more secure process. Which of the following is the best strategy for the engineer to use?',
       answer: 'Managing key material on a HSM',
@@ -1615,49 +1628,49 @@ const securityQuiz = {
       questionNumber: 156
     },
     {
-      question: 'After an incident response exercise, a security administrator reviews the following table:\n\n\n' +
-        `![Question 157](${imgPath(157)})\n\n\n` +
+      question: 'After an incident response exercise, a security administrator reviews the following table:\n\n' +
+        `![Question 157](${imgPath(157)})\n\n` +
         'Which of the following should the administrator do to best support rapid incident response in the future?',
-      answer: 'Enable dashboards for service status monitoring.',
+      answer: 'Enable dashboards for service status monitoring',
       distractors: [
-        'Automate alerting to IT support for phone system outages.',
-        'Send emails for failed log-in attempts on the public website.',
-        'Configure automated isolation of human resources systems.'
+        'Automate alerting to IT support for phone system outages',
+        'Send emails for failed log-in attempts on the public website',
+        'Configure automated isolation of human resources systems'
       ],
       explanation: '',
       questionNumber: 157
     },
-    // {
-    //   question: 'An organization is required to:\n' +
-    //   '- Respond to internal and external inquiries in a timely manner.\n' +
-    //   '- Provide transparency.\n' +
-    //   '- Comply with regulatory requirements.\n' +
-    //   'The organization has not experienced any reportable breaches but wants to be prepared if a breach occurs in the future. Which of the following is the best way for the organization to prepare?',
-    //   answer: 'Developing communication templates that have been vetted by internal and external counsel',
-    //   distractors: [
-    //     'Outsourcing the handling of necessary regulatory filings to an external consultant',
-    //     'Integrating automated response mechanisms into the data subject access request process',
-    //     'Conducting lessons-learned activities and integrating observations into the crisis management plan'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 158
-    // },
-    // {
-    //   question: 'An incident response team is analyzing malware and observes the following:\n' +
-    //   '- Does not execute in a sandbox\n' +
-    //   '- No network IoCs\n' +
-    //   '- No publicly known hash match\n' +
-    //   '- No process injection method detected\n\n' +
-    //   'Which of the following should the team do next to proceed with further analysis?',
-    //   answer: 'Check for an anti-virtualization code in the sample.',
-    //   distractors: [
-    //     'Use an online virus analysis tool to analyze the sample.',
-    //     'Utilize a new deployed machine to run the sample.',
-    //     'Search other internal sources for a new sample.'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 159
-    // },
+    {
+      question: 'An organization is required to:\n\n' +
+      '- Respond to internal and external inquiries in a timely manner\n\n' +
+      '- Provide transparency\n\n' +
+      '- Comply with regulatory requirements\n\n' +
+      'The organization has not experienced any reportable breaches but wants to be prepared if a breach occurs in the future. Which of the following is the best way for the organization to prepare?',
+      answer: 'Developing communication templates that have been vetted by internal and external counsel',
+      distractors: [
+        'Outsourcing the handling of necessary regulatory filings to an external consultant',
+        'Integrating automated response mechanisms into the data subject access request process',
+        'Conducting lessons-learned activities and integrating observations into the crisis management plan'
+      ],
+      explanation: '158',
+      questionNumber: 158
+    },
+    {
+      question: 'An incident response team is analyzing malware and observes the following:\n\n' +
+      '- Does not execute in a sandbox\n\n' +
+      '- No network IoCs\n\n' +
+      '- No publicly known hash match\n\n' +
+      '- No process injection method detected\n\n' +
+      'Which of the following should the team do next to proceed with further analysis?',
+      answer: 'Check for an anti-virtualization code in the sample',
+      distractors: [
+        'Use an online virus analysis tool to analyze the sample',
+        'Utilize a new deployed machine to run the sample',
+        'Search other internal sources for a new sample'
+      ],
+      explanation: '159',
+      questionNumber: 159
+    },
     {
       question: 'Which of the following best explains the business requirement a healthcare provider fulfills by encrypting patient data at rest?',
       answer: 'Protecting privacy while supporting portability',
@@ -1666,7 +1679,7 @@ const securityQuiz = {
         'Providing for non-repudiation of data',
         'Reducing liability from identity theft'
       ],
-      explanation: '',
+      explanation: '160',
       questionNumber: 160
     },
     {
@@ -1688,7 +1701,7 @@ const securityQuiz = {
         'To address concerns the team has about API bandwidth utilization',
         'To reduce attack surface exposure of the API endpoints connecting peers'
       ],
-      explanation: '',
+      explanation: '162',
       questionNumber: 162
     },
     {
@@ -1703,14 +1716,14 @@ const securityQuiz = {
       questionNumber: 163
     },
     {
-      question: 'A user reports application access issues to the help desk. The help desk reviews the logs for the user:\n\n\n' +
-        `![Question 164](${imgPath(164)})\n\n\n` +
+      question: 'A user reports application access issues to the help desk. The help desk reviews the logs for the user:\n\n' +
+        `![Question 164](${imgPath(164)})\n\n` +
         'Which of the following is most likely the reason for the issue?',
-      answer: `A threat actor has compromised the user's account and attempted to log in.`,
+      answer: `A threat actor has compromised the user's account and attempted to log in`,
       distractors: [
-        'The user inadvertently tripped the geoblock rule in NGFW.',
-        'The user is not allowed to access the human resources system outside of business hours.',
-        'The user did not attempt to connect from an approved subnet.'
+        'The user inadvertently tripped the geoblock rule in NGFW',
+        'The user is not allowed to access the human resources system outside of business hours',
+        'The user did not attempt to connect from an approved subnet'
       ],
       explanation: '',
       questionNumber: 164
@@ -1723,7 +1736,7 @@ const securityQuiz = {
         'Creating a bug bounty program',
         'Implementing a continuous security assessment program'
       ],
-      explanation: '',
+      explanation: '165',
       questionNumber: 165
     },
     {
@@ -1735,12 +1748,12 @@ const securityQuiz = {
     },
     {
       question: 'A security architect must make sure that the least number of services as possible is exposed in order to limit an adversary\'s ability to access the systems. Which of the following should the architect do first?',
-      answer: 'Perform attack surface reduction.',
+      answer: 'Perform attack surface reduction',
       distractors: [
-        'Enforce Secure Boot.',
-        'Perform attack surface reduction.',
-        'Disable third-party integrations.',
-        'Limit access to the systems.'
+        'Enforce Secure Boot',
+        'Perform attack surface reduction',
+        'Disable third-party integrations',
+        'Limit access to the systems'
       ],
       explanation: '',
       questionNumber: 167
@@ -1757,52 +1770,52 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 168
     },
-    // {
-    //   question: 'An administrator needs to craft a single certificate-signing request for a web-server certificate. The server should be able to use the following identities to mutually authenticate other resources over TLS:\n' +
-    //     '- www.int.comptia.org\n' +
-    //     '- webserver01 .int.comptia.org\n' +
-    //     '- 10.5.100.10\n' +
-    //     'Which of the following certificate fields must be set properly to support this objective?',
-    //   answer: 'Subject alternative name',
-    //   distractors: [
-    //     'Organizational unit',
-    //     'Extended key usage',
-    //     'Certificate extension'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 169
-    // },
     {
-      question: 'A security analyst reviews the following event timeline from an EDR solution:\n\n\n' +
-        `![Question 170](${imgPath(170)})\n\n\n` +
-        'Which of the following has most likely occurred and needs to be fixed?',
-      answer: 'A logic flaw has introduced a TOCTOU vulnerability and must be addressed by the vendor.',
+      question: 'An administrator needs to craft a single certificate-signing request for a web-server certificate. The server should be able to use the following identities to mutually authenticate other resources over TLS:\n\n' +
+        '- `www.int.comptia.org`\n\n' +
+        '- `webserver01 .int.comptia.org`\n\n' +
+        '- `10.5.100.10`\n\n' +
+        'Which of the following certificate fields must be set properly to support this objective?',
+      answer: 'Subject alternative name',
       distractors: [
-        'The DLP has failed to block malicious exfiltration, and data tagging is not being utilized properly.',
-        'A NIDS bypass was utilized by a threat actor, and updates must be installed by the administrator.',
-        'A potential insider threat is being investigated and will be addressed by the senior management team.'
+        'Organizational unit',
+        'Extended key usage',
+        'Certificate extension'
+      ],
+      explanation: '169',
+      questionNumber: 169
+    },
+    {
+      question: 'A security analyst reviews the following event timeline from an EDR solution:\n\n' +
+        `![Question 170](${imgPath(170)})\n\n` +
+        'Which of the following has most likely occurred and needs to be fixed?',
+      answer: 'A logic flaw has introduced a TOCTOU vulnerability and must be addressed by the vendor',
+      distractors: [
+        'The DLP has failed to block malicious exfiltration, and data tagging is not being utilized properly',
+        'A NIDS bypass was utilized by a threat actor, and updates must be installed by the administrator',
+        'A potential insider threat is being investigated and will be addressed by the senior management team'
       ],
       explanation: '',
       questionNumber: 170
     },
-    // {
-    //   question: 'A hospital provides tablets to its medical staff to enable them to more quickly access and edit patients\' charts. The hospital wants to ensure that if a tablet is identified as lost or stolen and a remote command is issued, the risk of data loss can be mitigated within seconds. The tablets are configured as follows to meet hospital policy:\n' +
-    //     '- Full disk encryption is enabled.\n' +
-    //     '- "Always On" corporate VPN is enabled.\n' +
-    //     '- eFuse-backed keystore is enabled/ready.\n' +
-    //     '- Wi-Fi 6 is configured with SAE.\n' +
-    //     '- Location services is disabled.\n' +
-    //     '- Application allow list is unconfigured.\n' +
-    //     'Assuming the hospital policy cannot be changed, which of the following is the best way to meet the hospital\'s objective?',
-    //   answer: 'Cryptographically erase FDE volumes',
-    //   distractors: [
-    //     'Revoke the user VPN and Wi-Fi certificates',
-    //     'Issue new MFA credentials to all users',
-    //     'Configure the application allow list'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 171
-    // },
+    {
+      question: 'A hospital provides tablets to its medical staff to enable them to more quickly access and edit patients\' charts. The hospital wants to ensure that if a tablet is identified as lost or stolen and a remote command is issued, the risk of data loss can be mitigated within seconds. The tablets are configured as follows to meet hospital policy:\n\n' +
+        '- Full disk encryption is enabled\n\n' +
+        '- `Always On` corporate VPN is enabled\n\n' +
+        '- eFuse-backed keystore is enabled/ready\n\n' +
+        '- Wi-Fi 6 is configured with SAE\n\n' +
+        '- Location services is disabled\n\n' +
+        '- Application allow list is unconfigured.\n\n' +
+        'Assuming the hospital policy cannot be changed, which of the following is the best way to meet the hospital\'s objective?',
+      answer: 'Cryptographically erase FDE volumes',
+      distractors: [
+        'Revoke the user VPN and Wi-Fi certificates',
+        'Issue new MFA credentials to all users',
+        'Configure the application allow list'
+      ],
+      explanation: '171',
+      questionNumber: 171
+    },
     {
       question: 'A compliance officer is facilitating a business impact analysis and wants business unit leaders to collect meaningful data. Several business unit leaders want more information about the types of data the officer needs. Which of the following data types would be the most beneficial for the compliance officer?',
       answer: [
@@ -1818,20 +1831,20 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 172
     },
-    // {
-    //   question: 'An ISAC supplied recent threat intelligence information about pictures used on social media that provide reconnaissance of systems in use in secure facilities. In response, the Chief Information Security Officer (CISO) wants several configuration changes implemented via the MDM to ensure the following:' +
-    //     '\n- Camera functions and location services are blocked for corporate mobile devices.' +
-    //     '\n- All social media is blocked on the corporate and guest wireless networks.' +
-    //     '\n\nWhich of the following is the CISO practicing to safeguard against the threat?',
-    //   answer: 'Operational security',
-    //   distractors: [
-    //     'Adversary emulation',
-    //     'Open-source intelligence',
-    //     'Social engineering'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 173
-    // },
+    {
+      question: 'An ISAC supplied recent threat intelligence information about pictures used on social media that provide reconnaissance of systems in use in secure facilities. In response, the Chief Information Security Officer (CISO) wants several configuration changes implemented via the MDM to ensure the following:\n\n' +
+        '- Camera functions and location services are blocked for corporate mobile devices\n\n' +
+        '- All social media is blocked on the corporate and guest wireless networks\n\n' +
+        'Which of the following is the CISO practicing to safeguard against the threat?',
+      answer: 'Operational security',
+      distractors: [
+        'Adversary emulation',
+        'Open-source intelligence',
+        'Social engineering'
+      ],
+      explanation: '173',
+      questionNumber: 173
+    },
     {
       question: 'A company needs to define a new road map for improving secure coding practices in the software development life cycle and implementing better security standards. Which of the following is the best way for the company to achieve this goal?',
       answer: 'Performing a Software Assurance Maturity Model assessment and generating a road map as a final result',
@@ -1863,11 +1876,11 @@ const securityQuiz = {
     },
     {
       question: `A global organization is reviewing potential vendors to outsource a critical payroll function. Each vendor's plan includes using local resources in multiple regions to ensure compliance with all regulations. The organization's Chief Information Security Officer is conducting a risk assessment on the potential outsourcing vendors' subprocessors. Which of the following best explains the need for this risk assessment?`,
-      answer: 'The responsibility of protecting PII remains with the organization.',
+      answer: 'The responsibility of protecting PII remains with the organization',
       distractors: [
-        'Risk mitigations must be more comprehensive than the existing payroll provider.',
-        'Due care must be exercised during all procurement activities.',
-        'Specific regulatory requirements must be met in each jurisdiction.'
+        'Risk mitigations must be more comprehensive than the existing payroll provider',
+        'Due care must be exercised during all procurement activities',
+        'Specific regulatory requirements must be met in each jurisdiction'
       ],
       explanation: '',
       questionNumber: 177
@@ -1890,28 +1903,28 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 179
     },
-    // {
-    //   question: 'A web application server that provides services to hybrid modern and legacy financial applications recently underwent a scheduled upgrade to update common libraries, including OpenSSL. Multiple users are now reporting failed connection attempts to the server. The technician performing initial triage identified the following:\n' +
-    //     '- Client applications more than five years old appear to be the most affected\n' +
-    //     '- Web server logs show initial connection attempts by affected hosts.\n' +
-    //     '- For the failed connections, logs indicate "cipher unavailable. "\n' +
-    //     'Which of the following is most likely to safely remediate this situation?',
-    //   answer: 'The client applications need to be modified to support AES in Galois/Counter Mode or equivalent',
-    //   distractors: [
-    //     'The server needs to be configured for backward compatibility to SSL 3.0 applications.',
-    //     'The client TLS configuration must be set to enforce electronic codebook modes of operation',
-    //     'The server-side digital signature algorithm needs to be modified to support elliptic curve cryptography'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 180
-    // },
+    {
+      question: 'A web application server that provides services to hybrid modern and legacy financial applications recently underwent a scheduled upgrade to update common libraries, including OpenSSL. Multiple users are now reporting failed connection attempts to the server. The technician performing initial triage identified the following:\n\n' +
+        '- Client applications more than five years old appear to be the most affected\n\n' +
+        '- Web server logs show initial connection attempts by affected hosts\n\n' +
+        '- For the failed connections, logs indicate `cipher unavailable`\n\n' +
+        'Which of the following is most likely to safely remediate this situation?',
+      answer: 'The client applications need to be modified to support AES in Galois/Counter Mode or equivalent',
+      distractors: [
+        'The server needs to be configured for backward compatibility to SSL 3.0 applications',
+        'The client TLS configuration must be set to enforce electronic codebook modes of operation',
+        'The server-side digital signature algorithm needs to be modified to support elliptic curve cryptography'
+      ],
+      explanation: '180',
+      questionNumber: 180
+    },
     {
       question: 'An organization recently migrated data to a new file management system. The architect decides to use a discretionary authorization model on the new system. Which of the following best explains the architect’s choice?',
-      answer: 'The permissions were not able to be migrated to the new system, and several stakeholders were made responsible for granting appropriate access.',
+      answer: 'The permissions were not able to be migrated to the new system, and several stakeholders were made responsible for granting appropriate access',
       distractors: [
-        'The responsibility of migrating data to the new file management system was outsourced to the vendor providing the platform.',
-        'The legacy file management system did not support modern authentication techniques despite the business requirements.',
-        'The data custodians were selected by business stakeholders to ensure backups of the file management system are maintained off site.'
+        'The responsibility of migrating data to the new file management system was outsourced to the vendor providing the platform',
+        'The legacy file management system did not support modern authentication techniques despite the business requirements',
+        'The data custodians were selected by business stakeholders to ensure backups of the file management system are maintained off site'
       ],
       explanation: '',
       questionNumber: 181
@@ -1941,21 +1954,21 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 184
     },
-    // {
-    //   question: 'An analyst wants to conduct a risk assessment on a new application that is being deployed. Given the following information:\n' +
-    //     '- Total budget allocation for the new application is unavailable.\n' +
-    //     '- Recovery time objectives have not been set\n' +
-    //     '- Downtime loss calculations cannot be provided\n' +
-    //     'Which of the following statements describes the reason a qualitative assessment is the best option?',
-    //   answer: 'Sufficient metrics are not available to conduct other risk assessment types',
-    //   distractors: [
-    //     'The analyst has previous work experience in application development',
-    //     'An organizational risk register tracks all risks and mitigations across business units',
-    //     'The organization wants to find the monetary value of any outages'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 185
-    // },
+    {
+      question: 'An analyst wants to conduct a risk assessment on a new application that is being deployed. Given the following information:\n\n' +
+        '- Total budget allocation for the new application is unavailable\n\n' +
+        '- Recovery time objectives have not been set\n\n' +
+        '- Downtime loss calculations cannot be provided\n\n' +
+        'Which of the following statements describes the reason a qualitative assessment is the best option?',
+      answer: 'Sufficient metrics are not available to conduct other risk assessment types',
+      distractors: [
+        'The analyst has previous work experience in application development',
+        'An organizational risk register tracks all risks and mitigations across business units',
+        'The organization wants to find the monetary value of any outages'
+      ],
+      explanation: '185',
+      questionNumber: 185
+    },
     {
       question: 'A software company deployed a new application based on its internal code repository. Several customers are reporting anti-malware alerts on workstations used to test the application. Which of the following is the most likely cause of the alerts?',
       answer: 'Unsecure bundled libraries',
@@ -1964,8 +1977,8 @@ const securityQuiz = {
       questionNumber: 186
     },
     {
-      question: 'A security engineer is reviewing the following vulnerability scan report:\n\n\n' +
-        `![Question 187](${imgPath(187)})\n\n\n` +
+      question: 'A security engineer is reviewing the following vulnerability scan report:\n\n' +
+        `![Question 187](${imgPath(187)})\n\n` +
         'Which of the following should the engineer prioritize for remediation?',
       answer: 'OpenSSH',
       distractors: ['Apache HTTP Server', 'Google Chrome', 'Migration to TLS 1.3'],
@@ -1995,14 +2008,14 @@ const securityQuiz = {
       questionNumber: 189
     },
     {
-      question: 'A company reduced its staff 60 days ago, and applications are now starting to fail. The security analyst is investigating to determine if there is malicious intent for the application failures. The security analyst reviews the following logs:\n\n\n\n' +
-        `![Question 190](${imgPath(190)})\n\n\n` +
+      question: 'A company reduced its staff 60 days ago, and applications are now starting to fail. The security analyst is investigating to determine if there is malicious intent for the application failures. The security analyst reviews the following logs:\n\n\n' +
+        `![Question 190](${imgPath(190)})\n\n` +
         'Which of the following is the most likely reason for the application failures?',
       answer: 'The user’s account was set as a service account',
       distractors: [
         `The user's account was set as a service account`,
         `The user's home directory was deleted`,
-        'The user does not have sudo access.',
+        'The user does not have sudo access',
         'The root password has been changed'
       ],
       explanation: '',
@@ -2020,64 +2033,64 @@ const securityQuiz = {
       questionNumber: 191
     },
     {
-      question: 'Source code snippets for two separate malware samples are shown below:\n\n\n' +
-        `![Question 192](${imgPath(192)})\n\n\n` +
+      question: 'Source code snippets for two separate malware samples are shown below:\n\n' +
+        `![Question 192](${imgPath(192)})\n\n` +
         'Which of the following describes the most important observation about the two samples?',
-      answer: 'The samples were probably written by the same developer.',
+      answer: 'The samples were probably written by the same developer',
       distractors: [
         'Telemetry is first buffered and then transmitted in paranoid mode',
         'Both samples use IP connectivity for command and control',
-        'Sample 1 is the target agent while Sample 2 is the C2 server.'
+        'Sample 1 is the target agent while Sample 2 is the C2 server'
       ],
       explanation: '',
       questionNumber: 192
     },
-    // {
-    //   question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n' +
-    //     '- Unauthorized reading and modification of data and programs\n' +
-    //     '- Bypassing application security mechanisms\n' +
-    //     '- Privilege escalation\n' +
-    //     '- Interference with other processes\n' +
-    //     'Which of the following is the most appropriate for the engineer to deploy?',
-    //   answer: 'SELinux',
-    //   distractors: [
-    //     'Privileged access management',
-    //     'Self-encrypting disks',
-    //     'NIPS'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 193
-    // },
-    // {
-    //   question: 'A company migrated a critical workload from its data center to the cloud. The workload uses a very large data set that requires computational-intensive data processing. The business unit that uses the workload is projecting the following growth pattern:\n' +
-    //     '• Storage requirements will double every six months.\n' +
-    //     '• Computational requirements will fluctuate throughout the year\n' +
-    //     '• Average computational requirements will double every year.\n' +
-    //     'Which of the following should the company do to address the business unit\'s requirements?',
-    //   answer: 'Plan for a horizontally scaling computing and storage infrastructure',
-    //   distractors: [
-    //     'Deploy a cloud-based CDN for storage and a load balancer for compute',
-    //     'Combine compute and storage in vertically autoscaling mode',
-    //     'Implement a load balancer for computing and storage resources'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 194
-    // },
-    // {
-    //   question: 'A security analyst received a notification from a cloud service provider regarding an attack detected on a web server. The cloud service provider shared the following information about the attack:\n' +
-    //     '- The attack came from inside the network.\n' +
-    //     '- The attacking source IP was from the internal vulnerability scanners\n' +
-    //     '- The scanner is not configured to target the cloud servers.\n' +
-    //     'Which of the following actions should the security analyst take first?',
-    //   answer: 'Configure the scan policy to avoid targeting an out-of-scope host',
-    //   distractors: [
-    //     'Create an allow list for the vulnerability scanner IPs in order to avoid false positives',
-    //     'Set network behavior analysis rules.',
-    //     'Quarantine the scanner sensor to perform a forensic analysis'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 195
-    // },
+    {
+      question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n' +
+        '- Unauthorized reading and modification of data and programs\n' +
+        '- Bypassing application security mechanisms\n' +
+        '- Privilege escalation\n' +
+        '- Interference with other processes\n' +
+        'Which of the following is the most appropriate for the engineer to deploy?',
+      answer: 'SELinux',
+      distractors: [
+        'Privileged access management',
+        'Self-encrypting disks',
+        'NIPS'
+      ],
+      explanation: '193',
+      questionNumber: 193
+    },
+    {
+      question: 'A company migrated a critical workload from its data center to the cloud. The workload uses a very large data set that requires computational-intensive data processing. The business unit that uses the workload is projecting the following growth pattern:\n\n' +
+        '- Storage requirements will double every six months\n\n' +
+        '- Computational requirements will fluctuate throughout the year\n\n' +
+        '- Average computational requirements will double every year\n\n' +
+        `Which of the following should the company do to address the business unit's requirements?`,
+      answer: 'Plan for a horizontally scaling computing and storage infrastructure',
+      distractors: [
+        'Deploy a cloud-based CDN for storage and a load balancer for compute',
+        'Combine compute and storage in vertically autoscaling mode',
+        'Implement a load balancer for computing and storage resources'
+      ],
+      explanation: '194',
+      questionNumber: 194
+    },
+    {
+      question: 'A security analyst received a notification from a cloud service provider regarding an attack detected on a web server. The cloud service provider shared the following information about the attack:\n\n' +
+        '- The attack came from inside the network\n\n' +
+        '- The attacking source IP was from the internal vulnerability scanners\n\n' +
+        '- The scanner is not configured to target the cloud servers\n\n' +
+        'Which of the following actions should the security analyst take first?',
+      answer: 'Configure the scan policy to avoid targeting an out-of-scope host',
+      distractors: [
+        'Create an allow list for the vulnerability scanner IPs in order to avoid false positives',
+        'Set network behavior analysis rules',
+        'Quarantine the scanner sensor to perform a forensic analysis'
+      ],
+      explanation: '195',
+      questionNumber: 195
+    },
     {
       question: 'A company implemented a NIDS and a NIPS on the most critical environments. Since this implementation the company has been experiencing network connectivity issues. Which of the following should the security architect recommend for a new NIDS/NIPS implementation?',
       answer: 'Implementing the NIDS with a port mirror in the core switch and the NIPS in the main firewall',
@@ -2086,7 +2099,7 @@ const securityQuiz = {
         'Implementing a NIDS without a NIPS to increase the detection capability',
         'Implementing the NIDS in the bastion host and the NIPS in the branch network router'
       ],
-      explanation: '',
+      explanation: '196',
       questionNumber: 196
     },
     {
@@ -2104,8 +2117,8 @@ const securityQuiz = {
       questionNumber: 197
     },
     {
-      question: 'A security analyst is reviewing a SIEM and generates the following report:\n\n\n' +
-        `![Question 198](${imgPath(198)})\n\n\n` +
+      question: 'A security analyst is reviewing a SIEM and generates the following report:\n\n' +
+        `![Question 198](${imgPath(198)})\n\n` +
         'Later, the incident response team notices an attack was executed on the VM001 host. Which of the following should the security analyst do to enhance the alerting process on the SIEM platform?',
       answer: 'Perform a log correlation on the SIEM solution',
       distractors: [
@@ -2116,27 +2129,27 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 198
     },
-    // {
-    //   question: 'A security administrator is performing a gap assessment against a specific OS benchmark. The benchmark requires the following configurations be applied to endpoints:\n' +
-    //     '- Full disk encryption\n' +
-    //     '- Host-based firewall\n' +
-    //     '- Time synchronization\n' +
-    //     '- Password policies\n' +
-    //     '- Application allow listing\n' +
-    //     '- Zero Trust application access\n' +
-    //     'Which of the following solutions best addresses the requirements?',
-    //   answer: ['MDM', 'SCAP'],
-    //   distractors: ['MDM', 'CASB', 'SBoM', 'SCAP', 'SASE', 'HIDS'],
-    //   explanation: '',
-    //   questionNumber: 199
-    // },
     {
-      question: 'A security analyst is reviewing the following authentication logs:\n\n\n' +
-        `![Question 200](${imgPath(200)})\n\n\n` +
+      question: 'A security administrator is performing a gap assessment against a specific OS benchmark. The benchmark requires the following configurations be applied to endpoints:\n\n' +
+        '- Full disk encryption\n\n' +
+        '- Host-based firewall\n\n' +
+        '- Time synchronization\n\n' +
+        '- Password policies\n\n' +
+        '- Application allow listing\n\n' +
+        '- Zero Trust application access\n\n' +
+        'Which of the following solutions best addresses the requirements?',
+      answer: ['MDM', 'SCAP'],
+      distractors: ['MDM', 'CASB', 'SBoM', 'SCAP', 'SASE', 'HIDS'],
+      explanation: '199',
+      questionNumber: 199
+    },
+    {
+      question: 'A security analyst is reviewing the following authentication logs:\n\n' +
+        `![Question 200](${imgPath(200)})\n\n` +
         'Which of the following should the analyst do first?',
       answer: 'Disable User1’s account',
-      distractors: [`Disable User2's account.`, `Disable User12's account`, `Disable User8's account`],
-      explanation: '',
+      distractors: [`Disable User2's account`, `Disable User12's account`, `Disable User8's account`],
+      explanation: '200',
       questionNumber: 200
     },
     {
@@ -2155,8 +2168,8 @@ const securityQuiz = {
     },
     {
       question: 'A company that operates in different countries has local email infrastructure for each of its business units. A breach occurred in which email communications were intercepted between the headquarters and one of the overseas business units.\n\n' +
-        'During an investigation, the security analyst finds the following email log:\n\n\n' +
-        `![Question 203](${imgPath(203)})\n\n\n` +
+        'During an investigation, the security analyst finds the following email log:\n\n' +
+        `![Question 203](${imgPath(203)})\n\n` +
         'Which of the following actions should the security analyst take to best address the issue?',
       answer: 'Change the TLS configuration from opportunistic to enforced',
       distractors: [
@@ -2168,8 +2181,8 @@ const securityQuiz = {
       questionNumber: 203
     },
     {
-      question: `During a recent audit, a company's systems were assessed Given the following information:\n\n\n` +
-        `![Question 204](${imgPath(204)})\n\n\n` +
+      question: `During a recent audit, a company's systems were assessed Given the following information:\n\n` +
+        `![Question 204](${imgPath(204)})\n\n` +
         'Which of the following is the best way to reduce the attack surface?',
       answer: 'Implementing an application-aware firewall and writing strict rules for the application access',
       distractors: [
@@ -2184,7 +2197,7 @@ const securityQuiz = {
       question: 'A global manufacturing company has an internal application that is critical to making products. This application cannot be updated and must be available in the production area. A security architect is implementing security for the application. Which of the following best describes the action the architect should take?',
       answer: 'Create a separate network for users who need access to the application',
       distractors: [
-        'Disallow wireless access to the application.',
+        'Disallow wireless access to the application',
         'Deploy intrusion detection capabilities using a network tap',
         'Create an acceptable use policy for the use of the application'
       ],
@@ -2199,8 +2212,8 @@ const securityQuiz = {
       questionNumber: 206
     },
     {
-      question: 'A company\'s internal network is experiencing a security breach and the threat actor is still active Due to business requirements, users in this environment are allowed to utilize multiple machines at the same time. Given the following log snippet:\n\n\n' +
-        `![Question 207](${imgPath(207)})\n\n\n` +
+      question: 'A company\'s internal network is experiencing a security breach and the threat actor is still active Due to business requirements, users in this environment are allowed to utilize multiple machines at the same time. Given the following log snippet:\n\n' +
+        `![Question 207](${imgPath(207)})\n\n` +
         'Which of the following accounts should a security analyst disable to best contain the incident without impacting valid users?',
       answer: 'user-d',
       distractors: ['user-а', 'user-b', 'user-с'],
@@ -2238,11 +2251,11 @@ const securityQuiz = {
     },
     {
       question: 'A subcontractor develops safety critical avionics software for a major aircraft manufacturer. After an incident, a third-party investigator recommends the company begin to employ formal methods in the development life cycle. Which of the following findings from the investigation most directly supports the investigator\'s recommendation?',
-      answer: 'The codebase lacks traceability to functional and non-functional requirements.',
+      answer: 'The codebase lacks traceability to functional and non-functional requirements',
       distractors: [
-        'The system’s bill of materials failed to include commercial and open-source libraries.',
-        'The company lacks dynamic and interactive application security testing standards.',
-        'The implemented software inefficiently manages compute and memory resources.'
+        'The system’s bill of materials failed to include commercial and open-source libraries',
+        'The company lacks dynamic and interactive application security testing standards',
+        'The implemented software inefficiently manages compute and memory resources'
       ],
       explanation: '',
       questionNumber: 211
@@ -2250,12 +2263,12 @@ const securityQuiz = {
     {
       question: 'A security architect is onboarding a new EDR agent on servers that traditionally do not have internet access. In order for the agent to receive updates and report back to the management console, some changes must be made. Which of the following should the architect do to best accomplish this requirement?',
       answer: [
-        'Create a firewall rule to only allow traffic from the subnet to the internet via a proxy.',
+        'Create a firewall rule to only allow traffic from the subnet to the internet via a proxy',
         'Configure a proxy policy that allows only fully qualified domain names needed to communicate to a portal'
       ],
       distractors: [
         'Configure a proxy policy that blocks all traffic on port 443',
-        'Create a firewall rule to only allow traffic from the subnet to the internet via port 443.',
+        'Create a firewall rule to only allow traffic from the subnet to the internet via port 443',
         'Create a firewall rule to only allow traffic from the subnet to the internet to fully qualified names that are not identified as malicious by the firewall vendor',
         'Configure a proxy policy that blocks only lists of known-bad fully qualified domain names'
       ],
@@ -2263,8 +2276,8 @@ const securityQuiz = {
       questionNumber: 212
     },
     {
-      question: 'Due to an infrastructure optimization plan, a company has moved from a unified architecture to a federated architecture divided by region. Long-term employees now have a better experience, but new employees are experiencing major performance issues when traveling between regions. The company is reviewing the following information:\n\n\n' +
-        `![Question 213](${imgPath(213)})\n\n\n` +
+      question: 'Due to an infrastructure optimization plan, a company has moved from a unified architecture to a federated architecture divided by region. Long-term employees now have a better experience, but new employees are experiencing major performance issues when traveling between regions. The company is reviewing the following information:\n\n' +
+        `![Question 213](${imgPath(213)})\n\n` +
         'Which of the following is the most effective action to remediate the issue?',
       answer: `Synchronizing all regions' user identities and ensuring ongoing synchronization`,
       distractors: [
@@ -2311,13 +2324,13 @@ const securityQuiz = {
     {
       question: 'A security analyst is troubleshooting the reason a specific user is having difficulty accessing company resources.\n\n' +
         'The analyst reviews the following information:\n' +
-        `![Question 217](${imgPath(217)})\n\n\n` +
+        `![Question 217](${imgPath(217)})\n\n` +
         'Which of the following is most likely the cause of the issue?',
-      answer: 'A network geolocation is being misidentified by the authentication server.',
+      answer: 'A network geolocation is being misidentified by the authentication server',
       distractors: [
-        'The local network access has been configured to bypass MFA requirements.',
-        'Administrator access from an alternate location is blocked by company policy.',
-        'Several users have not configured their mobile devices to receive OTP codes.'
+        'The local network access has been configured to bypass MFA requirements',
+        'Administrator access from an alternate location is blocked by company policy',
+        'Several users have not configured their mobile devices to receive OTP codes'
       ],
       explanation: '',
       questionNumber: 217
@@ -2330,7 +2343,7 @@ const securityQuiz = {
       questionNumber: 218
     },
     {
-      question: 'A security analyst needs to ensure email domains that send phishing attempts without previous communications are not delivered to mailboxes. The following email headers are being reviewed:\n\n\n' +
+      question: 'A security analyst needs to ensure email domains that send phishing attempts without previous communications are not delivered to mailboxes. The following email headers are being reviewed:\n\n' +
         `![Question 219](${imgPath(219)})\n\n` +
         'Which of the following is the best action for the security analyst to take?',
       answer: 'Quarantine all messages with sales-mail com in the email header',
@@ -2371,24 +2384,24 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 222
     },
-    // {
-    //   question: 'After an incident occurred, a team reported during the lessons-learned review that the team:\n' +
-    //     '- Lost important information for further analysis.\n' +
-    //     '- Did not utilize the chain of communication\n' +
-    //     '- Did not follow the right steps for a proper response.\n' +
-    //     'Which of the following solutions is the best way to address these findings?',
-    //   answer: 'Building playbooks for different scenarios and performing regular table-top exercises',
-    //   distractors: [
-    //     'Requesting budget for better forensic tools to improve technical capabilities for incident response operations',
-    //     'Requiring professional incident response certifications for each new team member',
-    //     'Publishing the incident response policy and enforcing it as part of the security awareness program'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 223
-    // },
     {
-      question: 'A security analyst is reviewing the following code in the public repository for potential risk concerns:\n\n\n' +
-        `![Question 224](${imgPath(224)})\n\n\n` +
+      question: 'After an incident occurred, a team reported during the lessons-learned review that the team:\n\n' +
+        '- Lost important information for further analysis\n\n' +
+        '- Did not utilize the chain of communication\n\n' +
+        '- Did not follow the right steps for a proper response\n\n' +
+        'Which of the following solutions is the best way to address these findings?',
+      answer: 'Building playbooks for different scenarios and performing regular table-top exercises',
+      distractors: [
+        'Requesting budget for better forensic tools to improve technical capabilities for incident response operations',
+        'Requiring professional incident response certifications for each new team member',
+        'Publishing the incident response policy and enforcing it as part of the security awareness program'
+      ],
+      explanation: '223',
+      questionNumber: 223
+    },
+    {
+      question: 'A security analyst is reviewing the following code in the public repository for potential risk concerns:\n\n' +
+        `![Question 224](${imgPath(224)})\n\n` +
         'Which of the following should the security analyst recommend first to remediate the vulnerability?',
       answer: 'Revoking the secret used in the solution',
       distractors: [
@@ -2399,33 +2412,33 @@ const securityQuiz = {
       explanation: '',
       questionNumber: 224
     },
-    // {
-    //   question: 'After remote desktop capabilities were deployed in the environment various vulnerabilities were noticed:\n' +
-    //     '- Exfiltration of intellectual property\n' +
-    //     '- Unencrypted files\n' +
-    //     '- Weak user passwords\n' +
-    //     'Which of the following is the best way to mitigate these vulnerabilities?',
-    //   answer: [
-    //     'Implementing data loss prevention',
-    //     'Deploying directory-based group policies'
-    //   ],
-    //   distractors: [
-    //     'Deploying file integrity monitoring',
-    //     'Restricting access to critical file services only',
-    //     'Enabling modem authentication that supports MFA',
-    //     'Implementing a version control system',
-    //     'Implementing a CMDB platform'
-    //   ],
-    //   explanation: '',
-    //   questionNumber: 225
-    // },
+    {
+      question: 'After remote desktop capabilities were deployed in the environment various vulnerabilities were noticed:\n\n' +
+        '- Exfiltration of intellectual property\n\n' +
+        '- Unencrypted files\n\n' +
+        '- Weak user passwords\n\n' +
+        'Which of the following is the best way to mitigate these vulnerabilities?',
+      answer: [
+        'Implementing data loss prevention',
+        'Deploying directory-based group policies'
+      ],
+      distractors: [
+        'Deploying file integrity monitoring',
+        'Restricting access to critical file services only',
+        'Enabling modem authentication that supports MFA',
+        'Implementing a version control system',
+        'Implementing a CMDB platform'
+      ],
+      explanation: '225',
+      questionNumber: 225
+    },
     {
       question: 'An audit finding reveals that a legacy platform has not retained logs for more than 30 days. The platform has been segmented due to its interoperability with newer technology. As a temporary solution, the IT department changed the log retention to 120 days. Which of the following should the security engineer do to ensure the logs are being properly retained?',
-      answer: 'Configure the SIEM to aggregate the logs.',
+      answer: 'Configure the SIEM to aggregate the logs',
       distractors: [
-        'Configure a scheduled task nightly to save the logs.',
-        'Configure event-based triggers to export the logs at a threshold.',
-        'Configure a Python script to move the logs into a SQL database.'
+        'Configure a scheduled task nightly to save the logs',
+        'Configure event-based triggers to export the logs at a threshold',
+        'Configure a Python script to move the logs into a SQL database'
       ],
       explanation: '',
       questionNumber: 226
@@ -2454,11 +2467,11 @@ const securityQuiz = {
     },
     {
       question: 'A security architect for a global organization with a distributed workforce recently received funding to deploy a CASB solution. Which of the following most likely explains the choice to use a proxy-based CASB?',
-      answer: 'The capability to block unapproved applications and services is possible.\n',
+      answer: 'The capability to block unapproved applications and services is possible',
       distractors: [
-        'Privacy compliance obligations are bypassed when using a user-based deployment.',
-        'Protecting and regularly rotating API secret keys requires a significant time commitment.',
-        'Corporate devices cannot receive certificates when not connected to on-premises devices.'
+        'Privacy compliance obligations are bypassed when using a user-based deployment',
+        'Protecting and regularly rotating API secret keys requires a significant time commitment',
+        'Corporate devices cannot receive certificates when not connected to on-premises devices'
       ],
       explanation: '',
       questionNumber: 229
@@ -2476,11 +2489,11 @@ const securityQuiz = {
     },
     {
       question: 'A compliance officer is reviewing the data sovereignty laws in several countries where the organization has no presence. Which of the following is the most likely reason for reviewing these laws?',
-      answer: 'The organization is concerned with new regulatory enforcement in other countries.',
+      answer: 'The organization is concerned with new regulatory enforcement in other countries',
       distractors: [
-        'The organization is performing due diligence of potential tax issues.',
-        'The organization has been subject to legal proceedings in countries where it has a presence.',
-        'The organization has suffered brand reputation damage from incorrect media coverage.'
+        'The organization is performing due diligence of potential tax issues',
+        'The organization has been subject to legal proceedings in countries where it has a presence',
+        'The organization has suffered brand reputation damage from incorrect media coverage'
       ],
       explanation: '',
       questionNumber: 231
@@ -2490,7 +2503,7 @@ const securityQuiz = {
       answer: 'The motherboard was not configured with a TPM from the OEM supplier',
       distractors: [
         'The HSM is outdated and no longer supported by the manufacturer',
-        'The vTPM was not properly initialized and is corrupt.',
+        'The vTPM was not properly initialized and is corrupt',
         'The HSM is vulnerable to common exploits and a firmware upgrade is needed',
         'The HSM does not support sealing storage'
       ],
@@ -2498,8 +2511,8 @@ const securityQuiz = {
       questionNumber: 232
     },
     {
-      question: 'A company\'s security policy states that any publicly available server must be patched within 12 hours after a patch is released. A recent IIS zero-day vulnerability was discovered that affects all versions of the Windows Server OS:\n\n\n' +
-        `![Question 233](${imgPath(233)})\n\n\n` +
+      question: 'A company\'s security policy states that any publicly available server must be patched within 12 hours after a patch is released. A recent IIS zero-day vulnerability was discovered that affects all versions of the Windows Server OS:\n\n' +
+        `![Question 233](${imgPath(233)})\n\n` +
         'Which of the following hosts should a security analyst patch first once a patch is available?',
       answer: '4',
       distractors: ['1', '2', '3', '5', '6'],
@@ -2519,18 +2532,18 @@ const securityQuiz = {
     },
     {
       question: 'An organization has noticed an increase in phishing campaigns utilizing typosquatting. A security analyst needs to enrich the data for commonly used domains against the domains used in phishing campaigns. The analyst uses a log forwarder to forward network logs to the SIEM. Which of the following would allow the security analyst to perform this analysis?',
-      answer: 'Create a parser that matches domains.',
+      answer: 'Create a parser that matches domains',
       distractors: [
-        'Use a cron job to regularly update and compare domains.',
-        'Develop a query that filters out all matching domain names.',
-        'Implement a dashboard on the SIEM that shows the percentage of traffic by domain.'
+        'Use a cron job to regularly update and compare domains',
+        'Develop a query that filters out all matching domain names',
+        'Implement a dashboard on the SIEM that shows the percentage of traffic by domain'
       ],
       explanation: '',
       questionNumber: 235
     },
     {
-      question: 'A security analyst wants to use lessons learned from a prior incident response to reduce dwell time in the future. The analyst is using the following data points:\n\n\n' +
-        `![Question 236](${imgPath(236)})\n\n\n` +
+      question: 'A security analyst wants to use lessons learned from a prior incident response to reduce dwell time in the future. The analyst is using the following data points:\n\n' +
+        `![Question 236](${imgPath(236)})\n\n` +
         'Which of the following would the analyst most likely recommend?',
       answer: 'Adjusting the SIEM to alert on attempts to visit phishing sites',
       distractors: [
@@ -2542,8 +2555,8 @@ const securityQuiz = {
       questionNumber: 236
     },
     {
-      question: 'After a penetration test on the internal network the following report was generated:\n\n\n' +
-        `![Question 237](${imgPath(237)})\n\n\n` +
+      question: 'After a penetration test on the internal network the following report was generated:\n\n' +
+        `![Question 237](${imgPath(237)})\n\n` +
         'Which of the following should be recommended to remediate the attack?',
       answer: 'Rotating KRBTGT password',
       distractors: ['Deleting SQLSV', 'Reimaging ADMIN01$', 'Resetting the local domain'],
@@ -2551,10 +2564,10 @@ const securityQuiz = {
       questionNumber: 237
     },
     {
-      question: 'A security engineer is given the following requirements:\n\n\n' +
-        '+ An endpoint must only execute internally signed applications.\n\n' +
-        '+ Administrator accounts cannot install unauthorized software\n\n' +
-        '+ Attempts to run unauthorized software must be logged\n\n' +
+      question: 'A security engineer is given the following requirements:\n\n' +
+        '- An endpoint must only execute internally signed applications.\n\n' +
+        '- Administrator accounts cannot install unauthorized software\n\n' +
+        '- Attempts to run unauthorized software must be logged\n\n' +
         'Which of the following best meets these requirements?',
       answer: 'Configuring application control with blocked hashes and enterprise-trusted root certificates',
       distractors: [
@@ -2562,7 +2575,7 @@ const securityQuiz = {
         'Implementing a CSPM platform to monitor updates being pushed to applications',
         'Deploying an EDR solution to monitor and respond to software installation attempts'
       ],
-      explanation: '',
+      explanation: '238',
       questionNumber: 238
     },
     {
@@ -2573,8 +2586,8 @@ const securityQuiz = {
       questionNumber: 239
     },
     {
-      question: 'After a cybersecurity incident, a security analyst was able to collect a binary that the attacker used on the compromised server. Then the analyst ran the following command:\n\n\n' +
-        `![Question 240](${imgPath(240)})\n\n\n` +
+      question: 'After a cybersecurity incident, a security analyst was able to collect a binary that the attacker used on the compromised server. Then the analyst ran the following command:\n\n' +
+        `![Question 240](${imgPath(240)})\n\n` +
         'Which of the following options describes what the analyst is trying to do?',
       answer: 'To extract IoCs from the binary used on the attack',
       distractors: [
@@ -2586,8 +2599,8 @@ const securityQuiz = {
       questionNumber: 240
     },
     {
-      question: `A senior security engineer flags the following log file snippet as having likely facilitated an attacker's lateral movement in a recent breach:\n\n\n` +
-        `![Question 241](${imgPath(241)})\n\n\n` +
+      question: `A senior security engineer flags the following log file snippet as having likely facilitated an attacker's lateral movement in a recent breach:\n\n` +
+        `![Question 241](${imgPath(241)})\n\n` +
         'Which of the following solutions, if implemented, would mitigate the risk of this issue reoccurring?',
       answer: 'Disabling DNS zone transfers',
       distractors: [
@@ -2600,9 +2613,9 @@ const securityQuiz = {
     },
     {
       question: 'To prevent data breaches, security leaders at a company decide to expand user education to:\n\n' +
-        'Create a healthy security culture.\n\n' +
-        'Comply with regulatory requirements\n\n' +
-        'Improve incident reporting\n\n\n' +
+        '- `Create a healthy security culture`\n\n' +
+        '- `Comply with regulatory requirements`\n\n' +
+        '- `Improve incident reporting`\n\n' +
         'Which of the following would best meet their objective?',
       answer: 'Simulating a phishing campaign',
       distractors: [
@@ -2610,7 +2623,7 @@ const securityQuiz = {
         'Scheduling regular penetration tests',
         'Deploying fake ransomware'
       ],
-      explanation: '',
+      explanation: '242',
       questionNumber: 242
     }
   ]
