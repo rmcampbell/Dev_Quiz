@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     watch: {
-      usePolling: true // required for container hot reloading
+      // required for container hot reloading
+      usePolling: true
     },
     port: 3000,
     host: true, // fixes container xdg-open issues

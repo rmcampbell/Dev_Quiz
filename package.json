@@ -1,11 +1,13 @@
 {
   "name": "developer-quiz",
-  "homepage": "https://developerquiz.org",
+  "homepage": "https://rmcampbell.github.io/dev_quiz",
   "description": "This is a free quiz",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "vite",
     "preview": "vite preview",
     "start:local-docker": "docker container run --rm -it -p 3000:3000 developer-quiz-site",
@@ -14,7 +16,7 @@
     "e2e:ui": "playwright test --ui",
     "e2e:ci": "playwright test",
     "lint": "eslint .",
-    "fix-style": "pnpm run lint --fix",
+    "fix-style": "npm run lint --fix",
     "lint-style": "prettier --list-different .",
     "format": "prettier --write \"**/*.{ts,tsx,json}\""
   },
@@ -45,6 +47,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "happy-dom": "^17.4.4",
     "prettier": "^3.5.3",
