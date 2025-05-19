@@ -189,6 +189,8 @@ const Main: React.FC = () => {
   const modalProps = {
     correct,
     chosenAnswer,
+    // Include the correct answer only when the user's answer is incorrect
+    ...(correct ? {} : { correctAnswer: currQuestion.answer }),
     message,
     points,
     displayExplanation,
