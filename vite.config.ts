@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: 'dev_quiz/',
   server: {
     watch: {
       // required for container hot reloading
