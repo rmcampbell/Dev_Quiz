@@ -33,10 +33,19 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             <b>Your Answer:</b>
           </p>
           <p>
-            {Array.isArray(QuizQuestion.chosenAnswer)
-              ? QuizQuestion.chosenAnswer.join(', ')
-              : QuizQuestion.chosenAnswer}
+            {Array.isArray(QuizQuestion.chosenAnswer) ? QuizQuestion.chosenAnswer.join(', ') : QuizQuestion.chosenAnswer}
           </p>
+          {/* Display correct answer if the user's answer is incorrect and correctAnswer is provided */}
+          {!QuizQuestion.correct && QuizQuestion.correctAnswer && (
+            <>
+              <p>
+                <b>Correct Answer:</b>
+              </p>
+              <p>
+                {Array.isArray(QuizQuestion.correctAnswer) ? QuizQuestion.correctAnswer.join(', ') : QuizQuestion.correctAnswer}
+              </p>
+            </>
+          )}
           <>
             {QuizQuestion?.displayExplanation ? (
               <>
