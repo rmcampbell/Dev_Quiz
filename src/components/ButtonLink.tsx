@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // TODO: check this with v7
 import '../stylesheets/Button.css';
 import '../stylesheets/ButtonLink.css';
 import { ButtonLinkProps } from '../types';
