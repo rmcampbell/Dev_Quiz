@@ -10,22 +10,52 @@ import Results from './pages/Results';
 import SelectCategory from './pages/SelectCategory';
 import SelectQuestionsTotal from './pages/SelectQuestionsTotal';
 import shuffle from './shuffle-arr';
+import { QuizState } from './types';
 
-const Main: React.FC = () => {
+const QuizTemplate: React.FC = () => {
   const navigate = useNavigate();
-  const [quiz, setQuiz] = useState(ALL_CATEGORIES);
-  const [questionNumber, setQuestionNumber] = useState(1);
-  const [points, setPoints] = useState(0);
-  const [message, setMessage] = useState('');
-  const [correct, setCorrect] = useState(false);
-  const [displayExplanation, setDisplayExplanation] = useState('');
-  const [showReference, setShowReference] = useState('');
-  const [selectedOption, setSelectedOption] = useState<string | string[]>('');
-  const [chosenAnswer, setChosenAnswer] = useState<string | string[]>('');
-  const [chooseAnswer, setChooseAnswer] = useState(false);
-  const [show, setShowModal] = useState(false);
 
-  const [choicesArr, setChoicesArr] = useState<string[][]>([]);
+  // Consolidated state using QuizState interface
+  const [quizState, setQuizState] = useState<QuizState>({
+    quiz: ALL_CATEGORIES,
+    questionNumber: 1,
+    points: 0,
+    message: '',
+    correct: false,
+    displayExplanation: '',
+    showReference: '',
+    selectedOption: '',
+    chosenAnswer: '',
+    chooseAnswer: false,
+    showModal: false,
+    choicesArr: [],
+    selectedCategory: '',
+    filteredQuestions: ALL_CATEGORIES
+  });
+
+  // Destructure state for easier access
+  const {
+    quiz,
+    questionNumber,
+    points,
+    message,
+    correct,
+    displayExplanation,
+    showReference,
+    selectedOption,
+    chosenAnswer,
+    chooseAnswer,
+    showModal,
+    choicesArr,
+    selectedCategory,
+    filteredQuestions
+  } = quizState;
+
+  // Helper function to update specific state properties
+  const updateQuizState = (updates: Partial<QuizState>) => {
+    setQuizState(prevState => ({ ...prevState, ...updates }));
+  };
+
   const currQuestion = quiz[questionNumber - 1];
   const totalQuestions = quiz.length;
   const [filteredQuestions, setFilteredQuestions] = useState(ALL_CATEGORIES);
@@ -241,4 +271,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default QuizTemplate;
