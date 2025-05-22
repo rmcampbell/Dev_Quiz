@@ -2047,7 +2047,7 @@ const securityQuiz = {
       questionNumber: 192
     },
     {
-      question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n' +
+      question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n\n' +
         '`- Unauthorized reading and modification of data and programs`\n\n' +
         '`- Bypassing application security mechanisms`\n\n' +
         '`- Privilege escalation`\n\n' +
