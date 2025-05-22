@@ -1,6 +1,7 @@
 import imageMap from '../../assets.ts';
 
 const base = './images/CAS-005_';
+// TODO: Optimize image loading/rendering
 const imgPath = (num: number|string) => {
   let numStr = num;
   if (typeof num === 'number') {
@@ -40,7 +41,7 @@ const securityQuiz = {
       questionNumber: 2
     },
     {
-      question: `A security architect discovers the following while reviewing code for a company's website:\n` +
+      question: `A security architect discovers the following while reviewing code for a company's website:\n\n` +
         '`selection = "SELECT Item FROM Catalog WHERE ItemID = " & Request("ItemID")`\n\n' +
       'Which of the following should the security architect recommend?',
       answer: 'Query parameterization',
@@ -2046,7 +2047,7 @@ const securityQuiz = {
       questionNumber: 192
     },
     {
-      question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n' +
+      question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n\n' +
         '`- Unauthorized reading and modification of data and programs`\n\n' +
         '`- Bypassing application security mechanisms`\n\n' +
         '`- Privilege escalation`\n\n' +

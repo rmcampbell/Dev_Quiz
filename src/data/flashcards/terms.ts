@@ -1,3 +1,4 @@
+// TODO: Implement term/definition functionality
 const terms = [
   {
     term: '',

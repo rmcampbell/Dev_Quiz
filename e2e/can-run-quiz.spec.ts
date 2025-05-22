@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('should display a list of categories', async ({ page }) => {
-  await expect(page.getByRole('heading', { name: 'Choose a Category' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Choose a Test' })).toBeVisible();
 
   for (let i = 0; i < CATEGORIES.length; i++) {
     await expect(page.getByRole('button', { name: CATEGORIES[0], exact: true })).toBeVisible();
