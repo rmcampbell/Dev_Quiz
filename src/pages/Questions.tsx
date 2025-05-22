@@ -24,7 +24,11 @@ const Questions: React.FC<QuizProps> = QuizProps => {
           <fieldset className="quiz-answers-div">
             <legend>
               <span className="sr-only">Question {QuizProps.questionNumber}</span>
-              <MarkdownRenderer content={`${QuizProps.currQuestion.question} (Choose ${QuizProps.currQuestion.answer.length})`} />
+              <MarkdownRenderer content={
+                Array.isArray(QuizProps.currQuestion.answer)
+                  ? `${QuizProps.currQuestion.question} (Choose ${QuizProps.currQuestion.answer.length})`
+                  : `${QuizProps.currQuestion.question}`
+              } />
             </legend>
             <ul>
               {QuizProps.choicesArr.length > 0 &&
