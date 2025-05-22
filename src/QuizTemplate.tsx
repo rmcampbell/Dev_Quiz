@@ -3,7 +3,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import ButtonLink from './components/ButtonLink';
 
 import { ALL_CATEGORIES, QUESTION_NUMS } from './constants';
-import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses.ts';
+import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses';
 import Questions from './pages/Questions';
 import './stylesheets/App.css';
 import Results from './pages/Results';
@@ -58,7 +58,6 @@ const QuizTemplate: React.FC = () => {
 
   const currQuestion = quiz[questionNumber - 1];
   const totalQuestions = quiz.length;
-  const [filteredQuestions, setFilteredQuestions] = useState(ALL_CATEGORIES);
 
   //detects if the user tries the refresh the page in the middle of the quiz
   useEffect(() => {
@@ -73,23 +72,27 @@ const QuizTemplate: React.FC = () => {
     e.preventDefault();
     e.returnValue = '';
   };
-  const [selectedCategory, setSelectedCategory] = useState('');
+  // Store the selected quiz number for potential future use
   const [, setSelectedQuiz] = useState(0);
 
   const selectQuiz = (category: string, index: number) => {
-    setSelectedCategory(category);
     setSelectedQuiz(QUESTION_NUMS[index]);
 
     // Filter questions based on the selected category
     const filteredQuiz = ALL_CATEGORIES.filter(q => q.category === category);
-    setFilteredQuestions(filteredQuiz);
+
+    updateQuizState({
+      selectedCategory: category,
+      filteredQuestions: filteredQuiz
+    });
+
     navigate(`/quizzes/${category}/questionsTotal`);
   };
 
   const startQuiz = (quizQuestionsCount: number) => {
     const shuffledQuiz = shuffle(filteredQuestions).slice(0, quizQuestionsCount);
 
-    const choicesArr: string[][] = shuffledQuiz.map((obj) => {
+    const newChoicesArr: string[][] = shuffledQuiz.map((obj) => {
       const validDistractors = obj.distractors.filter((str: string) => str.trim().length > 0);
       if (Array.isArray(obj.answer)) {
         // For multi-select questions, include all answers and distractors
@@ -100,22 +103,27 @@ const QuizTemplate: React.FC = () => {
       }
     });
 
-    setQuiz(shuffledQuiz);
-    setChoicesArr(choicesArr);
+    updateQuizState({
+      quiz: shuffledQuiz,
+      choicesArr: newChoicesArr
+    });
+
     navigate(`/quizzes/${selectedCategory}/questions/1/of/${quizQuestionsCount}`);
   };
 
   // Function to start a random quiz
   const startRandomQuiz = () => {
-    // Set the selected category to "Random"
-    setSelectedCategory('Random');
-
     const randomIndex = Math.floor(Math.random() * QUESTION_NUMS.length);
     setSelectedQuiz(QUESTION_NUMS[randomIndex]);
 
     // Generate a random set of questions
     const randomQuestions = shuffle(ALL_CATEGORIES).slice(0, QUESTION_NUMS[randomIndex]);
-    setQuiz(randomQuestions);
+
+    updateQuizState({
+      selectedCategory: 'Random',
+      quiz: randomQuestions
+    });
+
     navigate('/quizzes/Random/questionsTotal');
   };
 
@@ -124,21 +132,28 @@ const QuizTemplate: React.FC = () => {
       navigate(`/quizzes/${selectedCategory}/results`);
       return;
     }
-    setQuestionNumber(curr => curr + 1);
-    setChooseAnswer(false);
+
+    updateQuizState({
+      questionNumber: questionNumber + 1,
+      chooseAnswer: false
+    });
+
     navigate(`/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`);
   };
 
   const resetQuiz = () => {
-    // Reset the selected category
-    setSelectedCategory('');
-
     // Reset selected quiz
     setSelectedQuiz(0);
-    setShowModal(false);
-    setChooseAnswer(false);
-    setPoints(0);
-    setQuestionNumber(1);
+
+    // Reset all quiz state
+    updateQuizState({
+      selectedCategory: '',
+      showModal: false,
+      chooseAnswer: false,
+      points: 0,
+      questionNumber: 1
+    });
+
     navigate('/quizzes');
   };
 
@@ -150,28 +165,30 @@ const QuizTemplate: React.FC = () => {
   const selectOption = (option: string) => {
     if (Array.isArray(currQuestion.answer)) {
       // For multi-select questions
-      setSelectedOption(prevSelected => {
-        if (Array.isArray(prevSelected)) {
-          // If the option is already selected, remove it
-          if (prevSelected.includes(option)) {
-            return prevSelected.filter(item => item !== option);
-          }
-          // If we haven't reached the maximum number of selections, add the option
-          else if (prevSelected.length < currQuestion.answer.length) {
-            return [...prevSelected, option];
-          }
-          // If we've reached the maximum, replace the first selected option
-          else {
-            return [...prevSelected.slice(1), option];
-          }
-        } else {
-          // Initialize the array with the first selection
-          return [option];
+      let newSelectedOption: string[];
+
+      if (Array.isArray(selectedOption)) {
+        // If the option is already selected, remove it
+        if (selectedOption.includes(option)) {
+          newSelectedOption = selectedOption.filter(item => item !== option);
         }
-      });
+        // If we haven't reached the maximum number of selections, add the option
+        else if (selectedOption.length < currQuestion.answer.length) {
+          newSelectedOption = [...selectedOption, option];
+        }
+        // If we've reached the maximum, replace the first selected option
+        else {
+          newSelectedOption = [...selectedOption.slice(1), option];
+        }
+      } else {
+        // Initialize the array with the first selection
+        newSelectedOption = [option];
+      }
+
+      updateQuizState({ selectedOption: newSelectedOption });
     } else {
       // For single-select questions
-      setSelectedOption(option);
+      updateQuizState({ selectedOption: option });
     }
   };
 
@@ -182,10 +199,6 @@ const QuizTemplate: React.FC = () => {
     if (!userAnswer || (Array.isArray(userAnswer) && userAnswer.length === 0)) {
       return;
     }
-
-    setSelectedOption(Array.isArray(currQuestion.answer) ? [] : '');
-    setChooseAnswer(true);
-    setChosenAnswer(userAnswer);
 
     let isCorrect = false;
 
@@ -201,18 +214,18 @@ const QuizTemplate: React.FC = () => {
       isCorrect = userAnswer === currQuestion.answer;
     }
 
-    if (isCorrect) {
-      setCorrect(true);
-      setPoints(curr => curr + 1);
-      setMessage(shuffleModalResponses(correctModalResponses));
-    } else {
-      setCorrect(false);
-      setMessage(shuffleModalResponses(incorrectModalResponses));
-    }
-
-    setDisplayExplanation(currQuestion?.explanation || '');
-    setShowReference(currQuestion?.link || '');
-    setShowModal(true);
+    // Update all related state in a single call
+    updateQuizState({
+      selectedOption: Array.isArray(currQuestion.answer) ? [] : '',
+      chooseAnswer: true,
+      chosenAnswer: userAnswer,
+      correct: isCorrect,
+      points: isCorrect ? points + 1 : points,
+      message: isCorrect ? shuffleModalResponses(correctModalResponses) : shuffleModalResponses(incorrectModalResponses),
+      displayExplanation: currQuestion?.explanation || '',
+      showReference: currQuestion?.link || '',
+      showModal: true
+    });
   };
 
   const modalProps = {
@@ -224,7 +237,7 @@ const QuizTemplate: React.FC = () => {
     points,
     displayExplanation,
     showReference,
-    show,
+    show: showModal, // Use showModal instead of show
     nextQuestion
   };
 
