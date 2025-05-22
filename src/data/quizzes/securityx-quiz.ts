@@ -41,7 +41,7 @@ const securityQuiz = {
       questionNumber: 2
     },
     {
-      question: `A security architect discovers the following while reviewing code for a company's website:\n` +
+      question: `A security architect discovers the following while reviewing code for a company's website:\n\n` +
         '`selection = "SELECT Item FROM Catalog WHERE ItemID = " & Request("ItemID")`\n\n' +
       'Which of the following should the security architect recommend?',
       answer: 'Query parameterization',
