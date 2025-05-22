@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import ButtonLink from './components/ButtonLink';
 
@@ -52,30 +52,39 @@ const QuizTemplate: React.FC = () => {
   } = quizState;
 
   // Helper function to update specific state properties
-  const updateQuizState = (updates: Partial<QuizState>) => {
+  const updateQuizState = useCallback((updates: Partial<QuizState>) => {
     setQuizState(prevState => ({ ...prevState, ...updates }));
-  };
-
-  const currQuestion = quiz[questionNumber - 1];
-  const totalQuestions = quiz.length;
-
-  //detects if the user tries the refresh the page in the middle of the quiz
-  useEffect(() => {
-    window.addEventListener('beforeunload', alertUser);
-    return () => window.removeEventListener('beforeunload', alertUser);
   }, []);
 
-  const alertUser = (e: {
+  // Memoize current question and total questions calculations
+  const currQuestion = useMemo(() => quiz[questionNumber - 1], [quiz, questionNumber]);
+  const totalQuestions = useMemo(() => quiz.length, [quiz]);
+
+  // Alert user function for beforeunload event
+  const alertUser = useCallback((e: {
     preventDefault: () => void;
     returnValue: string;
   }) => {
     e.preventDefault();
     e.returnValue = '';
-  };
+  }, []);
+
+  //detects if the user tries the refresh the page in the middle of the quiz
+  useEffect(() => {
+    window.addEventListener('beforeunload', alertUser);
+    return () => window.removeEventListener('beforeunload', alertUser);
+  }, [alertUser]);
+
   // Store the selected quiz number for potential future use
   const [, setSelectedQuiz] = useState(0);
 
-  const selectQuiz = (category: string, index: number) => {
+  // Memoize the shuffle modal responses function
+  const shuffleModalResponses = useCallback((responses: string[]) => {
+    const shuffleModalArr = shuffle<string>(responses);
+    return shuffleModalArr[0];
+  }, []);
+
+  const selectQuiz = useCallback((category: string, index: number) => {
     setSelectedQuiz(QUESTION_NUMS[index]);
 
     // Filter questions based on the selected category
@@ -87,9 +96,9 @@ const QuizTemplate: React.FC = () => {
     });
 
     navigate(`/quizzes/${category}/questionsTotal`);
-  };
+  }, [navigate, updateQuizState]);
 
-  const startQuiz = (quizQuestionsCount: number) => {
+  const startQuiz = useCallback((quizQuestionsCount: number) => {
     const shuffledQuiz = shuffle(filteredQuestions).slice(0, quizQuestionsCount);
 
     const newChoicesArr: string[][] = shuffledQuiz.map((obj) => {
@@ -103,16 +112,13 @@ const QuizTemplate: React.FC = () => {
       }
     });
 
-    updateQuizState({
-      quiz: shuffledQuiz,
-      choicesArr: newChoicesArr
-    });
+    updateQuizState({ quiz: shuffledQuiz, choicesArr: newChoicesArr });
 
     navigate(`/quizzes/${selectedCategory}/questions/1/of/${quizQuestionsCount}`);
-  };
+  }, [filteredQuestions, navigate, selectedCategory, updateQuizState]);
 
   // Function to start a random quiz
-  const startRandomQuiz = () => {
+  const startRandomQuiz = useCallback(() => {
     const randomIndex = Math.floor(Math.random() * QUESTION_NUMS.length);
     setSelectedQuiz(QUESTION_NUMS[randomIndex]);
 
@@ -125,9 +131,9 @@ const QuizTemplate: React.FC = () => {
     });
 
     navigate('/quizzes/Random/questionsTotal');
-  };
+  }, [navigate, updateQuizState]);
 
-  const nextQuestion = () => {
+  const nextQuestion = useCallback(() => {
     if (questionNumber >= quiz.length) {
       navigate(`/quizzes/${selectedCategory}/results`);
       return;
@@ -139,9 +145,9 @@ const QuizTemplate: React.FC = () => {
     });
 
     navigate(`/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`);
-  };
+  }, [questionNumber, quiz.length, navigate, selectedCategory, updateQuizState]);
 
-  const resetQuiz = () => {
+  const resetQuiz = useCallback(() => {
     // Reset selected quiz
     setSelectedQuiz(0);
 
@@ -155,14 +161,9 @@ const QuizTemplate: React.FC = () => {
     });
 
     navigate('/quizzes');
-  };
+  }, [navigate, updateQuizState]);
 
-  const shuffleModalResponses = (responses: string[]) => {
-    const shuffleModalArr = shuffle<string>(responses);
-    return shuffleModalArr[0];
-  };
-
-  const selectOption = (option: string) => {
+  const selectOption = useCallback((option: string) => {
     if (Array.isArray(currQuestion.answer)) {
       // For multi-select questions
       let newSelectedOption: string[];
@@ -190,9 +191,9 @@ const QuizTemplate: React.FC = () => {
       // For single-select questions
       updateQuizState({ selectedOption: option });
     }
-  };
+  }, [currQuestion.answer, selectedOption, updateQuizState]);
 
-  const checkAnswer = () => {
+  const checkAnswer = useCallback(() => {
     const userAnswer = selectedOption;
 
     // Ensure option was selected before checking the answer
@@ -226,9 +227,10 @@ const QuizTemplate: React.FC = () => {
       showReference: currQuestion?.link || '',
       showModal: true
     });
-  };
+  }, [currQuestion, points, selectedOption, shuffleModalResponses, updateQuizState]);
 
-  const modalProps = {
+  // Memoize the modal props to prevent unnecessary object recreations
+  const modalProps = useMemo(() => ({
     correct,
     chosenAnswer,
     // Include the correct answer only when the user's answer is incorrect
@@ -239,15 +241,27 @@ const QuizTemplate: React.FC = () => {
     showReference,
     show: showModal, // Use showModal instead of show
     nextQuestion
-  };
+  }), [
+    correct,
+    chosenAnswer,
+    currQuestion.answer,
+    message,
+    points,
+    displayExplanation,
+    showReference,
+    showModal,
+    nextQuestion
+  ]);
 
-  const resultsProps = {
+  // Memoize the results props
+  const resultsProps = useMemo(() => ({
     points,
     totalQuestions,
     resetQuiz
-  };
+  }), [points, totalQuestions, resetQuiz]);
 
-  const questionProps = {
+  // Memoize the question props
+  const questionProps = useMemo(() => ({
     currQuestion,
     questionNumber,
     totalQuestions,
@@ -258,7 +272,18 @@ const QuizTemplate: React.FC = () => {
     selectedOption,
     selectOption,
     checkAnswer
-  };
+  }), [
+    currQuestion,
+    questionNumber,
+    totalQuestions,
+    modalProps,
+    chooseAnswer,
+    points,
+    choicesArr,
+    selectedOption,
+    selectOption,
+    checkAnswer
+  ]);
 
   return (
     <>
@@ -284,4 +309,5 @@ const QuizTemplate: React.FC = () => {
   );
 };
 
-export default QuizTemplate;
+// Wrap with React.memo to prevent unnecessary re-renders
+export default React.memo(QuizTemplate);
