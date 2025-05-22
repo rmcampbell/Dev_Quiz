@@ -70,6 +70,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
               }
               onClick={() => QuizProps.checkAnswer()}
             >
+              {/* TODO: move to end of question */}
               {Array.isArray(QuizProps.currQuestion.answer)
                 ? `Submit (Choose ${QuizProps.currQuestion.answer.length})`
                 : 'Submit'}

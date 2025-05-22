@@ -6,9 +6,7 @@ const SelectQuestionsTotal: React.FC<SelectQuestionsTotalProps> = ({
   totalQuestions,
   startQuiz
 }) => {
-  const availableQuizLengths = QUESTION_NUMS.filter(
-    length => length <= totalQuestions
-  );
+  const availableQuizLengths = QUESTION_NUMS.filter(length => length <= totalQuestions);
 
   return (
     <div className="select-quiz-styles">

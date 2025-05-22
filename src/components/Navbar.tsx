@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   return (
     <header>
       <nav className="homepage-navbar">
-        <a target="_blank" rel="noreferrer" href="https://www.rosscampbell.dev/">
+        <a target="_blank" rel="noreferrer" href="https://github.com/rmcampbell/Dev_Quiz/">
           <img className="website-logo" src={dqLogo} alt="Ross Campbell logo" />
         </a>
       </nav>
