@@ -42,6 +42,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
                 <b>Correct Answer:</b>
               </p>
               <p>
+                {/* TODO: \n separator */}
                 {Array.isArray(QuizQuestion.correctAnswer) ? QuizQuestion.correctAnswer.join(', ') : QuizQuestion.correctAnswer}
               </p>
             </>
