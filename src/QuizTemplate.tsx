@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import ButtonLink from './components/ButtonLink';
 
-import DQLogo from './components/DQLogo';
 import { ALL_CATEGORIES, QUESTION_NUMS } from './constants';
 import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses.ts';
 import Questions from './pages/Questions';
@@ -221,19 +220,13 @@ const Main: React.FC = () => {
   return (
     <>
       <ButtonLink to="/">Home</ButtonLink>
-      <DQLogo />
+      {/*<DQLogo />*/}
       <Routes>
-        <Route
-          path="/"
-          element={<SelectCategory selectQuiz={selectQuiz} startRandomQuiz={startRandomQuiz} />}
-        />
+        <Route path="/" element={<SelectCategory selectQuiz={selectQuiz} startRandomQuiz={startRandomQuiz} />} />
         <Route
           path="/:category/questionsTotal"
           element={
-            <SelectQuestionsTotal
-              startQuiz={startQuiz}
-              totalQuestions={filteredQuestions.length}
-            />
+            <SelectQuestionsTotal startQuiz={startQuiz} totalQuestions={filteredQuestions.length} />
           }
         />
         <Route
@@ -248,4 +241,5 @@ const Main: React.FC = () => {
     </>
   );
 };
+
 export default Main;
