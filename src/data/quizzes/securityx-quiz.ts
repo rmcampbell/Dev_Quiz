@@ -2140,7 +2140,7 @@ const securityQuiz = {
         '`- Zero Trust application access`\n\n' +
         'Which of the following solutions best addresses the requirements?',
       answer: ['MDM', 'SCAP'],
-      distractors: ['MDM', 'CASB', 'SBoM', 'SCAP', 'SASE', 'HIDS'],
+      distractors: ['CASB', 'SBoM', 'SASE', 'HIDS'],
       explanation: '199',
       questionNumber: 199
     },
