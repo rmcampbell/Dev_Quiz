@@ -59,9 +59,7 @@ test('should show \'success\' modal after selecting the correct option', async (
   await verifyModalResponse(page, correctModalResponses, '1');
 });
 
-test('should show \'failure\' modal after selecting the wrong option', async ({
-  page
-}) => {
+test(`should show 'failure' modal after selecting the wrong option`, async ({ page }) => {
   await selectQuizCategory(page, 'HTML', '10');
 
   const question = await page.locator('legend').textContent();

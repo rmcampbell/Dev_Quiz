@@ -25,18 +25,14 @@ test('should allow selecting the number of questions', async ({ page }) => {
   await expect(page.getByRole('button', { name: /All/ })).toBeVisible();
 });
 
-test('should start the first question after the user has selected the number of questions', async ({
-  page
-}) => {
+test('should start the first question after the user has selected the number of questions', async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
   await page.waitForURL('/#/quizzes/HTML/questions/1/of/10');
   await expect(page.getByRole('heading', { name: 'Question 1' })).toBeVisible();
 });
 
-test('question page should contain 4 options and `submit` button', async ({
-  page
-}) => {
+test('question page should contain 4 options and `submit` button', async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 
@@ -45,9 +41,7 @@ test('question page should contain 4 options and `submit` button', async ({
   await page.getByRole('button', { name: 'Submit', exact: true }).click();
 });
 
-test('selected option  must have \'answers-btns--selected\' class', async ({
-  page
-}) => {
+test(`selected option  must have 'answers-btns--selected' class`, async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 
@@ -56,9 +50,7 @@ test('selected option  must have \'answers-btns--selected\' class', async ({
   await expect(page.getByRole('button').first()).toHaveClass(/answers-btns--selected/);
 });
 
-test('should show a modal after selecting one option and click the `submit` button', async ({
-  page
-}) => {
+test('should show a modal after selecting one option and click the `submit` button', async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 

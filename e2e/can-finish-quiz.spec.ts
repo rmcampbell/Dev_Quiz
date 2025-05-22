@@ -6,9 +6,7 @@ test.beforeEach(async ({ page }) => {
   await page.getByRole('button', { name: '10', exact: true }).click();
 });
 
-test('should show the results after the user has answered all questions', async ({
-  page
-}) => {
+test('should show the results after the user has answered all questions', async ({ page }) => {
   // loop through all the questions.
   for (let i = 1; i <= 10; i++) {
     expect(page.url()).toContain(`${i}/of/10`);
