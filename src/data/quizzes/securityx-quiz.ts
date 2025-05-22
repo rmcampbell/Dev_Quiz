@@ -1005,7 +1005,7 @@ const securityQuiz = {
     },
     {
       question: 'A company runs a DAST scan on a web application. The tool outputs the following recommendations:\n\n' +
-      '`- Use Cookie prefixes.`\n\n' +
+        '`- Use Cookie prefixes.`\n\n' +
         '`- Content Security Policy - SameSite=strict is not set.`\n\n' +
         'Which of the following vulnerabilities has the tool identified?',
       answer: 'CSRF',
