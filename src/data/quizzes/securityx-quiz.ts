@@ -40,7 +40,7 @@ const securityQuiz = {
       questionNumber: 2
     },
     {
-      question: 'A security architect discovers the following while reviewing code for a company\'s website:\n' +
+      question: `A security architect discovers the following while reviewing code for a company's website:\n` +
         '`selection = "SELECT Item FROM Catalog WHERE ItemID = " & Request("ItemID")`\n\n' +
       'Which of the following should the security architect recommend?',
       answer: 'Query parameterization',
@@ -312,10 +312,10 @@ const securityQuiz = {
     },
     {
       question: 'An organization wants to implement an access control system based on its data classification policy that includes the following data types: \n\n' +
-        '- `Confidential`\n\n' +
-        '- `Restricted`\n\n' +
-        '- `Internal`\n\n' +
-        '- `Public Flag for Review`\n\n' +
+        '`- Confidential`\n\n' +
+        '`- Restricted`\n\n' +
+        '`- Internal`\n\n' +
+        '`- Public Flag for Review`\n\n' +
         'The access control system should support SSO federation to map users into groups. Each group should only access systems that process and store data at the classification assigned to the group.\n\n' +
         'Which of the following should the organization implement to enforce its requirements with a minimal impact to systems and resources?',
       answer: 'A tagging strategy in which all resources are assigned a tag based on the data classification type, and a system that enforces attribute-based access control',
@@ -539,8 +539,8 @@ const securityQuiz = {
     },
     {
       question: 'The principal security analyst for a global manufacturer is investigating a security incident related to abnormal behavior in the ICS network. A controller was restarted as part of the troubleshooting process, and the following issue was identified when the controller was restarted:\n\n' +
-      '- `SECURE BOOT FAILED:`\n\n' +
-      '- `FIRMWARE MISMATCH EXPECTED UXFDC479 ACTUAL 0x79F31B`\n\n' +
+      '`- SECURE BOOT FAILED:`\n\n' +
+      '`- FIRMWARE MISMATCH EXPECTED UXFDC479 ACTUAL 0x79F31B`\n\n' +
       'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\nWhich of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
@@ -549,9 +549,9 @@ const securityQuiz = {
     },
     {
       question: 'A web service provider has just taken on a very large contract that comes with requirements that are currently not being implemented. In order to meet contractual requirements, the company must achieve the following thresholds:\n\n' +
-        '- 99.99% uptime\n\n' +
-        '- Load time in 3 seconds\n\n' +
-        '- Response time = <1.0 seconds\n\n' +
+        '`- 99.99% uptime`\n\n' +
+        '`- Load time in 3 seconds`\n\n' +
+        '`- Response time = <1.0 seconds`\n\n' +
         'Starting with the computing environment, which of the following should a security engineer recommend to best meet the requirements?',
       answer: [
         'Deploying a content delivery network',
@@ -622,7 +622,7 @@ const securityQuiz = {
     },
     {
       question: 'A security analyst received the following finding from a cloud security assessment tool:\n\n' +
-        '- Virtual Machine Data Disk is encrypted with the default encryption key.\n\n' +
+        '`- Virtual Machine Data Disk is encrypted with the default encryption key.`\n\n' +
         'Because the organization hosts highly sensitive data files, regulations dictate it must be encrypted so It is unreadable to the CSP. Which of the following should be implemented to remediate the finding and meet the regulatory requirement?',
       answer: ['Disk encryption with customer-provided keys', 'File-level encryption with customer-provided keys'],
       distractors: [
@@ -654,8 +654,8 @@ const securityQuiz = {
     },
     {
       question: 'A security engineer would like to control configurations on mobile devices while fulfilling the following requirements:\n\n' +
-        '- Support and control Apple and Android devices.\n\n' +
-        '- The device must be corporate-owned.\n\n' +
+        '`- Support and control Apple and Android devices.`\n\n' +
+        '`- The device must be corporate-owned.`\n\n' +
         'Which of the following would enable the engineer to meet these requirements?',
       answer: ['Implement an MDM solution', 'Update policy to prohibit the use of BYOD devices'],
       distractors: [
@@ -833,9 +833,9 @@ const securityQuiz = {
     },
     {
       question: 'Users are experiencing a variety of issues when trying to access corporate resources. Examples include:\n\n' +
-        '- Connectivity issues between local computers and file servers between branch offices\n\n' +
-        '- Inability to download corporate applications on mobile endpoints while working remotely\n\n' +
-        '- Certificate errors when accessing internal web applications\n\n' +
+        '`- Connectivity issues between local computers and file servers between branch offices`\n\n' +
+        '`- Inability to download corporate applications on mobile endpoints while working remotely`\n\n' +
+        '`- Certificate errors when accessing internal web applications`\n\n' +
         'Which of the following actions are the most relevant when troubleshooting the reported issues?',
       answer: [
         'Review VPN throughput',
@@ -1005,9 +1005,9 @@ const securityQuiz = {
     },
     {
       question: 'A company runs a DAST scan on a web application. The tool outputs the following recommendations:\n\n' +
-      '- Use Cookie prefixes.\n\n' +
-      '- `Content Security Policy - SameSite=strict` is not set.\n\n' +
-      'Which of the following vulnerabilities has the tool identified?',
+      '`- Use Cookie prefixes.`\n\n' +
+        '`- Content Security Policy - SameSite=strict is not set.`\n\n' +
+        'Which of the following vulnerabilities has the tool identified?',
       answer: 'CSRF',
       distractors: ['RCE', 'XSS', 'TOCTOU'],
       explanation: '102',
@@ -1104,11 +1104,11 @@ const securityQuiz = {
     },
     {
       question: `A company acquires a location with a large infrastructure of legacy devices. Because of the hardware's age and the legacy software's limitations, the OS cannot be upgraded, and the machines cannot be virtualized. These machines are not publicly facing, but they do have internet access. The following controls are currently in place:\n\n` +
-      '- EDR\n\n' +
-      '- Anti-malware\n\n' +
-      '- Logging and monitoring\n\n' +
-      '- Host-based firewall\n\n' +
-      '- Proxied internet access\n\n' +
+      '`- EDR`\n\n' +
+      '`- Anti-malware`\n\n' +
+      '`- Logging and monitoring`\n\n' +
+      '`- Host-based firewall`\n\n' +
+      '`- Proxied internet access`\n\n' +
       'A security architect needs to supplement the existing control strategy with one that restricts unauthorized software. Which of the following controls should the architect recommend to best supplement the existing environment?',
       answer: 'Application control',
       distractors: ['SIEM', 'Isolation', 'Conditional access'],
@@ -1187,11 +1187,11 @@ const securityQuiz = {
     },
     {
       question: 'A developer receives feedback about code quality and efficiency. The developer needs to identify and resolve the following coding issues before submitting the code changes for peer review:\n\n' +
-      '- Indexing beyond arrays\n\n' +
-      '- Dereferencing null pointers\n\n' +
-      '- Potentially dangerous data type combos\n\n' +
-      '- Unreachable code\n\n' +
-      '- Non-portable constructs\n\n' +
+      '`- Indexing beyond arrays`\n\n' +
+      '`- Dereferencing null pointers`\n\n' +
+      '`- Potentially dangerous data type combos`\n\n' +
+      '`- Unreachable code`\n\n' +
+      '`- Non-portable constructs`\n\n' +
       'Which of the following would be most appropriate for the developer to use in this situation?',
       answer: 'Linting',
       distractors: ['SBoM', 'DAST', 'Branch protection', 'Software composition analysis'],
@@ -1221,10 +1221,10 @@ const securityQuiz = {
     },
     {
       question: 'A manufacturing plant is updating its IT services. During discussions, the senior management team created the following list of considerations:\n\n' +
-      '- Staff turnover is high and seasonal\n\n' +
-      '- Extreme conditions often damage endpoints\n\n' +
-      '- Losses from downtime must be minimized\n\n' +
-      '- Regulatory data retention requirements exist\n\n' +
+      '`- Staff turnover is high and seasonal`\n\n' +
+      '`- Extreme conditions often damage endpoints`\n\n' +
+      '`- Losses from downtime must be minimized`\n\n' +
+      '`- Regulatory data retention requirements exist`\n\n' +
       'Which of the following best addresses the considerations?',
       answer: 'Using a non-persistent virtual desktop interface with thin clients',
       distractors: [
@@ -1255,9 +1255,9 @@ const securityQuiz = {
     },
     {
       question: 'A cloud engineer needs to identify appropriate solutions to: \n\n' +
-      '- Provide secure access to internal and external cloud resources\n\n' +
-      '- Eliminate split-tunnel traffic flows\n\n' +
-      '- Enable identity and access management capabilities\n\n' +
+      '`- Provide secure access to internal and external cloud resources`\n\n' +
+      '`- Eliminate split-tunnel traffic flows`\n\n' +
+      '`- Enable identity and access management capabilities`\n\n' +
       'Which of the following solutions is the most appropriate?',
       answer: 'SASE',
       distractors: ['Micro-segmentation', 'PAM', 'SD-WAN'],
@@ -1592,9 +1592,9 @@ const securityQuiz = {
     },
     {
       question: 'A security engineer wants to enhance the security posture of end-user systems in a zero trust environment. Given the following requirements:\n\n' +
-      '- Reduce the ability for potentially compromised endpoints to contact C2 infrastructure\n\n' +
-      '- Track the requests that the malware makes to the IPs\n\n' +
-      '- Avoid the download of additional payloads\n\n' +
+      '`- Reduce the ability for potentially compromised endpoints to contact C2 infrastructure`\n\n' +
+      '`- Track the requests that the malware makes to the IPs`\n\n' +
+      '`- Avoid the download of additional payloads`\n\n' +
       'Which of the following should the engineer deploy to meet these requirements?',
       answer: 'DNS sinkholing',
       distractors: [
@@ -1642,9 +1642,9 @@ const securityQuiz = {
     },
     {
       question: 'An organization is required to:\n\n' +
-      '- Respond to internal and external inquiries in a timely manner\n\n' +
-      '- Provide transparency\n\n' +
-      '- Comply with regulatory requirements\n\n' +
+      '`- Respond to internal and external inquiries in a timely manner`\n\n' +
+      '`- Provide transparency`\n\n' +
+      '`- Comply with regulatory requirements`\n\n' +
       'The organization has not experienced any reportable breaches but wants to be prepared if a breach occurs in the future. Which of the following is the best way for the organization to prepare?',
       answer: 'Developing communication templates that have been vetted by internal and external counsel',
       distractors: [
@@ -1657,10 +1657,10 @@ const securityQuiz = {
     },
     {
       question: 'An incident response team is analyzing malware and observes the following:\n\n' +
-      '- Does not execute in a sandbox\n\n' +
-      '- No network IoCs\n\n' +
-      '- No publicly known hash match\n\n' +
-      '- No process injection method detected\n\n' +
+      '`- Does not execute in a sandbox`\n\n' +
+      '`- No network IoCs`\n\n' +
+      '`- No publicly known hash match`\n\n' +
+      '`- No process injection method detected`\n\n' +
       'Which of the following should the team do next to proceed with further analysis?',
       answer: 'Check for an anti-virtualization code in the sample',
       distractors: [
@@ -1772,9 +1772,9 @@ const securityQuiz = {
     },
     {
       question: 'An administrator needs to craft a single certificate-signing request for a web-server certificate. The server should be able to use the following identities to mutually authenticate other resources over TLS:\n\n' +
-        '- `www.int.comptia.org`\n\n' +
-        '- `webserver01 .int.comptia.org`\n\n' +
-        '- `10.5.100.10`\n\n' +
+        '`- www.int.comptia.org`\n\n' +
+        '`- webserver01 .int.comptia.org`\n\n' +
+        '`- 10.5.100.10`\n\n' +
         'Which of the following certificate fields must be set properly to support this objective?',
       answer: 'Subject alternative name',
       distractors: [
@@ -1800,12 +1800,12 @@ const securityQuiz = {
     },
     {
       question: 'A hospital provides tablets to its medical staff to enable them to more quickly access and edit patients\' charts. The hospital wants to ensure that if a tablet is identified as lost or stolen and a remote command is issued, the risk of data loss can be mitigated within seconds. The tablets are configured as follows to meet hospital policy:\n\n' +
-        '- Full disk encryption is enabled\n\n' +
-        '- `Always On` corporate VPN is enabled\n\n' +
-        '- eFuse-backed keystore is enabled/ready\n\n' +
-        '- Wi-Fi 6 is configured with SAE\n\n' +
-        '- Location services is disabled\n\n' +
-        '- Application allow list is unconfigured.\n\n' +
+        '`- Full disk encryption is enabled`\n\n' +
+        '`- `Always On` corporate VPN is enabled`\n\n' +
+        '`- eFuse-backed keystore is enabled/ready`\n\n' +
+        '`- Wi-Fi 6 is configured with SAE`\n\n' +
+        '`- Location services is disabled`\n\n' +
+        '`- Application allow list is unconfigured.`\n\n' +
         'Assuming the hospital policy cannot be changed, which of the following is the best way to meet the hospital\'s objective?',
       answer: 'Cryptographically erase FDE volumes',
       distractors: [
@@ -1833,8 +1833,8 @@ const securityQuiz = {
     },
     {
       question: 'An ISAC supplied recent threat intelligence information about pictures used on social media that provide reconnaissance of systems in use in secure facilities. In response, the Chief Information Security Officer (CISO) wants several configuration changes implemented via the MDM to ensure the following:\n\n' +
-        '- Camera functions and location services are blocked for corporate mobile devices\n\n' +
-        '- All social media is blocked on the corporate and guest wireless networks\n\n' +
+        '`- Camera functions and location services are blocked for corporate mobile devices`\n\n' +
+        '`- All social media is blocked on the corporate and guest wireless networks`\n\n' +
         'Which of the following is the CISO practicing to safeguard against the threat?',
       answer: 'Operational security',
       distractors: [
@@ -1905,9 +1905,9 @@ const securityQuiz = {
     },
     {
       question: 'A web application server that provides services to hybrid modern and legacy financial applications recently underwent a scheduled upgrade to update common libraries, including OpenSSL. Multiple users are now reporting failed connection attempts to the server. The technician performing initial triage identified the following:\n\n' +
-        '- Client applications more than five years old appear to be the most affected\n\n' +
-        '- Web server logs show initial connection attempts by affected hosts\n\n' +
-        '- For the failed connections, logs indicate `cipher unavailable`\n\n' +
+        '`- Client applications more than five years old appear to be the most affected`\n\n' +
+        '`- Web server logs show initial connection attempts by affected hosts`\n\n' +
+        '`- For the failed connections, logs indicate `cipher unavailable``\n\n' +
         'Which of the following is most likely to safely remediate this situation?',
       answer: 'The client applications need to be modified to support AES in Galois/Counter Mode or equivalent',
       distractors: [
@@ -1956,9 +1956,9 @@ const securityQuiz = {
     },
     {
       question: 'An analyst wants to conduct a risk assessment on a new application that is being deployed. Given the following information:\n\n' +
-        '- Total budget allocation for the new application is unavailable\n\n' +
-        '- Recovery time objectives have not been set\n\n' +
-        '- Downtime loss calculations cannot be provided\n\n' +
+        '`- Total budget allocation for the new application is unavailable`\n\n' +
+        '`- Recovery time objectives have not been set`\n\n' +
+        '`- Downtime loss calculations cannot be provided`\n\n' +
         'Which of the following statements describes the reason a qualitative assessment is the best option?',
       answer: 'Sufficient metrics are not available to conduct other risk assessment types',
       distractors: [
@@ -2047,10 +2047,10 @@ const securityQuiz = {
     },
     {
       question: 'A systems engineer is configuring a system baseline for servers that will provide email services. As part of the architecture design, the engineer needs to improve performance of the systems by using an access vector cache, facilitating mandatory access control, and protecting against:\n' +
-        '- Unauthorized reading and modification of data and programs\n' +
-        '- Bypassing application security mechanisms\n' +
-        '- Privilege escalation\n' +
-        '- Interference with other processes\n' +
+        '`- Unauthorized reading and modification of data and programs`\n\n' +
+        '`- Bypassing application security mechanisms`\n\n' +
+        '`- Privilege escalation`\n\n' +
+        '`- Interference with other processes`\n\n' +
         'Which of the following is the most appropriate for the engineer to deploy?',
       answer: 'SELinux',
       distractors: [
@@ -2063,9 +2063,9 @@ const securityQuiz = {
     },
     {
       question: 'A company migrated a critical workload from its data center to the cloud. The workload uses a very large data set that requires computational-intensive data processing. The business unit that uses the workload is projecting the following growth pattern:\n\n' +
-        '- Storage requirements will double every six months\n\n' +
-        '- Computational requirements will fluctuate throughout the year\n\n' +
-        '- Average computational requirements will double every year\n\n' +
+        '`- Storage requirements will double every six months`\n\n' +
+        '`- Computational requirements will fluctuate throughout the year`\n\n' +
+        '`- Average computational requirements will double every year`\n\n' +
         `Which of the following should the company do to address the business unit's requirements?`,
       answer: 'Plan for a horizontally scaling computing and storage infrastructure',
       distractors: [
@@ -2078,9 +2078,9 @@ const securityQuiz = {
     },
     {
       question: 'A security analyst received a notification from a cloud service provider regarding an attack detected on a web server. The cloud service provider shared the following information about the attack:\n\n' +
-        '- The attack came from inside the network\n\n' +
-        '- The attacking source IP was from the internal vulnerability scanners\n\n' +
-        '- The scanner is not configured to target the cloud servers\n\n' +
+        '`- The attack came from inside the network`\n\n' +
+        '`- The attacking source IP was from the internal vulnerability scanners`\n\n' +
+        '`- The scanner is not configured to target the cloud servers`\n\n' +
         'Which of the following actions should the security analyst take first?',
       answer: 'Configure the scan policy to avoid targeting an out-of-scope host',
       distractors: [
@@ -2131,12 +2131,12 @@ const securityQuiz = {
     },
     {
       question: 'A security administrator is performing a gap assessment against a specific OS benchmark. The benchmark requires the following configurations be applied to endpoints:\n\n' +
-        '- Full disk encryption\n\n' +
-        '- Host-based firewall\n\n' +
-        '- Time synchronization\n\n' +
-        '- Password policies\n\n' +
-        '- Application allow listing\n\n' +
-        '- Zero Trust application access\n\n' +
+        '`- Full disk encryption`\n\n' +
+        '`- Host-based firewall`\n\n' +
+        '`- Time synchronization`\n\n' +
+        '`- Password policies`\n\n' +
+        '`- Application allow listing`\n\n' +
+        '`- Zero Trust application access`\n\n' +
         'Which of the following solutions best addresses the requirements?',
       answer: ['MDM', 'SCAP'],
       distractors: ['MDM', 'CASB', 'SBoM', 'SCAP', 'SASE', 'HIDS'],
@@ -2386,9 +2386,9 @@ const securityQuiz = {
     },
     {
       question: 'After an incident occurred, a team reported during the lessons-learned review that the team:\n\n' +
-        '- Lost important information for further analysis\n\n' +
-        '- Did not utilize the chain of communication\n\n' +
-        '- Did not follow the right steps for a proper response\n\n' +
+        '`- Lost important information for further analysis`\n\n' +
+        '`- Did not utilize the chain of communication`\n\n' +
+        '`- Did not follow the right steps for a proper response`\n\n' +
         'Which of the following solutions is the best way to address these findings?',
       answer: 'Building playbooks for different scenarios and performing regular table-top exercises',
       distractors: [
@@ -2414,9 +2414,9 @@ const securityQuiz = {
     },
     {
       question: 'After remote desktop capabilities were deployed in the environment various vulnerabilities were noticed:\n\n' +
-        '- Exfiltration of intellectual property\n\n' +
-        '- Unencrypted files\n\n' +
-        '- Weak user passwords\n\n' +
+        '`- Exfiltration of intellectual property`\n\n' +
+        '`- Unencrypted files`\n\n' +
+        '`- Weak user passwords`\n\n' +
         'Which of the following is the best way to mitigate these vulnerabilities?',
       answer: [
         'Implementing data loss prevention',
@@ -2565,9 +2565,9 @@ const securityQuiz = {
     },
     {
       question: 'A security engineer is given the following requirements:\n\n' +
-        '- An endpoint must only execute internally signed applications.\n\n' +
-        '- Administrator accounts cannot install unauthorized software\n\n' +
-        '- Attempts to run unauthorized software must be logged\n\n' +
+        '`- An endpoint must only execute internally signed applications.`\n\n' +
+        '`- Administrator accounts cannot install unauthorized software`\n\n' +
+        '`- Attempts to run unauthorized software must be logged`\n\n' +
         'Which of the following best meets these requirements?',
       answer: 'Configuring application control with blocked hashes and enterprise-trusted root certificates',
       distractors: [
@@ -2613,9 +2613,9 @@ const securityQuiz = {
     },
     {
       question: 'To prevent data breaches, security leaders at a company decide to expand user education to:\n\n' +
-        '- `Create a healthy security culture`\n\n' +
-        '- `Comply with regulatory requirements`\n\n' +
-        '- `Improve incident reporting`\n\n' +
+        '`- Create a healthy security culture`\n\n' +
+        '`- Comply with regulatory requirements`\n\n' +
+        '`- Improve incident reporting`\n\n' +
         'Which of the following would best meet their objective?',
       answer: 'Simulating a phishing campaign',
       distractors: [
@@ -2625,6 +2625,17 @@ const securityQuiz = {
       ],
       explanation: '242',
       questionNumber: 242
+    },
+    {
+      question: '',
+      answer: '',
+      distractors: [
+        '',
+        '',
+        ''
+      ],
+      explanation: '',
+      questionNumber: 243
     }
   ]
 };
