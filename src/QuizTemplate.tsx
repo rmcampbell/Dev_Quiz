@@ -220,7 +220,6 @@ const Main: React.FC = () => {
   return (
     <>
       <ButtonLink to="/">Home</ButtonLink>
-      {/*<DQLogo />*/}
       <Routes>
         <Route path="/" element={<SelectCategory selectQuiz={selectQuiz} startRandomQuiz={startRandomQuiz} />} />
         <Route
