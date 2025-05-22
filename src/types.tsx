@@ -34,11 +34,10 @@ export interface Question {
   answer: string | string[];
   distractors: string[];
   explanation: string;
-  questionNumber?: number;
+  questionNumber?: number | undefined;
   link?: string;
 }
 
-// TODO: Fix this type
 export interface QuizQuestion {
   message: string;
   points: number;
@@ -47,15 +46,12 @@ export interface QuizQuestion {
   correctAnswer?: string | string[];
   displayExplanation: string;
   showReference: string;
-  nextQuestion: MouseEventHandler;
+  nextQuestion: MouseEventHandler; // Used as showModal in QuizTemplate.tsx
   show: boolean;
 }
 
-// TODO: Fix this type
 export interface QuizProps {
-  currQuestion: {
-    question: string; answer: string | string[]
-  };
+  currQuestion: Question;
   questionNumber: number;
   totalQuestions: number;
   modalProps: QuizQuestion;
@@ -65,6 +61,24 @@ export interface QuizProps {
   selectedOption: string | string[];
   selectOption: (option: string) => void;
   checkAnswer: () => void;
+}
+
+// Type for the quiz state to consolidate related state variables
+export interface QuizState {
+  quiz: Question[];
+  questionNumber: number;
+  points: number;
+  selectedOption: string | string[];
+  chosenAnswer: string | string[];
+  chooseAnswer: boolean;
+  showModal: boolean;
+  correct: boolean;
+  message: string;
+  displayExplanation: string;
+  showReference: string;
+  choicesArr: string[][];
+  selectedCategory: string;
+  filteredQuestions: Question[];
 }
 
 export interface PointTotals {

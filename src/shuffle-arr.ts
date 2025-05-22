@@ -1,16 +1,18 @@
 //fisher yates shuffle
 function shuffle<Type>(array: Type[]): Type[] {
-  let curInd = array.length,
+  // Create a copy of the array to avoid mutating the original
+  const arrayCopy = [...array];
+  let curInd = arrayCopy.length,
     randInd: number;
 
   while (curInd > 0) {
     randInd = Math.floor(Math.random() * curInd);
     curInd--;
 
-    [array[curInd], array[randInd]] = [array[randInd], array[curInd]];
+    [arrayCopy[curInd], arrayCopy[randInd]] = [arrayCopy[randInd], arrayCopy[curInd]];
   }
 
-  return array;
+  return arrayCopy;
 }
 
 export default shuffle;
