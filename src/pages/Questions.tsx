@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import QuizModal from '../components/QuizModal';
@@ -7,11 +7,24 @@ import { QuizProps } from '../types';
 
 const Questions: React.FC<QuizProps> = QuizProps => {
   const navigate = useNavigate();
+  const submitButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!QuizProps.choicesArr.length) {
       navigate('/quizzes');
     }
   }, [QuizProps.choicesArr, navigate]);
+
+  // Set focus on submit button when required answers are selected
+  useEffect(() => {
+    const isRequiredAnswersSelected = Array.isArray(QuizProps.currQuestion.answer)
+      ? Array.isArray(QuizProps.selectedOption) && QuizProps.selectedOption.length === QuizProps.currQuestion.answer.length
+      : Boolean(QuizProps.selectedOption);
+
+    if (isRequiredAnswersSelected && submitButtonRef.current) {
+      submitButtonRef.current.focus();
+    }
+  }, [QuizProps.selectedOption, QuizProps.currQuestion.answer]);
   return (
     <>
       <div className="quiz-text">
@@ -58,6 +71,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
             </ul>
             <hr />
             <button
+              ref={submitButtonRef}
               className="select-btns submit-btn"
               style={{
                 opacity: Array.isArray(QuizProps.currQuestion.answer)
