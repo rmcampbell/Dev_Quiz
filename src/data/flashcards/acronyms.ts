@@ -1,3 +1,4 @@
+// TODO: Implement acronym functionality
 const acronyms = [
   {
     acronym: '',

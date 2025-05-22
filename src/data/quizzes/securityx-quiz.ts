@@ -1,6 +1,7 @@
 import imageMap from '../../assets.ts';
 
 const base = './images/CAS-005_';
+// TODO: Optimize image loading/rendering
 const imgPath = (num: number|string) => {
   let numStr = num;
   if (typeof num === 'number') {

@@ -5,7 +5,7 @@ import { SelectCategoryProps } from '../types';
 const SelectCategory: React.FC<SelectCategoryProps> = SelectCategoryProps => {
   return (
     <div className="select-quiz-styles">
-      <h2 className="quiz-heading">Choose a Category</h2>
+      <h2 className="quiz-heading">Choose a Test</h2>
       <div className="select-btn-div">
         {CATEGORIES.map((category: string, index: number) => (
           <button

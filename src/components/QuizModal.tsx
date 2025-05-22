@@ -48,6 +48,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             </>
           )}
           <>
+            {/* TODO: Enable Markdown */}
             {QuizQuestion?.displayExplanation ? (
               <>
                 <p>
