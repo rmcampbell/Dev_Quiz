@@ -15,20 +15,16 @@ const Questions: React.FC<QuizProps> = QuizProps => {
   return (
     <>
       <div className="quiz-text">
-        <p>
-          Question: {QuizProps.questionNumber}/{QuizProps.totalQuestions}
-        </p>
+        <p>Question: {QuizProps.questionNumber}/{QuizProps.totalQuestions}</p>
         <p>Points: {QuizProps.points}</p>
       </div>
       <h1 className="quiz-heading">Question {QuizProps.questionNumber}</h1>
       <div className="quiz-div">
-        {QuizProps.chooseAnswer ? (
-          <QuizModal {...QuizProps.modalProps} />
-        ) : (
+        {QuizProps.chooseAnswer ? (<QuizModal {...QuizProps.modalProps} />) : (
           <fieldset className="quiz-answers-div">
             <legend>
               <span className="sr-only">Question {QuizProps.questionNumber}</span>
-              <MarkdownRenderer content={QuizProps.currQuestion.question} />
+              <MarkdownRenderer content={`${QuizProps.currQuestion.question} (Choose ${QuizProps.currQuestion.answer.length})`} />
             </legend>
             <ul>
               {QuizProps.choicesArr.length > 0 &&
@@ -70,10 +66,7 @@ const Questions: React.FC<QuizProps> = QuizProps => {
               }
               onClick={() => QuizProps.checkAnswer()}
             >
-              {/* TODO: move to end of question */}
-              {Array.isArray(QuizProps.currQuestion.answer)
-                ? `Submit (Choose ${QuizProps.currQuestion.answer.length})`
-                : 'Submit'}
+              Submit
             </button>
           </fieldset>
         )}
@@ -81,4 +74,5 @@ const Questions: React.FC<QuizProps> = QuizProps => {
     </>
   );
 };
+
 export default Questions;
