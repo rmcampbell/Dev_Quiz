@@ -16,9 +16,11 @@ const SelectCategory: React.FC<SelectCategoryProps> = SelectCategoryProps => {
             {category}
           </button>
         ))}
-        <button className="select-btns" onClick={SelectCategoryProps.startRandomQuiz}>
-          Random
-        </button>
+        {CATEGORIES.length > 1 && (
+          <button className="select-btns" onClick={SelectCategoryProps.startRandomQuiz}>
+            Random
+          </button>
+        )}
       </div>
     </div>
   );
