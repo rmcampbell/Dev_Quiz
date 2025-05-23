@@ -55,14 +55,10 @@ const Questions: React.FC<QuizProps> = quizProps => {
   }, [quizProps.currQuestion.answer, quizProps.selectedOption]);
 
   // Memoize the option selection handler
-  const handleOptionClick = useCallback((choice: string) => {
-    quizProps.selectOption(choice);
-  }, [quizProps]);
+  const handleOptionClick = useCallback((choice: string) => quizProps.selectOption(choice), [quizProps]);
 
   // Memoize the check answer handler
-  const handleCheckAnswer = useCallback(() => {
-    quizProps.checkAnswer();
-  }, [quizProps]);
+  const handleCheckAnswer = useCallback(() => quizProps.checkAnswer(), [quizProps]);
 
   return (
     <>

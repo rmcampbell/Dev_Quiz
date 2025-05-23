@@ -1,5 +1,5 @@
 // assets.ts
-const images = import.meta.glob('./images/*.{png,jpg,jpeg,svg,webp}', { eager: true });
+const images = import.meta.glob('../images/*.{png,jpg,jpeg,svg,webp}', { eager: true });
 
 const imageMap: Record<string, string> = {};
 
