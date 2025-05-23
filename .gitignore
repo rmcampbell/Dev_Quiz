@@ -33,4 +33,4 @@ yarn-error.log*
 
 # IDEs
 .idea
-settings.json
+.vscode/settings.json
