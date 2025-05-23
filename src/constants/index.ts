@@ -1,21 +1,21 @@
-// import accessibilityQuiz from './data/quizzes/accessibility-quiz';
-// import agileQuiz from './data/quizzes/agile-quiz';
-// import cloudComputingQuiz from './data/quizzes/cloud-computing-quiz';
-// import cssQuiz from './data/quizzes/css-quiz';
-// import devopsQuiz from './data/quizzes/devops-quiz';
-// import generalCSQuiz from './data/quizzes/general-cs-quiz';
-// import gitQuiz from './data/quizzes/git-quiz';
-// import htmlQuiz from './data/quizzes/html-quiz';
-// import informationTechnologyQuiz from './data/quizzes/information-technology-quiz';
-// import javascriptQuiz from './data/quizzes/javascript-quiz';
-// import linuxQuiz from './data/quizzes/linux-quiz';
-// import pythonQuiz from './data/quizzes/python-quiz';
-// import qualityAssuranceQuiz from './data/quizzes/quality-assurance-quiz';
-// import regexQuiz from './data/quizzes/regex-quiz';
-// import securityQuiz from './data/quizzes/security-quiz';
-import securityXQuiz from './data/quizzes/securityx-quiz';
-// import sqlQuiz from './data/quizzes/sql-quiz';
-import { Quiz } from './types';
+// import accessibilityQuiz from '../data/quizzes/accessibility-quiz';
+// import agileQuiz from '../data/quizzes/agile-quiz';
+// import cloudComputingQuiz from '../data/quizzes/cloud-computing-quiz';
+// import cssQuiz from '../data/quizzes/css-quiz';
+// import devopsQuiz from '../data/quizzes/devops-quiz';
+// import generalCSQuiz from '../data/quizzes/general-cs-quiz';
+// import gitQuiz from '../data/quizzes/git-quiz';
+// import htmlQuiz from '../data/quizzes/html-quiz';
+// import informationTechnologyQuiz from '../data/quizzes/information-technology-quiz';
+// import javascriptQuiz from '../data/quizzes/javascript-quiz';
+// import linuxQuiz from '../data/quizzes/linux-quiz';
+// import pythonQuiz from '../data/quizzes/python-quiz';
+// import qualityAssuranceQuiz from '../data/quizzes/quality-assurance-quiz';
+// import regexQuiz from '../data/quizzes/regex-quiz';
+// import securityQuiz from '../data/quizzes/security-quiz';
+import securityXQuiz from '../data/quizzes/securityx-quiz';
+// import sqlQuiz from '../data/quizzes/sql-quiz';
+import { Quiz } from '../types';
 
 const quizzes: Quiz[] = [
   // accessibilityQuiz,

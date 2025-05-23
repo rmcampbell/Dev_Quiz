@@ -1,15 +1,18 @@
 import { defineConfig } from 'vite';
 // import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
+import unusedAssetsPlugin from './vite-plugin-unused-assets';
 
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    unusedAssetsPlugin()
+  ],
   // base: '/dev_quiz/',
   server: {
     watch: {
-      // required for container hot reloading
-      usePolling: true
+      usePolling: true // required for container hot reloading
     },
     port: 3000,
     host: true, // fixes container xdg-open issues
@@ -17,7 +20,18 @@ export default defineConfig({
   },
   build: {
     outDir: './dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            // Separate out big dependencies
+            if (id.includes('react')) return 'vendor_react';
+            return 'vendor';
+          }
+        }
+      }
+    }
   }
   // test: {
   //   ...configDefaults,

@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './utils/reportWebVitals.ts';
 import App from './App';
 
 const router = createHashRouter([{ path: '*', Component: App }]);
