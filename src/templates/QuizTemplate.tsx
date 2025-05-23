@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import ButtonLink from './components/ButtonLink';
+import ButtonLink from '../components/ButtonLink';
 
-import { ALL_CATEGORIES, QUESTION_NUMS } from './constants';
-import { correctModalResponses, incorrectModalResponses } from './data/quizzes/modal-responses';
-import Questions from './pages/Questions';
-import './stylesheets/App.css';
-import Results from './pages/Results';
-import SelectCategory from './pages/SelectCategory';
-import SelectQuestionsTotal from './pages/SelectQuestionsTotal';
-import shuffle from './shuffle-arr';
-import { QuizState } from './types';
+import { ALL_CATEGORIES, QUESTION_NUMS } from '../constants';
+import { correctModalResponses, incorrectModalResponses } from '../data/quizzes/modal-responses';
+import Questions from '../pages/Questions';
+import '../stylesheets/App.css';
+import Results from '../pages/Results';
+import SelectCategory from '../pages/SelectCategory';
+import SelectQuestionsTotal from '../pages/SelectQuestionsTotal';
+import { shuffle } from '../utils/utilities.ts';
+import { QuizState } from '../types';
 
 const QuizTemplate: React.FC = () => {
   const navigate = useNavigate();
