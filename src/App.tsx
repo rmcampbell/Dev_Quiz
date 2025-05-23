@@ -1,5 +1,5 @@
 import WelcomePage from './pages/WelcomePage';
-import QuizTemplate from './QuizTemplate';
+import QuizTemplate from './templates/QuizTemplate';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 

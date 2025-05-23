@@ -1,5 +1,5 @@
 //fisher yates shuffle
-function shuffle<Type>(array: Type[]): Type[] {
+export function shuffle<Type>(array: Type[]): Type[] {
   // Create a copy of the array to avoid mutating the original
   const arrayCopy = [...array];
   let curInd = arrayCopy.length,
@@ -14,5 +14,3 @@ function shuffle<Type>(array: Type[]): Type[] {
 
   return arrayCopy;
 }
-
-export default shuffle;

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Volume2 } from 'lucide-react';
 
-import { FlashcardProps } from '../types.tsx';
+import { FlashcardProps } from '../types';
 
 export default function Flashcard({
   front,

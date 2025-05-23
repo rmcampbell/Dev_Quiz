@@ -1,6 +1,5 @@
-import imageMap from '../../assets.ts';
+import imageMap from '../../utils/assets.ts';
 
-const base = './images/CAS-005_';
 // TODO: Optimize image loading/rendering
 const imgPath = (num: number|string) => {
   let numStr = num;
@@ -8,7 +7,7 @@ const imgPath = (num: number|string) => {
     numStr = num.toString().padStart(3, '0');
   }
 
-  return imageMap?.[`${base}${numStr}.webp`] || imageMap?.[`${base}${numStr}.png`];
+  return imageMap?.[`../images/CAS-005_${numStr}.webp`] || imageMap?.[`../images/CAS-005_${numStr}.png`];
 };
 
 const securityQuiz = {
