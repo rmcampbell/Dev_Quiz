@@ -1,16 +1,11 @@
 import imageMap from '../../utils/assets.ts';
 
-// TODO: Optimize image loading/rendering
 const imgPath = (num: number|string) => {
-  let numStr = num;
-  if (typeof num === 'number') {
-    numStr = num.toString().padStart(3, '0');
-  }
-
+  const numStr = typeof num === 'number' ? num.toString().padStart(3, '0') : num;
   return imageMap?.[`../images/CAS-005_${numStr}.webp`] || imageMap?.[`../images/CAS-005_${numStr}.png`];
 };
 
-const securityQuiz = {
+const securityXQuiz = {
   category: 'SecurityX',
   questions: [
     {
@@ -2640,4 +2635,4 @@ const securityQuiz = {
   ]
 };
 
-export default securityQuiz;
+export default securityXQuiz;
