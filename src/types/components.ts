@@ -23,3 +23,9 @@ export interface FlashcardProps {
 export interface MarkdownRendererProps {
   content: string;
 }
+
+export type NavLinkRenderProps = {
+  isActive: boolean;
+  isPending: boolean;
+  isTransitioning: boolean;
+};
