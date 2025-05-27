@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 import { NavLinkProps } from 'react-router-dom';
 
 export interface ButtonProps {
@@ -14,7 +14,7 @@ export interface ButtonLinkProps extends NavLinkProps {
 
 export interface FlashcardProps {
   front: string;
-  back: string;
+  back: ReactNode;
   trackProgress?: boolean;
   known?: boolean;
   onToggleKnown?: () => void;
