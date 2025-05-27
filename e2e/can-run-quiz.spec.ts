@@ -13,10 +13,21 @@ test('should display a list of categories', async ({ page }) => {
   }
 });
 
+test('should allow selecting the quiz type', async ({ page }) => {
+  await page.getByRole('button', { name: 'HTML' }).click();
+  await page.waitForURL('#/quizzes/HTML/quizType');
+  await expect(page.getByRole('heading', { name: 'Select Quiz Type' })).toBeVisible();
+
+  await expect(page.getByRole('button', { name: 'Acronym Quiz' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Term Quiz' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Multiple Choice Quiz' })).toBeVisible();
+});
+
 test('should allow selecting the number of questions', async ({ page }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
+  await page.getByRole('button', { name: 'Multiple Choice Quiz' }).click();
   await page.waitForURL('#/quizzes/HTML/questionsTotal');
-  await expect(page.getByRole('heading', { name: 'Choose a length for the Quiz' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'How many Questions?' })).toBeVisible();
 
   for (let i = 0; i < QUESTION_NUMS.length; i++) {
     await expect(page.getByRole('button', { name: QUESTION_NUMS[i].toString(), exact: true })).toBeVisible();
@@ -29,6 +40,7 @@ test('should start the first question after the user has selected the number of 
   page
 }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
+  await page.getByRole('button', { name: 'Multiple Choice Quiz' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
   await page.waitForURL('/#/quizzes/HTML/questions/1/of/10');
   await expect(page.getByRole('heading', { name: 'Question 1' })).toBeVisible();
@@ -38,6 +50,7 @@ test('question page should contain 4 options and `submit` button', async ({
   page
 }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
+  await page.getByRole('button', { name: 'Multiple Choice Quiz' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 
   const options = page.getByRole('list');
@@ -45,10 +58,11 @@ test('question page should contain 4 options and `submit` button', async ({
   await page.getByRole('button', { name: 'Submit', exact: true }).click();
 });
 
-test('selected option  must have \'answers-btns--selected\' class', async ({
+test(`selected option  must have 'answers-btns--selected' class`, async ({
   page
 }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
+  await page.getByRole('button', { name: 'Multiple Choice Quiz' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 
   // Select the first option (no matter if it's right or wrong)
@@ -60,6 +74,7 @@ test('should show a modal after selecting one option and click the `submit` butt
   page
 }) => {
   await page.getByRole('button', { name: 'HTML' }).click();
+  await page.getByRole('button', { name: 'Multiple Choice Quiz' }).click();
   await page.getByRole('button', { name: '10', exact: true }).click();
 
   // Select the first option (no matter if it's right or wrong)
