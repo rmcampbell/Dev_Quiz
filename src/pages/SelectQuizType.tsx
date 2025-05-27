@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ButtonLink from '../components/ButtonLink';
+import { hasTerms as categoryHasTerms, hasAcronyms as categoryHasAcronyms } from '../utils/utilities';
+import { quizzes } from '../constants';
 
 export interface SelectQuizTypeProps {
   selectedCategory: string;
@@ -9,27 +11,49 @@ export interface SelectQuizTypeProps {
 
 const SelectQuizType: React.FC<SelectQuizTypeProps> = ({ selectedCategory, goBack }) => {
   const navigate = useNavigate();
+  const [hasTerms, setHasTerms] = useState(false);
+  const [hasAcronyms, setHasAcronyms] = useState(false);
+
+  useEffect(() => {
+    // Check if the selected category has terms and acronyms using utility functions
+    setHasTerms(categoryHasTerms(quizzes, selectedCategory));
+    setHasAcronyms(categoryHasAcronyms(quizzes, selectedCategory));
+  }, [selectedCategory]);
 
   const selectQuizType = (quizType: string) => {
-    // For now, we'll just navigate to the next page
-    // In the future, this could be used to determine which type of quiz to show
     console.log(`Selected quiz type: ${quizType}`);
-    navigate(`/quizzes/${selectedCategory}/questionsTotal`);
+
+    // Navigate to different pages based on the quiz type
+    if (quizType === 'term') {
+      navigate(`/quizzes/${selectedCategory}/terms`);
+    } else if (quizType === 'acronym') {
+      navigate(`/quizzes/${selectedCategory}/acronyms`);
+    } else {
+      // Default to multiple choice quiz
+      navigate(`/quizzes/${selectedCategory}/questionsTotal`);
+    }
   };
 
   return (
     <div className="select-quiz-styles">
       <h2 className="quiz-heading">Select Quiz Type</h2>
       <div className="select-btn-div">
-        <button
-          className="select-btns"
-          onClick={() => selectQuizType('acronym')}
-        >
-          Acronyms
-        </button>
-        <button className="select-btns" onClick={() => selectQuizType('term')}>
-          Terms
-        </button>
+        {hasAcronyms && (
+          <button
+            className="select-btns"
+            onClick={() => selectQuizType('acronym')}
+          >
+            Acronyms
+          </button>
+        )}
+        {hasTerms && (
+          <button
+            className="select-btns"
+            onClick={() => selectQuizType('term')}
+          >
+            Terms
+          </button>
+        )}
         <button
           className="select-btns"
           onClick={() => selectQuizType('multiple-choice')}

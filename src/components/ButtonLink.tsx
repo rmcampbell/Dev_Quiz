@@ -5,7 +5,7 @@ import '../stylesheets/Button.css';
 import '../stylesheets/ButtonLink.css';
 import { ButtonLinkProps, NavLinkRenderProps } from '../types';
 
-const ButtonLink: React.FC<ButtonLinkProps & { onClick?: () => void }> = ({ to, children, size, onClick }) => {
+const ButtonLink: React.FC<ButtonLinkProps & { onClick?: () => void, className?: string }> = ({ to, children, size, onClick, className = '' }) => {
   // Convert children to ReactNode if it's a function (only needed for button element)
   const childrenContent: ReactNode = typeof children === 'function'
     ? children({ isActive: false, isPending: false, isTransitioning: false } as NavLinkRenderProps)
@@ -15,7 +15,7 @@ const ButtonLink: React.FC<ButtonLinkProps & { onClick?: () => void }> = ({ to, 
     return (
       <button
         onClick={onClick}
-        className={`btn-default btn--link ${size === 'large' ? 'large-btn' : ''}`}
+        className={`btn-default btn--link ${size === 'large' ? 'large-btn' : ''} ${className}`}
       >
         {childrenContent}
       </button>
@@ -26,7 +26,7 @@ const ButtonLink: React.FC<ButtonLinkProps & { onClick?: () => void }> = ({ to, 
   return (
     <NavLink
       to={to}
-      className={`btn-default btn--link ${size === 'large' ? 'large-btn' : ''}`}
+      className={`btn-default btn--link ${size === 'large' ? 'large-btn' : ''} ${className}`}
     >
       {children}
     </NavLink>
