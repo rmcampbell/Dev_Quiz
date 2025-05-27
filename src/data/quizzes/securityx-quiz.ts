@@ -1,12 +1,82 @@
 import imageMap from '../../utils/assets.ts';
+import { Acronym, Term } from '../../types';
 
 const imgPath = (num: number|string) => {
   const numStr = typeof num === 'number' ? num.toString().padStart(3, '0') : num;
   return imageMap?.[`../images/CAS-005_${numStr}.webp`] || imageMap?.[`../images/CAS-005_${numStr}.png`];
 };
 
+// Security-related terms
+const terms: Term[] = [
+  {
+    term: 'Collision Resistance',
+    definition: 'In the context of cryptographic hash functions, means that it is computationally difficult to find ' +
+      'two different input values that produce the same hash output. This property is crucial for ensuring the ' +
+      'integrity and security of various cryptographic applications. ',
+    notes: 'A collision occurs when two different inputs produce the same hash output.',
+    example: 'Imagine a hash function that outputs a 10-bit hash. A naive approach to finding a collision would be ' +
+      'to try all possible 10-bit outputs. However, a collision-resistant hash function makes this computationally ' +
+      'infeasible. '
+  },
+  {
+    term: 'Key Stretching',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Port Mirroring',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Port Security',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Rainbow Table',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Salting',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Separation of duties',
+    definition: 'Helps prevent fraud by ensuring no single person has control over all aspects of a process.',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Split Knowledge',
+    definition: '',
+    notes: '',
+    example: ''
+  }
+];
+
+// Security-related acronyms
+const acronyms: Acronym[] = [
+  {
+    acronym: '2FA',
+    actual: 'Two Factor Authentication',
+    definition: 'Adds an extra layer of security to online accounts by requiring two separate verification methods, typically a password and a code sent to a mobile device.  This makes it significantly harder for unauthorized users to gain access, even if they have stolen or guessed a password. MFA essentially creates a barrier that requires more than just a password to be bypassed.',
+    additionalAcronyms: [''],
+    notes: ''
+  }
+];
+
 const securityXQuiz = {
   category: 'SecurityX',
+  terms,
+  acronyms,
   questions: [
     {
       question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n' +
@@ -2635,4 +2705,5 @@ const securityXQuiz = {
   ]
 };
 
+export { terms, acronyms };
 export default securityXQuiz;
