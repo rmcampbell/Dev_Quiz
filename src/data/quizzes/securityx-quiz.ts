@@ -359,32 +359,32 @@ const securityXQuiz = {
         'A group of politically motivated hackers',
         'Disgruntled employees who were recently terminated'
       ],
-      explanation: '(30)',
-      link: '',
+      explanation: '(30) An Advanced Persistent Threat (APT) is a sophisticated, sustained cyberattack where an intruder gains unauthorized access to a network and remains undetected for an extended period to steal sensitive data or disrupt operations. While APTs can be conducted by various actors, they are often linked to nation-states, meaning they are sponsored or supported by governments.',
+      link: 'https://www.lookout.com/blog/mobile-apt-cyber-espionage',
       questionNumber: 30
     },
     {
       question: `The company's client service team is receiving a large number of inquiries from clients regarding a new vulnerability. Which of the following would provide the customer service team with a consistent message to deliver directly to clients?`,
       answer: 'Response playbook',
       distractors: ['Communication plan', 'Disaster recovery procedure', 'Automated runbook'],
-      explanation: '',
-      link: '',
+      explanation: '(31) An incident response playbook is a structured set of guidelines and procedures that organizations follow to detect, respond to, and recover from cybersecurity incidents. It provides a step-by-step approach for handling specific types of threats, ensuring a swift and coordinated response to minimize damage and downtime.',
+      link: 'https://www.paloaltonetworks.com/cyberpedia/what-is-an-incident-response-playbook#:~:text=An%20incident%20response%20playbook%20is,to%20minimize%20damage%20and%20downtime.',
       questionNumber: 31
     },
     {
       question: 'A company wants to use a process to embed a sign of ownership covertly inside a proprietary document without adding any identifying attributes. Which of the following would be best to use as part of the process to support copyright protections of the document?',
       answer: 'Steganography',
       distractors: ['E-signature', 'Watermarking', 'Cryptography'],
-      explanation: '',
-      link: '',
+      explanation: '(32) Steganography is the practice of concealing information within another message or physical object to avoid detection. Steganography can be used to hide virtually any type of digital content, including text, image, video, or audio content. That hidden data is then extracted at its destination.',
+      link: 'https://www.kaspersky.com/resource-center/definitions/what-is-steganography',
       questionNumber: 32
     },
     {
       question: 'Which of the following utilizes policies that route packets to ensure only specific types of traffic are being sent to the correct destination based on application usage?',
       answer: 'SDN',
       distractors: ['DNSSEC', 'pcap', 'vmstat', 'VPC'],
-      explanation: '',
-      link: '',
+      explanation: '(33) Software Defined Networking (SDN) is a networking approach that uses software to manage and control network devices, separating the control plane from the data plane. This separation allows for a more centralized and flexible way to manage and configure networks. SDN enables network administrators to use software to program and manage network devices, making it easier to automate tasks, improve security, and optimize network performance.',
+      link: 'https://www.vmware.com/topics/software-defined-networking',
       questionNumber: 33
     },
     {
@@ -399,72 +399,72 @@ const securityXQuiz = {
         'Which methods can be implemented to increase speed of offline backup recovery?',
         'Which user roles are most often targeted by spear phishing attacks?'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(34) UEBA (User and Entity Behavior Analytics) functions as a technical control by analyzing user and machine behavior to detect suspicious activity. It uses machine learning to identify anomalies and deviations from established baselines, alerting security teams to potential threats. This proactive approach complements traditional security measures by providing a layer of detection for sophisticated attacks and insider threats.',
+      link: 'https://www.varonis.com/blog/user-entity-behavior-analytics-ueba',
       questionNumber: 34
     },
     {
       question: 'Two companies that recently merged would like to unify application access between the companies, without initially merging internal authentication stores. Which of the following technical strategies would best meet this objective?',
       answer: 'Federation',
       distractors: ['RADIUS', 'TACACS+', 'MFA', 'ABAC'],
-      explanation: '',
-      link: '',
+      explanation: `(35) federation refers to a collaborative arrangement where multiple organizations share and mutually trust each other's security information and systems. This sharing allows for enhanced security measures and potentially reduces the attack surface by enabling dynamic defenses and intelligence sharing.`,
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/active-directory-federation-service-adfs/',
       questionNumber: 35
     },
     {
       question: 'An analyst needs to evaluate all images and documents that are publicly shared on a website. Which of the following would be the best tool to evaluate the metadata of these files?',
       answer: 'ExifTool',
       distractors: ['OllyDbg', 'Volatility', 'Ghidra'],
-      explanation: '',
-      link: '',
+      explanation: '(36) ExifTool is a powerful tool for cybersecurity professionals, enabling them to analyze various types of media files and extract valuable information for threat detection, incident response, and penetration testing.',
+      link: 'https://www.infosecinstitute.com/resources/general-security/metadata-and-information-security/',
       questionNumber: 36
     },
     {
       question: 'An organization has deployed a cloud-based application that provides virtual event services globally to clients. During a typical event, thousands of users access various entry pages within a short period of time. The entry pages include sponsor-related content that is relatively static and is pulled from a database. When the first major event occurs, users report poor response time on the entry pages. Which of the following features is the most appropriate for the company to implement?',
       answer: 'Caching',
       distractors: ['Horizontal scalability', 'Vertical scalability', 'Containerization', 'Static code analysis'],
-      explanation: '',
-      link: '',
+      explanation: `(37) Caching can improve browser performance, but it also risks users' confidential or sensitive information being exposed to cyber criminals. Caching data could result in authentication data, browsing history, or session tokens being vulnerable, especially if a browser is left open or if another user has access to it.`,
+      link: 'https://www.fortinet.com/resources/cyberglossary/what-is-caching#:~:text=Caching%20can%20improve%20browser%20performance,user%20has%20access%20to%20it.',
       questionNumber: 37
     },
     {
       question: `An organization's board of directors has asked the Chief Information Security Officer to build a third-party management program. Which of the following best explains a reason for this request?`,
       answer: 'Supply chain visibility',
       distractors: ['Risk transference', 'Support availability', 'Vulnerability management'],
-      explanation: '',
-      link: '',
+      explanation: `(38) Supply chain visibility (SCV) is the ability to track and monitor a product's journey from raw materials to the end customer, encompassing all stages of the supply chain. This includes order status, shipment status, and real-time location of goods, providing stakeholders with insights into inventory management, logistics, and potential disruptions.`,
+      link: 'https://www.chrobinson.com/en-us/resources/blog/why-is-supply-chain-visibility-so/#:~:text=The%20goal%20of%20supply%20chain,be%20as%20efficient%20as%20possible.',
       questionNumber: 38
     },
     {
       question: `A company is rewriting a vulnerable application and adding the mprotect() system call in multiple parts of the application's code that was being leveraged by a recent exploitation tool. Which of the following should be enabled to ensure the application can leverage the new system call against similar attacks in the future?`,
       answer: 'NX bit',
       distractors: ['TPM', 'Secure boot', 'HSM'],
-      explanation: '',
-      link: '',
+      explanation: `(39) The NX bit, also known as No eXecute or Data Execution Prevention (DEP), is a CPU feature that prevents code from executing in certain memory regions, specifically those designated as data. It's a security measure that helps to mitigate vulnerabilities like buffer overflows and shellcode injection by preventing malicious code from being executed in unexpected locations.`,
+      link: 'https://medium.com/@boutnaru/security-nx-bit-non-executable-18759fd2802e',
       questionNumber: 39
     },
     {
       question: 'Which of the following items should be included when crafting a disaster recovery plan?',
       answer: 'Testing exercises',
       distractors: ['Redundancy', 'Autoscaling', 'Competitor locations'],
-      explanation: '',
-      link: '',
+      explanation: `(40) Cybersecurity testing exercises are simulated scenarios used to assess and improve an organization's ability to detect, respond to, and mitigate cyber threats. These exercises help organizations identify vulnerabilities, test their security controls, and enhance their incident response plans.`,
+      link: 'https://www.isaca.org/resources/news-and-trends/industry-news/2024/using-a-functional-cybersecurity-exercise-to-test-incident-response-plans',
       questionNumber: 40
     },
     {
       question: 'A web application server is running a legacy operating system with an unpatched RCE vulnerability. The server cannot be upgraded until the corresponding application code is changed. Which of the following compensating controls would best prevent successful exploitation?',
       answer: 'Segmentation',
       distractors: ['CASB', 'UEBA', 'HIPS'],
-      explanation: '',
-      link: '',
+      explanation: '(41) Segmentation divides a computer network into smaller parts. The purpose is to improve network performance and security. Other terms that often mean the same thing are network segregation, network partitioning, and network isolation.',
+      link: 'https://www.cisco.com/c/en/us/products/security/what-is-network-segmentation.html#:~:text=Segmentation%20divides%20a%20computer%20network,network%20partitioning%2C%20and%20network%20isolation.',
       questionNumber: 41
     },
     {
       question: 'Which of the following is the reason why security engineers often cannot upgrade the security of embedded facility automation systems?',
       answer: 'They are constrained by available compute',
       distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
-      explanation: '',
-      link: '',
+      explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.',
+      link: ['https://dedicatedcomputing.com/embedded-computing-systems-101/', 'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software.'],
       questionNumber: 42
     },
     {
@@ -475,8 +475,8 @@ const securityXQuiz = {
         'Uninstalling the impacted runtime engine',
         'Selectively blocking traffic on the affected port'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(43) Configuring an Intrusion Prevention System (IPS) and a Web Application Firewall (WAF) involves setting up rules and policies to filter and monitor network traffic, protecting against various attacks and vulnerabilities. IPS focuses on network-level threats, while WAF specifically targets application-layer attacks like SQL injection and cross-site scripting.',
+      link: 'https://www.f5.com/glossary/web-application-firewall-waf#:~:text=The%20difference%20between%20a%20web,is%20a%20next%2Dgeneration%20firewall.',
       questionNumber: 43
     },
     {
@@ -487,16 +487,16 @@ const securityXQuiz = {
         'Extract the private key from the certificate',
         'Compare the retrieved certificate with the embedded certificate'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(44) Out-of-band certificate obtaining refers to securing a certificate through a communication channel separate from the primary network. This can be done by using a separate communication channel for exchanging the certificate or by using a physical medium like a storage device to transport the certificate.',
+      link: 'https://doubleoctopus.com/security-wiki/authentication/out-of-band-authentication/#:~:text=of%20band%20authentication.-,Example%20forms%20of%20OOB%20authentication%20include%20codes%20sent%20to%20a,trying%20to%20establish%20an%20authenticated',
       questionNumber: 44
     },
     {
       question: 'A company hired a third-party consultant to run a cybersecurity incident simulation in order to identify security gaps and prepare stakeholders for a potential incident. Which of the following best describes this activity?',
       answer: 'Tabletop exercise',
       distractors: ['Walk-through review', 'Lessons learned', 'Business impact analysis'],
-      explanation: '',
-      link: '',
+      explanation: '(45) A tabletop exercise is a discussion-based activity where participants gather to simulate a real-world incident, like a cyberattack, without physically enacting the response. It focuses on clarifying roles, discussing strategies, and evaluating existing plans in a low-stress environment.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/tabletop-exercise/',
       questionNumber: 45
     },
     {
