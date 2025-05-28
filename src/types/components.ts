@@ -18,6 +18,8 @@ export interface FlashcardProps {
   trackProgress?: boolean;
   known?: boolean;
   onToggleKnown?: () => void;
+  flipped?: boolean;
+  setFlipped?: (flipped: boolean) => void;
 }
 
 export interface MarkdownRendererProps {

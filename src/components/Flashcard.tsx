@@ -11,9 +11,15 @@ export default function Flashcard({
   back,
   trackProgress = true,
   known = false,
-  onToggleKnown
+  onToggleKnown,
+  flipped: controlledFlipped,
+  setFlipped: controlledSetFlipped
 }: FlashcardProps) {
-  const [flipped, setFlipped] = useState(false);
+  const [internalFlipped, setInternalFlipped] = useState(false);
+
+  // Use controlled props if provided, otherwise use internal state
+  const flipped = controlledFlipped !== undefined ? controlledFlipped : internalFlipped;
+  const setFlipped = controlledSetFlipped || setInternalFlipped;
 
   return (
     <div className="quiz-div">

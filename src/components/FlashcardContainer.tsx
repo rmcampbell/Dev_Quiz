@@ -30,6 +30,7 @@ export default function FlashcardContainer<T extends FlashcardItem>({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [knownItems, setKnownItems] = useState<Record<string, boolean>>({});
   const [items, setItems] = useState<T[]>([]);
+  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
     if (category) {
@@ -58,12 +59,18 @@ export default function FlashcardContainer<T extends FlashcardItem>({
   const goToNext = () => {
     if (currentIndex < validItems.length - 1) {
       setCurrentIndex(currentIndex + 1);
+
+      // Reset to show front of card
+      setFlipped(false);
     }
   };
 
   const goToPrevious = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+
+      // Reset to show front of card
+      setFlipped(false);
     }
   };
 
@@ -91,6 +98,8 @@ export default function FlashcardContainer<T extends FlashcardItem>({
         back={renderBack(currentItem)}
         known={knownItems[getId(currentItem)] || false}
         onToggleKnown={toggleKnown}
+        flipped={flipped}
+        setFlipped={setFlipped}
       />
 
       <div className="flashcard-nav-buttons">

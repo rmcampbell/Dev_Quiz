@@ -17,7 +17,7 @@ import securityXQuiz from '../data/quizzes/securityx-quiz';
 // import sqlQuiz from '../data/quizzes/sql-quiz';
 import { Quiz } from '../types';
 
-const quizzes: Quiz[] = [
+export const quizzes: Quiz[] = [
   // accessibilityQuiz,
   // agileQuiz,
   // cloudComputingQuiz,
