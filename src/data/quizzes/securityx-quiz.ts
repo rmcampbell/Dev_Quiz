@@ -12,14 +12,14 @@ const securityXQuiz = {
       question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n' +
         `![Question](${imgPath(1)})\n\n` +
         'Which of the following most likely occurred when the employee connected a personally owned Windows laptop and was allowed on the network?',
-      answer: 'The OS was running a Windows version below 10 and triggered a false negative',
+      answer: 'The OS was a valid version, but the MDM agent was not installed, triggering a true positive',
       distractors: [
+        'The OS was running a Windows version below 10 and triggered a false negative',
         'The agent was not running on the laptop, which triggered a false positive',
-        'The OS was a valid version, but the MDM agent was not installed, triggering a true positive',
         'The OS version was higher than 11, and the MDM agent was running, triggering a true negative'
       ],
-      explanation: '',
-      link: '',
+      explanation: 'Many organizations require a Mobile Device Management (MDM) agent or similar endpoint security software to be installed on any device connecting to their network for security and compliance. A personally owned laptop is unlikely to have this corporate-mandated agent pre-installed. If the network access control (NAC) or endpoint detection system identifies the absence of the required MDM agent and flags the device as non-compliant, this is a true positive (a correct detection of a non-compliant condition).',
+      link: 'https://learn.microsoft.com/en-us/windows/client-management/mdm-overview',
       questionNumber: 1
     },
     {
@@ -32,8 +32,8 @@ const securityXQuiz = {
         'Utilize mandatory vacations for all developers',
         'Review all access to production systems on a quarterly basis'
       ],
-      explanation: '',
-      link: '',
+      explanation: 'Separation of duties, also known as segregation of duties, is a principle that ensures no single individual has complete control over a process or system. It involves dividing key tasks and responsibilities among multiple people to reduce the risk of fraud, error, and unauthorized access. This principle is crucial in various fields like finance, IT, and cybersecurity.',
+      link: 'https://pathlock.com/learn/separation-of-duties-in-your-organization/',
       questionNumber: 2
     },
     {
@@ -47,8 +47,8 @@ const securityXQuiz = {
         'Escape character blocking',
         'URL encoding'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(3) query parameterization is a vital technique for securing database applications and improving query performance. It helps prevent SQL injection attacks by separating the query logic from user-supplied data and can also lead to performance improvements through caching and pre-compilation.',
+      link: 'https://techcommunity.microsoft.com/blog/sqlserver/how-and-why-to-use-parameterized-queries/383483',
       questionNumber: 3
     },
     {
@@ -62,16 +62,16 @@ const securityXQuiz = {
         'Update the state: present module to state: absent in the main.yml file',
         'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(4) Ansible.cfg is a configuration file that allows you to customize various aspects of Ansible's behavior. It's used to define settings like the default inventory file, module search paths, and connection parameters, among others.`,
+      link: 'https://www.youtube.com/watch?v=F5LsMndrTrs&t=50',
       questionNumber: 4
     },
     {
       question: 'A CRM company leverages a CSP PaaS service to host and publish Its SaaS product. Recently, a large customer requested that all infrastructure components must meet strict regulatory requirements, including configuration management, patch management, and life-cycle management. Which of the following organizations is responsible for ensuring those regulatory requirements are met?',
       answer: 'The CRM company',
       distractors: [`The CRM company's customer`, 'The CSP', 'The regulatory body'],
-      explanation: '',
-      link: '',
+      explanation: '(5) Customer Relationship Management (CRM) system is a software application used to manage and automate various aspects of customer interactions, including sales, marketing, and customer service. Examples of CRM systems include Salesforce, HubSpot CRM, and Microsoft Dynamics 365.',
+      link: 'https://www.zendesk.com/dk/sell/crm/what-is-crm/',
       questionNumber: 5
     },
     {
@@ -82,8 +82,8 @@ const securityXQuiz = {
         `Ensure hot, warm, and mobile disaster recovery sites are available, and give an update to the companies' leadership teams`,
         `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA`
       ],
-      explanation: '',
-      link: '',
+      explanation: '(6) incident response plan is a documented strategy outlining how an organization will detect, respond to, and recover from cybersecurity incidents or other disruptions.\n\n Disaster recovery plan (DRP), on the other hand, addresses broader disruptions, including natural disasters, equipment failures, and cyberattacks, with the goal of restoring systems and operations after a major incident.',
+      link: '(6) https://www.zengrc.com/blog/incident-response-plan-vs-disaster-recovery-plan/#:~:text=Where%20an%20IRP%20focuses%20on,business%20functions%20across%20all%20departments.',
       questionNumber: 6
     },
     {
@@ -99,8 +99,8 @@ const securityXQuiz = {
         'Remove the complexity requirements',
         'Increase the maximum age to 120 days'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(7) Minimum length of the passwords should be enforced by the application. Passwords shorter than 8 characters are considered to be weak (NIST SP800-63B). Maximum password length should be at least 64 characters to allow passphrases (NIST SP800-63B).',
+      link: 'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html',
       questionNumber: 7
     },
     {
@@ -113,8 +113,8 @@ const securityXQuiz = {
         'Wireless network auto joining',
         '802.1X with mutual authentication'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(8) Association MAC address randomization is a security and privacy feature in Wi-Fi where a device, when connecting to a network, uses a randomized MAC address instead of its actual hardware MAC address.',
+      link: 'https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior',
       questionNumber: 8
     },
     {
@@ -125,8 +125,8 @@ const securityXQuiz = {
         'Classify the incident as a true positive',
         'Classify the incident as a true negative'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(9) false negative occurs when a security system fails to detect a threat or vulnerability that actually exists. This means a threat is missed, and the security system incorrectly indicates that no issues were found when a problem exists.',
+      link: 'https://www.contrastsecurity.com/glossary/false-negative',
       questionNumber: 9
     },
     {
@@ -146,8 +146,8 @@ const securityXQuiz = {
       question: 'A software development company wants to ensure that users can confirm the software is legitimate when installing it. Which of the following is the best way for the company to achieve this security objective?',
       answer: 'Code signing',
       distractors: ['Non-repudiation', 'Key escrow', 'Private keys'],
-      explanation: 'Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.',
-      link: '',
+      explanation: '(11) Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.',
+      link: 'https://www.digicert.com/faq/code-signing-trust/what-is-code-signing',
       questionNumber: 11
     },
     {
@@ -162,32 +162,32 @@ const securityXQuiz = {
         'Set up a DLP policy to alert for exfiltration on all application servers',
         'Enable nightly vulnerability scans'
       ],
-      explanation: 'A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
-      link: '',
+      explanation: '(12) A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
+      link: 'https://www.fortinet.com/resources/cyberglossary/buffer-overflow#:~:text=Application%20developers%20can%20prevent%20buffer,to%20detect%20and%20fix%20errors.',
       questionNumber: 12
     },
     {
       question: 'PKI can be used to support security requirements in the change management process. Which of the following capabilities does PKI provide for messages?',
       answer: 'Non-repudiation',
       distractors: ['Confidentiality', 'Delivery receipts', 'Attestation'],
-      explanation: 'PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.',
-      link: '',
+      explanation: '(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.',
+      link: 'https://www.techtarget.com/searchsecurity/definition/nonrepudiation',
       questionNumber: 13
     },
     {
       question: 'Several unlabeled documents in a cloud document repository contain cardholder information. Which of the following configuration changes should be made to the DLP system to correctly label these documents in the future?',
       answer: 'Regular expressions',
       distractors: ['Digital rights management', 'Network traffic decryption', 'Watermarking'],
-      explanation: 'DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.',
-      link: '',
+      explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.',
+      link: 'https://www.splunk.com/en_us/blog/security/regex-regular-expression.html#:~:text=Known%20as%20RegEx%20(or%20gibberish,a%20log%2C%20regex%20is%20invaluable.',
       questionNumber: 14
     },
     {
       question: 'A systems administrator at a web-hosting provider has been tasked with renewing the public certificates of all customer sites. Which of the following would best support multiple domain names while minimizing the amount of certificates needed?',
       answer: 'SAN',
       distractors: ['OCSP', 'CRL', 'CA'],
-      explanation: 'The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
-      link: '',
+      explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
+      link: 'https://www.sectigo.com/knowledge-base/detail/Subject-Alternative-Name-SAN-1527076087222/kA01N000000zFKm',
       questionNumber: 15
     },
     {
@@ -199,8 +199,8 @@ const securityXQuiz = {
         `It verifies the recipient's identity`,
         'It ensures the code is free of malware'
       ],
-      explanation: 'Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
-      link: '',
+      explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
+      link: 'https://www.encryptionconsulting.com/securing-digital-trust-the-essentials-of-origin-verification/',
       questionNumber: 16
     },
     {
@@ -212,7 +212,7 @@ const securityXQuiz = {
         'Reverse engineer the application to look for vulnerable code paths',
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
-      explanation: 'Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
+      explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
       link: 'https://github.com/resources/articles/security/what-is-fuzz-testing',
       questionNumber: 17
     },
@@ -226,8 +226,8 @@ const securityXQuiz = {
         'Recommend thread-safe processes in the code to eliminate race conditions',
         'Move the batch processing from client side to server side to remove client processing inconsistencies'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.`,
+      link: 'https://www.theserverside.com/definition/exception-handler',
       questionNumber: 18
     },
     {
@@ -241,16 +241,16 @@ const securityXQuiz = {
         'TOCTOU remediation in SET USERACL',
         'Database connection over encrypted channels'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.',
+      link: 'https://www.upguard.com/blog/vulnerability-remediation',
       questionNumber: 19
     },
     {
       question: 'A senior cybersecurity engineer is solving a digital certificate issue in which the CA denied certificate issuance due to failed subject identity validation. At which of the following steps within the PKI enrollment process would the denial have occurred?',
       answer: 'RA',
       distractors: ['OCSP', 'IdP', 'CA'],
-      explanation: 'RA (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.',
-      link: '',
+      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.',
+      link: 'https://www.keyfactor.com/blog/what-is-a-registration-authority/',
       questionNumber: 20
     },
     {
@@ -261,32 +261,32 @@ const securityXQuiz = {
         'The external recipient has an expired public/private key pair that has not been revoked by the CA',
         `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
-      explanation: '',
-      link: '',
+      explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.`,
+      link: 'https://latisresearch.umn.edu/resolve-ssh-key-mismatch',
       questionNumber: 21
     },
     {
       question: 'A security administrator is setting up a virtualization solution that needs to run services from a single host. Each service should be the only one running in its environment. Each environment needs to have its own operating system as a base but share the kernel version and properties of the running host. Which of the following technologies would best meet these requirements',
       answer: 'Containers',
       distractors: ['Type 1 hypervisor', 'Type 2 hypervisor', 'Virtual desktop infrastructure', 'Emulation'],
-      explanation: '',
-      link: '',
+      explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.',
+      link: 'https://cloud.google.com/learn/what-are-containers',
       questionNumber: 22
     },
     {
       question: 'A company has data it would like to aggregate from its PLCs for data visualization and predictive maintenance purposes. Which of the following is the most likely destination for the tag data from the PLCs?',
       answer: 'Local historian',
       distractors: ['External drive', 'Cloud storage', 'System aggregator'],
-      explanation: 'A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.',
-      link: '',
+      explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.',
+      link: 'https://claroty.com/team82/research/hacking-ics-historians-the-pivot-point-from-it-to-ot',
       questionNumber: 23
     },
     {
       question: 'Which of the following is the best way to protect the website browsing history for an executive who travels to foreign countries where internet usage is closely monitored?',
       answer: 'DOH',
       distractors: ['EAP-TLS', 'Geofencing', 'Private browsing mode'],
-      explanation: 'DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.',
-      link: '',
+      explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.',
+      link: 'https://blog.netwrix.com/dns-over-https',
       questionNumber: 24
     },
     {
@@ -297,24 +297,24 @@ const securityXQuiz = {
         'Tune alerts to Identify changes to administrative groups',
         'Perform binary hash comparisons to identify infected devices'
       ],
-      explanation: 'NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
-      link: '',
+      explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
+      link: 'https://www.manageengine.com/log-management/siem/log-netflow-collection-processing.html',
       questionNumber: 25
     },
     {
       question: 'A retail organization wants to properly test and verify its capabilities to detect and/or prevent specific TTPs as mapped to the MITRE ATTACK framework specific to APTs. Which of the following should be used by the organization to accomplish this goal?',
       answer: 'Penetration test',
       distractors: ['Tabletop exercise', 'Sandbox detonation', 'Honeypot'],
-      explanation: '',
-      link: '',
+      explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.`,
+      link: 'https://www.cloudflare.com/learning/security/glossary/what-is-penetration-testing/#:~:text=Penetration%20testing%20(or%20pen%20testing,attackers%20could%20take%20advantage%20of.',
       questionNumber: 26
     },
     {
       question: 'IoCs were missed during a recent security incident due to the reliance on a signature-based detection platform. A security engineer must recommend a solution that can be implemented to address this shortcoming. Which of the following would be the most appropriate recommendation?',
       answer: 'UEBA',
       distractors: ['FIM', 'SASE', 'CSPM', 'EAP'],
-      explanation: 'UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
-      link: '',
+      explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
+      link: 'https://www.fortinet.com/resources/cyberglossary/what-is-ueba',
       questionNumber: 27
     },
     {
@@ -329,8 +329,8 @@ const securityXQuiz = {
         'Install SIEM within a SOC',
         'Configure SOAR to monitor and intercept files and data leaving the network'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(28) File Integrity Monitoring (FIM) is a security process that verifies the integrity of critical assets like files, directories, databases, and OS components by comparing them to a baseline and detecting unauthorized changes. It helps identify potential cyberattacks, data breaches, and malware infections by monitoring for any drift from the established baseline.',
+      link: 'https://www.youtube.com/watch?v=NK96Txxt9qo&t=58',
       questionNumber: 28
     },
     {
@@ -347,8 +347,8 @@ const securityXQuiz = {
         'Network microsegmentation based on data types, and a network access control system enforcing mandatory access control based on the user principal',
         'A rule-based access control strategy enforced by the SSO system with rules managed by the internal LDAP and applied on a per-system basis'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(29) Data classification and tagging are processes for organizing data assets based on defined criteria to improve organization, security, and discoverability. Data classification involves categorizing data based on its type, sensitivity, and business value. Tagging is a specific technique used within data classification, where labels or keywords are assigned to data assets to make them easier to find and manage.',
+      link: 'https://www.cybersecuritytribe.com/articles/an-introduction-to-data-tagging-and-classification-in-the-cloud#:~:text=Data%20tagging%20and%20classification%20entail,%2C%20access%20control%2C%20and%20protection.',
       questionNumber: 29
     },
     {
@@ -359,7 +359,7 @@ const securityXQuiz = {
         'A group of politically motivated hackers',
         'Disgruntled employees who were recently terminated'
       ],
-      explanation: '',
+      explanation: '(30)',
       link: '',
       questionNumber: 30
     },
@@ -704,10 +704,10 @@ const securityXQuiz = {
       answer: 'To provide context to the relevancy of risk',
       distractors: [
         'To connect risks to business objectives',
-        'To ensure a consistent approach to risk',
+        'To ensure a consistent approach to assessment',
         'To ensure a consistent approach to risk'
       ],
-      explanation: '',
+      explanation: '(64)',
       link: '',
       questionNumber: 64
     },
@@ -2290,10 +2290,8 @@ const securityXQuiz = {
       answer: ['Implementing a role-based access policy', 'Performing periodic access reviews'],
       distractors: [
         'Setting different access controls defined by business area',
-        'Implementing a role-based access policy',
         'Designing a least-needed privilege policy',
         'Establishing a mandatory vacation policy',
-        'Performing periodic access reviews',
         'Requiring periodic job rotation'
       ],
       explanation: '',
