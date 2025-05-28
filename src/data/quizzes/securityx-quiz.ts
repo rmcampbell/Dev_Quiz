@@ -507,8 +507,8 @@ const securityXQuiz = {
         'Assign attributes to each file and allow authorized users to share the files',
         'Assign roles to users and authorize access to files based on the roles'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(46) Formal access authorization in cybersecurity is the process of granting or denying access to resources based on predefined policies and procedures. It ensures that only authorized users or entities can access specific systems, data, or applications. This process is crucial for maintaining the confidentiality, integrity, and availability of information assets.',
+      link: 'https://www.fortinet.com/resources/cyberglossary/access-control',
       questionNumber: 46
     },
     {
@@ -519,16 +519,16 @@ const securityXQuiz = {
         'Enable packet captures to continue to run for the source and destination related to the file transfer',
         'Disable login activity for those users after business hours'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(47) To restrict uploading activity, you can control which file types are allowed, limit file sizes, and implement security measures like file type validation and malware detection. You can also restrict uploads based on the application or service being used, or by controlling which websites or domains users can upload to.',
+      link: 'https://spyboy.blog/2025/02/02/bypassing-file-upload-restrictions-a-deep-dive-into-security-and-exploitation/',
       questionNumber: 47
     },
     {
       question: 'A company recently acquired a SaaS company and performed a gap analysis. The results of the gap analysis Indicate security controls are absent throughout the SDLC and have led to several vulnerable production releases. Which of the following security tools best reduces the risk of vulnerable code being pushed to production in the future?',
       answer: 'Static application security testing',
       distractors: ['Regression testing', 'Code signing', 'Sandboxing'],
-      explanation: '',
-      link: '',
+      explanation: `(48) SAST (Static Application Security Testing) is a proactive cybersecurity technique that analyzes an application's source code, bytecode, or binaries before it is deployed to identify potential vulnerabilities. It helps developers and security professionals discover and fix security flaws early in the development process, preventing costly errors and enforcing compliance.`,
+      link: 'https://www.blackduck.com/glossary/what-is-sast.html#:~:text=Static%20application%20security%20testing%20(SAST,before%20the%20code%20is%20compiled',
       questionNumber: 48
     },
     {
@@ -539,8 +539,8 @@ const securityXQuiz = {
         'To generate unique identifiers for each file',
         'To preserve the chain of custody of files'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(49) To validate file integrity, you can use checksums (also known as hashes) to verify if a file has been altered or corrupted. A checksum is a unique numerical representation of a file's content, and by comparing the checksum of a file to its expected checksum (from the source), you can confirm that the file remains unchanged.`,
+      link: 'https://www.techtarget.com/searchcontentmanagement/tip/How-to-check-and-verify-file-integrity#:~:text=Create%20a%20hash%20value%20%2D%2D,Algorithm%201%20and%20SHA%2D256',
       questionNumber: 49
     },
     {
@@ -553,8 +553,8 @@ const securityXQuiz = {
         'Impact',
         'Attack vector'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(50) In the Common Vulnerability Scoring System (CVSS, the three main metric groups are Base, Temporal, and Environmental. Base metrics describe the intrinsic characteristics of a vulnerability, which remain constant over time and across different environments. Temporal metrics adjust the base score based on factors that change over time, such as the availability of exploits. Environmental metrics further refine the score to reflect an organization's specific environment and its unique vulnerabilities.`,
+      link: 'https://www.balbix.com/insights/base-cvss-scores/',
       questionNumber: 50
     },
     {
@@ -565,7 +565,7 @@ const securityXQuiz = {
         'Using a third-party audit report',
         'By choosing a major product'
       ],
-      explanation: '',
+      explanation: `(51) A cybersecurity risk assessment is a systematic process aimed at identifying vulnerabilities and threats within an organization's IT environment, assessing the likelihood of a security event, and determining the potential impact of such occurrences.`,
       link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/cybersecurity-risk-assessment/',
       questionNumber: 51
     },
@@ -573,26 +573,26 @@ const securityXQuiz = {
       question: 'A security engineer is performing a vulnerability management scan on multihomed Linux systems. The engineer notices that the vulnerability count is high due to the fact that each vulnerability is multiplied by the number of NICs on each system. Which of the following should the engineer do to deduplicate the vulnerabilities and to associate the vulnerabilities with a particular host?',
       answer: 'Deploy an agent',
       distractors: ['Use a SCAP scanner', 'Initiate a discovery scan', 'Perform an Nmap scan'],
-      explanation: '',
-      link: '',
+      explanation: '(52) The Deployment Agent is a software agent that must be deployed to all clients managed by the Management Center. The Deployment Agent runs as a Windows Service and performs tasks on the client when instructed by the Management Server.',
+      link: 'https://hstechdocs.helpsystems.com/manuals/corects/impact/current/userguide/content/topics/appx_controlagents_deploy-agents.html',
       questionNumber: 52
     },
     {
       question: 'Which of the following best describes a risk associated with using facial recognition to locally authenticate to a mobile device?',
       answer: 'Biometric impersonation',
       distractors: ['Data remanence', 'Deepfake', 'Metadata scraping'],
-      explanation: '',
-      link: '',
+      explanation: '(53) Biometric impersonation, also known as biometric spoofing, is a method used by fraudsters to mimic or forge biometric identifiers to gain unauthorized access to systems or accounts that rely on biometric authentication. This could involve imitating fingerprints, facial patterns, iris scans, or even voice patterns to deceive the security system into believing they are a legitimate user.',
+      link: 'https://nordvpn.com/cybersecurity/glossary/biometric-spoofing/',
       questionNumber: 53
     },
     {
       question: 'The principal security analyst for a global manufacturer is investigating a security incident related to abnormal behavior in the ICS network. A controller was restarted as part of the troubleshooting process, and the following issue was identified when the controller was restarted:\n\n' +
       '`- SECURE BOOT FAILED:`\n\n' +
       '`- FIRMWARE MISMATCH EXPECTED UXFDC479 ACTUAL 0x79F31B`\n\n' +
-      'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\nWhich of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
+      'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\n Which of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
-      explanation: '',
+      explanation: '(54) ',
       link: '',
       questionNumber: 54
     },
@@ -797,9 +797,9 @@ const securityXQuiz = {
     },
     {
       question: `A help desk technician is troubleshooting an issue with an employee's laptop that will not boot into its operating system. The employee reported the laptop had been stolen but then found it one day later. The employee has asked the technician for help recovering important data. The technician has identified the following:\n\n` +
-      'The laptop operating system was not configured with BitLocker.\n\n' +
-      'The hard drive has no hardware failures.\n\n' +
-      'Data is present and readable on the hard drive, although it appears to be illegible.\n\n' +
+      '- The laptop operating system was not configured with BitLocker.\n\n' +
+      '- The hard drive has no hardware failures.\n\n' +
+      '- Data is present and readable on the hard drive, although it appears to be illegible.\n\n' +
       'Which of the following is the most likely reason the technician is unable to retrieve legible data from the hard drive?',
       answer: 'The hard drive experienced crypto-shredding',
       distractors: [
