@@ -19,4 +19,6 @@
   --border-light-gray: #dee2e6;
   --effect-shadow: rgba(245, 242, 247, 0.7);
   --gray-00: var(--white);
+  --success-green: #28a745;
+  --error-red: #dc3545;
 }

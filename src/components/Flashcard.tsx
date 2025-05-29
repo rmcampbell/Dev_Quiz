@@ -3,58 +3,84 @@ import { motion } from 'framer-motion';
 import { Lightbulb, Volume2 } from 'lucide-react';
 
 import { FlashcardProps } from '../types';
+import '../stylesheets/Flashcard.css';
+import '../stylesheets/Modal.css';
 
 export default function Flashcard({
   front,
   back,
   trackProgress = true,
   known = false,
-  onToggleKnown
+  onToggleKnown,
+  flipped: controlledFlipped,
+  setFlipped: controlledSetFlipped
 }: FlashcardProps) {
-  const [flipped, setFlipped] = useState(false);
+  const [internalFlipped, setInternalFlipped] = useState(false);
+
+  // Use controlled props if provided, otherwise use internal state
+  const flipped = controlledFlipped !== undefined ? controlledFlipped : internalFlipped;
+  const setFlipped = controlledSetFlipped || setInternalFlipped;
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className="quiz-div">
       <div
-        className="relative w-96 h-60 perspective"
+        className="perspective flashcard-container"
         onClick={() => setFlipped(!flipped)}
       >
         <motion.div
-          className="absolute w-full h-full rounded-2xl shadow-lg bg-[#2e3348] text-white cursor-pointer"
+          className="flashcard-content"
           animate={{ rotateY: flipped ? 180 : 0 }}
           transition={{ duration: 0.6 }}
           style={{ transformStyle: 'preserve-3d' }}
         >
+          {/* Front of card */}
           <div
-            className="absolute w-full h-full flex flex-col justify-center items-center px-4 text-2xl"
+            className="flashcard-face"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            <div className="absolute top-2 left-2 text-sm text-gray-400 flex items-center gap-1">
-              <Lightbulb size={16} /> Get a hint
+            <div className="modal-header">
+              <h2 className="modal-text" style={{ display: 'flex', alignItems: 'center', width: '100%', position: 'relative' }}>
+                <Lightbulb size={16} className="flashcard-icon" />
+                <div style={{ flex: 1, textAlign: 'center' }}>Term</div>
+              </h2>
             </div>
-            <div className="absolute top-2 right-2">
-              <Volume2 size={16} />
+            <div className="modal-body">
+              <div className="text-center modal-text">{front}</div>
             </div>
-            {front}
+            <div className="modal-footer">
+              <span className="flashcard-hint">Click to flip</span>
+            </div>
           </div>
 
+          {/* Back of card */}
           <div
-            className="absolute w-full h-full flex items-center justify-center px-4 text-xl bg-[#1e2130] rounded-2xl"
+            className="flashcard-face"
             style={{transform: 'rotateY(180deg)', backfaceVisibility: 'hidden'}}
           >
-            {back}
+            <div className="modal-header">
+              <h2 className="modal-text" style={{ display: 'flex', alignItems: 'center', width: '100%', position: 'relative' }}>
+                <Volume2 size={16} className="flashcard-icon" />
+                <div style={{ flex: 1, textAlign: 'center' }}>{front}</div>
+              </h2>
+            </div>
+            <div className="modal-body">
+              <div className="modal-text">{back}</div>
+            </div>
+            <div className="modal-footer">
+              <span className="flashcard-hint">Click to flip back</span>
+            </div>
           </div>
         </motion.div>
       </div>
 
       {trackProgress && (
-        <div className="mt-4 flex gap-4 items-center text-white">
-          <span className="text-sm text-gray-400">Track if you know it or not</span>
+        <div className="flashcard-track-progress">
+          <span className="text-sm">Track if you know it or not</span>
           <button
-            className={`px-4 py-1 rounded-full ${known ? 'bg-green-600' : 'bg-red-600'}`}
+            className={`modal-btn ${known ? 'known-btn' : 'unknown-btn'}`}
             onClick={onToggleKnown}
           >
-            {known ? '✓' : '✗'}
+            {known ? '✓ Known' : '✗ Unknown'}
           </button>
         </div>
       )}

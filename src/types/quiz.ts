@@ -1,8 +1,11 @@
 import { MouseEventHandler } from 'react';
+import { Acronym, Term } from './flashcards';
 
 export interface Quiz {
   category: string;
   questions: Question[];
+  terms?: Term[];
+  acronyms?: Acronym[];
 }
 
 export interface Question {
