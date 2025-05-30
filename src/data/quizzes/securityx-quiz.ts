@@ -464,7 +464,10 @@ const securityXQuiz = {
       answer: 'They are constrained by available compute',
       distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
       explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.',
-      link: ['https://dedicatedcomputing.com/embedded-computing-systems-101/', 'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software.'],
+      link: [
+        'https://dedicatedcomputing.com/embedded-computing-systems-101/',
+        'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software'
+      ],
       questionNumber: 42
     },
     {
@@ -592,8 +595,8 @@ const securityXQuiz = {
       'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\n Which of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
-      explanation: '(54) ',
-      link: '',
+      explanation: `(54) persistence refers to a threat actor's ability to maintain long-term access to a system or network, even after attempted removal or disruption. This allows attackers to remain undetected and hidden, potentially launching further attacks or stealing data over time.`,
+      link: 'https://www.beyondtrust.com/blog/entry/what-is-persistence-in-cybersecurity',
       questionNumber: 54
     },
     {
@@ -613,8 +616,16 @@ const securityXQuiz = {
         'Implementing RAID on the backup servers',
         'Utilizing redundant power for all developer workstations'
       ],
-      explanation: '55',
-      link: '',
+      explanation: [
+        '(55) Content Delivery Networks (CDNs) process static content such as images and scripts, dynamic content, and live streams, making them vital to global business. They add security layers against DDoS attacks and unauthorized access by moving traffic from origin servers.',
+        '`Storage input/output (I/O) refers to the security considerations related to how data is input to and output from storage devices and systems. This includes measures to protect data in transit (e.g., encryption during I/O) and data at rest (e.g., secure storage media).`\n\n' +
+        '`Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.`'
+      ],
+      link: [
+        '`https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee`\n\n',
+        'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/',
+        'https://www.fs.com/blog/a-complete-guide-to-server-clusters-6961.html'
+      ],
       questionNumber: 55
     },
     {
@@ -1300,8 +1311,8 @@ const securityXQuiz = {
       'Which of the following would be most appropriate for the developer to use in this situation?',
       answer: 'Linting',
       distractors: ['SBoM', 'DAST', 'Branch protection', 'Software composition analysis'],
-      explanation: '117',
-      link: '',
+      explanation: `(117) Linting, in the context of cybersecurity, refers to the automated analysis of code, configuration files, or API specifications to identify potential errors, vulnerabilities, and security issues. It's a form of static analysis that helps to improve code quality, reduce the risk of bugs, and proactively address security concerns before they become real-world threats.`,
+      link: 'https://www.youtube.com/watch?v=H1hMnHJBdqg&t=3',
       questionNumber: 117
     },
     {
@@ -2014,8 +2025,8 @@ const securityXQuiz = {
         'Developing a new road map, including secure coding best practices, based on the security area road map and annual goals defined by the Chief Information Security Officer',
         'Using the best practices in the OWASP secure coding manual to define a new road map'
       ],
-      explanation: 'The Software Assurance Maturity Model (SAMM) is a framework developed by OWASP (Open Web Application Security Project) to help organizations assess, improve, and track their software security practices. It provides a structured way to evaluate an organizations current security posture, identify areas for improvement, and build a balanced security program incrementally. SAMM is designed to be adaptable to various organizational sizes, development methodologies, and business functions.',
-      link: '',
+      explanation: '(174) The Software Assurance Maturity Model (SAMM) is a framework developed by OWASP (Open Web Application Security Project) to help organizations assess, improve, and track their software security practices. It provides a structured way to evaluate an organizations current security posture, identify areas for improvement, and build a balanced security program incrementally. SAMM is designed to be adaptable to various organizational sizes, development methodologies, and business functions.',
+      link: 'https://codific.com/owasp-samm-comprehensive-introduction/',
       questionNumber: 174
     },
     {
@@ -2780,8 +2791,8 @@ const securityXQuiz = {
         'Which of the following should be recommended to remediate the attack?',
       answer: 'Rotating KRBTGT password',
       distractors: ['Deleting SQLSV', 'Reimaging ADMIN01$', 'Resetting the local domain'],
-      explanation: '',
-      link: '',
+      explanation: `(237) KRBTGT is a built-in account specifically used by the Kerberos authentication service. It's essentially the "Key Distribution Center" service account, responsible for encrypting and signing all Kerberos tickets within the domain. Essentially, it validates that a user's authentication request is legitimate, and it's a key target for Golden Ticket attacks.`,
+      link: 'https://infrastructureinsider.co.uk/active-directory-you-need-to-know-about-krbtgt-password-resets/#:~:text=First%20off%2C%20KRBTGT%20stands%20for,takes%20place%20via%20%E2%80%9Ctickets%E2%80%9D.',
       questionNumber: 237
     },
     {
