@@ -26,8 +26,11 @@ export default defineConfig({
         // manualChunks: undefined
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            // Separate out big dependencies
-            if (id.includes('react')) return 'vendor_react';
+            if (
+              /node_modules\/(react|react-dom|scheduler|use-sync-external-store)/.test(id)
+            ) {
+              return 'vendor_react';
+            }
             return 'vendor';
           }
         }
