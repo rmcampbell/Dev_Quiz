@@ -19,7 +19,7 @@ export default function unusedAssetsPlugin(): Plugin {
     // This hook transforms each module
     transform(code: string, id: string): string | null {
       const normalizedId = id.replace(/\\/g, '/');
-      console.log('Transforming file:', normalizedId);
+      // console.log('Transforming file:', normalizedId);
 
       // Detect active quiz imports from constants/index.ts
       if (normalizedId.includes('constants/index.ts')) {

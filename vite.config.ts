@@ -11,18 +11,20 @@ export default defineConfig({
     unusedAssetsPlugin(),
     visualizer({
       filename: 'dist/stats.html',
-      open: true, // automatically opens report in browser
+      // automatically opens report in browser
+      open: true,
       gzipSize: true,
       brotliSize: true
     })
   ],
-  // base: '/dev_quiz/',
   server: {
     watch: {
-      usePolling: true // required for container hot reloading
+      // required for container hot reloading
+      usePolling: true
     },
     port: 3000,
-    host: true, // fixes container xdg-open issues
+    // fixes container xdg-open issues
+    host: true,
     open: true
   },
   build: {
@@ -30,19 +32,11 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        // manualChunks: undefined
-        // manualChunks(id) {
-        //   if (id.includes('node_modules')) return 'vendor';
-        // }
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            // Normalize path to avoid issues with slashes (especially on Windows)
-            const normalizedId = id.replace(/\\/g, '/');
-
-            // Match only core React packages
+          const normalizedId = id.replace(/\\/g, '/');
+          if (normalizedId.includes('node_modules')) {
             if (normalizedId.includes('/node_modules/framer-motion/')) return 'vendor_motion';
             if (normalizedId.includes('/node_modules/react-router-dom/')) return 'vendor_router';
-
             return 'vendor';
           }
         }
