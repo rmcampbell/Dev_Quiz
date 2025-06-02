@@ -39,7 +39,6 @@ a:hover {
 }
 
 .select-quiz-styles,
-.quiz-div,
 .results-div {
   display: flex;
   flex-direction: column;
@@ -54,15 +53,7 @@ a:hover {
   text-align: center;
 }
 
-.select-btn-div {
-  display: flex;
-  flex-direction: column;
-  margin: 1.25rem;
-  width: 100%;
-  padding: 0 10% 0;
-}
 
-.select-btns,
 .answers-btns {
   font-size: 1.2rem;
   margin: 10px 0;
@@ -75,7 +66,6 @@ a:hover {
   transition: all 0.4s ease-in-out;
 }
 
-.select-btns:hover,
 .answers-btns:hover {
   box-shadow: -1px -1px 15px var(--effect-shadow);
 }
@@ -130,9 +120,6 @@ hr {
   opacity: 0.25;
 }
 
-.perspective {
-  perspective: 1000px;
-}
 
 .quiz-btn {
   position: absolute;
@@ -140,19 +127,13 @@ hr {
   left: 0;
 }
 
-.quiz-text {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0 10px;
-  font-size: 1.4rem;
-}
 
 .submit-btn {
   font-weight: bold;
   color: var(--text-primary);
-  background-color: transparent;
+  background-color: transparent !important;
   opacity: 0.5;
-  border: 2px solid var(--text-primary);
+  border: 2px solid var(--text-primary) !important;
 }
 
 /* Results styles */
@@ -163,23 +144,4 @@ hr {
 
 .results-rpg-link {
   color: var(--text-link);
-}
-
-@media screen and (max-width: 460px) {
-  .quiz-answers-div {
-    width: auto;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .select-btn-div {
-    padding: 0 20% 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .select-btn-div {
-    width: 25%;
-    padding: 0;
-  }
 }
