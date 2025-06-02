@@ -27,7 +27,7 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules')) {
             // Separate out big dependencies
-            // if (id.includes('react')) return 'vendor_react';
+            if (id.includes('react')) return 'vendor_react';
             return 'vendor';
           }
         }
