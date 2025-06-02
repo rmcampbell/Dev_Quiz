@@ -8,7 +8,10 @@ import Questions from '../pages/Questions';
 import '../stylesheets/App.css';
 import Results from '../pages/Results';
 import SelectCategory from '../pages/SelectCategory';
+import SelectQuizType from '../pages/SelectQuizType';
 import SelectQuestionsTotal from '../pages/SelectQuestionsTotal';
+import TermsFlashcards from '../pages/TermsFlashcards';
+import AcronymsFlashcards from '../pages/AcronymsFlashcards';
 import { shuffle } from '../utils/utilities.ts';
 import { QuizState } from '../types';
 
@@ -90,12 +93,10 @@ const QuizTemplate: React.FC = () => {
     // Filter questions based on the selected category
     const filteredQuiz = ALL_CATEGORIES.filter(q => q.category === category);
 
-    updateQuizState({
-      selectedCategory: category,
-      filteredQuestions: filteredQuiz
-    });
+    updateQuizState({ selectedCategory: category, filteredQuestions: filteredQuiz });
 
-    navigate(`/quizzes/${category}/questionsTotal`);
+    // Navigate to the quiz type selection page instead of directly to questions total
+    navigate(`/quizzes/${category}/quizType`);
   }, [navigate, updateQuizState]);
 
   const startQuiz = useCallback((quizQuestionsCount: number) => {
@@ -125,13 +126,17 @@ const QuizTemplate: React.FC = () => {
     // Generate a random set of questions
     const randomQuestions = shuffle(ALL_CATEGORIES).slice(0, QUESTION_NUMS[randomIndex]);
 
-    updateQuizState({
-      selectedCategory: 'Random',
-      quiz: randomQuestions
-    });
+    updateQuizState({ selectedCategory: 'Random', quiz: randomQuestions });
 
-    navigate('/quizzes/Random/questionsTotal');
+    // Navigate to the quiz type selection page instead of directly to questions total
+    navigate('/quizzes/Random/quizType');
   }, [navigate, updateQuizState]);
+
+  // Go back from SelectQuizType to SelectCategory
+  const goBackToCategory = useCallback(() => {navigate('/quizzes');}, [navigate]);
+
+  // Go back from SelectQuestionsTotal to SelectQuizType
+  const goBackToQuizType = useCallback(() => {navigate(`/quizzes/${selectedCategory}/quizType`);}, [navigate, selectedCategory]);
 
   const nextQuestion = useCallback(() => {
     if (questionNumber >= quiz.length) {
@@ -139,10 +144,7 @@ const QuizTemplate: React.FC = () => {
       return;
     }
 
-    updateQuizState({
-      questionNumber: questionNumber + 1,
-      chooseAnswer: false
-    });
+    updateQuizState({ questionNumber: questionNumber + 1, chooseAnswer: false });
 
     navigate(`/quizzes/${selectedCategory}/questions/${questionNumber + 1}/of/${quiz.length}`);
   }, [questionNumber, quiz.length, navigate, selectedCategory, updateQuizState]);
@@ -291,10 +293,24 @@ const QuizTemplate: React.FC = () => {
       <Routes>
         <Route path="/" element={<SelectCategory selectQuiz={selectQuiz} startRandomQuiz={startRandomQuiz} />} />
         <Route
+          path="/:category/quizType"
+          element={
+            <SelectQuizType selectedCategory={selectedCategory} goBack={goBackToCategory} />
+          }
+        />
+        <Route
           path="/:category/questionsTotal"
           element={
-            <SelectQuestionsTotal startQuiz={startQuiz} totalQuestions={filteredQuestions.length} />
+            <SelectQuestionsTotal startQuiz={startQuiz} totalQuestions={filteredQuestions.length} goBack={goBackToQuizType} />
           }
+        />
+        <Route
+          path={'/:category/terms'}
+          element={<TermsFlashcards />}
+        />
+        <Route
+          path={'/:category/acronyms'}
+          element={<AcronymsFlashcards />}
         />
         <Route
           path={'/:category/questions/:currentQuestion/of/:total'}

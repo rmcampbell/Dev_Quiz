@@ -7,6 +7,7 @@
 
 .modal-text {
   font-size: 1.6rem;
+  color: var(--text-deep-blue);
 }
 
 ::backdrop {
@@ -37,7 +38,8 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: auto;
-  display: block;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--border-light-gray);
 }
 

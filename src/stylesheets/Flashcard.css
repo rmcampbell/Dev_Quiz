@@ -1,0 +1,153 @@
+@import "./colors.css";
+
+/* Flashcard styles */
+.quiz-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.flashcard-container {
+  width: 100%;
+  max-width: 50%;
+  height: 300px;
+  margin: 20px auto 30px auto;
+  cursor: pointer;
+}
+
+.flashcard-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.flashcard-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.flashcard-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.flashcard-hint {
+  font-size: 0.9rem;
+  color: var(--text-deep-blue);
+  font-style: italic;
+}
+
+.known-btn {
+  background-color: var(--success-green);
+  color: white;
+}
+
+.unknown-btn {
+  background-color: var(--error-red);
+  color: white;
+}
+
+.flashcard-track-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 20;
+}
+
+/* Button styling to match modal buttons */
+.modal-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-text {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  font-size: 1.4rem;
+}
+
+.select-btn-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  width: 100%;
+  padding: 0 10% 0;
+  position: relative;
+  z-index: 20;
+}
+
+.flashcard-nav-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10% 0;
+  position: relative;
+  z-index: 20;
+  margin-top: 0; /* Reduce space between "Track if you know it" and buttons */
+}
+
+.select-btns {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: var(--text-primary);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.select-btns:hover {
+  box-shadow: -1px -1px 15px var(--effect-shadow);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 460px) {
+  .quiz-answers-div {
+    width: auto;
+  }
+  .flashcard-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .select-btn-div {
+    padding: 0 20% 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .select-btn-div {
+    width: 25%;
+    padding: 0;
+  }
+}

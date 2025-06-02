@@ -1,12 +1,82 @@
 import imageMap from '../../utils/assets.ts';
+import { Acronym, Term } from '../../types';
 
 const imgPath = (num: number|string) => {
   const numStr = typeof num === 'number' ? num.toString().padStart(3, '0') : num;
   return imageMap?.[`../images/CAS-005_${numStr}.webp`] || imageMap?.[`../images/CAS-005_${numStr}.png`];
 };
 
+// Security-related terms
+const terms: Term[] = [
+  {
+    term: 'Collision Resistance',
+    definition: 'In the context of cryptographic hash functions, means that it is computationally difficult to find ' +
+      'two different input values that produce the same hash output. This property is crucial for ensuring the ' +
+      'integrity and security of various cryptographic applications. ',
+    notes: 'A collision occurs when two different inputs produce the same hash output.',
+    example: 'Imagine a hash function that outputs a 10-bit hash. A naive approach to finding a collision would be ' +
+      'to try all possible 10-bit outputs. However, a collision-resistant hash function makes this computationally ' +
+      'infeasible. '
+  },
+  {
+    term: 'Key Stretching',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Port Mirroring',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Port Security',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Rainbow Table',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Salting',
+    definition: '',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Separation of duties',
+    definition: 'Helps prevent fraud by ensuring no single person has control over all aspects of a process.',
+    notes: '',
+    example: ''
+  },
+  {
+    term: 'Split Knowledge',
+    definition: '',
+    notes: '',
+    example: ''
+  }
+];
+
+// Security-related acronyms
+const acronyms: Acronym[] = [
+  {
+    acronym: '2FA',
+    actual: 'Two Factor Authentication',
+    definition: 'Adds an extra layer of security to online accounts by requiring two separate verification methods, typically a password and a code sent to a mobile device.  This makes it significantly harder for unauthorized users to gain access, even if they have stolen or guessed a password. MFA essentially creates a barrier that requires more than just a password to be bypassed.',
+    additionalAcronyms: [''],
+    notes: ''
+  }
+];
+
 const securityXQuiz = {
   category: 'SecurityX',
+  terms,
+  acronyms,
   questions: [
     {
       question: 'A security engineer is reviewing event logs because an employee successfully connected a personal Windows laptop to the corporate network, which is against company policy. Company policy allows all Windows 10 and 11 laptops to connect to the system as long as the MDM agent installed by IT is running. Only compliant devices can connect, and the logic in the system to evaluate compliant laptops is as follows:\n\n' +
@@ -464,10 +534,11 @@ const securityXQuiz = {
       answer: 'They are constrained by available compute',
       distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
       explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.',
-      link: [
-        'https://dedicatedcomputing.com/embedded-computing-systems-101/',
-        'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software'
-      ],
+      link: 'https://dedicatedcomputing.com/embedded-computing-systems-101/',
+      // link: [
+      //   'https://dedicatedcomputing.com/embedded-computing-systems-101/',
+      //   'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software'
+      // ],
       questionNumber: 42
     },
     {
@@ -616,16 +687,18 @@ const securityXQuiz = {
         'Implementing RAID on the backup servers',
         'Utilizing redundant power for all developer workstations'
       ],
-      explanation: [
-        '(55) Content Delivery Networks (CDNs) process static content such as images and scripts, dynamic content, and live streams, making them vital to global business. They add security layers against DDoS attacks and unauthorized access by moving traffic from origin servers.',
-        '`Storage input/output (I/O) refers to the security considerations related to how data is input to and output from storage devices and systems. This includes measures to protect data in transit (e.g., encryption during I/O) and data at rest (e.g., secure storage media).`\n\n' +
-        '`Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.`'
-      ],
-      link: [
-        '`https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee`\n\n',
-        'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/',
-        'https://www.fs.com/blog/a-complete-guide-to-server-clusters-6961.html'
-      ],
+      // explanation: [
+      explanation:
+        '(55) Content Delivery Networks (CDNs) process static content such as images and scripts, dynamic content, and live streams, making them vital to global business. They add security layers against DDoS attacks and unauthorized access by moving traffic from origin servers.' +
+        'Storage input/output (I/O) refers to the security considerations related to how data is input to and output from storage devices and systems. This includes measures to protect data in transit (e.g., encryption during I/O) and data at rest (e.g., secure storage media).' +
+        'Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.',
+      // ],
+      link: 'https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee',
+      // link: [
+      //   'https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee',
+      //   'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/',
+      //   'https://www.fs.com/blog/a-complete-guide-to-server-clusters-6961.html'
+      // ],
       questionNumber: 55
     },
     {
@@ -2862,20 +2935,21 @@ const securityXQuiz = {
       explanation: '242',
       link: '',
       questionNumber: 242
-    },
-    {
-      question: '',
-      answer: '',
-      distractors: [
-        '',
-        '',
-        ''
-      ],
-      explanation: '',
-      link: '',
-      questionNumber: 243
     }
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '',
+    //   link: '',
+    //   questionNumber: 243
+    // }
   ]
 };
 
+export { terms, acronyms };
 export default securityXQuiz;

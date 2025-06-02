@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import path from 'path';
 import type { Plugin } from 'vite';
 
@@ -12,11 +13,13 @@ export default function unusedAssetsPlugin(): Plugin {
     // This hook runs at the beginning of the build
     buildStart() {
       console.log('Analyzing active quizzes and their assets...');
+      this.addWatchFile(path.resolve(__dirname, 'src/constants/index.ts'));
     },
 
     // This hook transforms each module
     transform(code: string, id: string): string | null {
       const normalizedId = id.replace(/\\/g, '/');
+      // console.log('Transforming file:', normalizedId);
 
       // Detect active quiz imports from constants/index.ts
       if (normalizedId.includes('constants/index.ts')) {
@@ -113,6 +116,17 @@ export default function unusedAssetsPlugin(): Plugin {
 
       // Return null to use the original code
       return null;
+    },
+
+    load(id) {
+      const normalizedId = id.replace(/\\/g, '/');
+      if (normalizedId.includes('utils/assets.ts') && usedImages.size > 0) {
+        const code = readFileSync(id, 'utf-8');
+        const imagePattern = Array.from(usedImages).join(',');
+        const searchValue = `import.meta.glob("../images/*.{png,jpg,jpeg,svg,webp}", { eager: true })`;
+        const replaceValue = `import.meta.glob('../images/{${imagePattern}}', { eager: true })`;
+        return code.replace(searchValue, replaceValue);
+      }
     }
   };
 }
