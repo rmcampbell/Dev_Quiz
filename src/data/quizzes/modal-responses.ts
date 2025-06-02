@@ -15,6 +15,8 @@ export const correctModalResponses = [
   'Correct! Superb work!',
   'Correct! Terrific job!',
   `You're nailing it!`,
+  `Correct! The Force Is Strong In This One!`,
+  `Correct! Impressive, Most Impressive!`,
   `Impressive, you're correct!`
 ];
 

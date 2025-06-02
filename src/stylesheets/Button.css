@@ -37,6 +37,12 @@
   font-size: 25px;
 }
 
+.nowrap-btn {
+  width: 200px !important;
+  min-width: 200px !important;
+  white-space: nowrap !important;
+}
+
 @media screen and (max-width: 480px) {
   .large-btn {
     width: 200px;
