@@ -20,18 +20,19 @@ export default defineConfig({
   },
   build: {
     outDir: './dist',
-    emptyOutDir: true
-    // rollupOptions: {
-    //   output: {
-    //     manualChunks(id) {
-    //       if (id.includes('node_modules')) {
-    //         // Separate out big dependencies
-    //         if (id.includes('react')) return 'vendor_react';
-    //         return 'vendor';
-    //       }
-    //     }
-    //   }
-    // }
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+        // manualChunks(id) {
+        //   if (id.includes('node_modules')) {
+        //     // Separate out big dependencies
+        //     if (id.includes('react')) return 'vendor_react';
+        //     return 'vendor';
+        //   }
+        // }
+      }
+    }
   }
   // test: {
   //   ...configDefaults,
