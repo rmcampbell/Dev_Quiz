@@ -24,8 +24,26 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // manualChunks: undefined
+        // manualChunks(id) {
+        //   if (id.includes('node_modules')) return 'vendor';
+        // }
         manualChunks(id) {
-          if (id.includes('node_modules')) return 'vendor';
+          if (id.includes('node_modules')) {
+            // Normalize path to avoid issues with slashes (especially on Windows)
+            const normalizedId = id.replace(/\\/g, '/');
+
+            // Match only core React packages
+            if (
+              normalizedId.includes('/node_modules/react/') ||
+              normalizedId.includes('/node_modules/react-dom/') ||
+              normalizedId.includes('/node_modules/scheduler/') ||
+              normalizedId.includes('/node_modules/use-sync-external-store/')
+            ) {
+              return 'vendor_react';
+            }
+
+            return 'vendor';
+          }
         }
       }
     }
