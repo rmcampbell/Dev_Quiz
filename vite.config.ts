@@ -1,13 +1,20 @@
 import { defineConfig } from 'vite';
 // import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 import unusedAssetsPlugin from './vite-plugin-unused-assets';
 
 
 export default defineConfig({
   plugins: [
     react(),
-    unusedAssetsPlugin()
+    unusedAssetsPlugin(),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: true, // automatically opens report in browser
+      gzipSize: true,
+      brotliSize: true
+    })
   ],
   // base: '/dev_quiz/',
   server: {
@@ -33,14 +40,8 @@ export default defineConfig({
             const normalizedId = id.replace(/\\/g, '/');
 
             // Match only core React packages
-            if (
-              normalizedId.includes('/node_modules/react/') ||
-              normalizedId.includes('/node_modules/react-dom/') ||
-              normalizedId.includes('/node_modules/scheduler/') ||
-              normalizedId.includes('/node_modules/use-sync-external-store/')
-            ) {
-              return 'vendor_react';
-            }
+            if (normalizedId.includes('/node_modules/framer-motion/')) return 'vendor_motion';
+            if (normalizedId.includes('/node_modules/react-router-dom/')) return 'vendor_router';
 
             return 'vendor';
           }
