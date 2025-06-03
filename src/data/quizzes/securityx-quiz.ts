@@ -705,32 +705,32 @@ const securityXQuiz = {
       question: 'An analyst is working to address a potential compromise of a corporate endpoint and discovers the attacker accessed a user\'s credentials. However, it is unclear if the system baseline was modified to achieve persistence. Which of the following would most likely support forensic activities in this scenario?',
       answer: 'Bit-level disk duplication',
       distractors: ['Software composition analysis', 'Side-channel analysis', 'SCAP scanner'],
-      explanation: '',
-      link: '',
+      explanation: '(56) Bit-level disk duplication, also known as a bit-by-bit copy or sector-by-sector clone, creates an exact replica of a hard drive by copying every single bit of data, including used, unused, and even logically bad sectors. This process ensures the copied disk is bit-for-bit identical to the original, preserving all data and features like drive size, formatting, and number of volumes.',
+      link: 'https://www.easeus.com/disk-copy/clone-resource/bit-for-bit-copy-hard-drive.html#:~:text=Making%20a%20bit%2Dby%2Dbit,sector%2Dby%2Dsector%20clone.',
       questionNumber: 56
     },
     {
       question: 'A company is decommissioning old servers and hard drives that contain sensitive data. Which of the following best protects against data leakage?',
       answer: 'Purging',
       distractors: ['Clearing', 'Shredding', 'Degaussing'],
-      explanation: '',
-      link: '',
+      explanation: `(57) purging refers to the process of permanently and securely erasing data from storage media, making it irretrievable even with advanced laboratory techniques. It's a stronger method of data removal than "clearing," which may allow for data recovery in some cases.`,
+      link: 'https://www.lenovo.com/in/en/glossary/purge/?orgRef=https%253A%252F%252Fwww.google.com%252F',
       questionNumber: 57
     },
     {
       question: 'An engineer has had scaling issues with a web application hosted on premises and would like to move to a serverless architecture. Which of the following cloud benefits would be best to utilize for this project?',
       answer: 'Automation of resource provisioning',
       distractors: ['Cost savings for hosting', 'Eliminating need to patch', 'Providing geo-redundant hosting'],
-      explanation: '',
-      link: '',
+      explanation: `(58) Automated provisioning is an approach for controlling user access within an organization's IT systems, applications, and resources using software that automatically creates, modifies, and revokes accounts and their associated privileges without manual intervention.`,
+      link: 'https://www.strongdm.com/blog/automated-provisioning',
       questionNumber: 58
     },
     {
       question: 'An organization needs to classify its systems and data in accordance with external requirements. Which of the following roles is best qualified to perform this task?',
       answer: 'Data owner',
       distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward', ''],
-      explanation: '',
-      link: '',
+      explanation: '(59) The data owner defines the rules and criteria for access, while data custodians (often IT) implement the provisioning based on those rules. The individual or entity accountable for a specific dataset within an organization.',
+      link: 'https://www.montecarlodata.com/blog-data-owner-responsibilities/',
       questionNumber: 59
     },
     {
@@ -742,8 +742,8 @@ const securityXQuiz = {
         'Token-based access for application users',
         'Address space layout randomization'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(60) Tokenization using an Hardware Security Module (HSM) involves replacing sensitive data with unique tokens, while securely managing the cryptographic keys within the HSM. This process enhances cybersecurity by reducing the scope of data that needs to be protected and making it harder for attackers to compromise sensitive information.',
+      link: 'https://paylosophy.com/hsm-tokenization-appliance/',
       questionNumber: 60
     },
     {
@@ -756,7 +756,7 @@ const securityXQuiz = {
         'The IPSec settings allow more than one cipher suite on both devices',
         'The Diffie-Hellman group on both sides matches but is a legacy group'
       ],
-      explanation: '',
+      explanation: '(61) ',
       link: '',
       questionNumber: 61
     },
