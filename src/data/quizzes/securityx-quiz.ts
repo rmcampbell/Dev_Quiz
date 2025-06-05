@@ -1174,8 +1174,8 @@ const securityXQuiz = {
       question: 'Which of the following best explains why AI output could be inaccurate?',
       answer: 'Model poisoning',
       distractors: ['Social engineering', 'Output handling', 'Prompt injections'],
-      explanation: '101',
-      link: '',
+      explanation: `(101) Model poisoning, a type of cybersecurity threat, involves attackers manipulating a machine learning model's training data or parameters to compromise its performance or behavior. This can lead to various issues, including biased outputs, degraded performance, and the introduction of vulnerabilities or backdoors.`,
+      link: 'https://www.startupdefense.io/cyberattacks/model-poisoning-ml#:~:text=This%20can%20happen%20through%20various,the%20model%20performs%20in%20deployment.',
       questionNumber: 101
     },
     {
@@ -1185,8 +1185,8 @@ const securityXQuiz = {
         'Which of the following vulnerabilities has the tool identified?',
       answer: 'CSRF',
       distractors: ['RCE', 'XSS', 'TOCTOU'],
-      explanation: '102',
-      link: '',
+      explanation: `(102) Cross-Site Request Forgery (CSRF) is a web security vulnerability where an attacker tricks a user into performing actions on a website they are already logged into, without the user's knowledge or consent. It exploits the fact that web browsers send requests to a website with the user's cookies, including authentication details, even when the user is on a different, potentially malicious, website. This allows an attacker to make unauthorized requests to the trusted website, potentially changing the user's email, password, or making funds transfers.`,
+      link: 'https://www.fortinet.com/resources/cyberglossary/csrf#:~:text=CSRF%20Definition%20And%20Meaning,has%20already%20granted%20them%20authentication.',
       questionNumber: 102
     },
     {
@@ -1197,8 +1197,8 @@ const securityXQuiz = {
         'The business requirements state that confidentiality is a critical success factor',
         'Modern cryptographic protocols list this process as a prerequisite for use'
       ],
-      explanation: '103',
-      link: '',
+      explanation: '(103) Cryptanalysis is the art and science of analyzing and decrypting encrypted messages without knowing the encryption key. It involves understanding the workings of ciphers, cryptosystems, and ciphertext to find and exploit weaknesses for decryption. Essentially, cryptanalysis is the practice of breaking encryption.',
+      link: 'https://www.techtarget.com/searchsecurity/definition/cryptanalysis#:~:text=Cryptanalysis%20is%20the%20study%20of,for%20defeating%20or%20weakening%20them.',
       questionNumber: 103
     },
     {
@@ -1209,8 +1209,8 @@ const securityXQuiz = {
         'Budgetary pressure drives risk mitigation planning in all companies',
         'Risk appetite directly influences which breaches are disclosed publicly'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(104) In cybersecurity, risk appetite refers to the amount and type of risk an organization is willing to accept in pursuit of its business objectives. It's a formal statement outlining the organization's acceptable level of cyber risk, ensuring security measures align with strategic goals. Risk appetite helps with decision-making, provides direction for cybersecurity, and communicates the organization's approach to stakeholders.`,
+      link: 'https://www.unit21.ai/fraud-aml-dictionary/risk-appetite',
       questionNumber: 104
     },
     {
@@ -1228,8 +1228,8 @@ const securityXQuiz = {
         'The TXT record must be changed to "v=dkim ip4:192.168.1.11 include:my-email.com ~all"',
         'The srv01 A record must be changed to a type CNAME record pointing to the web01 server'
       ],
-      explanation: '105',
-      link: '',
+      explanation: `(105) A CNAME (Canonical Name) record is a type of DNS record that acts as an alias, pointing one domain name to another domain name. It's used to associate multiple domain names with a single IP address, often in conjunction with content delivery networks (CDNs). SPF (Sender Policy Framework) is a cybersecurity measure that helps authenticate emails and prevent email spoofing. It works by listing which mail servers are authorized to send emails on behalf of a specific domain, allowing recipient servers to verify the sender's legitimacy. This helps protect against phishing and other email scams where attackers impersonate legitimate senders.`,
+      link: 'https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/',
       questionNumber: 105
     },
     {
@@ -1240,8 +1240,8 @@ const securityXQuiz = {
         'Microsegmentation',
         'Conditional access'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(106) Secure Access Service Edge (SASE) is a cloud-based architecture that combines network and security services into a single, unified platform, offering a more agile and secure way to connect users and applications, regardless of location. It consolidates traditional networking and security functions, like SD-WAN, firewall-as-a-service, zero trust network access, and cloud access security brokers, into a single cloud-delivered service.',
+      link: 'https://www.fortinet.com/resources/cyberglossary/sase#:~:text=SASE%20allows%20organizations%20to%20extend,WAN%2C%20cloud%2C%20data%20center.',
       questionNumber: 106
     },
     {
@@ -1254,8 +1254,8 @@ const securityXQuiz = {
         'Adding additional time to software development to perform fuzz testing',
         'Not allowing users to change their local passwords'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(107) Hard-coded credentials are passwords or other secrets embedded directly into the source code of an application, firmware, or configuration file. This practice poses a significant security risk because these credentials can be easily discovered by anyone who gains access to the code or binaries.',
+      link: 'https://owasp.org/www-community/vulnerabilities/Use_of_hard-coded_password#:~:text=The%20use%20of%20a%20hard%2Dcoded%20password%20increases,possibility%20of%20password%20guessing%20tremendously.&text=Authentication%3A%20If%20hard%2Dcoded%20passwords,through%20the%20account%20in%20question.',
       questionNumber: 107
     },
     {
@@ -1266,8 +1266,8 @@ const securityXQuiz = {
         'The SIEM indexes are too large',
         'The retention policy is not properly configured'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(108) Properly parsed data is data that has been successfully transformed from its raw format into a structured, organized, and easily understandable format for processing or analysis. This process, known as parsing, involves analyzing a sequence of characters or symbols to extract meaningful information and often results in a structured format like JSON, XML, or CSV.',
+      link: 'https://www.youtube.com/watch?v=1JgMXvVKP1Y',
       questionNumber: 108
     },
     {
@@ -1280,8 +1280,8 @@ const securityXQuiz = {
         'One certificate is being bound to multiple websites on the same server',
         'Subject alternative names were not used appropriately for subdomains'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(109) A Global Root Certification Authority (CA) is a trusted entity that issues root certificates, which are the foundational trust anchors for digital certificate hierarchies. These root certificates are pre-installed in operating systems, browsers, and other software, allowing them to verify the authenticity of other certificates issued by subordinate CAs.',
+      link: 'https://www.keyfactor.com/education-center/the-difference-in-root-certificates-vs-intermediate-certificates/#:~:text=a%20valid%20CA.-,Root%20Certificate,the%20CAs%20that%20issue%20them.',
       questionNumber: 109
     },
     {
@@ -1294,8 +1294,8 @@ const securityXQuiz = {
       'A security architect needs to supplement the existing control strategy with one that restricts unauthorized software. Which of the following controls should the architect recommend to best supplement the existing environment?',
       answer: 'Application control',
       distractors: ['SIEM', 'Isolation', 'Conditional access'],
-      explanation: '110',
-      link: '',
+      explanation: '(110) Application control is a cybersecurity measure that regulates and manages the execution of software applications on a computer or network.',
+      link: 'https://www.perimeter81.com/glossary/application-control',
       questionNumber: 110
     },
     {
@@ -1306,8 +1306,8 @@ const securityXQuiz = {
         'External-facing infrastructure with a low risk score and no known exploited vulnerabilities',
         'External-facing infrastructure with a high risk score that can only be exploited with local access to the resource'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(111) External-facing infrastructure cybersecurity focuses on securing an organization's assets accessible from the internet, such as websites, applications, and cloud resources. This involves identifying potential vulnerabilities and implementing measures to protect them from external threats. Key aspects include vulnerability assessments, penetration testing, and ongoing monitoring of the external attack surface.`,
+      link: 'https://tesserent.com/resources/what-is-external-penetration-testing-explained?utm_source=organic',
       questionNumber: 111
     },
     {
@@ -1318,8 +1318,8 @@ const securityXQuiz = {
         'Incident response playbook',
         'Crisis management plan'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(112) A Business Impact Analysis (BIA) in cybersecurity helps organizations understand the potential consequences of cyber incidents or disruptions to critical business operations. It identifies the business functions, systems, and resources that are most critical, assesses the impact of a disruption, and helps prioritize recovery efforts and resource allocation. Essentially, it's a "health check" for the business, identifying vulnerabilities and dependencies to improve resilience and preparedness for cyberattacks and other disruptions.`,
+      link: 'https://www.geeksforgeeks.org/what-is-bia-in-cyber-security/',
       questionNumber: 112
     },
     {
@@ -1332,8 +1332,8 @@ const securityXQuiz = {
         'Quarantine PRDDB01 and then alert the database engineers',
         'Review all the network logs for further data exfiltration'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(113) An incident response playbook is a structured guide that organizations use to handle cybersecurity incidents. It outlines the steps for detecting, responding to, and recovering from incidents, ensuring a coordinated and efficient response. Playbooks help to minimize damage and downtime by providing a standardized approach to different types of threats.',
+      link: 'https://www.paloaltonetworks.com/cyberpedia/what-is-an-incident-response-playbook#:~:text=The%20Role%20of%20Incident%20Response%20Playbooks,-Incident%20response%20playbooks&text=This%20ensures%20that%20team%20members,responsibilities%2C%20promoting%20accountability%20and%20clarity.',
       questionNumber: 113
     },
     {
@@ -1344,8 +1344,8 @@ const securityXQuiz = {
         'Identify lessons learned from the audit',
         'Select samples for audit testing'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(114) An internal cybersecurity audit assessment is a systematic review of an organization's information systems, policies, and procedures to ensure they align with security standards and best practices. It identifies potential vulnerabilities, verifies compliance with regulations, and provides actionable insights for improving cybersecurity posture.`,
+      link: 'https://internalaudit360.com/the-crucial-role-of-internal-audit-in-cybersecurity-strategy/',
       questionNumber: 114
     },
     {
@@ -1356,8 +1356,8 @@ const securityXQuiz = {
         'Modifying the WAF polices to block against known vulnerabilities',
         'Completing an IAST scan against the web application'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(115) Software dependency management is crucial in cybersecurity as it involves controlling and maintaining external components (like libraries and frameworks) that software relies on. This helps prevent vulnerabilities, ensures software stability, and improves overall security. By carefully managing dependencies, developers can minimize the risk of cyberattacks that exploit weaknesses in third-party components.',
+      link: 'https://teamhub.com/blog/understanding-dependency-management-in-software-development/#:~:text=Dependency%20management%20refers%20to%20the,types%3A%20static%20and%20dynamic%20dependencies.',
       questionNumber: 115
     },
     {
@@ -1370,7 +1370,7 @@ const securityXQuiz = {
         'Potential activity indicating an attacker moving laterally in the network',
         'A misconfigured syslog server creating false negatives'
       ],
-      explanation: '',
+      explanation: '(116) ',
       link: '',
       questionNumber: 116
     },
