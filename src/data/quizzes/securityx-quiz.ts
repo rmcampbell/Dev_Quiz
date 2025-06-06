@@ -89,7 +89,12 @@ const securityXQuiz = {
         'The OS version was higher than 11, and the MDM agent was running, triggering a true negative'
       ],
       explanation: 'Many organizations require a Mobile Device Management (MDM) agent or similar endpoint security software to be installed on any device connecting to their network for security and compliance. A personally owned laptop is unlikely to have this corporate-mandated agent pre-installed. If the network access control (NAC) or endpoint detection system identifies the absence of the required MDM agent and flags the device as non-compliant, this is a true positive (a correct detection of a non-compliant condition).',
-      link: 'https://learn.microsoft.com/en-us/windows/client-management/mdm-overview',
+      references: [
+        {
+          title: '',
+          url: 'https://learn.microsoft.com/en-us/windows/client-management/mdm-overview'
+        }
+      ],
       questionNumber: 1
     },
     {
@@ -103,7 +108,12 @@ const securityXQuiz = {
         'Review all access to production systems on a quarterly basis'
       ],
       explanation: 'Separation of duties, also known as segregation of duties, is a principle that ensures no single individual has complete control over a process or system. It involves dividing key tasks and responsibilities among multiple people to reduce the risk of fraud, error, and unauthorized access. This principle is crucial in various fields like finance, IT, and cybersecurity.',
-      link: 'https://pathlock.com/learn/separation-of-duties-in-your-organization/',
+      references: [
+        {
+          title: '',
+          url: 'https://pathlock.com/learn/separation-of-duties-in-your-organization/'
+        }
+      ],
       questionNumber: 2
     },
     {
@@ -118,7 +128,12 @@ const securityXQuiz = {
         'URL encoding'
       ],
       explanation: '(3) query parameterization is a vital technique for securing database applications and improving query performance. It helps prevent SQL injection attacks by separating the query logic from user-supplied data and can also lead to performance improvements through caching and pre-compilation.',
-      link: 'https://techcommunity.microsoft.com/blog/sqlserver/how-and-why-to-use-parameterized-queries/383483',
+      references: [
+        {
+          title: '',
+          url: 'https://techcommunity.microsoft.com/blog/sqlserver/how-and-why-to-use-parameterized-queries/383483'
+        }
+      ],
       questionNumber: 3
     },
     {
@@ -133,7 +148,12 @@ const securityXQuiz = {
         'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file'
       ],
       explanation: `(4) Ansible.cfg is a configuration file that allows you to customize various aspects of Ansible's behavior. It's used to define settings like the default inventory file, module search paths, and connection parameters, among others.`,
-      link: 'https://www.youtube.com/watch?v=F5LsMndrTrs&t=50',
+      references: [
+        {
+          title: '',
+          url: 'https://www.youtube.com/watch?v=F5LsMndrTrs&t=50'
+        }
+      ],
       questionNumber: 4
     },
     {
@@ -141,7 +161,12 @@ const securityXQuiz = {
       answer: 'The CRM company',
       distractors: [`The CRM company's customer`, 'The CSP', 'The regulatory body'],
       explanation: '(5) Customer Relationship Management (CRM) system is a software application used to manage and automate various aspects of customer interactions, including sales, marketing, and customer service. Examples of CRM systems include Salesforce, HubSpot CRM, and Microsoft Dynamics 365.',
-      link: 'https://www.zendesk.com/dk/sell/crm/what-is-crm/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.zendesk.com/dk/sell/crm/what-is-crm/'
+        }
+      ],
       questionNumber: 5
     },
     {
@@ -153,7 +178,12 @@ const securityXQuiz = {
         `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA`
       ],
       explanation: '(6) incident response plan is a documented strategy outlining how an organization will detect, respond to, and recover from cybersecurity incidents or other disruptions.\n\n Disaster recovery plan (DRP), on the other hand, addresses broader disruptions, including natural disasters, equipment failures, and cyberattacks, with the goal of restoring systems and operations after a major incident.',
-      link: '(6) https://www.zengrc.com/blog/incident-response-plan-vs-disaster-recovery-plan/#:~:text=Where%20an%20IRP%20focuses%20on,business%20functions%20across%20all%20departments.',
+      references: [
+        {
+          title: '',
+          url: '(6) https://www.zengrc.com/blog/incident-response-plan-vs-disaster-recovery-plan/#:~:text=Where%20an%20IRP%20focuses%20on,business%20functions%20across%20all%20departments.'
+        }
+      ],
       questionNumber: 6
     },
     {
@@ -170,7 +200,12 @@ const securityXQuiz = {
         'Increase the maximum age to 120 days'
       ],
       explanation: '(7) Minimum length of the passwords should be enforced by the application. Passwords shorter than 8 characters are considered to be weak (NIST SP800-63B). Maximum password length should be at least 64 characters to allow passphrases (NIST SP800-63B).',
-      link: 'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html',
+      references: [
+        {
+          title: '',
+          url: 'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html'
+        }
+      ],
       questionNumber: 7
     },
     {
@@ -184,7 +219,12 @@ const securityXQuiz = {
         '802.1X with mutual authentication'
       ],
       explanation: '(8) Association MAC address randomization is a security and privacy feature in Wi-Fi where a device, when connecting to a network, uses a randomized MAC address instead of its actual hardware MAC address.',
-      link: 'https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior',
+      references: [
+        {
+          title: '',
+          url: 'https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior'
+        }
+      ],
       questionNumber: 8
     },
     {
@@ -196,7 +236,12 @@ const securityXQuiz = {
         'Classify the incident as a true negative'
       ],
       explanation: '(9) false negative occurs when a security system fails to detect a threat or vulnerability that actually exists. This means a threat is missed, and the security system incorrectly indicates that no issues were found when a problem exists.',
-      link: 'https://www.contrastsecurity.com/glossary/false-negative',
+      references: [
+        {
+          title: '',
+          url: 'https://www.contrastsecurity.com/glossary/false-negative'
+        }
+      ],
       questionNumber: 9
     },
     {
@@ -209,7 +254,12 @@ const securityXQuiz = {
         'Chain of custody'
       ],
       explanation: '(10) Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.',
-      link: 'https://www.sciencedirect.com/topics/computer-science/nonrepudiation#:~:text=Nonrepudiation%20refers%20to%20the%20inability,and%20accountability%20in%20computing%20environments.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.sciencedirect.com/topics/computer-science/nonrepudiation#:~:text=Nonrepudiation%20refers%20to%20the%20inability,and%20accountability%20in%20computing%20environments.'
+        }
+      ],
       questionNumber: 10
     },
     {
@@ -217,7 +267,12 @@ const securityXQuiz = {
       answer: 'Code signing',
       distractors: ['Non-repudiation', 'Key escrow', 'Private keys'],
       explanation: '(11) Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.',
-      link: 'https://www.digicert.com/faq/code-signing-trust/what-is-code-signing',
+      references: [
+        {
+          title: '',
+          url: 'https://www.digicert.com/faq/code-signing-trust/what-is-code-signing'
+        }
+      ],
       questionNumber: 11
     },
     {
@@ -233,7 +288,12 @@ const securityXQuiz = {
         'Enable nightly vulnerability scans'
       ],
       explanation: '(12) A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
-      link: 'https://www.fortinet.com/resources/cyberglossary/buffer-overflow#:~:text=Application%20developers%20can%20prevent%20buffer,to%20detect%20and%20fix%20errors.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.fortinet.com/resources/cyberglossary/buffer-overflow#:~:text=Application%20developers%20can%20prevent%20buffer,to%20detect%20and%20fix%20errors.'
+        }
+      ],
       questionNumber: 12
     },
     {
@@ -241,7 +301,12 @@ const securityXQuiz = {
       answer: 'Non-repudiation',
       distractors: ['Confidentiality', 'Delivery receipts', 'Attestation'],
       explanation: '(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.',
-      link: 'https://www.techtarget.com/searchsecurity/definition/nonrepudiation',
+      references: [
+        {
+          title: '',
+          url: 'https://www.techtarget.com/searchsecurity/definition/nonrepudiation'
+        }
+      ],
       questionNumber: 13
     },
     {
@@ -249,7 +314,12 @@ const securityXQuiz = {
       answer: 'Regular expressions',
       distractors: ['Digital rights management', 'Network traffic decryption', 'Watermarking'],
       explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.',
-      link: 'https://www.splunk.com/en_us/blog/security/regex-regular-expression.html#:~:text=Known%20as%20RegEx%20(or%20gibberish,a%20log%2C%20regex%20is%20invaluable.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.splunk.com/en_us/blog/security/regex-regular-expression.html#:~:text=Known%20as%20RegEx%20(or%20gibberish,a%20log%2C%20regex%20is%20invaluable.'
+        }
+      ],
       questionNumber: 14
     },
     {
@@ -257,7 +327,12 @@ const securityXQuiz = {
       answer: 'SAN',
       distractors: ['OCSP', 'CRL', 'CA'],
       explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
-      link: 'https://www.sectigo.com/knowledge-base/detail/Subject-Alternative-Name-SAN-1527076087222/kA01N000000zFKm',
+      references: [
+        {
+          title: '',
+          url: 'https://www.sectigo.com/knowledge-base/detail/Subject-Alternative-Name-SAN-1527076087222/kA01N000000zFKm'
+        }
+      ],
       questionNumber: 15
     },
     {
@@ -270,7 +345,12 @@ const securityXQuiz = {
         'It ensures the code is free of malware'
       ],
       explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
-      link: 'https://www.encryptionconsulting.com/securing-digital-trust-the-essentials-of-origin-verification/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.encryptionconsulting.com/securing-digital-trust-the-essentials-of-origin-verification/'
+        }
+      ],
       questionNumber: 16
     },
     {
@@ -283,7 +363,12 @@ const securityXQuiz = {
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
       explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
-      link: 'https://github.com/resources/articles/security/what-is-fuzz-testing',
+      references: [
+        {
+          title: '',
+          url: 'https://github.com/resources/articles/security/what-is-fuzz-testing'
+        }
+      ],
       questionNumber: 17
     },
     {
@@ -297,7 +382,12 @@ const securityXQuiz = {
         'Move the batch processing from client side to server side to remove client processing inconsistencies'
       ],
       explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.`,
-      link: 'https://www.theserverside.com/definition/exception-handler',
+      references: [
+        {
+          title: '',
+          url: 'https://www.theserverside.com/definition/exception-handler'
+        }
+      ],
       questionNumber: 18
     },
     {
@@ -312,7 +402,12 @@ const securityXQuiz = {
         'Database connection over encrypted channels'
       ],
       explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.',
-      link: 'https://www.upguard.com/blog/vulnerability-remediation',
+      references: [
+        {
+          title: '',
+          url: 'https://www.upguard.com/blog/vulnerability-remediation'
+        }
+      ],
       questionNumber: 19
     },
     {
@@ -320,7 +415,12 @@ const securityXQuiz = {
       answer: 'RA',
       distractors: ['OCSP', 'IdP', 'CA'],
       explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.',
-      link: 'https://www.keyfactor.com/blog/what-is-a-registration-authority/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.keyfactor.com/blog/what-is-a-registration-authority/'
+        }
+      ],
       questionNumber: 20
     },
     {
@@ -332,7 +432,12 @@ const securityXQuiz = {
         `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
       explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.`,
-      link: 'https://latisresearch.umn.edu/resolve-ssh-key-mismatch',
+      references: [
+        {
+          title: '',
+          url: 'https://latisresearch.umn.edu/resolve-ssh-key-mismatch'
+        }
+      ],
       questionNumber: 21
     },
     {
@@ -340,7 +445,12 @@ const securityXQuiz = {
       answer: 'Containers',
       distractors: ['Type 1 hypervisor', 'Type 2 hypervisor', 'Virtual desktop infrastructure', 'Emulation'],
       explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.',
-      link: 'https://cloud.google.com/learn/what-are-containers',
+      references: [
+        {
+          title: '',
+          url: 'https://cloud.google.com/learn/what-are-containers'
+        }
+      ],
       questionNumber: 22
     },
     {
@@ -348,7 +458,12 @@ const securityXQuiz = {
       answer: 'Local historian',
       distractors: ['External drive', 'Cloud storage', 'System aggregator'],
       explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.',
-      link: 'https://claroty.com/team82/research/hacking-ics-historians-the-pivot-point-from-it-to-ot',
+      references: [
+        {
+          title: '',
+          url: 'https://claroty.com/team82/research/hacking-ics-historians-the-pivot-point-from-it-to-ot'
+        }
+      ],
       questionNumber: 23
     },
     {
@@ -356,7 +471,12 @@ const securityXQuiz = {
       answer: 'DOH',
       distractors: ['EAP-TLS', 'Geofencing', 'Private browsing mode'],
       explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.',
-      link: 'https://blog.netwrix.com/dns-over-https',
+      references: [
+        {
+          title: '',
+          url: 'https://blog.netwrix.com/dns-over-https'
+        }
+      ],
       questionNumber: 24
     },
     {
@@ -368,7 +488,12 @@ const securityXQuiz = {
         'Perform binary hash comparisons to identify infected devices'
       ],
       explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
-      link: 'https://www.manageengine.com/log-management/siem/log-netflow-collection-processing.html',
+      references: [
+        {
+          title: '',
+          url: 'https://www.manageengine.com/log-management/siem/log-netflow-collection-processing.html'
+        }
+      ],
       questionNumber: 25
     },
     {
@@ -376,7 +501,12 @@ const securityXQuiz = {
       answer: 'Penetration test',
       distractors: ['Tabletop exercise', 'Sandbox detonation', 'Honeypot'],
       explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.`,
-      link: 'https://www.cloudflare.com/learning/security/glossary/what-is-penetration-testing/#:~:text=Penetration%20testing%20(or%20pen%20testing,attackers%20could%20take%20advantage%20of.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.cloudflare.com/learning/security/glossary/what-is-penetration-testing/#:~:text=Penetration%20testing%20(or%20pen%20testing,attackers%20could%20take%20advantage%20of.'
+        }
+      ],
       questionNumber: 26
     },
     {
@@ -384,7 +514,12 @@ const securityXQuiz = {
       answer: 'UEBA',
       distractors: ['FIM', 'SASE', 'CSPM', 'EAP'],
       explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
-      link: 'https://www.fortinet.com/resources/cyberglossary/what-is-ueba',
+      references: [
+        {
+          title: '',
+          url: 'https://www.fortinet.com/resources/cyberglossary/what-is-ueba'
+        }
+      ],
       questionNumber: 27
     },
     {
@@ -400,7 +535,12 @@ const securityXQuiz = {
         'Configure SOAR to monitor and intercept files and data leaving the network'
       ],
       explanation: '(28) File Integrity Monitoring (FIM) is a security process that verifies the integrity of critical assets like files, directories, databases, and OS components by comparing them to a baseline and detecting unauthorized changes. It helps identify potential cyberattacks, data breaches, and malware infections by monitoring for any drift from the established baseline.',
-      link: 'https://www.youtube.com/watch?v=NK96Txxt9qo&t=58',
+      references: [
+        {
+          title: '',
+          url: 'https://www.youtube.com/watch?v=NK96Txxt9qo&t=58'
+        }
+      ],
       questionNumber: 28
     },
     {
@@ -418,7 +558,12 @@ const securityXQuiz = {
         'A rule-based access control strategy enforced by the SSO system with rules managed by the internal LDAP and applied on a per-system basis'
       ],
       explanation: '(29) Data classification and tagging are processes for organizing data assets based on defined criteria to improve organization, security, and discoverability. Data classification involves categorizing data based on its type, sensitivity, and business value. Tagging is a specific technique used within data classification, where labels or keywords are assigned to data assets to make them easier to find and manage.',
-      link: 'https://www.cybersecuritytribe.com/articles/an-introduction-to-data-tagging-and-classification-in-the-cloud#:~:text=Data%20tagging%20and%20classification%20entail,%2C%20access%20control%2C%20and%20protection.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.cybersecuritytribe.com/articles/an-introduction-to-data-tagging-and-classification-in-the-cloud#:~:text=Data%20tagging%20and%20classification%20entail,%2C%20access%20control%2C%20and%20protection.'
+        }
+      ],
       questionNumber: 29
     },
     {
@@ -430,7 +575,12 @@ const securityXQuiz = {
         'Disgruntled employees who were recently terminated'
       ],
       explanation: '(30) An Advanced Persistent Threat (APT) is a sophisticated, sustained cyberattack where an intruder gains unauthorized access to a network and remains undetected for an extended period to steal sensitive data or disrupt operations. While APTs can be conducted by various actors, they are often linked to nation-states, meaning they are sponsored or supported by governments.',
-      link: 'https://www.lookout.com/blog/mobile-apt-cyber-espionage',
+      references: [
+        {
+          title: '',
+          url: 'https://www.lookout.com/blog/mobile-apt-cyber-espionage'
+        }
+      ],
       questionNumber: 30
     },
     {
@@ -438,7 +588,12 @@ const securityXQuiz = {
       answer: 'Response playbook',
       distractors: ['Communication plan', 'Disaster recovery procedure', 'Automated runbook'],
       explanation: '(31) An incident response playbook is a structured set of guidelines and procedures that organizations follow to detect, respond to, and recover from cybersecurity incidents. It provides a step-by-step approach for handling specific types of threats, ensuring a swift and coordinated response to minimize damage and downtime.',
-      link: 'https://www.paloaltonetworks.com/cyberpedia/what-is-an-incident-response-playbook#:~:text=An%20incident%20response%20playbook%20is,to%20minimize%20damage%20and%20downtime.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-an-incident-response-playbook#:~:text=An%20incident%20response%20playbook%20is,to%20minimize%20damage%20and%20downtime.'
+        }
+      ],
       questionNumber: 31
     },
     {
@@ -446,7 +601,12 @@ const securityXQuiz = {
       answer: 'Steganography',
       distractors: ['E-signature', 'Watermarking', 'Cryptography'],
       explanation: '(32) Steganography is the practice of concealing information within another message or physical object to avoid detection. Steganography can be used to hide virtually any type of digital content, including text, image, video, or audio content. That hidden data is then extracted at its destination.',
-      link: 'https://www.kaspersky.com/resource-center/definitions/what-is-steganography',
+      references: [
+        {
+          title: '',
+          url: 'https://www.kaspersky.com/resource-center/definitions/what-is-steganography'
+        }
+      ],
       questionNumber: 32
     },
     {
@@ -454,7 +614,12 @@ const securityXQuiz = {
       answer: 'SDN',
       distractors: ['DNSSEC', 'pcap', 'vmstat', 'VPC'],
       explanation: '(33) Software Defined Networking (SDN) is a networking approach that uses software to manage and control network devices, separating the control plane from the data plane. This separation allows for a more centralized and flexible way to manage and configure networks. SDN enables network administrators to use software to program and manage network devices, making it easier to automate tasks, improve security, and optimize network performance.',
-      link: 'https://www.vmware.com/topics/software-defined-networking',
+      references: [
+        {
+          title: '',
+          url: 'https://www.vmware.com/topics/software-defined-networking'
+        }
+      ],
       questionNumber: 33
     },
     {
@@ -470,7 +635,12 @@ const securityXQuiz = {
         'Which user roles are most often targeted by spear phishing attacks?'
       ],
       explanation: '(34) UEBA (User and Entity Behavior Analytics) functions as a technical control by analyzing user and machine behavior to detect suspicious activity. It uses machine learning to identify anomalies and deviations from established baselines, alerting security teams to potential threats. This proactive approach complements traditional security measures by providing a layer of detection for sophisticated attacks and insider threats.',
-      link: 'https://www.varonis.com/blog/user-entity-behavior-analytics-ueba',
+      references: [
+        {
+          title: '',
+          url: 'https://www.varonis.com/blog/user-entity-behavior-analytics-ueba'
+        }
+      ],
       questionNumber: 34
     },
     {
@@ -478,7 +648,12 @@ const securityXQuiz = {
       answer: 'Federation',
       distractors: ['RADIUS', 'TACACS+', 'MFA', 'ABAC'],
       explanation: `(35) federation refers to a collaborative arrangement where multiple organizations share and mutually trust each other's security information and systems. This sharing allows for enhanced security measures and potentially reduces the attack surface by enabling dynamic defenses and intelligence sharing.`,
-      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/active-directory-federation-service-adfs/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/active-directory-federation-service-adfs/'
+        }
+      ],
       questionNumber: 35
     },
     {
@@ -486,7 +661,12 @@ const securityXQuiz = {
       answer: 'ExifTool',
       distractors: ['OllyDbg', 'Volatility', 'Ghidra'],
       explanation: '(36) ExifTool is a powerful tool for cybersecurity professionals, enabling them to analyze various types of media files and extract valuable information for threat detection, incident response, and penetration testing.',
-      link: 'https://www.infosecinstitute.com/resources/general-security/metadata-and-information-security/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.infosecinstitute.com/resources/general-security/metadata-and-information-security/'
+        }
+      ],
       questionNumber: 36
     },
     {
@@ -494,7 +674,12 @@ const securityXQuiz = {
       answer: 'Caching',
       distractors: ['Horizontal scalability', 'Vertical scalability', 'Containerization', 'Static code analysis'],
       explanation: `(37) Caching can improve browser performance, but it also risks users' confidential or sensitive information being exposed to cyber criminals. Caching data could result in authentication data, browsing history, or session tokens being vulnerable, especially if a browser is left open or if another user has access to it.`,
-      link: 'https://www.fortinet.com/resources/cyberglossary/what-is-caching#:~:text=Caching%20can%20improve%20browser%20performance,user%20has%20access%20to%20it.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.fortinet.com/resources/cyberglossary/what-is-caching#:~:text=Caching%20can%20improve%20browser%20performance,user%20has%20access%20to%20it.'
+        }
+      ],
       questionNumber: 37
     },
     {
@@ -502,7 +687,12 @@ const securityXQuiz = {
       answer: 'Supply chain visibility',
       distractors: ['Risk transference', 'Support availability', 'Vulnerability management'],
       explanation: `(38) Supply chain visibility (SCV) is the ability to track and monitor a product's journey from raw materials to the end customer, encompassing all stages of the supply chain. This includes order status, shipment status, and real-time location of goods, providing stakeholders with insights into inventory management, logistics, and potential disruptions.`,
-      link: 'https://www.chrobinson.com/en-us/resources/blog/why-is-supply-chain-visibility-so/#:~:text=The%20goal%20of%20supply%20chain,be%20as%20efficient%20as%20possible.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.chrobinson.com/en-us/resources/blog/why-is-supply-chain-visibility-so/#:~:text=The%20goal%20of%20supply%20chain,be%20as%20efficient%20as%20possible.'
+        }
+      ],
       questionNumber: 38
     },
     {
@@ -510,7 +700,12 @@ const securityXQuiz = {
       answer: 'NX bit',
       distractors: ['TPM', 'Secure boot', 'HSM'],
       explanation: `(39) The NX bit, also known as No eXecute or Data Execution Prevention (DEP), is a CPU feature that prevents code from executing in certain memory regions, specifically those designated as data. It's a security measure that helps to mitigate vulnerabilities like buffer overflows and shellcode injection by preventing malicious code from being executed in unexpected locations.`,
-      link: 'https://medium.com/@boutnaru/security-nx-bit-non-executable-18759fd2802e',
+      references: [
+        {
+          title: '',
+          url: 'https://medium.com/@boutnaru/security-nx-bit-non-executable-18759fd2802e'
+        }
+      ],
       questionNumber: 39
     },
     {
@@ -518,7 +713,12 @@ const securityXQuiz = {
       answer: 'Testing exercises',
       distractors: ['Redundancy', 'Autoscaling', 'Competitor locations'],
       explanation: `(40) Cybersecurity testing exercises are simulated scenarios used to assess and improve an organization's ability to detect, respond to, and mitigate cyber threats. These exercises help organizations identify vulnerabilities, test their security controls, and enhance their incident response plans.`,
-      link: 'https://www.isaca.org/resources/news-and-trends/industry-news/2024/using-a-functional-cybersecurity-exercise-to-test-incident-response-plans',
+      references: [
+        {
+          title: '',
+          url: 'https://www.isaca.org/resources/news-and-trends/industry-news/2024/using-a-functional-cybersecurity-exercise-to-test-incident-response-plans'
+        }
+      ],
       questionNumber: 40
     },
     {
@@ -526,7 +726,12 @@ const securityXQuiz = {
       answer: 'Segmentation',
       distractors: ['CASB', 'UEBA', 'HIPS'],
       explanation: '(41) Segmentation divides a computer network into smaller parts. The purpose is to improve network performance and security. Other terms that often mean the same thing are network segregation, network partitioning, and network isolation.',
-      link: 'https://www.cisco.com/c/en/us/products/security/what-is-network-segmentation.html#:~:text=Segmentation%20divides%20a%20computer%20network,network%20partitioning%2C%20and%20network%20isolation.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.cisco.com/c/en/us/products/security/what-is-network-segmentation.html#:~:text=Segmentation%20divides%20a%20computer%20network,network%20partitioning%2C%20and%20network%20isolation.'
+        }
+      ],
       questionNumber: 41
     },
     {
@@ -534,11 +739,16 @@ const securityXQuiz = {
       answer: 'They are constrained by available compute',
       distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
       explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.',
-      link: 'https://dedicatedcomputing.com/embedded-computing-systems-101/',
-      // link: [
-      //   'https://dedicatedcomputing.com/embedded-computing-systems-101/',
-      //   'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software'
-      // ],
+      references: [
+        {
+          title: '',
+          url: 'https://dedicatedcomputing.com/embedded-computing-systems-101/'
+        },
+        {
+          title: '',
+          url: 'https://www.maven-silicon.com/blog/what-are-the-challenges-of-embedded-systems/#:~:text=Limited%20Processing%20Power%3A%20Embedded%20systems,management%20and%20optimization%20of%20software'
+        }
+      ],
       questionNumber: 42
     },
     {
@@ -550,7 +760,12 @@ const securityXQuiz = {
         'Selectively blocking traffic on the affected port'
       ],
       explanation: '(43) Configuring an Intrusion Prevention System (IPS) and a Web Application Firewall (WAF) involves setting up rules and policies to filter and monitor network traffic, protecting against various attacks and vulnerabilities. IPS focuses on network-level threats, while WAF specifically targets application-layer attacks like SQL injection and cross-site scripting.',
-      link: 'https://www.f5.com/glossary/web-application-firewall-waf#:~:text=The%20difference%20between%20a%20web,is%20a%20next%2Dgeneration%20firewall.',
+      references: [
+        {
+          title: '',
+          url: 'https://www.f5.com/glossary/web-application-firewall-waf#:~:text=The%20difference%20between%20a%20web,is%20a%20next%2Dgeneration%20firewall.'
+        }
+      ],
       questionNumber: 43
     },
     {
@@ -562,7 +777,12 @@ const securityXQuiz = {
         'Compare the retrieved certificate with the embedded certificate'
       ],
       explanation: '(44) Out-of-band certificate obtaining refers to securing a certificate through a communication channel separate from the primary network. This can be done by using a separate communication channel for exchanging the certificate or by using a physical medium like a storage device to transport the certificate.',
-      link: 'https://doubleoctopus.com/security-wiki/authentication/out-of-band-authentication/#:~:text=of%20band%20authentication.-,Example%20forms%20of%20OOB%20authentication%20include%20codes%20sent%20to%20a,trying%20to%20establish%20an%20authenticated',
+      references: [
+        {
+          title: '',
+          url: 'https://doubleoctopus.com/security-wiki/authentication/out-of-band-authentication/#:~:text=of%20band%20authentication.-,Example%20forms%20of%20OOB%20authentication%20include%20codes%20sent%20to%20a,trying%20to%20establish%20an%20authenticated'
+        }
+      ],
       questionNumber: 44
     },
     {
@@ -570,7 +790,12 @@ const securityXQuiz = {
       answer: 'Tabletop exercise',
       distractors: ['Walk-through review', 'Lessons learned', 'Business impact analysis'],
       explanation: '(45) A tabletop exercise is a discussion-based activity where participants gather to simulate a real-world incident, like a cyberattack, without physically enacting the response. It focuses on clarifying roles, discussing strategies, and evaluating existing plans in a low-stress environment.',
-      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/tabletop-exercise/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/tabletop-exercise/'
+        }
+      ],
       questionNumber: 45
     },
     {
@@ -582,7 +807,12 @@ const securityXQuiz = {
         'Assign roles to users and authorize access to files based on the roles'
       ],
       explanation: '(46) Formal access authorization in cybersecurity is the process of granting or denying access to resources based on predefined policies and procedures. It ensures that only authorized users or entities can access specific systems, data, or applications. This process is crucial for maintaining the confidentiality, integrity, and availability of information assets.',
-      link: 'https://www.fortinet.com/resources/cyberglossary/access-control',
+      references: [
+        {
+          title: '',
+          url: 'https://www.fortinet.com/resources/cyberglossary/access-control'
+        }
+      ],
       questionNumber: 46
     },
     {
@@ -594,7 +824,12 @@ const securityXQuiz = {
         'Disable login activity for those users after business hours'
       ],
       explanation: '(47) To restrict uploading activity, you can control which file types are allowed, limit file sizes, and implement security measures like file type validation and malware detection. You can also restrict uploads based on the application or service being used, or by controlling which websites or domains users can upload to.',
-      link: 'https://spyboy.blog/2025/02/02/bypassing-file-upload-restrictions-a-deep-dive-into-security-and-exploitation/',
+      references: [
+        {
+          title: '',
+          url: 'https://spyboy.blog/2025/02/02/bypassing-file-upload-restrictions-a-deep-dive-into-security-and-exploitation/'
+        }
+      ],
       questionNumber: 47
     },
     {
@@ -602,7 +837,12 @@ const securityXQuiz = {
       answer: 'Static application security testing',
       distractors: ['Regression testing', 'Code signing', 'Sandboxing'],
       explanation: `(48) SAST (Static Application Security Testing) is a proactive cybersecurity technique that analyzes an application's source code, bytecode, or binaries before it is deployed to identify potential vulnerabilities. It helps developers and security professionals discover and fix security flaws early in the development process, preventing costly errors and enforcing compliance.`,
-      link: 'https://www.blackduck.com/glossary/what-is-sast.html#:~:text=Static%20application%20security%20testing%20(SAST,before%20the%20code%20is%20compiled',
+      references: [
+        {
+          title: '',
+          url: 'https://www.blackduck.com/glossary/what-is-sast.html#:~:text=Static%20application%20security%20testing%20(SAST,before%20the%20code%20is%20compiled'
+        }
+      ],
       questionNumber: 48
     },
     {
@@ -614,7 +854,12 @@ const securityXQuiz = {
         'To preserve the chain of custody of files'
       ],
       explanation: `(49) To validate file integrity, you can use checksums (also known as hashes) to verify if a file has been altered or corrupted. A checksum is a unique numerical representation of a file's content, and by comparing the checksum of a file to its expected checksum (from the source), you can confirm that the file remains unchanged.`,
-      link: 'https://www.techtarget.com/searchcontentmanagement/tip/How-to-check-and-verify-file-integrity#:~:text=Create%20a%20hash%20value%20%2D%2D,Algorithm%201%20and%20SHA%2D256',
+      references: [
+        {
+          title: '',
+          url: 'https://www.techtarget.com/searchcontentmanagement/tip/How-to-check-and-verify-file-integrity#:~:text=Create%20a%20hash%20value%20%2D%2D,Algorithm%201%20and%20SHA%2D256'
+        }
+      ],
       questionNumber: 49
     },
     {
@@ -628,7 +873,12 @@ const securityXQuiz = {
         'Attack vector'
       ],
       explanation: `(50) In the Common Vulnerability Scoring System (CVSS, the three main metric groups are Base, Temporal, and Environmental. Base metrics describe the intrinsic characteristics of a vulnerability, which remain constant over time and across different environments. Temporal metrics adjust the base score based on factors that change over time, such as the availability of exploits. Environmental metrics further refine the score to reflect an organization's specific environment and its unique vulnerabilities.`,
-      link: 'https://www.balbix.com/insights/base-cvss-scores/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.balbix.com/insights/base-cvss-scores/'
+        }
+      ],
       questionNumber: 50
     },
     {
@@ -640,7 +890,12 @@ const securityXQuiz = {
         'By choosing a major product'
       ],
       explanation: `(51) A cybersecurity risk assessment is a systematic process aimed at identifying vulnerabilities and threats within an organization's IT environment, assessing the likelihood of a security event, and determining the potential impact of such occurrences.`,
-      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/cybersecurity-risk-assessment/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/cybersecurity-risk-assessment/'
+        }
+      ],
       questionNumber: 51
     },
     {
@@ -648,7 +903,12 @@ const securityXQuiz = {
       answer: 'Deploy an agent',
       distractors: ['Use a SCAP scanner', 'Initiate a discovery scan', 'Perform an Nmap scan'],
       explanation: '(52) The Deployment Agent is a software agent that must be deployed to all clients managed by the Management Center. The Deployment Agent runs as a Windows Service and performs tasks on the client when instructed by the Management Server.',
-      link: 'https://hstechdocs.helpsystems.com/manuals/corects/impact/current/userguide/content/topics/appx_controlagents_deploy-agents.html',
+      references: [
+        {
+          title: '',
+          url: 'https://hstechdocs.helpsystems.com/manuals/corects/impact/current/userguide/content/topics/appx_controlagents_deploy-agents.html'
+        }
+      ],
       questionNumber: 52
     },
     {
@@ -656,7 +916,12 @@ const securityXQuiz = {
       answer: 'Biometric impersonation',
       distractors: ['Data remanence', 'Deepfake', 'Metadata scraping'],
       explanation: '(53) Biometric impersonation, also known as biometric spoofing, is a method used by fraudsters to mimic or forge biometric identifiers to gain unauthorized access to systems or accounts that rely on biometric authentication. This could involve imitating fingerprints, facial patterns, iris scans, or even voice patterns to deceive the security system into believing they are a legitimate user.',
-      link: 'https://nordvpn.com/cybersecurity/glossary/biometric-spoofing/',
+      references: [
+        {
+          title: '',
+          url: 'https://nordvpn.com/cybersecurity/glossary/biometric-spoofing/'
+        }
+      ],
       questionNumber: 53
     },
     {
@@ -667,7 +932,12 @@ const securityXQuiz = {
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
       explanation: `(54) persistence refers to a threat actor's ability to maintain long-term access to a system or network, even after attempted removal or disruption. This allows attackers to remain undetected and hidden, potentially launching further attacks or stealing data over time.`,
-      link: 'https://www.beyondtrust.com/blog/entry/what-is-persistence-in-cybersecurity',
+      references: [
+        {
+          title: '',
+          url: 'https://www.beyondtrust.com/blog/entry/what-is-persistence-in-cybersecurity'
+        }
+      ],
       questionNumber: 54
     },
     {
@@ -693,8 +963,13 @@ const securityXQuiz = {
         'Storage input/output (I/O) refers to the security considerations related to how data is input to and output from storage devices and systems. This includes measures to protect data in transit (e.g., encryption during I/O) and data at rest (e.g., secure storage media).' +
         'Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.',
       // ],
-      link: 'https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee',
-      // link: [
+      references: [
+        {
+          title: '',
+          url: 'https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee'
+        }
+      ],
+      // lnk: [
       //   'https://medium.com/@codedconversations/understanding-the-basics-029a6a8ab2ee',
       //   'https://www.cloudflare.com/learning/cdn/what-is-a-cdn/',
       //   'https://www.fs.com/blog/a-complete-guide-to-server-clusters-6961.html'
@@ -706,7 +981,12 @@ const securityXQuiz = {
       answer: 'Bit-level disk duplication',
       distractors: ['Software composition analysis', 'Side-channel analysis', 'SCAP scanner'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 56
     },
     {
@@ -714,7 +994,12 @@ const securityXQuiz = {
       answer: 'Purging',
       distractors: ['Clearing', 'Shredding', 'Degaussing'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 57
     },
     {
@@ -722,7 +1007,12 @@ const securityXQuiz = {
       answer: 'Automation of resource provisioning',
       distractors: ['Cost savings for hosting', 'Eliminating need to patch', 'Providing geo-redundant hosting'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 58
     },
     {
@@ -730,7 +1020,12 @@ const securityXQuiz = {
       answer: 'Data owner',
       distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward', ''],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 59
     },
     {
@@ -743,7 +1038,12 @@ const securityXQuiz = {
         'Address space layout randomization'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 60
     },
     {
@@ -757,7 +1057,12 @@ const securityXQuiz = {
         'The Diffie-Hellman group on both sides matches but is a legacy group'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 61
     },
     {
@@ -772,7 +1077,12 @@ const securityXQuiz = {
         'Disk-level encryption with a cross-signed certificate'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 62
     },
     {
@@ -780,7 +1090,12 @@ const securityXQuiz = {
       answer: 'Harden the camera configuration',
       distractors: ['Send camera logs to the SIEM', `Encrypt the camera's video stream`, 'Place the camera on an isolated segment'],
       explanation: '63',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 63
     },
     {
@@ -792,7 +1107,12 @@ const securityXQuiz = {
         'To ensure a consistent approach to risk'
       ],
       explanation: '(64)',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 64
     },
     {
@@ -808,7 +1128,12 @@ const securityXQuiz = {
         'Implement a RADIUS solution'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 65
     },
     {
@@ -816,7 +1141,12 @@ const securityXQuiz = {
       answer: 'A machine-learning-based data security service',
       distractors: ['A cloud configuration assessment and compliance service', 'An automated data classification system', 'A file integrity monitoring service'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 66
     },
     {
@@ -824,7 +1154,12 @@ const securityXQuiz = {
       answer: 'Dynamic analysis',
       distractors: ['Input validation', 'Static analysis', 'Fuzz testing', 'Side-channel analysis'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 67
     },
     {
@@ -832,7 +1167,12 @@ const securityXQuiz = {
       answer: 'MOU',
       distractors: ['SOW', 'NDA', 'SLA'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 68
     },
     {
@@ -840,7 +1180,12 @@ const securityXQuiz = {
       answer: 'Create an organizational risk register for project prioritization',
       distractors: ['Accept the risk as the cost of doing business', 'Purchase insurance to offset the cost if a failure occurred', 'Implement network compensating controls'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 69
     },
     {
@@ -848,7 +1193,12 @@ const securityXQuiz = {
       answer: 'CI/CD pipeline',
       distractors: ['Integrated development environment', 'Container orchestrator', 'Code repository'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 70
     },
     {
@@ -856,7 +1206,12 @@ const securityXQuiz = {
       answer: 'Use a secrets management tool',
       distractors: ['Save secrets in key escrow', 'Store the secrets inside the Dockerfiles', 'Run all Dockerfiles in a randomized namespace'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 71
     },
     {
@@ -864,7 +1219,12 @@ const securityXQuiz = {
       answer: 'Covert channel analysis',
       distractors: ['Fuzz testing', 'Machine-learning statistical analysis', 'Protocol analysis'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 72
     },
     {
@@ -876,7 +1236,12 @@ const securityXQuiz = {
         'Setting up a honey network for attackers'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 73
     },
     {
@@ -892,7 +1257,12 @@ const securityXQuiz = {
         `The employee's password was changed, and the new password needs to be used`
       ],
       explanation: '74',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 74
     },
     // {
@@ -941,7 +1311,12 @@ const securityXQuiz = {
         '<"error_log": {"system_1": {"InAlarmState": True }}}'
       ],
       explanation: '80',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 80
     },
     {
@@ -949,7 +1324,12 @@ const securityXQuiz = {
       answer: ['STIX', 'TAXII'],
       distractors: ['CWPP', 'YARA', 'ATT&CK', 'JTAG'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 81
     },
     {
@@ -957,7 +1337,12 @@ const securityXQuiz = {
       answer: 'Threat intelligence platform',
       distractors: ['Dark web monitoring', 'Honeypots', 'Continuous adversary emulation'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 82
     },
     {
@@ -965,7 +1350,12 @@ const securityXQuiz = {
       answer: 'DLP',
       distractors: ['Vulnerability scanner', 'Threat intelligence platform', 'SIEM'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 83
     },
     {
@@ -975,7 +1365,12 @@ const securityXQuiz = {
       answer: 'Supply chain',
       distractors: ['System', 'Quantitative', 'Organizational'],
       explanation: '84',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 84
     },
     {
@@ -987,7 +1382,12 @@ const securityXQuiz = {
         'Implementing canary protection in an earlier life-cycle stage'
       ],
       explanation: '85',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 85
     },
     {
@@ -1007,7 +1407,12 @@ const securityXQuiz = {
         'Implement advanced WAF rules'
       ],
       explanation: '86',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 86
     },
     {
@@ -1019,7 +1424,12 @@ const securityXQuiz = {
       answer: 'IPS',
       distractors: ['CDN', 'VPN', 'IDS'],
       explanation: '87',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 87
     },
     {
@@ -1027,7 +1437,12 @@ const securityXQuiz = {
       answer: 'Key stretching',
       distractors: ['Key encryption', 'Key rotation', 'Key escrow', 'Key splitting'],
       explanation: '88',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 88
     },
     {
@@ -1035,7 +1450,12 @@ const securityXQuiz = {
       answer: 'Context-based',
       distractors: ['Time-based', 'Role-based', 'Rule-based'],
       explanation: 'Context-Based Access Control (CBAC) is an access control model that considers various contextual factors when deciding whether to grant or deny access to resources. It extends traditional access control methods like RBAC (Role-Based Access Control) and ABAC (Attribute-Based Access Control) by incorporating dynamic information about users, resources, and the environment.',
-      link: 'https://www.apono.io/wiki/context-based-access-control-cbac/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.apono.io/wiki/context-based-access-control-cbac/'
+        }
+      ],
       questionNumber: 89
     },
     {
@@ -1047,7 +1467,12 @@ const securityXQuiz = {
         'Perfect forward secrecy will prevent deployment of advanced firewall monitoring techniques'
       ],
       explanation: '90',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 90
     },
     {
@@ -1059,7 +1484,12 @@ const securityXQuiz = {
         'Use snapshots to deploy code to existing compute instances'
       ],
       explanation: 'Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually. Terraform enables infrastructure-as-code, allowing teams to automate the creation of consistent environments. Instead of manually updating base OS images every time, Terraform helps deploy pre-configured golden images that already contain the necessary updates. Automating infrastructure provisioning ensures that each microservice deployment happens smoothly, without delays related to updating the OS manually.',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 91
     },
     {
@@ -1075,7 +1505,12 @@ const securityXQuiz = {
         'DLP, to enforce data protection capabilities'
       ],
       explanation: '92',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 92
     },
     {
@@ -1087,7 +1522,12 @@ const securityXQuiz = {
         'Asking the cloud provider for copies of certificates of destruction'
       ],
       explanation: '93',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 93
     },
     {
@@ -1099,7 +1539,12 @@ const securityXQuiz = {
         'To orchestrate additional reporting for the security operations center'
       ],
       explanation: '94',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 94
     },
     {
@@ -1111,7 +1556,12 @@ const securityXQuiz = {
         'Interactive application security testing'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 95
     },
     {
@@ -1123,7 +1573,12 @@ const securityXQuiz = {
         'Install machine certificates on corporate devices and perform checks against the clients'
       ],
       explanation: 'Device attestation ensures that only approved corporate devices can perform privileged actions by validating security posture, ownership, and compliance. Continuous authorization controls dynamically assess security risk, preventing unauthorized access even if credentials are compromised. This approach supports BYOD for non-privileged tasks while enforcing strict security for sensitive operations.',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 96
     },
     {
@@ -1131,7 +1586,12 @@ const securityXQuiz = {
       answer: 'Change management',
       distractors: ['Compliance tracking', 'Situational awareness', 'Quality assurance'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 97
     },
     {
@@ -1143,7 +1603,12 @@ const securityXQuiz = {
         'Add the VPN hostname as a SAN entry on the root certificate'
       ],
       explanation: 'Device certificates uniquely identify company-owned assets, allowing the VPN to restrict access only to authorized devices. Certificate-based authentication ensures that only approved machines can connect, preventing unauthorized external devices from accessing the corporate network. This approach is commonly used in enterprise environments to enforce security policies without relying solely on usernames and passwords.',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 98
     },
     {
@@ -1159,7 +1624,12 @@ const securityXQuiz = {
         'The WAF is configured to be in transparent mode'
       ],
       explanation: '99',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 99
     },
     {
@@ -1167,7 +1637,12 @@ const securityXQuiz = {
       answer: 'CMDB',
       distractors: ['SASE', 'SBoM', 'SIEM'],
       explanation: 'A CMDB maintains detailed records of IT assets, including software, hardware, and configurations. When a vulnerability is identified, the CMDB can map affected assets, helping security teams prioritize patching efforts. It ensures better visibility and tracking, reducing response time to threats.',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 100
     },
     {
@@ -1175,7 +1650,12 @@ const securityXQuiz = {
       answer: 'Model poisoning',
       distractors: ['Social engineering', 'Output handling', 'Prompt injections'],
       explanation: '101',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 101
     },
     {
@@ -1186,7 +1666,12 @@ const securityXQuiz = {
       answer: 'CSRF',
       distractors: ['RCE', 'XSS', 'TOCTOU'],
       explanation: '102',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 102
     },
     {
@@ -1198,7 +1683,12 @@ const securityXQuiz = {
         'Modern cryptographic protocols list this process as a prerequisite for use'
       ],
       explanation: '103',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 103
     },
     {
@@ -1210,7 +1700,12 @@ const securityXQuiz = {
         'Risk appetite directly influences which breaches are disclosed publicly'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 104
     },
     {
@@ -1229,7 +1724,12 @@ const securityXQuiz = {
         'The srv01 A record must be changed to a type CNAME record pointing to the web01 server'
       ],
       explanation: '105',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 105
     },
     {
@@ -1241,7 +1741,12 @@ const securityXQuiz = {
         'Conditional access'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 106
     },
     {
@@ -1255,7 +1760,12 @@ const securityXQuiz = {
         'Not allowing users to change their local passwords'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 107
     },
     {
@@ -1267,7 +1777,12 @@ const securityXQuiz = {
         'The retention policy is not properly configured'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 108
     },
     {
@@ -1281,7 +1796,12 @@ const securityXQuiz = {
         'Subject alternative names were not used appropriately for subdomains'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 109
     },
     {
@@ -1295,7 +1815,12 @@ const securityXQuiz = {
       answer: 'Application control',
       distractors: ['SIEM', 'Isolation', 'Conditional access'],
       explanation: '110',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 110
     },
     {
@@ -1307,7 +1832,12 @@ const securityXQuiz = {
         'External-facing infrastructure with a high risk score that can only be exploited with local access to the resource'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 111
     },
     {
@@ -1319,7 +1849,12 @@ const securityXQuiz = {
         'Crisis management plan'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 112
     },
     {
@@ -1333,7 +1868,12 @@ const securityXQuiz = {
         'Review all the network logs for further data exfiltration'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 113
     },
     {
@@ -1345,7 +1885,12 @@ const securityXQuiz = {
         'Select samples for audit testing'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 114
     },
     {
@@ -1357,7 +1902,12 @@ const securityXQuiz = {
         'Completing an IAST scan against the web application'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 115
     },
     {
@@ -1371,7 +1921,12 @@ const securityXQuiz = {
         'A misconfigured syslog server creating false negatives'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 116
     },
     {
@@ -1385,7 +1940,12 @@ const securityXQuiz = {
       answer: 'Linting',
       distractors: ['SBoM', 'DAST', 'Branch protection', 'Software composition analysis'],
       explanation: `(117) Linting, in the context of cybersecurity, refers to the automated analysis of code, configuration files, or API specifications to identify potential errors, vulnerabilities, and security issues. It's a form of static analysis that helps to improve code quality, reduce the risk of bugs, and proactively address security concerns before they become real-world threats.`,
-      link: 'https://www.youtube.com/watch?v=H1hMnHJBdqg&t=3',
+      references: [
+        {
+          title: '',
+          url: 'https://www.youtube.com/watch?v=H1hMnHJBdqg&t=3'
+        }
+      ],
       questionNumber: 117
     },
     {
@@ -1393,7 +1953,12 @@ const securityXQuiz = {
       answer: 'Ansible',
       distractors: ['Jenkins', 'Python', 'PowerShell'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 118
     },
     {
@@ -1401,7 +1966,12 @@ const securityXQuiz = {
       answer: 'RASP',
       distractors: ['Cloud-based IDE', 'DAST', 'NIPS'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 119
     },
     {
@@ -1409,7 +1979,12 @@ const securityXQuiz = {
       answer: 'Key splitting',
       distractors: ['SSO with MFA', 'Salting and hashing', 'Account federation with hardware tokens', 'SAE'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 120
     },
     {
@@ -1426,7 +2001,12 @@ const securityXQuiz = {
         'Maintaining an inventory of spare endpoints for rapid deployment'
       ],
       explanation: '121',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 121
     },
     {
@@ -1434,7 +2014,12 @@ const securityXQuiz = {
       answer: 'Code signing',
       distractors: ['Envelope encryption', 'File integrity monitoring', 'Application control'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 122
     },
     {
@@ -1446,7 +2031,12 @@ const securityXQuiz = {
         'Configure an IPS solution in the internal network to mitigate infections'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 123
     },
     {
@@ -1458,7 +2048,12 @@ const securityXQuiz = {
       answer: 'SASE',
       distractors: ['Micro-segmentation', 'PAM', 'SD-WAN'],
       explanation: '124',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 124
     },
     {
@@ -1470,7 +2065,12 @@ const securityXQuiz = {
         'The /etc/hosts file, updating the IP parameter'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 125
     },
     {
@@ -1484,7 +2084,12 @@ const securityXQuiz = {
         'A registry script to disable weak protocols in the Schannel hive'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 126
     },
     {
@@ -1498,7 +2103,12 @@ const securityXQuiz = {
         'The network connection activity is unusual, and a network infection is highly possible'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 127
     },
     {
@@ -1510,7 +2120,12 @@ const securityXQuiz = {
         'Installing a firewall and making it the network core'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 128
     },
     {
@@ -1522,7 +2137,12 @@ const securityXQuiz = {
         'Migrating application usage logs to on-premises storage'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 129
     },
     {
@@ -1540,7 +2160,12 @@ const securityXQuiz = {
         'Increasing the key length to 256 for `TLS_RSA_WITH_AES_128_CBC_SHA`'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 130
     },
     {
@@ -1554,7 +2179,12 @@ const securityXQuiz = {
         'The DNS was set up incorrectly'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 131
     },
     {
@@ -1566,7 +2196,12 @@ const securityXQuiz = {
         'Exposure to social engineering'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 132
     },
     {
@@ -1580,7 +2215,12 @@ const securityXQuiz = {
         'A PDF that exposed sensitive information improperly'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 133
     },
     {
@@ -1592,7 +2232,12 @@ const securityXQuiz = {
         'Writing non-zero, random data to all cells of the SSD'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 134
     },
     {
@@ -1606,7 +2251,12 @@ const securityXQuiz = {
         'Deploying a WAF with virtual patching upstream of the affected systems'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 135
     },
     {
@@ -1618,7 +2268,12 @@ const securityXQuiz = {
         'Implementing DNS filtering'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 136
     },
     {
@@ -1630,7 +2285,12 @@ const securityXQuiz = {
         'Give users permission to rotate administrator passwords and deny port 80 traffic'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 137
     },
     {
@@ -1642,7 +2302,12 @@ const securityXQuiz = {
         'Configuring host-based encryption'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 138
     },
     {
@@ -1654,7 +2319,12 @@ const securityXQuiz = {
         'Authenticated encryption with associated data'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 139
     },
     {
@@ -1662,7 +2332,12 @@ const securityXQuiz = {
       answer: ['DMARC', 'SPF', 'DKIM'],
       distractors: ['DNSSEC', 'SASE', 'SAN', 'SOA', 'MX'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 140
     },
     {
@@ -1674,7 +2349,12 @@ const securityXQuiz = {
         'Using an application vulnerability scanner to identify coding flaws in production'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 141
     },
     {
@@ -1685,7 +2365,12 @@ const securityXQuiz = {
       answer: 'Enable split tunneling',
       distractors: ['Move the servers to a screened subnet', 'Configure an NAC solution', 'Implement DNS over HTTPS'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 142
     },
     {
@@ -1699,7 +2384,12 @@ const securityXQuiz = {
         'Block employees from logging in to applications that are not part of their business area'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 143
     },
     {
@@ -1711,7 +2401,12 @@ const securityXQuiz = {
         'Verify the encryption key length'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 144
     },
     {
@@ -1725,7 +2420,12 @@ const securityXQuiz = {
         'Querying user behavior analytics data'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 145
     },
     {
@@ -1737,7 +2437,12 @@ const securityXQuiz = {
         'Implementing single sign-on to centralize access control enforcement'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 146
     },
     {
@@ -1749,7 +2454,12 @@ const securityXQuiz = {
         'Require end-user acknowledgement of organizational policies'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 147
     },
     {
@@ -1757,7 +2467,12 @@ const securityXQuiz = {
       answer: 'User-agent string',
       distractors: ['Byte length of the request', 'Web application headers', 'HTML encoding field'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 148
     },
     {
@@ -1773,7 +2488,12 @@ const securityXQuiz = {
         'Discontinuing the use of self-signed certificates'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 149
     },
     {
@@ -1785,7 +2505,12 @@ const securityXQuiz = {
         'Implementing a monitoring process for the integration between the application and the vendor appliance'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 150
     },
     {
@@ -1797,7 +2522,12 @@ const securityXQuiz = {
         'Implement default credentials to automate RADIUS authentication and grant access to the network if the device owner is an employee'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 151
     },
     {
@@ -1805,7 +2535,12 @@ const securityXQuiz = {
       answer: 'Capabilities',
       distractors: ['Knowledge', 'Phase', 'Methodologies'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 152
     },
     {
@@ -1813,7 +2548,12 @@ const securityXQuiz = {
       answer: 'Hashing',
       distractors: ['Interference', 'Antitampering', 'Journaling'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 153
     },
     {
@@ -1829,7 +2569,12 @@ const securityXQuiz = {
         'HIDS'
       ],
       explanation: '154',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 154
     },
     {
@@ -1841,7 +2586,12 @@ const securityXQuiz = {
         'Employing shielding to prevent EMI'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 155
     },
     {
@@ -1853,7 +2603,12 @@ const securityXQuiz = {
         'Placing a hold on all information about corporate interest in acquisitions'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 156
     },
     {
@@ -1867,7 +2622,12 @@ const securityXQuiz = {
         'Configure automated isolation of human resources systems'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 157
     },
     {
@@ -1883,7 +2643,12 @@ const securityXQuiz = {
         'Conducting lessons-learned activities and integrating observations into the crisis management plan'
       ],
       explanation: '158',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 158
     },
     {
@@ -1900,7 +2665,12 @@ const securityXQuiz = {
         'Search other internal sources for a new sample'
       ],
       explanation: '159',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 159
     },
     {
@@ -1912,7 +2682,12 @@ const securityXQuiz = {
         'Reducing liability from identity theft'
       ],
       explanation: '160',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 160
     },
     {
@@ -1924,7 +2699,12 @@ const securityXQuiz = {
         'Implementing hardware root of trust'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 161
     },
     {
@@ -1936,7 +2716,12 @@ const securityXQuiz = {
         'To reduce attack surface exposure of the API endpoints connecting peers'
       ],
       explanation: '162',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 162
     },
     {
@@ -1948,7 +2733,12 @@ const securityXQuiz = {
         'Event logs to be collected from the systems for all security events and some custom application logs'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 163
     },
     {
@@ -1962,7 +2752,12 @@ const securityXQuiz = {
         'The user did not attempt to connect from an approved subnet'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 164
     },
     {
@@ -1974,7 +2769,12 @@ const securityXQuiz = {
         'Implementing a continuous security assessment program'
       ],
       explanation: '165',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 165
     },
     {
@@ -1982,7 +2782,12 @@ const securityXQuiz = {
       answer: 'Data labeling',
       distractors: ['Sensor placement', 'Continuous monitoring', 'Centralized logging'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 166
     },
     {
@@ -1994,7 +2799,12 @@ const securityXQuiz = {
         'Limit access to the systems'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 167
     },
     {
@@ -2007,7 +2817,12 @@ const securityXQuiz = {
         'Reporting frameworks'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 168
     },
     {
@@ -2023,7 +2838,12 @@ const securityXQuiz = {
         'Certificate extension'
       ],
       explanation: '169',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 169
     },
     {
@@ -2037,7 +2857,12 @@ const securityXQuiz = {
         'A potential insider threat is being investigated and will be addressed by the senior management team'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 170
     },
     {
@@ -2056,7 +2881,12 @@ const securityXQuiz = {
         'Configure the application allow list'
       ],
       explanation: '171',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 171
     },
     {
@@ -2072,7 +2902,12 @@ const securityXQuiz = {
         'Contingency plans'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 172
     },
     {
@@ -2087,7 +2922,12 @@ const securityXQuiz = {
         'Social engineering'
       ],
       explanation: '173',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 173
     },
     {
@@ -2099,7 +2939,12 @@ const securityXQuiz = {
         'Using the best practices in the OWASP secure coding manual to define a new road map'
       ],
       explanation: '(174) The Software Assurance Maturity Model (SAMM) is a framework developed by OWASP (Open Web Application Security Project) to help organizations assess, improve, and track their software security practices. It provides a structured way to evaluate an organizations current security posture, identify areas for improvement, and build a balanced security program incrementally. SAMM is designed to be adaptable to various organizational sizes, development methodologies, and business functions.',
-      link: 'https://codific.com/owasp-samm-comprehensive-introduction/',
+      references: [
+        {
+          title: '',
+          url: 'https://codific.com/owasp-samm-comprehensive-introduction/'
+        }
+      ],
       questionNumber: 174
     },
     {
@@ -2107,7 +2952,12 @@ const securityXQuiz = {
       answer: 'Ansible',
       distractors: ['Snort', 'CASВ', 'CMDB'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 175
     },
     {
@@ -2119,7 +2969,12 @@ const securityXQuiz = {
         'Using a large language model to generate synthetic data'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 176
     },
     {
@@ -2131,7 +2986,12 @@ const securityXQuiz = {
         'Specific regulatory requirements must be met in each jurisdiction'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 177
     },
     {
@@ -2139,7 +2999,12 @@ const securityXQuiz = {
       answer: 'RACI matrix',
       distractors: ['CMDB', 'Recall tree', 'ITIL'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 178
     },
     {
@@ -2151,7 +3016,12 @@ const securityXQuiz = {
         'Deploying microsegmentation with a firewall acting as the core router'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 179
     },
     {
@@ -2167,7 +3037,12 @@ const securityXQuiz = {
         'The server-side digital signature algorithm needs to be modified to support elliptic curve cryptography'
       ],
       explanation: '180',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 180
     },
     {
@@ -2179,7 +3054,12 @@ const securityXQuiz = {
         'The data custodians were selected by business stakeholders to ensure backups of the file management system are maintained off site'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 181
     },
     {
@@ -2191,7 +3071,12 @@ const securityXQuiz = {
         'Automating the suppression of all alerts that are not critical and sending an email asking SOC analysts to review these alerts'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 182
     },
     {
@@ -2199,7 +3084,12 @@ const securityXQuiz = {
       answer: 'Attack pattern analysis',
       distractors: ['Spear-phishing campaign', 'Threat modeling', 'Red-team assessment'],
       explanation: 'Attack pattern analysis, in the context of cybersecurity, refers to the systematic examination of how attackers exploit vulnerabilities to reach their targets. It involves mapping potential "paths" an attacker could take from initial access to achieving their objectives, such as gaining control of a system or accessing sensitive data. This analysis helps security professionals understand threat actor behavior, prioritize vulnerabilities, and improve defenses.',
-      link: 'https://www.maltego.com/blog/analyzing-attack-patterns-and-ttps/',
+      references: [
+        {
+          title: '',
+          url: 'https://www.maltego.com/blog/analyzing-attack-patterns-and-ttps/'
+        }
+      ],
       questionNumber: 183
     },
     {
@@ -2207,7 +3097,12 @@ const securityXQuiz = {
       answer: 'GDPR',
       distractors: ['COPPA', 'CCPA', 'DORA'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 184
     },
     {
@@ -2223,7 +3118,12 @@ const securityXQuiz = {
         'The organization wants to find the monetary value of any outages'
       ],
       explanation: '185',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 185
     },
     {
@@ -2231,7 +3131,12 @@ const securityXQuiz = {
       answer: 'Unsecure bundled libraries',
       distractors: ['Misconfigured code commit', 'Invalid code signing certificate', 'Data leakage'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 186
     },
     {
@@ -2241,7 +3146,12 @@ const securityXQuiz = {
       answer: 'OpenSSH',
       distractors: ['Apache HTTP Server', 'Google Chrome', 'Migration to TLS 1.3'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 187
     },
     {
@@ -2253,7 +3163,12 @@ const securityXQuiz = {
         'Only allowing API requests coming from regions with known customers'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 188
     },
     {
@@ -2265,7 +3180,12 @@ const securityXQuiz = {
         'Traffic shaping through the use of a SASE'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 189
     },
     {
@@ -2279,7 +3199,12 @@ const securityXQuiz = {
         'The root password has been changed'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 190
     },
     {
@@ -2291,7 +3216,12 @@ const securityXQuiz = {
         'Allowing only files from internal sources'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 191
     },
     {
@@ -2305,7 +3235,12 @@ const securityXQuiz = {
         'Sample 1 is the target agent while Sample 2 is the C2 server'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 192
     },
     {
@@ -2322,7 +3257,12 @@ const securityXQuiz = {
         'NIPS'
       ],
       explanation: '193',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 193
     },
     {
@@ -2338,7 +3278,12 @@ const securityXQuiz = {
         'Implement a load balancer for computing and storage resources'
       ],
       explanation: '194',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 194
     },
     {
@@ -2354,7 +3299,12 @@ const securityXQuiz = {
         'Quarantine the scanner sensor to perform a forensic analysis'
       ],
       explanation: '195',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 195
     },
     {
@@ -2366,7 +3316,12 @@ const securityXQuiz = {
         'Implementing the NIDS in the bastion host and the NIPS in the branch network router'
       ],
       explanation: '196',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 196
     },
     {
@@ -2379,7 +3334,12 @@ const securityXQuiz = {
         'Requiring periodic job rotation'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 197
     },
     {
@@ -2393,7 +3353,12 @@ const securityXQuiz = {
         'Create a new rule set to detect malware'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 198
     },
     {
@@ -2408,7 +3373,12 @@ const securityXQuiz = {
       answer: ['MDM', 'SCAP'],
       distractors: ['CASB', 'SBoM', 'SASE', 'HIDS'],
       explanation: '199',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 199
     },
     {
@@ -2418,7 +3388,12 @@ const securityXQuiz = {
       answer: 'Disable User1’s account',
       distractors: [`Disable User2's account`, `Disable User12's account`, `Disable User8's account`],
       explanation: '200',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 200
     },
     {
@@ -2426,7 +3401,12 @@ const securityXQuiz = {
       answer: 'COPPA',
       distractors: ['GDPR', 'LGPD', 'PCI DSS'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 201
     },
     {
@@ -2434,7 +3414,12 @@ const securityXQuiz = {
       answer: 'Prompt injection',
       distractors: ['Model inversion', 'Data poisoning', 'Non-explainable model'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 202
     },
     {
@@ -2449,7 +3434,12 @@ const securityXQuiz = {
         'Create a new TLS certificate using a stronger algorithm and larger key'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 203
     },
     {
@@ -2463,7 +3453,12 @@ const securityXQuiz = {
         'Setting up an IDS inline to monitor and detect any threats to the software'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 204
     },
     {
@@ -2475,7 +3470,12 @@ const securityXQuiz = {
         'Create an acceptable use policy for the use of the application'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 205
     },
     {
@@ -2492,7 +3492,12 @@ const securityXQuiz = {
       answer: 'user-d',
       distractors: ['user-а', 'user-b', 'user-с'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 207
     },
     {
@@ -2500,7 +3505,12 @@ const securityXQuiz = {
       answer: 'Reviewing the asset inventory',
       distractors: ['Performing a port scan', 'Inspecting egress network traffic', 'Analyzing user behavior'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 208
     },
     {
@@ -2512,7 +3522,12 @@ const securityXQuiz = {
         'Extend the allowed session length'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 209
     },
     {
@@ -2524,7 +3539,12 @@ const securityXQuiz = {
         'Enabling client device logging and system event auditing'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 210
     },
     {
@@ -2536,7 +3556,12 @@ const securityXQuiz = {
         'The implemented software inefficiently manages compute and memory resources'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 211
     },
     {
@@ -2552,7 +3577,12 @@ const securityXQuiz = {
         'Configure a proxy policy that blocks only lists of known-bad fully qualified domain names'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 212
     },
     {
@@ -2566,7 +3596,12 @@ const securityXQuiz = {
         'Resyncing single sign-on application with connected security appliances'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 213
     },
     {
@@ -2578,7 +3613,12 @@ const securityXQuiz = {
         'Implementing application load balancing and cross-region availability'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 214
     },
     {
@@ -2590,7 +3630,12 @@ const securityXQuiz = {
         'Web application vulnerability scanning'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 215
     },
     {
@@ -2602,7 +3647,12 @@ const securityXQuiz = {
         'Enabling OTP via email'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 216
     },
     {
@@ -2617,7 +3667,12 @@ const securityXQuiz = {
         'Several users have not configured their mobile devices to receive OTP codes'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 217
     },
     {
@@ -2625,7 +3680,12 @@ const securityXQuiz = {
       answer: 'АТТ&СК',
       distractors: ['ОWASP', 'САРЕС', 'STRIDE'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 218
     },
     {
@@ -2639,7 +3699,12 @@ const securityXQuiz = {
         'Block vendor com for repeated attempts to send suspicious messages'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 219
     },
     {
@@ -2647,7 +3712,12 @@ const securityXQuiz = {
       answer: 'Deploying a honeypot',
       distractors: ['Configuring an IPS', 'Implementing sandboxing', 'Scanning for IoCs'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 220
     },
     {
@@ -2655,7 +3725,12 @@ const securityXQuiz = {
       answer: 'Crisis management plan',
       distractors: ['Data subject access request', 'Business impact analysis', 'Supply chain management program'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 221
     },
     {
@@ -2671,7 +3746,12 @@ const securityXQuiz = {
         `Forcing a password reset requiring more stringent passwords for users on Company B's network`
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 222
     },
     {
@@ -2687,7 +3767,12 @@ const securityXQuiz = {
         'Publishing the incident response policy and enforcing it as part of the security awareness program'
       ],
       explanation: '223',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 223
     },
     {
@@ -2701,7 +3786,12 @@ const securityXQuiz = {
         'Scanning the application with SAST'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 224
     },
     {
@@ -2722,7 +3812,12 @@ const securityXQuiz = {
         'Implementing a CMDB platform'
       ],
       explanation: '225',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 225
     },
     {
@@ -2734,7 +3829,12 @@ const securityXQuiz = {
         'Configure a Python script to move the logs into a SQL database'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 226
     },
     {
@@ -2746,7 +3846,12 @@ const securityXQuiz = {
         'Using code signing to verify the source of OS updates'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 227
     },
     {
@@ -2758,7 +3863,12 @@ const securityXQuiz = {
         'Running security assessments regularly and checking for the security baseline on containers already in production'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 228
     },
     {
@@ -2770,7 +3880,12 @@ const securityXQuiz = {
         'Corporate devices cannot receive certificates when not connected to on-premises devices'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 229
     },
     {
@@ -2782,7 +3897,12 @@ const securityXQuiz = {
         'Installing new rules for the IDS to detect impersonation attacks'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 230
     },
     {
@@ -2794,7 +3914,12 @@ const securityXQuiz = {
         'The organization has suffered brand reputation damage from incorrect media coverage'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 231
     },
     {
@@ -2807,7 +3932,12 @@ const securityXQuiz = {
         'The HSM does not support sealing storage'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 232
     },
     {
@@ -2817,7 +3947,12 @@ const securityXQuiz = {
       answer: '4',
       distractors: ['1', '2', '3', '5', '6'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 233
     },
     {
@@ -2829,7 +3964,12 @@ const securityXQuiz = {
         'Non-conformance to accepted manufacturing standards'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 234
     },
     {
@@ -2841,7 +3981,12 @@ const securityXQuiz = {
         'Implement a dashboard on the SIEM that shows the percentage of traffic by domain'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 235
     },
     {
@@ -2855,7 +4000,12 @@ const securityXQuiz = {
         'Utilizing allow lists on the WAF for all users using GET methods'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 236
     },
     {
@@ -2865,7 +4015,12 @@ const securityXQuiz = {
       answer: 'Rotating KRBTGT password',
       distractors: ['Deleting SQLSV', 'Reimaging ADMIN01$', 'Resetting the local domain'],
       explanation: `(237) KRBTGT is a built-in account specifically used by the Kerberos authentication service. It's essentially the "Key Distribution Center" service account, responsible for encrypting and signing all Kerberos tickets within the domain. Essentially, it validates that a user's authentication request is legitimate, and it's a key target for Golden Ticket attacks.`,
-      link: 'https://infrastructureinsider.co.uk/active-directory-you-need-to-know-about-krbtgt-password-resets/#:~:text=First%20off%2C%20KRBTGT%20stands%20for,takes%20place%20via%20%E2%80%9Ctickets%E2%80%9D.',
+      references: [
+        {
+          title: '',
+          url: 'https://infrastructureinsider.co.uk/active-directory-you-need-to-know-about-krbtgt-password-resets/#:~:text=First%20off%2C%20KRBTGT%20stands%20for,takes%20place%20via%20%E2%80%9Ctickets%E2%80%9D.'
+        }
+      ],
       questionNumber: 237
     },
     {
@@ -2881,7 +4036,12 @@ const securityXQuiz = {
         'Deploying an EDR solution to monitor and respond to software installation attempts'
       ],
       explanation: '238',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 238
     },
     {
@@ -2889,7 +4049,12 @@ const securityXQuiz = {
       answer: 'Adversary emulation',
       distractors: ['Reliability factors', 'Deployment of a honeypot', 'Internal reconnaissance'],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 239
     },
     {
@@ -2903,7 +4068,12 @@ const securityXQuiz = {
         'To debug the binary to analyze low-level instructions'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 240
     },
     {
@@ -2917,7 +4087,12 @@ const securityXQuiz = {
         'Permitting only clients from internal networks to query DNS'
       ],
       explanation: '',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 241
     },
     {
@@ -2933,7 +4108,12 @@ const securityXQuiz = {
         'Deploying fake ransomware'
       ],
       explanation: '242',
-      link: '',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 242
     }
     // {
@@ -2945,7 +4125,12 @@ const securityXQuiz = {
     //     ''
     //   ],
     //   explanation: '',
-    //   link: '',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
     //   questionNumber: 243
     // }
   ]
