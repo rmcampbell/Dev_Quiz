@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import '../stylesheets/Modal.css';
 import { QuizQuestion } from '../types';
+import MarkdownRenderer from './MarkdownRenderer';
 
 const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -54,11 +55,11 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
                 <p>
                   <b>Explanation:</b>
                 </p>
-                <p>{QuizQuestion.displayExplanation}</p>
+                <p><MarkdownRenderer content={QuizQuestion.displayExplanation} /></p>
               </>
             ) : ('')}
           </>
-
+          
           {/* Display reference link only if one exists */}
           {/* TODO: Test with Markdown*/}
           {QuizQuestion.showReference && (
