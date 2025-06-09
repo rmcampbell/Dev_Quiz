@@ -1370,8 +1370,14 @@ const securityXQuiz = {
         'Potential activity indicating an attacker moving laterally in the network',
         'A misconfigured syslog server creating false negatives'
       ],
-      explanation: '(116) ',
-      link: '',
+      explanation: `(116) Unauthorized access in cybersecurity occurs when “a person gains logical or physical access without permission to a network, system, application, data, or other resource,” according to NIST. Unauthorized access involves bypassing security measures or exploiting vulnerabilities in IT infrastructure to get access to systems that should be accessible only to authorized users.
+`,
+      //links: [
+      //  {
+      //    title: 'Unauthorized Access',
+      link: 'https://www.syteca.com/en/blog/detecting-and-responding-to-unauthorized-access',
+      //  }
+      //],
       questionNumber: 116
     },
     {
@@ -1392,24 +1398,24 @@ const securityXQuiz = {
       question: 'A company wants to improve and automate the compliance of its cloud environments to meet industry standards. Which of the following resources should the company use to best achieve this goal?',
       answer: 'Ansible',
       distractors: ['Jenkins', 'Python', 'PowerShell'],
-      explanation: '',
-      link: '',
+      explanation: `(118) Ansible is an open source, command-line IT automation software application written in Python. It can configure systems, deploy software, and orchestrate advanced workflows to support application deployment, system updates, and more. Ansible's main strengths are simplicity and ease of use.`,
+      link: 'https://docs.ansible.com/ansible/latest/getting_started/index.html',
       questionNumber: 118
     },
     {
       question: 'A company wants to protect against the most common attacks and rapidly integrate with different programming languages. Which of the following technologies is most likely to meet this need?',
       answer: 'RASP',
       distractors: ['Cloud-based IDE', 'DAST', 'NIPS'],
-      explanation: '',
-      link: '',
+      explanation: `(119) Runtime application self-protection (RASP) is a cybersecurity technology that enhances application security by integrating directly into the application's runtime environment. It works by monitoring the application's behavior, detecting and preventing real-time attacks, and closing the gap where traditional perimeter security might fall short. RASP aims to protect applications from various threats, including zero-day attacks, malware, and SQL injection.`,
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/cloud-security/runtime-application-self-protection-rasp/',
       questionNumber: 119
     },
     {
       question: 'An organization is concerned about insider threats from employees who have individual access to encrypted material. Which of the following techniques best addresses this issue?',
       answer: 'Key splitting',
       distractors: ['SSO with MFA', 'Salting and hashing', 'Account federation with hardware tokens', 'SAE'],
-      explanation: '',
-      link: '',
+      explanation: '(120) Split-key encryption, also known as cryptographic splitting or key splitting, is a security technique that divides a cryptographic key into multiple parts (shares) and distributes them to different entities or locations. No single entity or location holds the entire key; instead, multiple parties are required to combine their shares to reconstruct the full key. This enhances security by preventing a single point of failure or compromise.',
+      link: 'https://www.hypr.com/security-encyclopedia/key-splitting',
       questionNumber: 120
     },
     {
@@ -1425,16 +1431,17 @@ const securityXQuiz = {
         'Deploying redundant file servers and configuring database journaling',
         'Maintaining an inventory of spare endpoints for rapid deployment'
       ],
-      explanation: '121',
-      link: '',
+      explanation: '(121) A non-persistent virtual desktop infrastructure (VDI) provides users with a generic virtual desktop that resets to its original state after each session, meaning no user data or customizations are saved. This approach is cost-effective and simplifies management, as it requires less storage and easier maintenance by always providing a fresh desktop environment.',
+      link: 'https://phoenixnap.com/kb/persistent-vs-non-persistent-vdi#:~:text=A%20non%2Dpersistent%20VDI%20is,state%20for%20the%20next%20session.',
       questionNumber: 121
     },
     {
       question: 'A software vendor provides routine functionality and security updates to its global customer base. The vendor would like to ensure distributed updates are authorized, originate from only the company, and have not been modified by others. Which of the following solutions best supports these objectives?',
       answer: 'Code signing',
       distractors: ['Envelope encryption', 'File integrity monitoring', 'Application control'],
-      explanation: '',
-      link: '',
+      explanation: `(122) Code signing in cybersecurity is a process where a digital signature is applied to software, ensuring its authenticity and integrity from the developer to the end user. This signature verifies the software's origin and proves that it hasn't been altered since it was signed. Code signing helps build trust in software, preventing users from installing or running malicious or tampered software.\n\n` +
+        'Envelope encryption, a key component of cybersecurity, is a technique where data is encrypted using a symmetric key (Data Encryption Key (DEK)) and then the DEK itself is encrypted with an asymmetric key (Key Encryption Key (KEK)). This method offers improved performance and security compared to traditional methods. The term "envelope" refers to the concept of wrapping one layer of encryption around another, akin to sealing a letter in multiple envelopes.',
+      link: 'https://cloud.ibm.com/docs/key-protect?topic=key-protect-envelope-encryption',
       questionNumber: 122
     },
     {
@@ -1445,7 +1452,7 @@ const securityXQuiz = {
         'Perform a penetration test to detect technology gaps on the anti-spam solution',
         'Configure an IPS solution in the internal network to mitigate infections'
       ],
-      explanation: '',
+      explanation: '(123) ',
       link: '',
       questionNumber: 123
     },
