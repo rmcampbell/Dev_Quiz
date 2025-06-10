@@ -59,7 +59,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
               </>
             ) : ('')}
           </>
-          
+
           {/* Display reference link only if one exists */}
           {/* TODO: Test with Markdown*/}
           {QuizQuestion.showReference && (

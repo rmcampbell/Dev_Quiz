@@ -1452,8 +1452,8 @@ const securityXQuiz = {
         'Perform a penetration test to detect technology gaps on the anti-spam solution',
         'Configure an IPS solution in the internal network to mitigate infections'
       ],
-      explanation: '(123) ',
-      link: '',
+      explanation: `(123) A Security Awareness Program is a structured initiative designed to educate employees on cybersecurity threats and best practices to protect an organization's data and infrastructure. These programs aim to empower employees to recognize and avoid common threats like phishing, social engineering, and malware, ultimately reducing the risk of human error that can lead to breaches.`,
+      link: 'https://www.kaspersky.com/resource-center/definitions/what-is-security-awareness-training',
       questionNumber: 123
     },
     {
@@ -1464,8 +1464,8 @@ const securityXQuiz = {
       'Which of the following solutions is the most appropriate?',
       answer: 'SASE',
       distractors: ['Micro-segmentation', 'PAM', 'SD-WAN'],
-      explanation: '124',
-      link: '',
+      explanation: '(124) SASE (Secure Access Service Edge) is a cloud-based cybersecurity approach that integrates network and security functions into a single, unified service. This architecture aims to provide secure and optimized access to resources for users and devices, regardless of their location, by combining networking technologies like SD-WAN with security features like CASB, FWaaS, and ZTNA.',
+      link: 'https://www.paloaltonetworks.com/cyberpedia/what-is-sase#:~:text=What%20is%20the%20SASE%20framework,and%20adapt%20to%20changing%20needs.',
       questionNumber: 124
     },
     {
@@ -1476,8 +1476,8 @@ const securityXQuiz = {
         'The /etc/nsswitch.conf file, updating the name server',
         'The /etc/hosts file, updating the IP parameter'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(125) Updating cipher suites in cybersecurity involves ensuring your system uses the most secure and up-to-date encryption algorithms, known as ciphers. This is crucial for protecting data from various cryptographic attacks and maintaining strong security standards.',
+      link: 'https://www.emagined.com/blog/how-to-fix-weak-ciphers-and-strengthen-your-data-security',
       questionNumber: 125
     },
     {
@@ -1490,8 +1490,8 @@ const securityXQuiz = {
         'A PowerShell script to disable weak protocols in the HKLM Schannel hive',
         'A registry script to disable weak protocols in the Schannel hive'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(126) Disabling weak protocols in the Schannel hive is a critical security measure because older, outdated protocols and weak cipher suites within Schannel (Windows' implementation of TLS/SSL) have known vulnerabilities that attackers can exploit.`,
+      link: 'https://medium.com/soluto-engineering/lesson-learned-disabling-weak-tls-cipher-suites-without-breaking-up-everything-3028164c6413',
       questionNumber: 126
     },
     {
@@ -1504,8 +1504,8 @@ const securityXQuiz = {
         'The SIEM platform is reporting multiple false positives on the alerts',
         'The network connection activity is unusual, and a network infection is highly possible'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(127) A security misconfiguration occurs when system or application settings are not configured properly, leaving systems vulnerable to attacks. This can happen due to default settings, incomplete setups, or overly permissive access controls. Misconfigurations can be exploited by attackers to gain unauthorized access, steal sensitive data, or disrupt operations.',
+      link: 'https://www.balbix.com/insights/security-misconfiguration-impact-examples-and-prevention/',
       questionNumber: 127
     },
     {
@@ -1516,8 +1516,8 @@ const securityXQuiz = {
         'Configuring a SASE solution to restrict users to server communication',
         'Installing a firewall and making it the network core'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(128) Microsegmentation in cybersecurity is a technique that divides a network into smaller, isolated segments, often at the level of individual applications or workloads, to enhance security and reduce the impact of potential breaches. It creates secure zones by isolating individual applications, limiting the ability of attackers to move laterally within the network.',
+      link: 'https://www.cloudflare.com/learning/access-management/what-is-microsegmentation/',
       questionNumber: 128
     },
     {
@@ -1528,8 +1528,8 @@ const securityXQuiz = {
         'Purchasing and deploying commercial off-the-shelf aggregation software',
         'Migrating application usage logs to on-premises storage'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(129) API integration is a vital component for effective cybersecurity data aggregation, leading to enhanced threat detection, improved visibility, and more streamlined incident response. While challenges exist, implementing strong security measures, utilizing automation, and employing specialized tools can empower organizations to leverage APIs for a robust and proactive cybersecurity framework.',
+      link: 'https://hasura.io/blog/a-supergraph-solution-to-api-integration-and-api-aggregation-challenges-in-the-enterprise',
       questionNumber: 129
     },
     {
@@ -1546,8 +1546,20 @@ const securityXQuiz = {
         'Restricting cipher suites to only allow `TLS_RSA_WITH_AES_128_CBC_SHA`',
         'Increasing the key length to 256 for `TLS_RSA_WITH_AES_128_CBC_SHA`'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(130) CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
+      //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
+      `Adding TLS_RSA_WITH_AES_256_CBC_SHA256 as a cipher suite is done to enable a more secure connection using Transport Layer Security (TLS). This specific cipher suite uses the following encryption method: RSA for key exchange, AES-256 in CBC mode for encryption, and SHA256 for hashing.`,
+      link: 'https://www.thesslstore.com/blog/cipher-suites-algorithms-security-settings/',
       questionNumber: 130
     },
     {
@@ -1560,8 +1572,8 @@ const securityXQuiz = {
         'DNS traffic is being sinkholed',
         'The DNS was set up incorrectly'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(131) DNS record poisoning, also known as DNS spoofing or DNS cache poisoning, is a type of cyber attack where an attacker modifies a DNS server's cache to redirect users to malicious websites. This attack exploits the way DNS servers store and retrieve IP addresses associated with domain names, allowing attackers to intercept and alter this information.`,
+      link: 'https://www.fortinet.com/resources/cyberglossary/dns-poisoning',
       questionNumber: 131
     },
     {
@@ -1572,8 +1584,8 @@ const securityXQuiz = {
         'Possible prompt injections',
         'Exposure to social engineering'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(132) Model explainability, especially in cybersecurity, refers to the ability to understand how and why a machine learning model makes a specific prediction. This is crucial because cybersecurity AI models, often acting as "black boxes," can be difficult to interpret, potentially leading to reduced trust and difficulty in debugging or improving their performance.',
+      link: 'https://www.paloaltonetworks.com/cyberpedia/ai-explainability',
       questionNumber: 132
     },
     {
@@ -1586,8 +1598,8 @@ const securityXQuiz = {
         'A text file containing passwords that were leaked',
         'A PDF that exposed sensitive information improperly'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(133) Malicious files are programs designed to cause harm to a computer system or network. These files can be disguised as legitimate documents or software, exploiting user trust to gain access and spread malicious code. Common examples include malware like viruses, worms, ransomware, and spyware. Understanding how cybercriminals use these files and implementing effective defense strategies is crucial for maintaining cybersecurity.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/malicious-code/',
       questionNumber: 133
     },
     {
@@ -1598,8 +1610,8 @@ const securityXQuiz = {
         'Wiping the SSD through degaussing',
         'Writing non-zero, random data to all cells of the SSD'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(134) Deleting encryption keys in cybersecurity is a serious action that makes encrypted data permanently unreadable and inaccessible. It's crucial to understand that once a key is deleted, the data encrypted with that key cannot be recovered unless a backup of the key exists. Deleting keys is equivalent to securely destroying the data they protect.`,
+      link: 'https://www.encryptionconsulting.com/introduction-to-crypto-shredding/',
       questionNumber: 134
     },
     {
@@ -1612,8 +1624,8 @@ const securityXQuiz = {
         'Disabling unused/unneeded ports on all servers',
         'Deploying a WAF with virtual patching upstream of the affected systems'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(135) By automating the patching system to update base images, organizations can significantly improve their cybersecurity posture, reduce operational burden, and protect their systems from costly breaches.',
+      link: 'https://www.pdq.com/blog/what-is-automated-patch-management/',
       questionNumber: 135
     },
     {
@@ -1624,8 +1636,8 @@ const securityXQuiz = {
         'Enforcing security awareness training',
         'Implementing DNS filtering'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(136) Browser isolation solutions, also known as Remote Browser Isolation (RBI), are cybersecurity technologies that separate web browsing activity from a user's device, protecting against online threats. They work by running web browsing sessions in a remote, isolated environment, often in the cloud, and streaming only the visual output to the user's device.`,
+      link: 'https://www.skyhighsecurity.com/cybersecurity-defined/what-is-browser-isolation.html#:~:text=Browser%20Isolation%20technology%20provides%20malware,in%20an%20isolated%20virtual%20environment.',
       questionNumber: 136
     },
     {
@@ -1636,8 +1648,9 @@ const securityXQuiz = {
         'Instruct users to use a password manager when generating new credentials and secure port 443 traffic',
         'Give users permission to rotate administrator passwords and deny port 80 traffic'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(137) Interactive logon cybersecurity focuses on securing the process where users interactively log into a system, often through a username and password. This includes measures to prevent unauthorized access, monitor user activity, and investigate potential security breaches related to interactive logins.\n\n' +
+      `Port 445 is primarily used for file sharing and printer sharing across a network, utilizing the Server Message Block (SMB) protocol. It is also used for accessing Active Directory. SMB on port 445 operates over TCP and is a key component of modern Windows file sharing.`,
+      link: 'https://graxoconsulting.com/interactive-login-and-non-interactive-login/',
       questionNumber: 137
     },
     {
@@ -1648,8 +1661,9 @@ const securityXQuiz = {
         'Installing self-encrypting drives',
         'Configuring host-based encryption'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(138) Measured boot is a cybersecurity technique that verifies the integrity of a device's boot process, ensuring that only trusted software is loaded. It involves measuring (hashing) the state of each component loaded during boot and storing these measurements in a secure location like the TPM, allowing for later verification and attestation of the system's trustworthiness.\n\n` +
+      'Self-encrypting drives (SEDs) are a hardware-based encryption solution that encrypts data on storage devices, like hard drives and SSDs, automatically, without the need for software. This encryption occurs at the hardware level, ensuring data remains secure even if the drive is stolen or physically accessed. SEDs offer a robust defense against data breaches, compliance violations, and unauthorized access, making them a valuable tool for organizations handling sensitive information.',
+      link: 'https://infohub.delltechnologies.com/l/dell-powermax-cybersecurity/secure-boot-and-measured-boot-1/#:~:text=Measured%20Boot%20is%20the%20process,keys%2C%20and%20the%20various%20signatures.',
       questionNumber: 138
     },
     {
@@ -1660,7 +1674,7 @@ const securityXQuiz = {
         'Envelope encryption',
         'Authenticated encryption with associated data'
       ],
-      explanation: '',
+      explanation: '(139) ',
       link: '',
       questionNumber: 139
     },
