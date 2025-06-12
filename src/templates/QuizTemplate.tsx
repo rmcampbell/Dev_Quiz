@@ -26,7 +26,7 @@ const QuizTemplate: React.FC = () => {
     message: '',
     correct: false,
     displayExplanation: '',
-    showReference: '',
+    references: [],
     selectedOption: '',
     chosenAnswer: '',
     chooseAnswer: false,
@@ -44,7 +44,7 @@ const QuizTemplate: React.FC = () => {
     message,
     correct,
     displayExplanation,
-    showReference,
+    references,
     selectedOption,
     chosenAnswer,
     chooseAnswer,
@@ -226,7 +226,7 @@ const QuizTemplate: React.FC = () => {
       points: isCorrect ? points + 1 : points,
       message: isCorrect ? shuffleModalResponses(correctModalResponses) : shuffleModalResponses(incorrectModalResponses),
       displayExplanation: currQuestion?.explanation || '',
-      showReference: currQuestion?.link || '',
+      references: currQuestion.references,
       showModal: true
     });
   }, [currQuestion, points, selectedOption, shuffleModalResponses, updateQuizState]);
@@ -240,7 +240,7 @@ const QuizTemplate: React.FC = () => {
     message,
     points,
     displayExplanation,
-    showReference,
+    references,
     show: showModal, // Use showModal instead of show
     nextQuestion
   }), [
@@ -250,7 +250,7 @@ const QuizTemplate: React.FC = () => {
     message,
     points,
     displayExplanation,
-    showReference,
+    references,
     showModal,
     nextQuestion
   ]);

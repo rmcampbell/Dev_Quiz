@@ -36,7 +36,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
           <p>
             {Array.isArray(QuizQuestion.chosenAnswer) ? QuizQuestion.chosenAnswer.join(', ') : QuizQuestion.chosenAnswer}
           </p>
-          {/* Display correct answer if the user's answer is incorrect and correctAnswer is provided */}
+          {/* Display the correct answer if the user's answer is incorrect and correctAnswer is provided */}
           {!QuizQuestion.correct && QuizQuestion.correctAnswer && (
             <>
               <p>
@@ -49,7 +49,6 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             </>
           )}
           <>
-            {/* TODO: Enable Markdown */}
             {QuizQuestion?.displayExplanation ? (
               <>
                 <p>
@@ -59,20 +58,41 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
               </>
             ) : ('')}
           </>
-          
-          {/* Display reference link only if one exists */}
-          {/* TODO: Test with Markdown*/}
-          {QuizQuestion.showReference && (
+
+          {/* Display references if they exist */}
+          {QuizQuestion.references && QuizQuestion.references.length > 0 && (
             <>
-              <a
-                className="modal-link"
-                href={QuizQuestion.showReference}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn more with this helpful resource
-              </a>
-              <br />
+              {QuizQuestion.references.length === 1 ? (
+                <>
+                  <a
+                    className="modal-link"
+                    href={QuizQuestion.references[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {QuizQuestion.references[0].title || QuizQuestion.references[0].url}
+                  </a>
+                  <br />
+                </>
+              ) : (
+                <>
+                  <p><b>References:</b></p>
+                  <ul>
+                    {QuizQuestion.references.map((reference, index) => (
+                      <li key={index}>
+                        <a
+                          className="modal-link"
+                          href={reference.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {reference.title || reference.url}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </>
           )}
         </div>
