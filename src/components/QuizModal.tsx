@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import '../stylesheets/Modal.css';
 import { QuizQuestion } from '../types';
+import MarkdownRenderer from './MarkdownRenderer';
 
 const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -48,13 +49,12 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
             </>
           )}
           <>
-            {/* TODO: Enable Markdown */}
             {QuizQuestion?.displayExplanation ? (
               <>
                 <p>
                   <b>Explanation:</b>
                 </p>
-                <p>{QuizQuestion.displayExplanation}</p>
+                <p><MarkdownRenderer content={QuizQuestion.displayExplanation} /></p>
               </>
             ) : ('')}
           </>
@@ -70,7 +70,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {QuizQuestion.references[0].title}
+                    {QuizQuestion.references[0].title || QuizQuestion.references[0].url}
                   </a>
                   <br />
                 </>
@@ -86,7 +86,7 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {reference.title}
+                          {reference.title || reference.url}
                         </a>
                       </li>
                     ))}
