@@ -1674,16 +1674,16 @@ const securityXQuiz = {
         'Envelope encryption',
         'Authenticated encryption with associated data'
       ],
-      explanation: '(139) ',
-      link: '',
+      explanation: '(139) Simultaneous Authentication of Equals (SAE) is a password-based authentication and key agreement method used in wireless networks, particularly in the context of WPA3-Personal and mesh networks. It allows two parties to authenticate each other simultaneously, ensuring mutual verification without a central authority. SAE utilizes the Dragonfly key exchange and Protected Management Frames (PMF) to enhance security.',
+      link: 'https://www.vpnunlimited.com/help/cybersecurity/sae?srsltid=AfmBOooDhnH6mOI7O4tWGrkuNvG02a-FBKJBi3unzYokzbMtMgNZhNPg',
       questionNumber: 139
     },
     {
       question: 'Emails that the marketing department is sending to customers are going to the customers’ spam folders. The security team is investigating the issue and discovers that the certificates used by the email server were reissued, but DNS records had not been updated. Which of the following should the security team update in order to fix this issue?',
       answer: ['DMARC', 'SPF', 'DKIM'],
       distractors: ['DNSSEC', 'SASE', 'SAN', 'SOA', 'MX'],
-      explanation: '',
-      link: '',
+      explanation: '(140) DMARC, DKIM, and SPF are email authentication protocols that work together to improve email security and reduce spoofing. DMARC provides a policy for how receiving email servers should handle emails that fail DKIM or SPF authentication. DKIM uses cryptographic signatures to verify email content and authenticity, while SPF defines authorized IP addresses for a domain.',
+      link: 'https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/',
       questionNumber: 140
     },
     {
@@ -1694,8 +1694,8 @@ const securityXQuiz = {
         'Configuring branch protection rules and dependency checks',
         'Using an application vulnerability scanner to identify coding flaws in production'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(141) choosing the right programming language for an AI project depends on specific needs like performance, scalability, or rapid prototyping. Tuning rule sets in AI is crucial for optimizing system performance, accuracy, and overall effectiveness by adjusting and refining the predefined rules.',
+      link: 'https://www.callstack.com/blog/12-rules-and-approaches-of-code-writing-for-beginners',
       questionNumber: 141
     },
     {
@@ -1705,8 +1705,8 @@ const securityXQuiz = {
       'Which of the following solutions should the analyst use to fix this issue?',
       answer: 'Enable split tunneling',
       distractors: ['Move the servers to a screened subnet', 'Configure an NAC solution', 'Implement DNS over HTTPS'],
-      explanation: '',
-      link: '',
+      explanation: '(142) The process of allowing a remote user or device to establish a non-remote connection with a system and simultaneously communicate via some other connection to a resource in an external network. This method of network access enables a user to access remote devices, and simultaneously, access uncontrolled networks.',
+      link: 'https://us.norton.com/blog/privacy/split-tunneling',
       questionNumber: 142
     },
     {
@@ -1719,8 +1719,8 @@ const securityXQuiz = {
         'Have the admin account owner change their password to avoid credential stuffing',
         'Block employees from logging in to applications that are not part of their business area'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(143) Automating the disabling of user accounts provides significant benefits for organizations, primarily by enhancing security, improving efficiency, and reducing manual tasks. It streamlines user account management, allowing for quicker responses to security threats, and ensures inactive accounts are addressed promptly, minimizing potential vulnerabilities.',
+      link: 'https://blog.netwrix.com/2015/03/17/how-to-disable-inactive-user-accounts-using-powershell/',
       questionNumber: 143
     },
     {
@@ -1731,8 +1731,8 @@ const securityXQuiz = {
         'Perform a business impact analysis',
         'Verify the encryption key length'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(144) Conducting regular backup testing is crucial in cybersecurity for validating the effectiveness of data recovery in the event of a disaster or cyberattack. This involves simulating recovery scenarios and verifying the integrity and accessibility of backed-up data. By testing backups, organizations can ensure they can restore their data quickly and efficiently, minimizing business disruption and data loss.',
+      link: 'https://www.morganstanley.com/articles/data-backup-importance-cybersecurity#:~:text=The%20goal%20of%20the%20backup,and%20will%20be%20easily%20recoverable.',
       questionNumber: 144
     },
     {
@@ -1745,8 +1745,8 @@ const securityXQuiz = {
         'Searching dark web monitoring resources for exposure',
         'Querying user behavior analytics data'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(145) Reviewing audit logs related to privileged actions in cybersecurity involves analyzing records of high-permission user activities to identify and address potential security risks. This process helps in ensuring compliance, detecting malicious activity, and verifying that privileged access is being used responsibly.',
+      link: 'https://www.cybersecuritydive.com/spons/how-do-i-monitor-privileged-accounts/631347/',
       questionNumber: 145
     },
     {
@@ -1757,8 +1757,8 @@ const securityXQuiz = {
         'Enabling multifactor authentication using biometrics on access attempts',
         'Implementing single sign-on to centralize access control enforcement'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(146) Device profiling is a security practice that involves gathering information about a device to assess its security posture and compliance with policies. This information can include details like the device's operating system, software versions, security patch level, and whether it has been jailbroken or rooted.`,
+      link: 'https://support.catonetworks.com/hc/en-us/articles/7387501459357-Creating-Device-Posture-Profiles-and-Device-Checks',
       questionNumber: 146
     },
     {
@@ -1769,16 +1769,17 @@ const securityXQuiz = {
         'Grant the system the ability to self-govern',
         'Require end-user acknowledgement of organizational policies'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(147) The principle of limiting a platform's abilities to non-sensitive cybersecurity functions aligns with the Principle of Least Privilege (PoLP), which dictates that entities should only have access to the specific resources required to complete a task. This minimizes the potential impact of a compromise.\n\n` +
+      'In the context of cybersecurity, sensitive data refers to information that, if disclosed, misused, or accessed without authorization, could lead to harm, discrimination, or adverse consequences for individuals or organizations.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/zero-trust-security/',
       questionNumber: 147
     },
     {
       question: 'A security analyst discovered requests associated with IP addresses known for both legitimate and bot-related traffic. Which of the following should the analyst use to determine whether the requests are malicious?',
       answer: 'User-agent string',
       distractors: ['Byte length of the request', 'Web application headers', 'HTML encoding field'],
-      explanation: '',
-      link: '',
+      explanation: '(148) User-agent strings, while primarily designed for browser identification and website personalization, can also be used in cybersecurity. They can be analyzed for suspicious activity, such as identifying malware or bots, and can be spoofed by malicious actors to bypass security measures or mask their origin.',
+      link: 'https://51degrees.com/blog/understanding-user-agent-string',
       questionNumber: 148
     },
     {
@@ -1793,8 +1794,8 @@ const securityXQuiz = {
         'Blocking all non-essential ports',
         'Discontinuing the use of self-signed certificates'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(149) Deprecated ciphers in cybersecurity refer to encryption algorithms that are no longer considered secure and have been phased out of use due to vulnerabilities or the availability of stronger alternatives. Organizations should regularly assess their systems and applications for deprecated ciphers and upgrade to more secure options.',
+      link: 'https://notifications.qualys.com/product/2024/08/12/deprecating-weak-cipher-suites-across-all-public-facing-product-urls',
       questionNumber: 149
     },
     {
@@ -1805,8 +1806,8 @@ const securityXQuiz = {
         'Performing regular red-team exercises on the vendor production line',
         'Implementing a monitoring process for the integration between the application and the vendor appliance'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(150) A Supply Chain Risk Management (SCRM) program is a systematic approach to identifying, assessing, and mitigating potential disruptions within a company's supply chain. It aims to minimize the impact of risks on operations, reputation, and financial performance. By proactively addressing vulnerabilities, SCRM helps ensure business continuity and resilience.`,
+      link: 'https://auditboard.com/blog/supply-chain-risk-management-best-practices',
       questionNumber: 150
     },
     {
@@ -1817,24 +1818,24 @@ const securityXQuiz = {
         'Check all the devices without proper access, enrolling them via the solution agent and authenticating to the network',
         'Implement default credentials to automate RADIUS authentication and grant access to the network if the device owner is an employee'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(151) Patch management helps keep computers and networks secure, reliable and up to date with features and functionality the organization considers important. It is an essential process for ensuring and documenting compliance with security and privacy regulations.',
+      link: 'https://www.manageengine.com/patch-management/what-is-patch-management.html',
       questionNumber: 151
     },
     {
       question: 'While performing threat-hunting functions, an analyst is using the Diamond Model of Intrusion Analysis. The analyst identifies the likely adversary, the infrastructure involved, and the target. Which of the following must the threat hunter document to use the model effectively?',
       answer: 'Capabilities',
       distractors: ['Knowledge', 'Phase', 'Methodologies'],
-      explanation: '',
-      link: '',
+      explanation: '(152) Cybersecurity capabilities refer to the skills, knowledge, and tools an organization uses to protect its systems and data from cyber threats. These capabilities encompass various areas, including threat detection, incident response, vulnerability management, and security awareness training.',
+      link: 'https://www.spiceworks.com/it-security/cyber-risk-management/articles/practical-guide-core-cybersecurity-capabilities/',
       questionNumber: 152
     },
     {
       question: 'A systems administrator needs to improve the security assurance in a company\'s cloud storage environment. The administrator determines that the best approach is to identify whether any data has been maliciously or inadvertently modified. Which of the following techniques should the systems administrator periodically use?',
       answer: 'Hashing',
       distractors: ['Interference', 'Antitampering', 'Journaling'],
-      explanation: '',
-      link: '',
+      explanation: '(153) Hashing is a data security technique used to convert data values into alternate, unique identifiers called hashes for quick and secure access. Hashing can be used for data security because the one-way process prevents access to or tampering with the source data.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/data-protection/data-hashing/',
       questionNumber: 153
     },
     {
@@ -1849,8 +1850,8 @@ const securityXQuiz = {
         'Zone transfer protection',
         'HIDS'
       ],
-      explanation: '154',
-      link: '',
+      explanation: '(154) A DNS sinkhole is a Domain Name System (DNS) server configured to redirect malicious DNS traffic to a controlled server, preventing devices from reaching harmful destinations. It effectively acts as a "trap" for malicious traffic, allowing security professionals to intercept, analyze, and neutralize threats.',
+      link: 'https://www.catchpoint.com/network-admin-guide/dns-sinkhole#:~:text=A%20DNS%20sinkhole%20is%20used,list%20of%20known%20malicious%20domains.',
       questionNumber: 154
     },
     {
@@ -1861,8 +1862,8 @@ const securityXQuiz = {
         'Managing secrets on the vTPM hardware',
         'Employing shielding to prevent EMI'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(155) Managing key material securely on a Hardware Security Module (HSM) (HSM) is crucial for cyber security. HSMs offer a robust, tamper-resistant environment for key generation, storage, and usage, safeguarding cryptographic processes and protecting sensitive data. Key management on an HSM involves several key aspects: secure key generation using True Random Number Generators (TRNGs), limiting key access and usage to specific authorized applications, and ensuring secure key destruction when no longer needed.',
+      link: 'https://www.spiceworks.com/it-security/vulnerability-management/articles/what-is-a-hardware-security-module/',
       questionNumber: 155
     },
     {
@@ -1873,8 +1874,8 @@ const securityXQuiz = {
         'Auditing vendors to mitigate supply chain risk during the acquisition',
         'Placing a hold on all information about corporate interest in acquisitions'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(156) Credential harvesting is a cyberattack technique where cybercriminals gather user credentials — such as user IDs, email addresses, passwords, and other login information — en masse. The hacker can then use the credentials to access systems and gather data or other sensitive information, sell or share them on the dark web, and/or advance a more sophisticated attack.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/credential-harvesting/',
       questionNumber: 156
     },
     {
@@ -1887,8 +1888,8 @@ const securityXQuiz = {
         'Send emails for failed log-in attempts on the public website',
         'Configure automated isolation of human resources systems'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(157) Service status monitoring in cybersecurity involves continuously observing and analyzing network traffic and system activity to detect and respond to security threats. It focuses on identifying potential security breaches, malicious activity, and vulnerabilities before they cause significant damage. This monitoring helps organizations maintain a secure environment and improve their overall cybersecurity posture.',
+      link: 'https://nordlayer.com/blog/cybersecurity-monitoring/',
       questionNumber: 157
     },
     {
@@ -1903,8 +1904,8 @@ const securityXQuiz = {
         'Integrating automated response mechanisms into the data subject access request process',
         'Conducting lessons-learned activities and integrating observations into the crisis management plan'
       ],
-      explanation: '158',
-      link: '',
+      explanation: '(158) Cybersecurity communication templates streamline how organizations communicate about security incidents, both internally and externally. These templates help ensure clear, consistent, and timely communication, especially during a crisis. They cover various stages of an incident, from initial notification to resolution and post-incident communication.',
+      link: 'https://www.atlassian.com/incident-management/incident-communication/templates',
       questionNumber: 158
     },
     {
@@ -1920,8 +1921,8 @@ const securityXQuiz = {
         'Utilize a new deployed machine to run the sample',
         'Search other internal sources for a new sample'
       ],
-      explanation: '159',
-      link: '',
+      explanation: `(159) anti-virtualization code refers to code intentionally embedded within malware to detect if it's running inside a virtual machine (VM) or sandbox environment. If it detects such an environment, the malware might alter its behavior to evade analysis, conceal its true nature, or even terminate its execution.`,
+      link: 'https://www.picussecurity.com/resource/virtualization/sandbox-evasion-how-attackers-avoid-malware-analysis',
       questionNumber: 159
     },
     {
@@ -1932,8 +1933,8 @@ const securityXQuiz = {
         'Providing for non-repudiation of data',
         'Reducing liability from identity theft'
       ],
-      explanation: '160',
-      link: '',
+      explanation: '(160) Data privacy is the right to control how your personal information is viewed and used, while security is the protection against threats through the application of safeguards. In the digital world, security generally refers to the protection against unauthorized access of data, often against hackers or cyber criminals.',
+      link: 'https://www.okta.com/identity-101/privacy-vs-security/#:~:text=Data%20privacy%20is%20the%20right,against%20hackers%20or%20cyber%20criminals.',
       questionNumber: 160
     },
     {
@@ -1944,8 +1945,8 @@ const securityXQuiz = {
         'Installing cryptography at the operational system level',
         'Implementing hardware root of trust'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(161) Secure boot is a fundamental security feature in Windows that ensures the integrity of your system's boot process. It functions by verifying the digital signatures of the bootloader and operating system, allowing only trusted and signed code to be executed during startup.`,
+      link: 'https://www.n-able.com/blog/enable-secure-boot-protection-for-your-it-systems',
       questionNumber: 161
     },
     {
@@ -1956,8 +1957,8 @@ const securityXQuiz = {
         'To address concerns the team has about API bandwidth utilization',
         'To reduce attack surface exposure of the API endpoints connecting peers'
       ],
-      explanation: '162',
-      link: '',
+      explanation: `(162) Resource exhaustion, in the context of cybersecurity, refers to attacks that drain a system's limited resources, like memory, processing power, or bandwidth, making them unavailable to legitimate users or applications. This can lead to system slowdowns, crashes, or even complete unavailability. Essentially, resource exhaustion attacks are a form of denial of service (DoS) or distributed denial of service (DDoS) where the attacker aims to overwhelm a system with requests, causing it to become unstable or unresponsive.`,
+      link: 'https://www.twingate.com/blog/glossary/resource-exhaustion',
       questionNumber: 162
     },
     {
@@ -1968,8 +1969,8 @@ const securityXQuiz = {
         'Anti-malware on these systems and only approved application file locations can be bypassed',
         'Event logs to be collected from the systems for all security events and some custom application logs'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(163) Application control and baseline configuration are crucial cybersecurity practices. Application control involves managing and regulating the execution of software applications to protect against unauthorized access and potential threats. Baseline configurations establish standardized settings for IT systems, ensuring consistent and secure setups.',
+      link: 'https://pathlock.com/learn/application-security-controls-benefits-types-and-frameworks/',
       questionNumber: 163
     },
     {
@@ -1982,8 +1983,8 @@ const securityXQuiz = {
         'The user is not allowed to access the human resources system outside of business hours',
         'The user did not attempt to connect from an approved subnet'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(164) A compromised user account refers to an online account that has been accessed by an unauthorized individual with the legitimate user's login credentials. This can happen due to various factors, including weak passwords, successful phishing attacks, or other security breaches.`,
+      link: 'https://www.proofpoint.com/us/threat-reference/compromised-account',
       questionNumber: 164
     },
     {
@@ -1994,16 +1995,16 @@ const securityXQuiz = {
         'Creating a bug bounty program',
         'Implementing a continuous security assessment program'
       ],
-      explanation: '165',
-      link: '',
+      explanation: '(165) SCA provides vital visibility into the open-source components used in software applications, helping organizations proactively identify and mitigate security risks and ensure compliance.',
+      link: 'https://www.contrastsecurity.com/glossary/sast-vs-sca',
       questionNumber: 165
     },
     {
       question: 'A global organization wants to manage all endpoint and user telemetry. The organization also needs to differentiate this data based on which office it is correlated to. Which of the following strategies best aligns with this goal?',
       answer: 'Data labeling',
       distractors: ['Sensor placement', 'Continuous monitoring', 'Centralized logging'],
-      explanation: '',
-      link: '',
+      explanation: '(166) Data labeling is the process of identifying raw data (images, text files, videos, etc.) and adding one or more meaningful and informative labels to provide context so that a machine learning model can learn from it. Data labeling is required for a variety of use cases including computer vision, natural language processing, and speech recognition.',
+      link: 'https://www.proofpoint.com/us/threat-reference/data-labeling',
       questionNumber: 166
     },
     {
@@ -2014,8 +2015,8 @@ const securityXQuiz = {
         'Disable third-party integrations',
         'Limit access to the systems'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(167) Attack surface reduction in cybersecurity involves minimizing the points where a system can be breached by attackers. This is achieved by identifying and eliminating unnecessary functionalities, services, and permissions, effectively reducing the potential entry points for malicious actors. It's a proactive approach that aims to make it harder for attackers to compromise a system, thereby lowering the overall cyber risk.`,
+      link: 'https://www.okta.com/identity-101/what-is-an-attack-surface/',
       questionNumber: 167
     },
     {
@@ -2027,8 +2028,8 @@ const securityXQuiz = {
         'Certification requirements',
         'Reporting frameworks'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(168) Privacy regulations in cybersecurity ensure the protection of sensitive data while also adhering to ethical and legal requirements. These regulations cover a wide range of topics, including data collection, storage, use, and disclosure, as well as requirements for security measures and incident response.',
+      link: 'https://www.okta.com/identity-101/privacy-vs-security/#:~:text=Data%20privacy%20is%20the%20right,against%20hackers%20or%20cyber%20criminals.',
       questionNumber: 168
     },
     {
@@ -2043,8 +2044,8 @@ const securityXQuiz = {
         'Extended key usage',
         'Certificate extension'
       ],
-      explanation: '169',
-      link: '',
+      explanation: '(169) A Subject Alternative Name (SAN) certificate, also known as a Multi-Domain certificate, secures multiple domains with a single SSL/TLS certificate. This is important in cybersecurity because it allows you to protect multiple domains and subdomains using a single certificate, simplifying management and reducing costs.',
+      link: 'https://www.keyfactor.com/blog/what-is-a-subject-alternative-name-ssl-certificate-and-why-does-it-matter/',
       questionNumber: 169
     },
     {
@@ -2057,8 +2058,8 @@ const securityXQuiz = {
         'A NIDS bypass was utilized by a threat actor, and updates must be installed by the administrator',
         'A potential insider threat is being investigated and will be addressed by the senior management team'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(170) A TOCTOU (Time of Check, Time of Use) vulnerability is a cybersecurity risk that arises when a system checks a resource or condition at one point in time, and then uses that resource or condition at a later time, but an attacker can alter the resource between the check and the use. This can lead to unauthorized actions or security breaches.',
+      link: 'https://arunprakashpj.medium.com/understanding-toctou-vulnerability-a-timeless-security-risk-c2be4fb10b3b',
       questionNumber: 170
     },
     {
