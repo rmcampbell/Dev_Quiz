@@ -62,8 +62,10 @@ const QuizModal: React.FC<QuizQuestion> = QuizQuestion => {
           {/* Display references if they exist */}
           {QuizQuestion.references && QuizQuestion.references.length > 0 && (
             <>
+              {/* TODO: Makes sure the url exists */}
               {QuizQuestion.references.length === 1 ? (
                 <>
+                  <p><b>References:</b></p>
                   <a
                     className="modal-link"
                     href={QuizQuestion.references[0].url}
