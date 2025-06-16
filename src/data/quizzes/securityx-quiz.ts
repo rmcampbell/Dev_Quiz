@@ -2077,8 +2077,8 @@ const securityXQuiz = {
         'Issue new MFA credentials to all users',
         'Configure the application allow list'
       ],
-      explanation: '171',
-      link: '',
+      explanation: '(171) Cryptographic Erase is the process of permanently erasing all data on an ISE-capable physical disk. You must execute Cryptographic Erase on ISE-capable drives that are either in Ready or Non-RAID state.',
+      link: 'https://jetico.com/blog/cryptographic-erasure-crypto-erase-is-it-a-secure-option-for-data-sanitization/',
       questionNumber: 171
     },
     {
@@ -2093,8 +2093,9 @@ const securityXQuiz = {
         'Network diagrams',
         'Contingency plans'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(172) Cybersecurity downtime costs can be staggering, encompassing both direct financial losses and less obvious, but equally damaging, hidden costs. Direct costs include lost revenue, regulatory fines, and increased insurance premiums. Hidden costs involve reputational damage, loss of customer trust, and decreased productivity.\n\n' +
+      'Critical processes in cybersecurity refer to the essential functions, systems, and data that an organization relies on for its operations and survival. These processes are often the most vulnerable to cyberattacks and, if compromised, can lead to significant disruptions, financial losses, and reputational damage.',
+      link: 'https://dotsecurity.com/insights/blog-what-is-the-cost-of-downtime',
       questionNumber: 172
     },
     {
@@ -2108,8 +2109,8 @@ const securityXQuiz = {
         'Open-source intelligence',
         'Social engineering'
       ],
-      explanation: '173',
-      link: '',
+      explanation: `(173) OPSEC is a proactive approach to security that involves understanding your vulnerabilities, taking steps to mitigate risks, and continuously assessing your security posture. It's not just about technology, but also about fostering a culture of security awareness and responsibility.`,
+      link: 'https://www.fortinet.com/resources/cyberglossary/operational-security#:~:text=Operational%20security%20(OPSEC)%20is%20a,data%20to%20a%20cyber%20criminal.',
       questionNumber: 173
     },
     {
@@ -2128,8 +2129,8 @@ const securityXQuiz = {
       question: 'A security architect wants to develop a baseline of security configurations. These configurations automatically will be utilized every time a new virtual machine is created. Which of the following technologies should the security architect deploy to accomplish this goal?',
       answer: 'Ansible',
       distractors: ['Snort', 'CASВ', 'CMDB'],
-      explanation: '',
-      link: '',
+      explanation: '(175) Ansible, a powerful automation tool, can be effectively used to enhance cybersecurity by automating tasks like vulnerability management, configuration management, compliance monitoring, and incident response. It helps enforce consistent security policies, reduce human error, improve security event visibility, and accelerate incident response.',
+      link: 'https://www.redhat.com/en/ansible-collaborative/how-ansible-works#:~:text=Ansible%20is%20an%20open%20source,simplicity%20and%20ease%20of%20use.',
       questionNumber: 175
     },
     {
@@ -2140,8 +2141,8 @@ const securityXQuiz = {
         'Truncating the data to make it not personally identifiable',
         'Using a large language model to generate synthetic data'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(176) Tokenization is a data security technique that replaces sensitive data elements with unique, non-sensitive identifiers called tokens. This approach helps protect sensitive information by rendering it meaningless to unauthorized parties while maintaining the data's usability for authorized operations. Tokenization is particularly valuable in cybersecurity for minimizing the impact of data breaches and complying with data privacy regulations.`,
+      link: 'https://www.skyhighsecurity.com/cybersecurity-defined/tokenization-vs-encryption.html#:~:text=Tokenization%20is%20the%20process%20of,used%20to%20guess%20those%20values.',
       questionNumber: 176
     },
     {
@@ -2152,16 +2153,16 @@ const securityXQuiz = {
         'Due care must be exercised during all procurement activities',
         'Specific regulatory requirements must be met in each jurisdiction'
       ],
-      explanation: '',
-      link: '',
+      explanation: `(177) PII (Personally Identifiable Information) refers to any data that can be used to identify, contact, or locate a specific individual. Protecting PII is crucial because it's often targeted in data breaches and can lead to identity theft and other malicious activities.`,
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/personally-identifiable-information-pii/',
       questionNumber: 177
     },
     {
       question: 'An organization plans to deploy new software. The project manager compiles a list of roles that will be involved in different phases of the deployment life cycle. Which of the following should the project manager use to track these roles?',
       answer: 'RACI matrix',
       distractors: ['CMDB', 'Recall tree', 'ITIL'],
-      explanation: '',
-      link: '',
+      explanation: '(178) A RACI matrix in cybersecurity is a tool used to define and assign roles and responsibilities for tasks related to cybersecurity efforts. It helps ensure clarity, accountability, and efficient resource allocation during both routine security tasks and incident response. By clearly outlining who is responsible, accountable, consulted, and informed for each task, a RACI matrix promotes better communication, reduces ambiguity, and improves overall cybersecurity effectiveness.',
+      link: 'https://www.atlassian.com/work-management/project-management/raci-chart',
       questionNumber: 178
     },
     {
@@ -2172,8 +2173,8 @@ const securityXQuiz = {
         'Configuring an SDN to block malicious traffic to on-premises networks',
         'Deploying microsegmentation with a firewall acting as the core router'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(179) Legacy systems present significant cybersecurity risks due to their outdated technology and security protocols, making them attractive targets for cyberattacks. These systems often lack modern security features like multi-factor authentication and are vulnerable to exploits targeting their inherent weaknesses. Protecting legacy systems requires a multi-faceted approach including access control, network segmentation, and regular monitoring.',
+      link: 'https://www.genetec.com/blog/cybersecurity/cyber-risks-of-a-legacy-access-control-system',
       questionNumber: 179
     },
     {
@@ -2188,8 +2189,8 @@ const securityXQuiz = {
         'The client TLS configuration must be set to enforce electronic codebook modes of operation',
         'The server-side digital signature algorithm needs to be modified to support elliptic curve cryptography'
       ],
-      explanation: '180',
-      link: '',
+      explanation: `(180) AES in Galois/Counter Mode (AES-GCM) is a widely used symmetric encryption method that combines the Advanced Encryption Standard (AES) with Galois/Counter Mode (GCM) to provide both confidentiality and data integrity. It's a popular choice for secure communication protocols like TLS and IPsec, due to its performance and security features.`,
+      link: 'https://en.wikipedia.org/wiki/Galois/Counter_Mode#:~:text=The%20GCM%20algorithm%20provides%20both,associated%20data%20(AEAD)%20methods.',
       questionNumber: 180
     },
     {
@@ -2200,7 +2201,7 @@ const securityXQuiz = {
         'The legacy file management system did not support modern authentication techniques despite the business requirements',
         'The data custodians were selected by business stakeholders to ensure backups of the file management system are maintained off site'
       ],
-      explanation: '',
+      explanation: '(181) ',
       link: '',
       questionNumber: 181
     },
@@ -2220,7 +2221,7 @@ const securityXQuiz = {
       question: 'While reviewing recent incident reports a security officer discovers that several employees were contacted by the same individual who impersonated a recruiter. Which of the following best describes this type of correlation?',
       answer: 'Attack pattern analysis',
       distractors: ['Spear-phishing campaign', 'Threat modeling', 'Red-team assessment'],
-      explanation: 'Attack pattern analysis, in the context of cybersecurity, refers to the systematic examination of how attackers exploit vulnerabilities to reach their targets. It involves mapping potential "paths" an attacker could take from initial access to achieving their objectives, such as gaining control of a system or accessing sensitive data. This analysis helps security professionals understand threat actor behavior, prioritize vulnerabilities, and improve defenses.',
+      explanation: '(183) Attack pattern analysis, in the context of cybersecurity, refers to the systematic examination of how attackers exploit vulnerabilities to reach their targets. It involves mapping potential "paths" an attacker could take from initial access to achieving their objectives, such as gaining control of a system or accessing sensitive data. This analysis helps security professionals understand threat actor behavior, prioritize vulnerabilities, and improve defenses.',
       link: 'https://www.maltego.com/blog/analyzing-attack-patterns-and-ttps/',
       questionNumber: 183
     },
