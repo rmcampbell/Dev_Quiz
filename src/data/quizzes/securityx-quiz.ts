@@ -2201,8 +2201,8 @@ const securityXQuiz = {
         'The legacy file management system did not support modern authentication techniques despite the business requirements',
         'The data custodians were selected by business stakeholders to ensure backups of the file management system are maintained off site'
       ],
-      explanation: '(181) ',
-      link: '',
+      explanation: '(181) In discretionary access control (DAC), resource owners have the power to decide who can access their resources and what permissions those users have. This model grants users more flexibility and control over their data but also introduces potential security risks if not managed carefully.',
+      link: 'https://nordlayer.com/learn/access-control/discretionary-access-control/',
       questionNumber: 181
     },
     {
@@ -2213,8 +2213,10 @@ const securityXQuiz = {
         'Reviewing all alerts manually in the various portals and taking action to isolate them',
         'Automating the suppression of all alerts that are not critical and sending an email asking SOC analysts to review these alerts'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(182) SOAR, which stands for Security Orchestration, Automation, and Response, is a category of cybersecurity solutions that integrates and automates various security tools and processes. It helps organizations detect, investigate, and remediate security threats more quickly and efficiently by orchestrating workflows and automating repetitive tasks.\n\n' +
+      `A Threat Intelligence Platform (TIP) is a cybersecurity tool that acts as a central hub for threat data, collecting, analyzing, and sharing information to help organizations proactively identify and respond to cyber threats. It gathers data from various sources, analyzes it for actionable insights, and integrates with other security systems to enhance an organization's overall security posture.\n\n` +
+      'Isolating endpoints via APIs refers to using Application Programming Interfaces (APIs) provided by endpoint security solutions to programmatically isolate endpoints (devices) from the network. This is a crucial response action in cybersecurity incident handling and threat containment.',
+      link: 'https://www.googlecloudcommunity.com/gc/SecOps-SOAR/Part-1-Dipping-Your-Toe-into-SOAR-Understanding-the-Basics/m-p/717159',
       questionNumber: 182
     },
     {
@@ -2229,8 +2231,8 @@ const securityXQuiz = {
       question: 'A news organization wants to implement workflows that allow users to request that untruthful data be retraced and scrubbed from online publications to comply with the right to be forgotten. Which of the following regulations is the organization most likely trying to address?',
       answer: 'GDPR',
       distractors: ['COPPA', 'CCPA', 'DORA'],
-      explanation: '',
-      link: '',
+      explanation: '(184) GDPR is an EU law with mandatory rules for how organisations and companies must use personal data in an integrity friendly way. Personal data means any information which, directly or indirectly, could identify a living person. Name, phone number, and address are schoolbook examples of personal data.',
+      link: 'https://www.crowdstrike.com/en-us/cybersecurity-101/data-protection/general-data-protection-regulation-gdpr/',
       questionNumber: 184
     },
     {
@@ -2245,16 +2247,16 @@ const securityXQuiz = {
         'An organizational risk register tracks all risks and mitigations across business units',
         'The organization wants to find the monetary value of any outages'
       ],
-      explanation: '185',
-      link: '',
+      explanation: '(185) cybersecurity risk assessments are a proactive and essential component of a comprehensive security strategy, enabling organizations to protect their valuable assets and maintain business continuity in the face of evolving cyber threats.',
+      link: 'https://www.hackerone.com/knowledge-center/5-step-security-assessment-process',
       questionNumber: 185
     },
     {
       question: 'A software company deployed a new application based on its internal code repository. Several customers are reporting anti-malware alerts on workstations used to test the application. Which of the following is the most likely cause of the alerts?',
       answer: 'Unsecure bundled libraries',
       distractors: ['Misconfigured code commit', 'Invalid code signing certificate', 'Data leakage'],
-      explanation: '',
-      link: '',
+      explanation: '(186) Unsecure bundled libraries refer to software components, dependencies, or modules included within an application that contain known security vulnerabilities.',
+      link: 'https://flameeyes.blog/2009/01/02/bundling-libraries-for-despair-and-insecurity/',
       questionNumber: 186
     },
     {
@@ -2263,7 +2265,7 @@ const securityXQuiz = {
         'Which of the following should the engineer prioritize for remediation?',
       answer: 'OpenSSH',
       distractors: ['Apache HTTP Server', 'Google Chrome', 'Migration to TLS 1.3'],
-      explanation: '',
+      explanation: '(187) ',
       link: '',
       questionNumber: 187
     },
@@ -2275,8 +2277,8 @@ const securityXQuiz = {
         'Defining request rate limits and comparing new requests from unknown IPs with a list of known-malicious IPs',
         'Only allowing API requests coming from regions with known customers'
       ],
-      explanation: '',
-      link: '',
+      explanation: 'OpenSSH is a widely used, free, and open-source implementation of the SSH (Secure Shell) protocol, crucial for secure communication over insecure networks. It provides tools for secure remote login, file transfers, and tunneling, making it vital for remote server management, DevOps, and other secure data communication tasks.',
+      link: 'https://www.ssh.com/academy/ssh/openssh',
       questionNumber: 188
     },
     {
@@ -2287,8 +2289,9 @@ const securityXQuiz = {
         'Remote journaling within a third data center',
         'Traffic shaping through the use of a SASE'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(189) Content Delivery Networks (CDNs) process static content such as images and scripts, dynamic content, and live streams, making them vital to global business. They add security layers against DDoS attacks and unauthorized access by moving traffic from origin servers.\n\n' +
+      'Generative AI security refers to the practices and tools used to secure systems that can produce new content from abuse or protection against misuse. It covers everything from data privacy to the potential for AI-generated misinformation.',
+      link: 'https://www.sentinelone.com/cybersecurity-101/data-and-ai/generative-ai-security-risks/#:~:text=Generative%20AI%20security%20refers%20to,potential%20for%20AI%2Dgenerated%20misinformation.',
       questionNumber: 189
     },
     {
@@ -2301,8 +2304,8 @@ const securityXQuiz = {
         'The user does not have sudo access',
         'The root password has been changed'
       ],
-      explanation: '',
-      link: '',
+      explanation: '(190) Service accounts and user accounts are both used to manage access to systems and resources, but they serve different purposes. User accounts are designed for human users to interact with systems, while service accounts are used by applications and automated processes to perform tasks without direct human intervention.',
+      link: 'https://www.zluri.com/blog/service-accounts-vs-user-accounts',
       questionNumber: 190
     },
     {
@@ -2313,7 +2316,7 @@ const securityXQuiz = {
         'Performing manual updates via USB ports',
         'Allowing only files from internal sources'
       ],
-      explanation: '',
+      explanation: '(191) ',
       link: '',
       questionNumber: 191
     },
@@ -2327,7 +2330,7 @@ const securityXQuiz = {
         'Both samples use IP connectivity for command and control',
         'Sample 1 is the target agent while Sample 2 is the C2 server'
       ],
-      explanation: '',
+      explanation: '(192) ',
       link: '',
       questionNumber: 192
     },
