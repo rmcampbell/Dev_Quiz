@@ -2265,8 +2265,8 @@ const securityXQuiz = {
         'Which of the following should the engineer prioritize for remediation?',
       answer: 'OpenSSH',
       distractors: ['Apache HTTP Server', 'Google Chrome', 'Migration to TLS 1.3'],
-      explanation: '(187) ',
-      link: '',
+      explanation: '(187) OpenSSH is a widely used, free, and open-source implementation of the SSH (Secure Shell) protocol, crucial for secure communication over insecure networks. It provides tools for secure remote login, file transfers, and tunneling, making it vital for remote server management, DevOps, and other secure data communication tasks.',
+      link: 'https://www.ssh.com/academy/ssh/openssh',
       questionNumber: 187
     },
     {
@@ -2277,8 +2277,8 @@ const securityXQuiz = {
         'Defining request rate limits and comparing new requests from unknown IPs with a list of known-malicious IPs',
         'Only allowing API requests coming from regions with known customers'
       ],
-      explanation: 'OpenSSH is a widely used, free, and open-source implementation of the SSH (Secure Shell) protocol, crucial for secure communication over insecure networks. It provides tools for secure remote login, file transfers, and tunneling, making it vital for remote server management, DevOps, and other secure data communication tasks.',
-      link: 'https://www.ssh.com/academy/ssh/openssh',
+      explanation: '(188) Rate limiting is a critical cybersecurity technique used to control the number of API requests within a specific timeframe, preventing abuse and denial-of-service attacks. By setting limits on how frequently a user or application can access an API, rate limiting ensures fair resource allocation and protects against malicious activities like brute-force attacks and excessive data consumption.',
+      link: 'https://www.radware.com/cyberpedia/bot-management/rate-limiting/#:~:text=In%20summary%2C%20API%20rate%20limiting,fair%20use%20of%20API%20resources.',
       questionNumber: 188
     },
     {
@@ -2316,8 +2316,8 @@ const securityXQuiz = {
         'Performing manual updates via USB ports',
         'Allowing only files from internal sources'
       ],
-      explanation: '(191) ',
-      link: '',
+      explanation: `(191) A digital signature in cybersecurity is a cryptographic technique that verifies the authenticity and integrity of digital documents, messages, or software. It acts like a digital fingerprint, ensuring the document hasn't been altered and proving the sender's identity.`,
+      link: 'https://www.proofpoint.com/us/threat-reference/digital-signature#:~:text=A%20digital%20signature%20is%20a%20mathematical%20protocol,and%20integrity%20of%20digital%20messages%20or%20documents.&text=The%20signer%20uses%20their%20private%20key%20to,it%20with%20the%20corresponding%20message%20or%20file.',
       questionNumber: 191
     },
     {
@@ -2330,8 +2330,8 @@ const securityXQuiz = {
         'Both samples use IP connectivity for command and control',
         'Sample 1 is the target agent while Sample 2 is the C2 server'
       ],
-      explanation: '(192) ',
-      link: '',
+      explanation: '(192) A code snippet has a title that you use to select the snippet, and can have a shortcut name you can type to insert the snippet. Snippets can also contain replacement parameters, which act as placeholders. Snippets are available for many languages, including C#, C++, and Visual Basic.',
+      link: 'https://learn.microsoft.com/en-us/visualstudio/ide/code-snippets?view=vs-2022#:~:text=A%20code%20snippet%20has%20a,C%2B%2B%2C%20and%20Visual%20Basic.',
       questionNumber: 192
     },
     {
@@ -2347,8 +2347,8 @@ const securityXQuiz = {
         'Self-encrypting disks',
         'NIPS'
       ],
-      explanation: '193',
-      link: '',
+      explanation: '(193) SELinux is a Linux kernel security module that enhances security by implementing mandatory access control (MAC). It controls access to system resources, like files and processes, based on labels and defined policies. This helps prevent unauthorized access and limits the impact of security breaches.',
+      link: 'https://www.blackdown.org/what-is-selinux/',
       questionNumber: 193
     },
     {
@@ -2363,7 +2363,7 @@ const securityXQuiz = {
         'Combine compute and storage in vertically autoscaling mode',
         'Implement a load balancer for computing and storage resources'
       ],
-      explanation: '194',
+      explanation: '(194) ',
       link: '',
       questionNumber: 194
     },
@@ -2525,7 +2525,7 @@ const securityXQuiz = {
       question: 'A security team is responding to malicious activity and needs to determine the scope of impact. The malicious activity appears to affect a certain version of an application used by the organization. Which of the following actions best enables the team to determine the scope of impact?',
       answer: 'Reviewing the asset inventory',
       distractors: ['Performing a port scan', 'Inspecting egress network traffic', 'Analyzing user behavior'],
-      explanation: '',
+      explanation: '(208) ',
       link: '',
       questionNumber: 208
     },
@@ -2537,7 +2537,7 @@ const securityXQuiz = {
         'Enforce password complexity',
         'Extend the allowed session length'
       ],
-      explanation: '',
+      explanation: '(209) ',
       link: '',
       questionNumber: 209
     },
@@ -2549,7 +2549,7 @@ const securityXQuiz = {
         'Configuring a span port on the perimeter firewall to ingest logs',
         'Enabling client device logging and system event auditing'
       ],
-      explanation: '',
+      explanation: '(210) ',
       link: '',
       questionNumber: 210
     },
