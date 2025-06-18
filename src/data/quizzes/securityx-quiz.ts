@@ -2363,8 +2363,8 @@ const securityXQuiz = {
         'Combine compute and storage in vertically autoscaling mode',
         'Implement a load balancer for computing and storage resources'
       ],
-      explanation: '(194) ',
-      link: '',
+      explanation: '(194) Horizontally scaling computing in cyber security refers to increasing the capacity of a system by adding more servers or computing nodes to distribute the workload and enhance performance, rather than increasing the resources of a single server (vertical scaling). This approach improves scalability, resilience, and fault tolerance in security systems.',
+      link: 'https://www.cockroachlabs.com/blog/vertical-scaling-vs-horizontal-scaling/#:~:text=Horizontal%20scaling%20refers%20to%20increasing,is%20also%20called%20scaling%20out.',
       questionNumber: 194
     },
     {
@@ -2379,8 +2379,9 @@ const securityXQuiz = {
         'Set network behavior analysis rules',
         'Quarantine the scanner sensor to perform a forensic analysis'
       ],
-      explanation: '195',
-      link: '',
+      explanation: `(195) A vulnerability scan policy in cybersecurity outlines how an organization identifies and addresses security weaknesses in its systems, networks, and applications. It's a crucial part of a broader vulnerability management program, ensuring consistent and effective security practices. The policy defines the scope, frequency, and responsibilities for conducting vulnerability scans, as well as how to handle and remediate identified vulnerabilities.\n\n` +
+      `In the context of cybersecurity and vulnerability scanning, "out of scope" refers to assets, systems, or environments that are intentionally excluded from a vulnerability scan or assessment.`,
+      link: 'https://www.indusface.com/learning/what-is-vulnerability-scanning/#:~:text=Vulnerability%20scanning%20identifies%20exploitable%20weaknesses,actors%20to%20leverage%20and%20abuse.',
       questionNumber: 195
     },
     {
@@ -2391,8 +2392,9 @@ const securityXQuiz = {
         'Implementing a NIDS without a NIPS to increase the detection capability',
         'Implementing the NIDS in the bastion host and the NIPS in the branch network router'
       ],
-      explanation: '196',
-      link: '',
+      explanation: '(196) A Network Intrusion Detection System (NIDS) (NIDS) with port mirroring is a crucial cybersecurity setup for monitoring network traffic and detecting malicious activity. Port mirroring, also known as SPAN port, allows a network switch to send a copy of network traffic to a designated port, where the NIDS can analyze it without affecting the live network traffic. This setup provides a passive monitoring approach, enhancing network security by enabling the detection of potential threats that might bypass other security measures like firewalls.\n\n' +
+      `A NIPS (Network Intrusion Prevention System) is a security system that analyzes network traffic to detect and prevent malicious activity, often working in conjunction with a firewall. While firewalls primarily control traffic based on rules, NIPS actively monitor and respond to threats, potentially blocking or mitigating attacks. A firewall acts as a gatekeeper, while a NIPS acts as a proactive security guard, detecting and stopping threats before they can impact the network.`,
+      link: 'https://owasp.org/www-community/controls/Intrusion_Detection#:~:text=However%2C%20the%20main%20distinction%20is,signature%20based%20or%20behavioral%20based.',
       questionNumber: 196
     },
     {
@@ -2404,7 +2406,7 @@ const securityXQuiz = {
         'Establishing a mandatory vacation policy',
         'Requiring periodic job rotation'
       ],
-      explanation: '',
+      explanation: '(197) ',
       link: '',
       questionNumber: 197
     },
