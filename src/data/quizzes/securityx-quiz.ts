@@ -1,5 +1,6 @@
 import imageMap from '../../utils/assets.ts';
 import { Acronym, Term } from '../../types';
+import { title } from 'process';
 
 const imgPath = (num: number|string) => {
   const numStr = typeof num === 'number' ? num.toString().padStart(3, '0') : num;
@@ -3358,11 +3359,16 @@ const securityXQuiz = {
         'Establishing a mandatory vacation policy',
         'Requiring periodic job rotation'
       ],
-      explanation: '(197) ',
+      explanation: '(197) Role-Based Access Control (RBAC) is a cybersecurity strategy that restricts system access to users based on their roles within an organization, ensuring they only have the permissions needed for their job functions. This approach enhances security by minimizing the potential for unauthorized access and data breaches, and it also simplifies user management.\n\n' +
+      `Periodic access reviews are a crucial part of a robust cybersecurity strategy, involving the systematic evaluation and validation of user access rights to systems, applications, and data at regular intervals. These reviews ensure that access permissions align with users' current roles and responsibilities, reducing security risks and maintaining compliance.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Role-Based Access Control?',
+          url: `https://www.ibm.com/think/topics/rbac#:~:text=Role%2Dbased%20access%20control%20(RBAC)%20is%20a%20model%20for,can't%20touch%20firewall%20settings`
+        },
+        {
+          title: 'Periodic User Access Review',
+          url: 'https://www.zluri.com/blog/periodic-user-access-review#:~:text=The%20periodic%20user%20access%20review,permissions%20or%20inactive%20user%20accounts'
         }
       ],
       questionNumber: 197
@@ -3377,11 +3383,11 @@ const securityXQuiz = {
         'Improve parsing of data on the SIEM',
         'Create a new rule set to detect malware'
       ],
-      explanation: '',
+      explanation: '(198) Log correlation is the process of gathering and analyzing log data from different sources to identify potential security breaches. This involves aggregating logs from various systems, such as antivirus software, firewalls, and network devices, to create a comprehensive view of network activity.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is log correlation?',
+          url: 'https://cyberpedia.reasonlabs.com/EN/log%20correlation.html#:~:text=Log%20correlation%20is%20the%20process,comprehensive%20view%20of%20network%20activity'
         }
       ],
       questionNumber: 198
@@ -3397,11 +3403,16 @@ const securityXQuiz = {
         'Which of the following solutions best addresses the requirements?',
       answer: ['MDM', 'SCAP'],
       distractors: ['CASB', 'SBoM', 'SASE', 'HIDS'],
-      explanation: '199',
+      explanation: '(199) Mobile Device Management (MDM) is a cybersecurity strategy that secures, monitors, and manages mobile devices used within an organization. It helps businesses control how employees use devices like smartphones, tablets, and laptops, ensuring data protection and adherence to company policies.\n\n' +
+      'The Security Content Automation Protocol (SCAP) is a suite of open standards that enables the automation of vulnerability management, measurement, and policy compliance evaluation. It provides a standardized way to communicate information about software flaws and security configurations, allowing for automated assessment and remediation of systems. Essentially, SCAP helps organizations improve their security posture by automating tasks that would otherwise be manual and time-consuming.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Mobile Device Management, How it Works',
+          url: `https://www.fortinet.com/resources/cyberglossary/mobile-device-management#:~:text=Mobile%20device%20management%20(MDM)%20is,policies%20on%20employees'%20mobile%20devices`
+        },
+        {
+          title: 'The Power of SCAP',
+          url: 'https://www.cisecurity.org/insights/blog/secure-configurations-and-the-power-of-scap'
         }
       ],
       questionNumber: 199
@@ -3412,11 +3423,11 @@ const securityXQuiz = {
         'Which of the following should the analyst do first?',
       answer: 'Disable User1’s account',
       distractors: [`Disable User2's account`, `Disable User12's account`, `Disable User8's account`],
-      explanation: '200',
+      explanation: '(200) Disabling user accounts is a crucial cybersecurity practice to mitigate risks associated with unauthorized access and data breaches. When employees leave or accounts become inactive, disabling them prevents former employees, malicious actors, or even automated scripts from exploiting those accounts to access sensitive information or systems. This practice is especially important for accounts with high privileges or those that have remained inactive for extended periods.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Why inactive accounts are a security risk',
+          url: 'https://www.stratospherenetworks.com/blog/why-you-need-to-disable-inactive-accounts-right-now-the-cybersecurity-risks-of-ghost-accounts/'
         }
       ],
       questionNumber: 200
@@ -3425,11 +3436,11 @@ const securityXQuiz = {
       question: 'A game developer wants to reach new markets and is advised by legal counsel to include specific age-related sign-up requirements. Which of the following best describes the legal counsel\'s concerns?',
       answer: 'COPPA',
       distractors: ['GDPR', 'LGPD', 'PCI DSS'],
-      explanation: '',
+      explanation: `(201) COPPA stands for the Children's Online Privacy Protection Act. It's a U.S. federal law designed to protect the privacy of children under 13 by regulating how websites and online services collect, use, and disclose personal information. Essentially, it gives parents more control over what information is collected from their young children online.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'COPPA',
+          url: 'https://www.kiteworks.com/risk-compliance-glossary/coppa-childrens-online-privacy-protection-act/'
         }
       ],
       questionNumber: 201
@@ -3438,11 +3449,11 @@ const securityXQuiz = {
       question: 'Which of the following AI concerns is most adequately addressed by input sanitization?',
       answer: 'Prompt injection',
       distractors: ['Model inversion', 'Data poisoning', 'Non-explainable model'],
-      explanation: '',
+      explanation: `(202) Prompt injection refers to a security threat where attackers manipulate large language models (LLMs) by crafting deceptive inputs, potentially causing the LLM to bypass safety measures, reveal confidential information, or perform unauthorized actions. These attacks exploit the LLM's reliance on natural language for both instructions and data, blurring the lines between what's intended as a prompt and what's meant as data.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Prompt Injection Attack?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-a-prompt-injection-attack#:~:text=A%20prompt%20injection%20attack%20is%20a%20type%20of%20GenAI%20security,into%20ignoring%20its%20intended%20instructions.&text=%22We%20recently%20assessed%20mainstream%20large,attacks%2C%20which%20revealed%20significant%20vulnerabilities'
         }
       ],
       questionNumber: 202
@@ -3458,11 +3469,11 @@ const securityXQuiz = {
         'Disable the NTLM authentication and replace it with TLS 1.2',
         'Create a new TLS certificate using a stronger algorithm and larger key'
       ],
-      explanation: '',
+      explanation: '(203) Moving from Opportunistic TLS to Enforced TLS in cybersecurity significantly increases email security by requiring encrypted connections, preventing downgrade attacks, and ensuring sensitive data is protected during transit. While Opportunistic TLS attempts encryption when available, it can fail open to unencrypted communication, whereas Enforced TLS guarantees encryption or prevents delivery if a secure connection cannot be established.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The difference between opportunistic and enforced tls',
+          url: 'https://resend.com/docs/knowledge-base/whats-the-difference-between-opportunistic-tls-vs-enforced-tls'
         }
       ],
       questionNumber: 203
@@ -3477,11 +3488,16 @@ const securityXQuiz = {
         'Segmenting the manufacturing network with a firewall and placing the rules in monitor mode',
         'Setting up an IDS inline to monitor and detect any threats to the software'
       ],
-      explanation: '',
+      explanation: '(204) An application-aware firewall is a cybersecurity tool that analyzes network traffic based on the specific applications attempting to communicate, rather than just relying on IP addresses or port numbers. This deeper level of inspection allows for more granular control and protection against application-layer attacks. Traditional firewalls primarily focus on network layers (like IP addresses and ports), while application-aware firewalls operate at the application layer (Layer 7 of the OSI model).\n\n' +
+      `Reducing the attack surface means minimizing the number of possible points of entry through which an attacker could potentially gain unauthorized access to a system, network, or organization's data. This involves identifying and eliminating vulnerabilities that could be exploited.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is an attack surface?',
+          url: 'https://www.youtube.com/watch?v=6D-iK8_sMw0'
+        },
+        {
+          title: 'Why application awareness is essential for firewall security',
+          url: 'https://www.catonetworks.com/blog/why-application-awareness-is-essential-for-firewall-security/'
         }
       ],
       questionNumber: 204
@@ -3494,11 +3510,11 @@ const securityXQuiz = {
         'Deploy intrusion detection capabilities using a network tap',
         'Create an acceptable use policy for the use of the application'
       ],
-      explanation: '',
+      explanation: '(205) Application segmentation in cybersecurity is a strategy of dividing an application into smaller, isolated parts (segments) to enhance security and limit the impact of potential breaches. This approach reduces the attack surface by restricting access to sensitive data and resources to only those who need it.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is application Segmentation?',
+          url: 'https://www.tigera.io/learn/guides/microsegmentation/application-segmentation/#:~:text=Application%20segmentation%20traditionally%20occurred%20at,regulates%20who%20may%20access%20it'
         }
       ],
       questionNumber: 205
@@ -3507,7 +3523,13 @@ const securityXQuiz = {
       question: 'A company wants to perform threat modeling on an internally developed, business-critical application. The Chief Information Security Officer (CISO) is most concerned that the application should maintain 99.999% availability and authorized users should only be able to gain access to data they are explicitly authorized to view. Which of the following threat-modeling frameworks directly addresses the CISO’s concerns about this system?',
       answer: 'STRIDE',
       distractors: ['CAPEC', 'ATT&CK', 'TAXII'],
-      explanation: '',
+      explanation: `(206) STRIDE is a security framework developed by Microsoft that helps in identifying potential threats to a system by categorizing them into six threat types: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege. It's a mnemonic device to help security professionals systematically assess vulnerabilities and risks in a system.`,
+      references: [
+        {
+          title: 'What is the STRIDE Threat Model?',
+          url: 'https://www.practical-devsecops.com/what-is-stride-threat-model/#:~:text=TL%3BDR,)%2C%20and%20Elevation%20of%20Privilege'
+        }
+      ],
       questionNumber: 206
     },
     {
@@ -3516,11 +3538,11 @@ const securityXQuiz = {
         'Which of the following accounts should a security analyst disable to best contain the incident without impacting valid users?',
       answer: 'user-d',
       distractors: ['user-а', 'user-b', 'user-с'],
-      explanation: '',
+      explanation: '(207) Containing a cybersecurity incident involves taking immediate actions to limit the scope and impact of a security breach or attack. This includes isolating compromised systems, blocking malicious network traffic, and disabling affected accounts to prevent further damage and data loss. Effective containment is crucial for minimizing the long-term consequences of a cyber incident.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How to Beat Cyber Threats in Real Time',
+          url: 'https://zeronetworks.com/blog/data-breach-containment-guide#:~:text=Data%20breach%20containment%20refers%20to,t%20pivot%20through%20your%20environment'
         }
       ],
       questionNumber: 207
@@ -3529,11 +3551,11 @@ const securityXQuiz = {
       question: 'A security team is responding to malicious activity and needs to determine the scope of impact. The malicious activity appears to affect a certain version of an application used by the organization. Which of the following actions best enables the team to determine the scope of impact?',
       answer: 'Reviewing the asset inventory',
       distractors: ['Performing a port scan', 'Inspecting egress network traffic', 'Analyzing user behavior'],
-      explanation: '',
+      explanation: `(208) An asset inventory in cybersecurity is a comprehensive list of all hardware, software, and other digital assets within an organization's IT environment. It's a foundational element for a strong cybersecurity posture, providing visibility into the attack surface and enabling effective risk management. By identifying and tracking assets, organizations can better protect their systems and data from cyber threats.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Asset Inventory Management?',
+          url: 'https://www.balbix.com/insights/what-is-asset-inventory-management/#:~:text=Asset%20inventory%20management%20tracks%20and,operational%20efficiency%2C%20and%20maintain%20compliance'
         }
       ],
       questionNumber: 208
@@ -3546,11 +3568,11 @@ const securityXQuiz = {
         'Enforce password complexity',
         'Extend the allowed session length'
       ],
-      explanation: '',
+      explanation: `(209) It's crucial to implement automatic logout mechanisms for inactive sessions. This prevents unauthorized access to sensitive data if a user leaves their session unattended. Session timeouts should be configured for both the admin console and user interfaces, with recommended settings varying based on risk level, such as 2-5 minutes for high-risk applications and up to 30 minutes for lower-risk ones.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The risk of no session timeouts',
+          url: 'https://turingsecure.com/knowledge-base/issues/no-session-timeout/#:~:text=By%20not%20having%20a%20session,as%20identity%20theft%20or%20fraud'
         }
       ],
       questionNumber: 209
@@ -3563,11 +3585,15 @@ const securityXQuiz = {
         'Configuring a span port on the perimeter firewall to ingest logs',
         'Enabling client device logging and system event auditing'
       ],
-      explanation: '',
+      explanation: '(210) A proxy server and segmented VLANs are both security measures that can be used to protect a network, and they can be used together to enhance security. VLANs provide network segmentation, isolating traffic and limiting the impact of a breach, while proxy servers act as intermediaries, controlling access to the internet and potentially filtering malicious traffic.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'VLAN Segmentation and Security',
+          url: 'https://www.checkpoint.com/cyber-hub/network-security/what-is-network-segmentation/vlan-segmentation-and-security/'
+        },
+        {
+          title: 'The role of proxy servers',
+          url: 'https://packetstream.io/the-role-of-proxy-servers-in-cybersecurity/'
         }
       ],
       questionNumber: 210
@@ -3580,11 +3606,11 @@ const securityXQuiz = {
         'The company lacks dynamic and interactive application security testing standards',
         'The implemented software inefficiently manages compute and memory resources'
       ],
-      explanation: '',
+      explanation: '(211) In the software development lifecycle, functional and non-functional requirements are both crucial for building secure and effective systems. Functional requirements define what the system should do, while non-functional requirements define how well it should do it, including security aspects.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Functional and Non-Functional Requirements',
+          url: 'https://byjus.com/gate/difference-between-functional-and-non-functional-requirments/#:~:text=Functional%20requirements%20allow%20you%20to,the%20performance%20of%20the%20system.&text=System%2C%20Integration%2C%20End%20to%20End,etc%20are%20non%2Dfunctional%20testing'
         }
       ],
       questionNumber: 211
@@ -3601,11 +3627,16 @@ const securityXQuiz = {
         'Create a firewall rule to only allow traffic from the subnet to the internet to fully qualified names that are not identified as malicious by the firewall vendor',
         'Configure a proxy policy that blocks only lists of known-bad fully qualified domain names'
       ],
-      explanation: '',
+      explanation: '(212) Configuring a firewall involves several key steps: securing the firewall itself, defining network zones and IP addresses, configuring access control lists (ACLs), enabling necessary services and logging, and finally, testing and monitoring the configuration.\n\n' +
+      'Configuring a proxy firewall in cybersecurity involves setting up a system that acts as an intermediary between users and the internet, enhancing security by filtering traffic, masking IP addresses, and potentially improving network performance. This setup can involve both explicit proxy configurations, where users manually configure their systems to use a proxy, and transparent proxy configurations, where the proxy operates invisibly in the background.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Firewall Configuration?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-firewall-configuration'
+        },
+        {
+          title: 'What is a Proxy Firewall and How does it work?',
+          url: 'https://www.zenarmor.com/docs/network-security-tutorials/what-is-proxy-firewall#:~:text=Go%20to%20the%20Control%20Panel,for%20firewalls%20and%20other%20services'
         }
       ],
       questionNumber: 212
@@ -3620,11 +3651,12 @@ const securityXQuiz = {
         'Restarting European region physical access control systems',
         'Resyncing single sign-on application with connected security appliances'
       ],
-      explanation: '',
+      explanation: '(213) Synchronizing regions in a federation in the context of cybersecurity is a crucial aspect of ensuring a strong and unified defense against cyber threats across multiple systems, organizations, or geographical locations.\n\n' +
+      `Federated security involves sharing security measures and data across multiple systems or organizations, allowing for a common authentication method for access to different domains or resources. This approach allows users to access resources securely while maintaining each domain's individual control and policies.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Federation Identity Strategies',
+          url: 'https://www.cloudoptimo.com/blog/iam-sso-and-federation-identity-strategies-for-the-cloud/'
         }
       ],
       questionNumber: 213
@@ -3637,11 +3669,11 @@ const securityXQuiz = {
         'Rotating API access and authorization keys every two months',
         'Implementing application load balancing and cross-region availability'
       ],
-      explanation: '',
+      explanation: '(214) a WAF policy provides a crucial layer of security, acting as an intermediary between users and the web application. It analyzes HTTP/S requests at the application layer, which is where traditional firewalls and intrusion prevention systems often lack sufficient protection.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a WAF?',
+          url: 'https://www.cisco.com/site/us/en/learn/topics/security/what-is-web-application-firewall-waf.html#:~:text=A%20web%20application%20firewall%20or,filtering%2C%20and%20blocking%20data%20packets'
         }
       ],
       questionNumber: 214
@@ -3654,11 +3686,11 @@ const securityXQuiz = {
         'Runtime application self-protection',
         'Web application vulnerability scanning'
       ],
-      explanation: '',
+      explanation: `(215) Static Application Security Testing (SAST) is a cybersecurity method that analyzes an application's source code to identify potential security vulnerabilities before the application is deployed. It's a "white box" testing approach, meaning it examines the code itself rather than the running application. SAST helps developers find and fix security flaws early in the development lifecycle, reducing the risk and cost associated with later remediation.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is SAST and How Does It Work?',
+          url: 'https://www.blackduck.com/glossary/what-is-sast.html#:~:text=Definition,known%20as%20white%20box%20testing'
         }
       ],
       questionNumber: 215
@@ -3671,11 +3703,11 @@ const securityXQuiz = {
         'Deploying a text message based on MFA',
         'Enabling OTP via email'
       ],
-      explanation: '',
+      explanation: `(216) "Prompt Driven MFA" most likely refers to the type of multi-factor authentication (MFA) that uses push notifications or prompts to the user's registered device as a verification factor. This means, after entering their username and password, the user receives a notification on their smartphone or other device asking them to approve or deny the login attempt.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is MFA?',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/multifactor-authentication-mfa/'
         }
       ],
       questionNumber: 216
@@ -3691,11 +3723,11 @@ const securityXQuiz = {
         'Administrator access from an alternate location is blocked by company policy',
         'Several users have not configured their mobile devices to receive OTP codes'
       ],
-      explanation: '',
+      explanation: `(217) Network geolocation misidentification poses a significant risk to cybersecurity by enabling malicious actors to bypass security measures, hide their true location, and potentially conduct fraudulent activities. This occurs when systems incorrectly identify a device's geographic location, often due to the use of VPNs, proxies, or inaccurate geolocation databases.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Geolocation for Fraud Prevention',
+          url: 'https://www.locationscloud.com/geolocation-cybersecurity-fraud-prevention/?srsltid=AfmBOormy76P-z67lB9hjfOuapJbR9pJMfWG4mMhEHEHz38ptXdKPcVh'
         }
       ],
       questionNumber: 217
@@ -3704,11 +3736,11 @@ const securityXQuiz = {
       question: 'An organization is looking for gaps in its detection capabilities based on the APTs that may target the industry. Which of the following should the security analyst use to perform threat modeling?',
       answer: 'АТТ&СК',
       distractors: ['ОWASP', 'САРЕС', 'STRIDE'],
-      explanation: '',
+      explanation: '(218) MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) is a globally-recognized knowledge base and framework used in cybersecurity to understand and combat cyber adversary behavior. It catalogs the tactics and techniques used by attackers during cyberattacks, providing a structured way for defenders to identify, analyze, and respond to threats. Essentially, ATT&CK helps security professionals understand how attackers operate, allowing them to build more effective defenses and improve their overall security posture.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is the MITRE ATT&CK?',
+          url: 'https://www.exabeam.com/explainers/mitre-attck/what-is-mitre-attck-an-explainer/#:~:text=ATT%26CK%20stands%20for%20adversarial%20tactics,an%20attack%20is%20in%20progress'
         }
       ],
       questionNumber: 218
@@ -3723,11 +3755,11 @@ const securityXQuiz = {
         'Reroute all messages with unusual security warning notices to the IT administrator',
         'Block vendor com for repeated attempts to send suspicious messages'
       ],
-      explanation: '',
+      explanation: `(219) Email quarantine is a security feature that isolates potentially dangerous or unwanted emails, preventing them from reaching users' inboxes. These emails are typically flagged as spam, malware, or phishing attempts and are held in a secure, separate space for review by administrators or, in some cases, users, according to Abnormal AI and Wayne State University. This helps protect users from falling victim to cyber threats and minimizes the risk of security breaches.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is quarantined email?',
+          url: 'https://www.paubox.com/blog/what-is-quarantined-email'
         }
       ],
       questionNumber: 219
@@ -3736,11 +3768,11 @@ const securityXQuiz = {
       question: 'A systems administrator needs to identify new attacks that could be carried out against the environment. The administrator plans to proactively seek out and observe new attacks. Which of the following is the best way to accomplish this goal?',
       answer: 'Deploying a honeypot',
       distractors: ['Configuring an IPS', 'Implementing sandboxing', 'Scanning for IoCs'],
-      explanation: '',
+      explanation: '(220) Deploying a honeypot is a strategic move to lure, detect, and analyze cyberattacks. Honeypots are essentially decoy systems designed to attract attackers and gain valuable intelligence on their tactics, techniques, and procedures (TTPs) without risking your real systems.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are Honeypots?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/what-is-honeypot#:~:text=In%20cybersecurity%20honeypots%20are%20decoy,organization%20actually%20uses%20for%20production'
         }
       ],
       questionNumber: 220
@@ -3749,11 +3781,11 @@ const securityXQuiz = {
       question: 'A company experienced a data breach, resulting in the disclosure of extremely sensitive data regarding a merger. As a regulated entity, the company must comply with reporting and disclosure requirements. The company is concerned about its public image and shareholder values. Which of the following best supports the organization in addressing its concerns?',
       answer: 'Crisis management plan',
       distractors: ['Data subject access request', 'Business impact analysis', 'Supply chain management program'],
-      explanation: '',
+      explanation: `(221) A crisis management plan prepares your organization for a disaster or unforeseen event. With a plan in place, you can lessen the impact of the crisis on your employees and your business operations. When the team is properly trained for the unexpected, there's less chance of long-term damage.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Understanding Crisis Management',
+          url: 'https://www.shadowhq.io/crisis-management-vs-cyber-crisis-management/'
         }
       ],
       questionNumber: 221
@@ -3770,11 +3802,16 @@ const securityXQuiz = {
         'Requiring data sensitivity labeling for all files shared with Company В',
         `Forcing a password reset requiring more stringent passwords for users on Company B's network`
       ],
-      explanation: '',
+      explanation: '(222) Documenting third-party involves creating and maintaining detailed records of how third-party vendors and service providers are assessed and managed for security risks. This includes documenting vendor inventory, risk assessments, security questionnaires, evidence requests, and ongoing monitoring efforts. Effective documentation helps organizations identify, assess, and mitigate potential cyber risks associated with third-party relationships.\n\n' +
+      `A security architecture review (SAR) is a comprehensive evaluation of an organization's cybersecurity infrastructure to identify vulnerabilities and ensure it aligns with best practices and business objectives. This review examines the design, implementation, and operation of systems, networks, and applications, looking for weaknesses that could be exploited by cyberattacks.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Security Architecture, What is it?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-security-architecture'
+        },
+        {
+          title: 'How to Manage Third-Party Cybersecurity Risks',
+          url: 'https://business.bofa.com/en-us/content/third-party-cyber-risk-management.html'
         }
       ],
       questionNumber: 222
@@ -3791,11 +3828,16 @@ const securityXQuiz = {
         'Requiring professional incident response certifications for each new team member',
         'Publishing the incident response policy and enforcing it as part of the security awareness program'
       ],
-      explanation: '223',
+      explanation: '(223) Cybersecurity playbooks are detailed, step-by-step guides that outline procedures for handling cybersecurity incidents. They are crucial for a consistent and efficient response to security threats, minimizing damage and ensuring a rapid recovery. Building these playbooks involves defining objectives, assembling a team, identifying potential incidents, developing response procedures, creating communication plans, and establishing documentation and reporting requirements.\n\n' +
+      `Tabletop exercises are a discussion-based simulation used to assess an organization's readiness to respond to potential cyber incidents. It involves stakeholders collaboratively walking through hypothetical scenarios to identify weaknesses in their incident response plans, communication protocols, and overall preparedness.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Understanding Tabletop Exercises',
+          url: 'https://www.youtube.com/watch?v=WUPTZlrTPQE&t=113'
+        },
+        {
+          title: 'Understanding cybersecurity playbooks',
+          url: 'https://medium.com/@trout.software/understanding-playbooks-in-cyber-security-2afc93ff8029#:~:text=Cybersecurity%20playbooks%20are%20not%20meant,when%20a%20real%20incident%20occurs'
         }
       ],
       questionNumber: 223
@@ -3810,11 +3852,11 @@ const securityXQuiz = {
         'Purging code from public view',
         'Scanning the application with SAST'
       ],
-      explanation: '',
+      explanation: '(224) Revoking a secret refers to the process of invalidating or deactivating a credential that grants access to a system or resource. This could be a password, API key, token, or any other type of sensitive information used for authentication or authorization.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Secrets Management?',
+          url: 'https://www.beyondtrust.com/resources/glossary/secrets-management#:~:text=Secrets%20management%20refers%20to%20the,parts%20of%20the%20IT%20ecosystem.'
         }
       ],
       questionNumber: 224
@@ -3836,11 +3878,16 @@ const securityXQuiz = {
         'Implementing a version control system',
         'Implementing a CMDB platform'
       ],
-      explanation: '225',
+      explanation: '(225) Data Loss Prevention (DLP) is a strategy and set of tools designed to detect, prevent, and manage the unauthorized access, use, or transmission of sensitive data. DLP solutions work to safeguard critical information from falling into the wrong hands, whether through malicious attacks, accidental exposure, or insider threats.\n\n' +
+      'Directory-based Group Policies provide a powerful means of managing and securing computer and user configurations within an Active Directory environment. By centrally managing these settings, organizations can enforce security policies, automate tasks, and improve overall operational efficiency.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is DLP? Yea, you know me!',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-data-loss-prevention-dlp'
+        },
+        {
+          title: 'What is Group Policy in Active Directory?',
+          url: 'https://www.ninjaone.com/blog/what-is-group-policy-in-active-directory/'
         }
       ],
       questionNumber: 225
@@ -3853,11 +3900,11 @@ const securityXQuiz = {
         'Configure event-based triggers to export the logs at a threshold',
         'Configure a Python script to move the logs into a SQL database'
       ],
-      explanation: '',
+      explanation: `(226) SIEM (Security Information and Event Management) is a cybersecurity solution that aggregates and analyzes security data from various sources to provide a centralized view of an organization's security posture. It helps in detecting, analyzing, and responding to security threats in real-time by correlating events and identifying potential incidents.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is log aggregation?',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/next-gen-siem/log-aggregation/'
         }
       ],
       questionNumber: 226
@@ -3870,11 +3917,11 @@ const securityXQuiz = {
         'Rolling the cryptographic keys used for hardware security modules',
         'Using code signing to verify the source of OS updates'
       ],
-      explanation: '',
+      explanation: '(227) Allow lists define which network traffic is permitted, enhancing security by restricting access to only necessary ports and protocols. This contrasts with denial lists, which block specific traffic. Implementing allow lists involves identifying essential network services and configuring firewalls to permit only traffic related to those services, minimizing the attack surface and improving overall security posture.',
       references: [
         {
-          title: '',
-          url: ''
+          title: '6 Network Security Protocols',
+          url: 'https://www.catonetworks.com/network-security/network-security-protocols/'
         }
       ],
       questionNumber: 227
@@ -3887,11 +3934,21 @@ const securityXQuiz = {
         'Finding hardened container images and enforcing them as the baseline for new deployments',
         'Running security assessments regularly and checking for the security baseline on containers already in production'
       ],
-      explanation: '',
+      explanation: '(228) Creating a robust pipeline for checking container cybersecurity involves implementing security measures throughout the various stages of the container lifecycle, from build to deployment and runtime. This is commonly referred to as integrating security into the Continuous Integration/Continuous Deployment (CI/CD) pipeline, often following a "shift-left" security approach.\n\n' +
+      'Pipeline security gates, particularly in the context of CI/CD (Continuous Integration/Continuous Delivery) pipelines, are critical for enhancing cybersecurity. These gates act as checkpoints within the automated software development and deployment process, enforcing security policies and mitigating risks at various stages. By integrating security checks into the pipeline, organizations can identify and address vulnerabilities earlier, improving overall security posture and reducing the likelihood of breaches.\n\n' +
+      `Validating baseline security controls involves systematically testing and confirming that security measures are functioning as intended and providing adequate protection against cyber threats. This process ensures that an organization's security infrastructure is resilient and capable of mitigating risks.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Security Control Validation?',
+          url: 'https://www.picussecurity.com/resource/glossary/what-is-security-control-validation'
+        },
+        {
+          title: 'CI CD Pipeline Security Best Practices',
+          url: 'https://cycode.com/blog/ci-cd-pipeline-security-best-practices/'
+        },
+        {
+          title: 'What is a container pipeline?',
+          url: 'https://blogs.bmc.com/devops-container-pipeline/?print-posts=pdf#:~:text=Container%20Pipelines%20are%20software%20delivery,speeding%20up%20the%20development%20process.'
         }
       ],
       questionNumber: 228
@@ -3904,7 +3961,7 @@ const securityXQuiz = {
         'Protecting and regularly rotating API secret keys requires a significant time commitment',
         'Corporate devices cannot receive certificates when not connected to on-premises devices'
       ],
-      explanation: '',
+      explanation: '(229) ',
       references: [
         {
           title: '',
