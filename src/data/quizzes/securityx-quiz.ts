@@ -3856,7 +3856,7 @@ const securityXQuiz = {
       references: [
         {
           title: 'What is Secrets Management?',
-          url: 'https://www.beyondtrust.com/resources/glossary/secrets-management#:~:text=Secrets%20management%20refers%20to%20the,parts%20of%20the%20IT%20ecosystem.'
+          url: 'https://www.beyondtrust.com/resources/glossary/secrets-management#:~:text=Secrets%20management%20refers%20to%20the,parts%20of%20the%20IT%20ecosystem'
         }
       ],
       questionNumber: 224
@@ -3948,7 +3948,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is a container pipeline?',
-          url: 'https://blogs.bmc.com/devops-container-pipeline/?print-posts=pdf#:~:text=Container%20Pipelines%20are%20software%20delivery,speeding%20up%20the%20development%20process.'
+          url: 'https://blogs.bmc.com/devops-container-pipeline/?print-posts=pdf#:~:text=Container%20Pipelines%20are%20software%20delivery,speeding%20up%20the%20development%20process'
         }
       ],
       questionNumber: 228
@@ -3961,11 +3961,11 @@ const securityXQuiz = {
         'Protecting and regularly rotating API secret keys requires a significant time commitment',
         'Corporate devices cannot receive certificates when not connected to on-premises devices'
       ],
-      explanation: '(229) ',
+      explanation: '(229) To block unapproved applications and services for cybersecurity, you can utilize a combination of tools and strategies, including firewalls, application control software, and access control policies. These methods help prevent unauthorized software from being installed or executed, enhancing overall security and productivity.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Application Control',
+          url: 'https://www.beyondtrust.com/resources/glossary/application-control'
         }
       ],
       questionNumber: 229
@@ -3978,11 +3978,16 @@ const securityXQuiz = {
         'Transitioning internal services to use DNS security',
         'Installing new rules for the IDS to detect impersonation attacks'
       ],
-      explanation: '',
+      explanation: '(230) Securing a web server involves a combination of strategies focused on preventing unauthorized access and protecting data. Key practices include using strong passwords, enabling HTTPS with SSL/TLS, keeping software updated, configuring firewalls, monitoring logs, and implementing web application firewalls (WAFs).\n\n' +
+      'X.509 certificates are digital documents used to verify the identity of entities (users, devices, servers, etc.) online, playing a crucial role in cybersecurity by enabling secure communication and authentication. They are fundamental to protocols like TLS/SSL for secure web browsing and are also used in email encryption (S/MIME), VPNs, and code signing.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is an X509 Certificate?',
+          url: 'https://www.encryptionconsulting.com/what-is-an-x-509-certificate/'
+        },
+        {
+          title: 'What is a secure web server?',
+          url: 'https://www.ninjaone.com/it-hub/endpoint-security/secure-web-server/'
         }
       ],
       questionNumber: 230
@@ -3995,11 +4000,11 @@ const securityXQuiz = {
         'The organization has been subject to legal proceedings in countries where it has a presence',
         'The organization has suffered brand reputation damage from incorrect media coverage'
       ],
-      explanation: '',
+      explanation: '(231) Regulatory enforcement in cybersecurity involves government agencies and industry-specific bodies issuing and enforcing rules to protect data and systems from cyber threats. These regulations mandate specific cybersecurity practices, and non-compliance can lead to penalties, fines, or legal action. Key agencies include the Federal Trade Commission (FTC) and the Cybersecurity and Infrastructure Security Agency (CISA).',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Cyber Security Regulations',
+          url: 'https://www.bitsight.com/glossary/cyber-security-regulations#:~:text=Confidentiality%3A%20Ensuring%20that%20information%20is,to%20authorized%20users%20when%20needed'
         }
       ],
       questionNumber: 231
@@ -4013,11 +4018,12 @@ const securityXQuiz = {
         'The HSM is vulnerable to common exploits and a firmware upgrade is needed',
         'The HSM does not support sealing storage'
       ],
-      explanation: '',
+      explanation: '(232) Original Equipment Manufacturers (OEMs) play a crucial role in cybersecurity by integrating Trusted Platform Modules (TPMs) into their devices and systems.\n\n' +
+      'A TPM is a specialized chip, either integrated into the CPU or as a separate component on the motherboard, designed to enhance security through hardware-based cryptographic operations. TPMs securely store sensitive information like passwords, certificates, and encryption keys, providing a hardware root of trust.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Trusted Platform Module?',
+          url: 'https://trustedcomputinggroup.org/about/what-is-a-trusted-platform-module-tpm/'
         }
       ],
       questionNumber: 232
@@ -4028,11 +4034,11 @@ const securityXQuiz = {
         'Which of the following hosts should a security analyst patch first once a patch is available?',
       answer: '4',
       distractors: ['1', '2', '3', '5', '6'],
-      explanation: '',
+      explanation: '(233) Critical servers to patch for cybersecurity include those running operating systems like Windows Server, Linux distributions, and macOS, as well as those hosting essential applications like web servers (Apache, IIS), database servers (SQL Server, MySQL), and virtualization platforms (VMware, Hyper-V). Additionally, network infrastructure devices such as firewalls, routers, and switches, along with firmware for these devices, should be prioritized.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Server Patching?',
+          url: 'https://www.ninjaone.com/blog/what-is-server-patching-why-its-important/'
         }
       ],
       questionNumber: 233
@@ -4045,11 +4051,16 @@ const securityXQuiz = {
         'Fragility to DDoS and other availability attacks',
         'Non-conformance to accepted manufacturing standards'
       ],
-      explanation: '',
+      explanation: '(234) Physical implants, like those used in medical devices or even computer hardware, introduce unique cybersecurity challenges due to their physical nature and potential for remote access and manipulation. These implants, while offering potential benefits, can be vulnerable to attacks that compromise patient safety, data privacy, or system functionality.\n\n' +
+      'Tampering refers to the unauthorized modification, alteration, or interference with systems, devices, processes, or data. This can be done with malicious intent.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Data Tampering Protection',
+          url: 'https://www.sealpath.com/blog/data-tampering-protection-business/'
+        },
+        {
+          title: 'Implants as an infection method',
+          url: 'https://blog.barracuda.com/2023/09/14/malware-101-implants'
         }
       ],
       questionNumber: 234
@@ -4062,11 +4073,11 @@ const securityXQuiz = {
         'Develop a query that filters out all matching domain names',
         'Implement a dashboard on the SIEM that shows the percentage of traffic by domain'
       ],
-      explanation: '',
+      explanation: '(235) Log parsing in cybersecurity is the process of transforming raw, unstructured log data into a structured format that can be analyzed for security threats and anomalies. This structured data helps security teams quickly identify and respond to potential breaches, troubleshoot issues, and maintain a strong security posture.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is log parsing?',
+          url: `https://www.dynatrace.com/knowledge-base/log-parsing/#:~:text=Log%20parsing%20is%20a%20process,an%20application's%20behavior%20and%20performance`
         }
       ],
       questionNumber: 235
@@ -4081,11 +4092,11 @@ const securityXQuiz = {
         'Enabling alerting on all suspicious administrator behavior',
         'Utilizing allow lists on the WAF for all users using GET methods'
       ],
-      explanation: '',
+      explanation: '(236) Adjusting SIEM (Security Information and Event Management) notifications is a crucial process in cybersecurity for optimizing threat detection and minimizing alert fatigue. It involves fine-tuning alert rules to reduce false positives and ensure that security teams focus on genuine threats. This process helps organizations streamline incident response, improve security posture, and optimize resource allocation.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are SIEM Alerts',
+          url: 'https://www.microsoft.com/en-us/security/business/security-101/what-is-siem'
         }
       ],
       questionNumber: 236
@@ -4099,7 +4110,7 @@ const securityXQuiz = {
       explanation: `(237) KRBTGT is a built-in account specifically used by the Kerberos authentication service. It's essentially the "Key Distribution Center" service account, responsible for encrypting and signing all Kerberos tickets within the domain. Essentially, it validates that a user's authentication request is legitimate, and it's a key target for Golden Ticket attacks.`,
       references: [
         {
-          title: '',
+          title: 'KRBTG Password resets',
           url: 'https://infrastructureinsider.co.uk/active-directory-you-need-to-know-about-krbtgt-password-resets/#:~:text=First%20off%2C%20KRBTGT%20stands%20for,takes%20place%20via%20%E2%80%9Ctickets%E2%80%9D'
         }
       ],
@@ -4117,11 +4128,16 @@ const securityXQuiz = {
         'Implementing a CSPM platform to monitor updates being pushed to applications',
         'Deploying an EDR solution to monitor and respond to software installation attempts'
       ],
-      explanation: '238',
+      explanation: '(238) Application control, when coupled with blocked hashes, is a cybersecurity technique that enhances security by regulating which applications can run on a system and by blocking known malicious or untrusted applications based on their cryptographic hash values. This approach helps prevent the execution of unauthorized or potentially harmful software, including zero-day exploits, and strengthens overall system security.\n\n' +
+      'Enterprise-trusted root certificates are crucial for establishing a secure and trusted environment within an organization. They act as the foundation for verifying the authenticity of other certificates, enabling secure communication, and mitigating various cyber security risks. By deploying these certificates to devices and users, organizations can ensure that only trusted entities are allowed to access network resources and participate in secure communication.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Application Control?',
+          url: 'https://www.beyondtrust.com/resources/glossary/application-control#:~:text=Application%20control%20is%20a%20cybersecurity,on%20a%20computer%20or%20network'
+        },
+        {
+          title: 'What are Root Certificates, and Why Do They Matter?',
+          url: 'https://www.ssl.com/article/what-are-root-certificates-and-why-do-they-matter/#:~:text=Root%20certificates%20are%20sometimes%20called,back%20to%20a%20trusted%20root'
         }
       ],
       questionNumber: 238
@@ -4130,11 +4146,11 @@ const securityXQuiz = {
       question: 'After an organization met with its ISAC, the organization decided to test the resiliency of its security controls against a small number of advanced threat actors. Which of the following will enable the security administrator to accomplish this task?',
       answer: 'Adversary emulation',
       distractors: ['Reliability factors', 'Deployment of a honeypot', 'Internal reconnaissance'],
-      explanation: '',
+      explanation: `(239) Adversary emulation in cybersecurity is the practice of simulating real-world cyberattacks to test and improve an organization's defenses. It involves mimicking the tactics, techniques, and procedures (TTPs) of specific threat actors to identify vulnerabilities and assess the effectiveness of security controls. Unlike penetration testing, which focuses on finding vulnerabilities, adversary emulation focuses on replicating the behavior of known adversaries to provide a more realistic assessment of an organization's security posture.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Adversary Emulation?',
+          url: 'https://www.picussecurity.com/resource/glossary/what-is-adversary-emulation#:~:text=Adversary%20emulation%20identifies%20gaps%20in,undetected%2C%20thus%20enabling%20timely%20remediation'
         }
       ],
       questionNumber: 239
@@ -4149,11 +4165,11 @@ const securityXQuiz = {
         'To replicate the attack in a secure environment',
         'To debug the binary to analyze low-level instructions'
       ],
-      explanation: '',
+      explanation: '(240) Indicators of compromise (IoCs) are information about a specific security breach that can help security teams determine if an attack has taken place. This data can include details about the attack, such as the type of malware used, the IP addresses involved, and other technical details.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are indicators of compromise?',
+          url: 'https://www.cloudflare.com/learning/security/what-are-indicators-of-compromise/#:~:text=Indicators%20of%20compromise%20(IoCs)%20are,involved%2C%20and%20other%20technical%20details'
         }
       ],
       questionNumber: 240
@@ -4168,11 +4184,11 @@ const securityXQuiz = {
         'Implementing DNS masking on internal servers',
         'Permitting only clients from internal networks to query DNS'
       ],
-      explanation: '',
+      explanation: `(241) DNS zone transfers, while essential for redundancy and synchronization between DNS servers, can pose significant security risks if not properly configured. An attacker can exploit insecure zone transfers to gain a comprehensive map of an organization's network infrastructure, including potentially sensitive information about servers, subdomains, and other internal resources. This information can then be used to launch targeted attacks, such as phishing campaigns, malware deployment, or even DDoS attacks.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are DNS Zone Transfers?',
+          url: 'https://www.cbtnuggets.com/blog/technology/networking/what-are-dns-zone-transfers'
         }
       ],
       questionNumber: 241
@@ -4189,11 +4205,11 @@ const securityXQuiz = {
         'Scheduling regular penetration tests',
         'Deploying fake ransomware'
       ],
-      explanation: '242',
+      explanation: '(242) phishing is a type of social engineering attack where cybercriminals impersonate trusted entities to trick individuals into revealing sensitive information like passwords, credit card details, or other personal data. They often use deceptive emails, text messages, or malicious websites to lure victims into divulging information or clicking on malicious links that can install malware.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a phishing campaign?',
+          url: 'https://www.barracuda.com/support/glossary/phishing-campaign'
         }
       ],
       questionNumber: 242
