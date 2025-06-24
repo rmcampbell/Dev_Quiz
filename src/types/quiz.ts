@@ -14,7 +14,12 @@ export interface Question {
   distractors: string[];
   explanation: string;
   questionNumber?: number | undefined;
-  link?: string;
+  references?: Reference[] | undefined;
+}
+
+export interface Reference {
+  title: string;
+  url: string;
 }
 
 export interface QuizQuestion {
@@ -24,7 +29,7 @@ export interface QuizQuestion {
   correct: boolean;
   correctAnswer?: string | string[];
   displayExplanation: string;
-  showReference: string;
+  references?: Reference[] | undefined;
   nextQuestion: MouseEventHandler; // Used as showModal in QuizTemplate.tsx
   show: boolean;
 }
@@ -54,7 +59,7 @@ export interface QuizState {
   correct: boolean;
   message: string;
   displayExplanation: string;
-  showReference: string;
+  references?: Reference[] | undefined;
   choicesArr: string[][];
   selectedCategory: string;
   filteredQuestions: Question[];
