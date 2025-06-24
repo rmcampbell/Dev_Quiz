@@ -71,6 +71,48 @@ const acronyms: Acronym[] = [
     definition: 'Adds an extra layer of security to online accounts by requiring two separate verification methods, typically a password and a code sent to a mobile device.  This makes it significantly harder for unauthorized users to gain access, even if they have stolen or guessed a password. MFA essentially creates a barrier that requires more than just a password to be bypassed.',
     additionalAcronyms: [''],
     notes: ''
+  },
+  {
+    acronym: 'SWG',
+    actual: 'Secure Web Gateway',
+    definition: `a network security solution that monitors and controls user access to the internet, protecting against web-based threats and enforcing security policies. It acts as an intermediary between users and the internet, filtering web traffic to ensure it meets the organization's security requirements.`,
+    additionalAcronyms: [''],
+    notes: ''
+  },
+  {
+    acronym: 'ZTA',
+    actual: 'Zero Trust Architecture',
+    definition: 'A cybersecurity approach that assumes no user or device, regardless of location, can be trusted by default and requires continuous verification and authorization for access to resources.',
+    additionalAcronyms: [''],
+    notes: ''
+  },
+  {
+    acronym: 'YARA',
+    actual: 'Yet Another Ridiculous Acronym',
+    definition: 'an open-source tool used in cybersecurity for creating and applying rules to detect malware and other malicious files based on textual and binary patterns.  These rules, known as YARA rules, allow security analysts to identify and classify threats, enabling them to respond more effectively to cyberattacks.',
+    additionalAcronyms: [''],
+    notes: ''
+  },
+  {
+    acronym: 'TOC/TOU',
+    actual: 'Time-of-check/Time-of-Use',
+    definition: `a class of software bugs caused by a race condition involving the checking of the state of a part of a system (such as a security credential) and the use of the results of that check. also known as TOCTOU or TOCTTOU) refers to a type of race condition vulnerability. It occurs when a system checks the state of a resource (like a file or socket) and then uses that state, but the resource's state changes between the check and its use. This change can cause the system to behave incorrectly or create a security vulnerability.`,
+    additionalAcronyms: [''],
+    notes: ''
+  },
+  {
+    acronym: 'SIEM',
+    actual: 'Security Information and Event Management',
+    definition: 'Refers to the process of collecting, storing, and analyzing log data from various sources within an IT environment to gain a comprehensive understanding of security events and activities. SIM is a core component of SIEM (Security Information and Event Management), which also includes SEM (Security Event Management) for real-time monitoring and analysis of security events.',
+    additionalAcronyms: [''],
+    notes: ''
+  },
+  {
+    acronym: 'SASE',
+    actual: 'Secure Access Service Edge',
+    definition: 'A cloud-based network architecture that combines wide area networking (WAN) capabilities with security services, like secure web gateways (SWG), cloud access security brokers (CASB), and zero-trust network access (ZTNA), to provide secure and optimized access to applications and data, regardless of user or resource location.',
+    additionalAcronyms: [''],
+    notes: ''
   }
 ];
 
@@ -89,11 +131,31 @@ const securityXQuiz = {
         'The agent was not running on the laptop, which triggered a false positive',
         'The OS version was higher than 11, and the MDM agent was running, triggering a true negative'
       ],
-      explanation: '(1) Many organizations require a Mobile Device Management (MDM) agent or similar endpoint security software to be installed on any device connecting to their network for security and compliance. A personally owned laptop is unlikely to have this corporate-mandated agent pre-installed. If the network access control (NAC) or endpoint detection system identifies the absence of the required MDM agent and flags the device as non-compliant, this is a true positive (a correct detection of a non-compliant condition).',
+      explanation: '(1) Many organizations require a Mobile Device Management (MDM) agent or similar endpoint security software to be installed on any device connecting to their network for security and compliance. A personally owned laptop is unlikely to have this corporate-mandated agent pre-installed. If the network access control (NAC) or endpoint detection system identifies the absence of the required MDM agent and flags the device as non-compliant, this is a true positive (a correct detection of a non-compliant condition).\n\n' +
+      'A false negative occurs when a security system fails to detect a genuine threat, incorrectly classifying it as harmless. This means a malicious activity, vulnerability, or attack is not identified by the security tool, allowing it to operate undetected and potentially cause significant damage.\n\n' +
+      'A false positive occurs when a security system incorrectly identifies legitimate activity or a safe file as a threat. This can lead to wasted time, alert fatigue, and even the overlooking of actual threats.\n\n' +
+      `A true positive occurs when a security system correcty identifies a malicious activity or threat. This means the system's detection mechanisms accurately flag a real attack or vulnerability, and the system responds appropriately, such as by triggering an alert, blocking an intrusion, or initiating other security measures.\n\n` +
+      `A true negative (TN) occurs when a security system correctly identifies and classifies a situation as non-threatening or benign, and there is indeed no actual threat present. Essentially, it's a correct "no threat" determination by the system.`,
       references: [
         {
           title: 'Mobile Device Management Overview',
           url: 'https://learn.microsoft.com/en-us/windows/client-management/mdm-overview'
+        },
+        {
+          title: 'Understanding False Negatives',
+          url: 'https://www.checkpoint.com/cyber-hub/cyber-security/understanding-false-negatives-in-cybersecurity/#:~:text=In%20cybersecurity%2C%20a%20false%20negative,instead%20of%20a%20positive%20one'
+        },
+        {
+          title: 'Understanding False Positives',
+          url: 'https://www.checkpoint.com/cyber-hub/cyber-security/understanding-false-positives-in-cybersecurity/#:~:text=False%20positives%20in%20cybersecurity%20are,categorizing%20an%20email%20as%20unsafe'
+        },
+        {
+          title: 'Catching True Positives',
+          url: 'https://securityboulevard.com/2022/01/catching-true-positives-in-network-security/'
+        },
+        {
+          title: 'What is a True Negative',
+          url: 'https://www.cycognito.com/glossary/true-negative.php'
         }
       ],
       questionNumber: 1
@@ -108,11 +170,36 @@ const securityXQuiz = {
         'Utilize mandatory vacations for all developers',
         'Review all access to production systems on a quarterly basis'
       ],
-      explanation: '(2) Separation of duties, also known as segregation of duties, is a principle that ensures no single individual has complete control over a process or system. It involves dividing key tasks and responsibilities among multiple people to reduce the risk of fraud, error, and unauthorized access. This principle is crucial in various fields like finance, IT, and cybersecurity.',
+      explanation: '(2) Separation of duties, also known as segregation of duties, is a principle that ensures no single individual has complete control over a process or system. It involves dividing key tasks and responsibilities among multiple people to reduce the risk of fraud, error, and unauthorized access. This principle is crucial in various fields like finance, IT, and cybersecurity.\n\n' +
+      'The principle of least privilege in cybersecurity dictates that users, applications, and processes should only be granted the minimum necessary access to resources needed to perform their tasks. This limits the potential damage from security breaches and errors by restricting access to only what is essential.\n\n' +
+      `Security awareness training is crucial for bolstering an organization's cybersecurity posture by educating employees on cyber threats and best practices. It equips individuals with the knowledge to identify and mitigate risks, reducing the likelihood of successful attacks. This training is essential for all levels of employees and should be tailored to the organization's specific needs and policies.\n\n` +
+      'Job rotations involves moving employees between different roles or teams within an organization to enhance their skills and knowledge while also improving security posture. These rotations can be formal programs or informal practices. They are beneficial for developing a well-rounded cybersecurity workforce, reducing insider threats, and improving access control.\n\n' +
+      `Mandatory vacation policies, also known as mandatory time-off, are a cybersecurity control designed to detect potential fraud, errors, or other malicious activities by requiring employees to take a set period of time away from their work duties. During this period, another employee can step into the absent employee's role and review their work, potentially uncovering inconsistencies, errors, or fraudulent activities.\n\n` +
+      'Quarterly access reviews are a crucial part of a strong cybersecurity strategy. They involve systematically evaluating and verifying user access rights to systems, applications, and data to ensure they align with job roles and regulatory requirements. By conducting these reviews regularly, organizations can identify and address potential security risks, maintain compliance, and protect sensitive information.',
       references: [
         {
           title: 'Separation of Duties',
           url: 'https://pathlock.com/learn/separation-of-duties-in-your-organization/'
+        },
+        {
+          title: 'What is the principal of least privilege?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-the-principle-of-least-privilege#:~:text=The%20principle%20of%20least%20privilege%20(PoLP)%20is%20an%20information%20security,to%20complete%20a%20required%20task'
+        },
+        {
+          title: '7 reasons why security awareness training is important',
+          url: 'https://www.cybsafe.com/blog/7-reasons-why-security-awareness-training-is-important/#:~:text=Security%20awareness%20training%20helps%20protect,potential%20threats%20and%20respond%20appropriately'
+        },
+        {
+          title: 'Why is Job Rotation important?',
+          url: 'https://www.hibob.com/hr-glossary/job-rotation/#:~:text=Job%20rotation%20programs%20involve%20systematically,deeper%20understanding%20of%20the%20business'
+        },
+        {
+          title: 'What is a Mandatory Vacation Policy?',
+          url: 'https://day-off.app/2024/02/18/understanding-the-mandatory-vacation-policy/'
+        },
+        {
+          title: 'What is a user access review?',
+          url: 'https://secureframe.com/blog/user-access-reviews'
         }
       ],
       questionNumber: 2
@@ -128,11 +215,31 @@ const securityXQuiz = {
         'Escape character blocking',
         'URL encoding'
       ],
-      explanation: '(3) query parameterization is a vital technique for securing database applications and improving query performance. It helps prevent SQL injection attacks by separating the query logic from user-supplied data and can also lead to performance improvements through caching and pre-compilation.',
+      explanation: '(3) query parameterization is a vital technique for securing database applications and improving query performance. It helps prevent SQL injection attacks by separating the query logic from user-supplied data and can also lead to performance improvements through caching and pre-compilation.\n\n' +
+      `Client-side processing, in the context of cybersecurity, refers to the security measures taken to protect the parts of a web application that run directly on the user's device, typically within their web browser. Client-side security is crucial because modern web applications rely heavily on client-side processing to provide dynamic and interactive experiences, but this also exposes them to various security vulnerabilities.\n\n` +
+      'Data normalization in cybersecurity is the process of standardizing data from various sources into a consistent format for easier analysis and correlation. This process is crucial for effective incident response, threat detection, and overall security posture management. By transforming diverse data types and structures into a unified format, security teams can overcome the challenges of analyzing information from multiple security tools and platforms.\n\n' +
+      '"Escape character blocking" refers to a technique used to prevent injection attacks, which are a major security vulnerability. Attackers can use special characters that have different meanings in a programming language or command shell to inject malicious code into an application.\n\n' +
+      `URL encoding, also known as percent-encoding, is a mechanism to represent characters in URLs that are not allowed or might cause issues during transmission. It's a fundamental part of cybersecurity as it ensures URLs are correctly interpreted by web browsers and servers, preventing potential vulnerabilities like cross-site scripting (XSS) or SQL injection attacks.`,
       references: [
         {
           title: 'Parameterized Queries, How and Why on Utilization',
           url: 'https://techcommunity.microsoft.com/blog/sqlserver/how-and-why-to-use-parameterized-queries/383483'
+        },
+        {
+          title: 'What is Client-Side Security?',
+          url: 'https://www.feroot.com/education-center/what-is-client-side-security/#:~:text=Client%2Dside%20security%20protects%20the,privacy%2C%20compliance%2C%20and%20trust'
+        },
+        {
+          title: 'Data Normalization for Security and Why It Matters',
+          url: 'https://www.leen.dev/post/data-normalization-for-security-why-it-matters#:~:text=your%20best%20ally.-,Understanding%20Data%20Normalization%20in%20Cybersecurity,each%20with%20its%20own%20format'
+        },
+        {
+          title: 'What are some common characters to prevent command injection attacks?',
+          url: 'https://eitca.org/cybersecurity/eitc-is-wapt-web-applications-penetration-testing/overthewire-natas/overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/examination-review-overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/what-are-some-common-characters-or-sequences-that-are-blocked-or-sanitized-to-prevent-command-injection-attacks/' 
+        }
+        {
+          title: 'The Importance of URL Encoding in Web Security',
+          url: 'https://bluegoatcyber.com/blog/the-importance-of-url-encoding-in-web-security/#:~:text=URL%20encoding%20is%20a%20process,by%20web%20servers%20and%20browsers'
         }
       ],
       questionNumber: 3
@@ -148,11 +255,26 @@ const securityXQuiz = {
         'Update the state: present module to state: absent in the main.yml file',
         'Update the insecure-bind-address from localhost to the COMPTIA001 in the manifests file'
       ],
-      explanation: '(4) `ansible.cfg` is a configuration file that allows you to customize various aspects of Ansible\'s behavior. It\'s used to define settings like the default inventory file, module search paths, and connection parameters, among others.',
+      explanation: '(4) `ansible.cfg` is a configuration file that allows you to customize various aspects of Ansible\'s behavior. It\'s used to define settings like the default inventory file, module search paths, and connection parameters, among others.\n\n' +
+      'Kubernetes security involves protecting containerized applications running on Kubernetes from various threats, including unauthorized access, misconfigurations, and vulnerabilities. It encompasses securing clusters, nodes, containers, applications, and the network infrastructure. Key areas include RBAC, network policies, container image security, and secret management.\n\n' +
+      'Ansible, while not a cybersecurity tool in itself, plays a crucial role in automating and enhancing cybersecurity practices. It can be used to automate security tasks like patching, vulnerability scanning, compliance auditing, and incident response, strengthening overall security posture.\n\n' +
+      'In Kubernetes, the "--insecure-bind-address" flag, when set, allows the API server to listen on an insecure port (typically 8080 by default, but configurable) without requiring authentication or encryption. This creates a significant security risk, as anyone who can reach that port can potentially interact with the cluster without proper authorization. Therefore, it is generally recommended to avoid using this flag and instead rely on secure communication channels for accessing the API server.',
       references: [
         {
           title: 'Basic Ansible',
           url: 'https://www.youtube.com/watch?v=F5LsMndrTrs&t=50'
+        },
+        {
+          title: 'What is Kubernetes? - Cheatsheet',
+          url: 'https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html'
+        },
+        {
+          title: 'How Ansible Works',
+          url: 'https://www.redhat.com/en/ansible-collaborative/how-ansible-works#:~:text=Ansible%20is%20an%20open%20source,simplicity%20and%20ease%20of%20use'
+        },
+        {
+          title: 'Enhancing Security of the Kubernetes API',
+          url: 'https://kubeops.net/kubernetes-security-library/measures/1-enhancing-security-of-the-kubernetes-api-server'
         }
       ],
       questionNumber: 4
@@ -161,11 +283,26 @@ const securityXQuiz = {
       question: 'A CRM company leverages a CSP PaaS service to host and publish Its SaaS product. Recently, a large customer requested that all infrastructure components must meet strict regulatory requirements, including configuration management, patch management, and life-cycle management. Which of the following organizations is responsible for ensuring those regulatory requirements are met?',
       answer: 'The CRM company',
       distractors: [`The CRM company's customer`, 'The CSP', 'The regulatory body'],
-      explanation: '(5) Customer Relationship Management (CRM) system is a software application used to manage and automate various aspects of customer interactions, including sales, marketing, and customer service. Examples of CRM systems include Salesforce, HubSpot CRM, and Microsoft Dynamics 365.',
+      explanation: '(5) Customer Relationship Management (CRM) system is a software application used to manage and automate various aspects of customer interactions, including sales, marketing, and customer service. Examples of CRM systems include Salesforce, HubSpot CRM, and Microsoft Dynamics 365.\n\n' +
+      'Cloud service providers (CSPs) are third-party companies that offer on-demand access to computing resources like servers, storage, and applications over the internet. They allow businesses to rent these resources instead of purchasing and maintaining their own physical infrastructure. Think of it like renting an apartment instead of buying a house – you get the benefits of having a place to live without the long-term commitment and responsibility of ownership.\n\n' +
+      'A regulatory body is a public authority or government agency responsible for overseeing and enforcing rules and regulations within a specific industry or sector, ensuring compliance and promoting standards. In the context of Information Technology (IT), this often involves setting and enforcing standards for data privacy, security, and the responsible use of technology.\n\n' +
+      'PaaS (Platform as a Service) cybersecurity focuses on protecting the applications, data, and underlying infrastructure within a PaaS environment. This involves securing the platform itself, as well as the applications and data deployed on it, from various threats. PaaS providers and users share responsibility for security, with providers typically handling infrastructure security and users focusing on application and data security.',
       references: [
         {
           title: 'What is CRM?',
           url: 'https://www.zendesk.com/dk/sell/crm/what-is-crm/'
+        },
+        {
+          title: 'What is a cloud service provider?',
+          url: 'https://cloud.google.com/learn/what-is-a-cloud-service-provider',
+        }
+        {
+          title: 'Regulatory Body',
+          url: 'https://www.sciencedirect.com/topics/computer-science/regulatory-body#:~:text=A%20regulatory%20body%20is%20an,practices%20in%20their%20respective%20domains'
+        },
+        {
+          title: 'What is Platform as a Service?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/platform-as-a-service-paas#:~:text=Platform%20as%20a%20service%20(PaaS)%2C%20is%20a%20cloud%20computing,quickly%20develop%20software%20and%20applications'
         }
       ],
       questionNumber: 5
