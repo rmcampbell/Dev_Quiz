@@ -236,7 +236,7 @@ const securityXQuiz = {
         {
           title: 'What are some common characters to prevent command injection attacks?',
           url: 'https://eitca.org/cybersecurity/eitc-is-wapt-web-applications-penetration-testing/overthewire-natas/overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/examination-review-overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/what-are-some-common-characters-or-sequences-that-are-blocked-or-sanitized-to-prevent-command-injection-attacks/' 
-        }
+        },
         {
           title: 'The Importance of URL Encoding in Web Security',
           url: 'https://bluegoatcyber.com/blog/the-importance-of-url-encoding-in-web-security/#:~:text=URL%20encoding%20is%20a%20process,by%20web%20servers%20and%20browsers'
@@ -295,7 +295,7 @@ const securityXQuiz = {
         {
           title: 'What is a cloud service provider?',
           url: 'https://cloud.google.com/learn/what-is-a-cloud-service-provider',
-        }
+        },
         {
           title: 'Regulatory Body',
           url: 'https://www.sciencedirect.com/topics/computer-science/regulatory-body#:~:text=A%20regulatory%20body%20is%20an,practices%20in%20their%20respective%20domains'
@@ -2297,16 +2297,6 @@ const securityXQuiz = {
       ],
       explanation: '(130) CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
         'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
-        //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
-        //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
-        //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
-        //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
-        //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
-        //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
-        //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
-        //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
-        //'CBC-based key exchange and signing algorithms are generally not directly used for key exchange in the typical sense of generating and distributing cryptographic keys.\n\n' +
-        //'Key Exchange Algorithms (KEX) are specifically designed to establish a shared secret between parties over an insecure channel. Examples include Diffie-Hellman or Elliptic Curve Diffie-Hellman.\n\n' +
         `Adding TLS_RSA_WITH_AES_256_CBC_SHA256 as a cipher suite is done to enable a more secure connection using Transport Layer Security (TLS). This specific cipher suite uses the following encryption method: RSA for key exchange, AES-256 in CBC mode for encryption, and SHA256 for hashing.`,
       references: [
         {
