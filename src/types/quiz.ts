@@ -18,7 +18,7 @@ export interface Question {
 }
 
 export interface Reference {
-  title?: string;
+  title: string;
   url: string;
 }
 

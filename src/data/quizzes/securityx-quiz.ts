@@ -1,6 +1,6 @@
 import imageMap from '../../utils/assets.ts';
 import { Acronym, Term } from '../../types';
-import { title } from 'process';
+//import { title } from 'process';
 
 const imgPath = (num: number|string) => {
   const numStr = typeof num === 'number' ? num.toString().padStart(3, '0') : num;
