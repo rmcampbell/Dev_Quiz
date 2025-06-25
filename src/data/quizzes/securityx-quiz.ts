@@ -294,7 +294,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is a cloud service provider?',
-          url: 'https://cloud.google.com/learn/what-is-a-cloud-service-provider',
+          url: 'https://cloud.google.com/learn/what-is-a-cloud-service-provider'
         },
         {
           title: 'Regulatory Body',
