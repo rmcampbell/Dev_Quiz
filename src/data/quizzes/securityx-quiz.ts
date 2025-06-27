@@ -577,11 +577,35 @@ const securityXQuiz = {
       question: 'Several unlabeled documents in a cloud document repository contain cardholder information. Which of the following configuration changes should be made to the DLP system to correctly label these documents in the future?',
       answer: 'Regular expressions',
       distractors: ['Digital rights management', 'Network traffic decryption', 'Watermarking'],
-      explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.',
+      explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.\n\n' +
+      `A regular expression (regex or regexp) is a sequence of characters that defines a search pattern. It's used to find, match, or validate specific text patterns within data, such as logs, files, or network traffic. Essentially, regex empowers security professionals to efficiently search for and analyze data by identifying patterns instead of specific words or phrases.\n\n` +
+      'Digital rights management (DRM) is the use of technology to control and manage access to copyrighted material. Another DRM meaning is taking control of digital content away from the person who possesses it and handing it to a computer program. DRM aims to protect the copyright holder’s rights and prevents content from unauthorized distribution and modification.\n\n' +
+      'Network traffic decryption involves intercepting and decrypting encrypted network traffic to inspect its contents for potential threats, such as malware or unauthorized access attempts. This process is crucial for maintaining a secure network environment, as it allows security systems to detect and respond to threats that may be hidden within encrypted communication.\n\n' +
+      'Digital watermarking is a cybersecurity technique used to embed imperceptible identifiers within digital content (like documents, images, or audio) to verify ownership, track usage, and prevent unauthorized access or distribution. It acts as a security measure to protect sensitive information, deter data leakage, and enable tracing of content back to its source.',
       references: [
         {
           title: 'Regex Known Gibberish',
           url: 'https://www.splunk.com/en_us/blog/security/regex-regular-expression.html#:~:text=Known%20as%20RegEx%20(or%20gibberish,a%20log%2C%20regex%20is%20invaluable'
+        },
+        {
+          title: 'Regular Expressions: A Quick Intro for Security Professionals',
+          url: 'https://dzone.com/articles/regular-expressions-a-quick-intro-for-security-pro'
+        },
+        {
+          title: 'What is Digital Rights Management (DRM)?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information.'
+        },
+        {
+          title: 'What is SSL Decryption?',
+          url: 'https://www.zscaler.com/resources/security-terms-glossary/what-is-ssl-decryption'
+        },
+        {
+          title: 'Decryption Basics',
+          url: 'https://docs.paloaltonetworks.com/network-security/decryption/administration/decryption-overview'
+        },
+        {
+          title: 'What is Digital Watermarking?',
+          url: 'https://www.digitalguardian.com/blog/digital-watermarking'
         }
       ],
       questionNumber: 14
@@ -589,12 +613,27 @@ const securityXQuiz = {
     {
       question: 'A systems administrator at a web-hosting provider has been tasked with renewing the public certificates of all customer sites. Which of the following would best support multiple domain names while minimizing the amount of certificates needed?',
       answer: 'SAN',
-      distractors: ['OCSP', 'CRL', 'CA'],
-      explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
+      distractors: ['OCSP', 'CRL', 'CAs'],
+      explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.\n\n' +
+      'OCSP, or Online Certificate Status Protocol, is a security protocol used to verify the validity of digital certificates in real-time, primarily for SSL/TLS connections. It allows browsers to check if a certificate has been revoked by the issuing Certificate Authority (CA) before establishing a connection, adding a layer of security to online interactions.\n\n' +
+      `A Certificate Revocation List (CRL) in cyber security is a list of digital certificates that have been revoked by a Certificate Authority (CA) before their expiration date. It's a crucial component of Public Key Infrastructure (PKI), used to ensure the validity and trustworthiness of digital certificates, which are essential for secure online communication. Essentially, a CRL helps prevent the use of potentially compromised or untrusted certificates.\n\n` +
+      'Certificate Authorities (CAs) are vital for cybersecurity as they issue and manage digital certificates, which are essential for verifying the identity of websites and other entities online. These certificates enable secure communication and transactions by providing a chain of trust between users, websites, and other online services. Without CAs, the internet would be vulnerable to impersonation and fraud, making secure online activities like shopping and banking risky.',
       references: [
         {
           title: 'Subject Alternative Name',
           url: 'https://www.sectigo.com/knowledge-base/detail/Subject-Alternative-Name-SAN-1527076087222/kA01N000000zFKm'
+        },
+        {
+          title: 'What is OCSP?',
+          url: 'https://www.sectigo.com/resource-library/how-the-online-certificate-status-protocol-and-ocsp-stapling-work-more'
+        },
+        {
+          title: 'Waht is a certificate revocation list?',
+          url: 'https://www.portnox.com/cybersecurity-101/certificate-revocation-list/'
+        },
+        {
+          title: 'What is a certificate authority?',
+          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates.'
         }
       ],
       questionNumber: 15
@@ -608,11 +647,26 @@ const securityXQuiz = {
         `It verifies the recipient's identity`,
         'It ensures the code is free of malware'
       ],
-      explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
+      explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.\n\n' +
+      'Checking code for malware is a critical component due to the potential for malicious code to cause significant damage, disruptions, and breaches.\n\n' +
+      `Digital signatures provide a secure way to verify the identity of a recipient in cybersecurity by cryptographically linking a digital message or document to the sender's identity. This process ensures both the authenticity of the sender and the integrity of the message. By using a digital signature, the recipient can be confident that the message or document has not been tampered with and that it genuinely originated from the claimed sender.\n\n` +
+      `Ensure confidentiality by encrypting the entire message with the recipient's public key. This means that only the recipient, who is in possession of the corresponding private key, can read the message. Verify the user's identity using the public key and checking it against a certificate authority.`,
       references: [
         {
           title: 'Securing Digital Trust',
           url: 'https://www.encryptionconsulting.com/securing-digital-trust-the-essentials-of-origin-verification/'
+        },
+        {
+          title: 'Malicious Code: What it is and How to prevent it?',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/malicious-code/'
+        },
+        {
+          title: 'Understanding Digital Signatures',
+          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature.'
+        },
+        {
+          title: 'How to overcome Vulnerabilities in Digital Signatures',
+          url: 'https://cybelangel.com/digital-signatures-are-the-cybersecurity-vulnerability-you-need-to-stop-ignoring/'
         }
       ],
       questionNumber: 16
