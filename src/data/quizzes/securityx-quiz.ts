@@ -680,11 +680,16 @@ const securityXQuiz = {
         'Reverse engineer the application to look for vulnerable code paths',
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
-      explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
+      explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.\n\n' +
+      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.',
       references: [
         {
           title: 'What is fuzz testing?',
           url: 'https://github.com/resources/articles/security/what-is-fuzz-testing'
+        },
+        {
+          title: 'Exploit Frameworks',
+          url: 'https://www.prosec-networks.com/en/blog/exploit-frameworks/'
         }
       ],
       questionNumber: 17
