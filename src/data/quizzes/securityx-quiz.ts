@@ -679,7 +679,11 @@ const securityXQuiz = {
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
       explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.\n\n' +
-      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.',
+      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.\n\n' +
+      `Software Composition Analysis (SCA) tools are essential for identifying known vulnerabilities within the open-source and third-party components of software projects. These tools scan applications to detect security flaws, license compliance issues, and even malicious components within the software's supply chain. By flagging these vulnerabilities, SCA tools enable developers and security teams to proactively address risks and strengthen overall application security.\n\n` +
+      `Reverse engineering in cybersecurity involves analyzing an application to understand its functionality, identify vulnerabilities, and potentially create countermeasures. This process can be used by security professionals to enhance security by finding flaws and by malicious actors to exploit them. It involves examining compiled code, understanding data handling, and potentially recreating the application's logic.\n\n` +
+      'Vulnerable code paths refer to specific sections of software code that contain weaknesses, or vulnerabilities, that can be exploited by attackers to gain unauthorized access, execute malicious code, or cause other security breaches. These vulnerabilities often arise from insecure coding practices, insufficient input validation, or misconfigurations.\n\n' +
+      `An HTTP intercepting proxy is a security tool that sits between a user's browser and a web server, allowing for the interception, inspection, and modification of HTTP traffic. This capability is valuable for cybersecurity in several ways, including: testing web application security, identifying and mitigating vulnerabilities, and enhancing online privacy and security.`,
       references: [
         {
           title: 'What is fuzz testing?',
@@ -688,6 +692,22 @@ const securityXQuiz = {
         {
           title: 'Exploit Frameworks',
           url: 'https://www.prosec-networks.com/en/blog/exploit-frameworks/'
+        },
+        {
+          title: 'What is Software Composition Analysis?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-sca'
+        },
+        {
+          title: 'What is Reverse Engineering Technique in Cybersecurity?',
+          url: 'https://www.geeksforgeeks.org/computer-networks/what-is-reverse-engineering-technique-in-cybersecurity/'
+        },
+        {
+          tite: 'Identifying Vulnerable Code',
+          url: 'https://www.infosecinstitute.com/resources/secure-coding/identifying-vulnerable-code/'
+        },
+        {
+          title: 'What is an intercepting proxy?',
+          url: 'https://www.pakiki.co.nz/blog/what-is-an-intercepting-proxy/'
         }
       ],
       questionNumber: 17
