@@ -314,11 +314,21 @@ const securityXQuiz = {
         `Ensure hot, warm, and mobile disaster recovery sites are available, and give an update to the companies' leadership teams`,
         `Initiate Company A's IT systems processes and procedures, assess the damage, and perform a BIA`
       ],
-      explanation: '(6) incident response plan is a documented strategy outlining how an organization will detect, respond to, and recover from cybersecurity incidents or other disruptions.\n\n Disaster recovery plan (DRP), on the other hand, addresses broader disruptions, including natural disasters, equipment failures, and cyberattacks, with the goal of restoring systems and operations after a major incident.',
+      explanation: '(6) incident response plan is a documented strategy outlining how an organization will detect, respond to, and recover from cybersecurity incidents or other disruptions.\n\n Disaster recovery plan (DRP), on the other hand, addresses broader disruptions, including natural disasters, equipment failures, and cyberattacks, with the goal of restoring systems and operations after a major incident.\n\n' +
+      'Hot, warm, and cold sites are three different approaches to disaster recovery (DR) sites, each offering varying levels of preparedness and cost. A hot site is a fully operational, mirrored environment ready to take over immediately, while a cold site is a basic facility requiring significant setup, and a warm site is a compromise between the two.\n\n' +
+      `BIA stands for Business Impact Analysis. It's a systematic process used to identify and assess the potential effects of disruptions to critical business operations due to cyber incidents or other events. The primary goal of a BIA is to understand the financial, operational, and reputational consequences that could arise from such disruptions.`,
       references: [
         {
           title: 'Incident response vs Disaster Recovery',
           url: 'https://www.zengrc.com/blog/incident-response-plan-vs-disaster-recovery-plan/#:~:text=Where%20an%20IRP%20focuses%20on,business%20functions%20across%20all%20departments'
+        },
+        {
+          title: 'Types of Disaster Recovery Sites',
+          url: 'https://blog.icorps.com/bid/101789/types-of-disaster-recovery-sites'
+        },
+        {
+          title: 'What is BIA?',
+          url: 'https://www.geeksforgeeks.org/ethical-hacking/what-is-bia-in-cyber-security/'
         }
       ],
       questionNumber: 6
@@ -336,11 +346,16 @@ const securityXQuiz = {
         'Remove the complexity requirements',
         'Increase the maximum age to 120 days'
       ],
-      explanation: '(7) Minimum length of the passwords should be enforced by the application. Passwords shorter than 8 characters are considered to be weak (NIST SP800-63B). Maximum password length should be at least 64 characters to allow passphrases (NIST SP800-63B).',
+      explanation: '(7) Minimum length of the passwords should be enforced by the application. Passwords shorter than 8 characters are considered to be weak (NIST SP800-63B). Maximum password length should be at least 64 characters to allow passphrases (NIST SP800-63B).\n\n' +
+      'Require passwords to be a minimum of eight characters, with a recommended minimal length of 15 characters. Allow passwords to be up to 64 characters long. Accept all printing ASCII [RFC20] characters and the space character in passwords.',
       references: [
         {
           title: 'Authentication Cheat Sheet',
           url: 'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html'
+        },
+        {
+          title: 'NIST Password Guidelines',
+          url: 'https://www.strongdm.com/blog/nist-password-guidelines'
         }
       ],
       questionNumber: 7
@@ -355,11 +370,30 @@ const securityXQuiz = {
         'Wireless network auto joining',
         '802.1X with mutual authentication'
       ],
-      explanation: '(8) Association MAC address randomization is a security and privacy feature in Wi-Fi where a device, when connecting to a network, uses a randomized MAC address instead of its actual hardware MAC address.',
+      explanation: '(8) Association MAC address randomization is a security and privacy feature in Wi-Fi where a device, when connecting to a network, uses a randomized MAC address instead of its actual hardware MAC address.\n\n' +
+      `A Service Set Identifier (SSID) is the name of a Wi-Fi network that devices use to connect. While SSIDs themselves don't provide security, they are a crucial part of the authentication process. Strong security measures like WPA2/3 encryption and strong passwords, combined with proper SSID configuration (like changing the default and potentially disabling broadcasting), are vital for protecting a Wi-Fi network.\n\n` +
+      'Wireless network auto-joining, while convenient, presents significant cybersecurity risks, particularly with open or unsecured networks. Automatically connecting to unknown or malicious networks can expose your device and data to potential threats like hacking, malware, and data interception.\n\n' +
+      '802.1X with mutual authentication provides a robust security framework for network access control. It ensures both the client and the network authenticate each other before granting access, enhancing security against unauthorized access and various network attacks. This is typically achieved through the use of digital certificates and encryption, making it more secure than traditional password-based authentication.',
       references: [
         {
           title: 'WiFi Mac Randomization',
           url: 'https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior'
+        },
+        {
+          title: 'What is a Service Set Identifier?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/service-set-identifier-ssid'
+        },
+        {
+          title: '12 Best Practices for Wireless Network Security',
+          url: 'https://www.globalsign.com/en/blog/12-best-practices-wireless-network-security'
+        },
+        {
+          title: '802.1X Overview and EAP Types',
+          url: 'https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html'
+        },
+        {
+          title: '802.1x: The Key to Secure Network Access',
+          url: 'https://www.numberanalytics.com/blog/8021x-secure-network-access'
         }
       ],
       questionNumber: 8
@@ -372,11 +406,27 @@ const securityXQuiz = {
         'Classify the incident as a true positive',
         'Classify the incident as a true negative'
       ],
-      explanation: '(9) false negative occurs when a security system fails to detect a threat or vulnerability that actually exists. This means a threat is missed, and the security system incorrectly indicates that no issues were found when a problem exists.',
+      explanation: '(9) false negative occurs when a security system fails to detect a threat or vulnerability that actually exists. This means a threat is missed, and the security system incorrectly indicates that no issues were found when a problem exists.\n\n' +
+      'A false negative occurs when a security system fails to detect a genuine threat, incorrectly classifying it as harmless. This means a malicious activity, vulnerability, or attack is not identified by the security tool, allowing it to operate undetected and potentially cause significant damage.\n\n' +
+      'A false positive occurs when a security system incorrectly identifies legitimate activity or a safe file as a threat. This can lead to wasted time, alert fatigue, and even the overlooking of actual threats.\n\n' +
+      `A true positive occurs when a security system correcty identifies a malicious activity or threat. This means the system's detection mechanisms accurately flag a real attack or vulnerability, and the system responds appropriately, such as by triggering an alert, blocking an intrusion, or initiating other security measures.\n\n` +
+      `A true negative (TN) occurs when a security system correctly identifies and classifies a situation as non-threatening or benign, and there is indeed no actual threat present. Essentially, it's a correct "no threat" determination by the system.`,
       references: [
         {
           title: 'False Negative',
           url: 'https://www.contrastsecurity.com/glossary/false-negative'
+        },
+        {
+          title: 'Understanding False Positives',
+          url: 'https://www.checkpoint.com/cyber-hub/cyber-security/understanding-false-positives-in-cybersecurity/#:~:text=False%20positives%20in%20cybersecurity%20are,categorizing%20an%20email%20as%20unsafe'
+        },
+        {
+          title: 'Catching True Positives',
+          url: 'https://securityboulevard.com/2022/01/catching-true-positives-in-network-security/'
+        },
+        {
+          title: 'What is a True Negative',
+          url: 'https://www.cycognito.com/glossary/true-negative.php'
         }
       ],
       questionNumber: 9
@@ -390,11 +440,31 @@ const securityXQuiz = {
         'Sender authentication',
         'Chain of custody'
       ],
-      explanation: '(10) Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.',
+      explanation: '(10) Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.\n\n' +
+      'Body encryption in cybersecurity refers to the process of encrypting the content (body) of a message or data packet to protect it from unauthorized access or modification during transmission or storage. This is a crucial aspect of data security, ensuring sensitive information remains confidential and unreadable to anyone without the decryption key.\n\n' +
+      `Code signing is a cyber security practice where a digital signature is added to software or code to verify its authenticity and integrity. This process ensures that the software hasn't been tampered with since it was signed and that it comes from a legitimate source. It helps users trust the software they are downloading and installing.\n\n` +
+      `Sender authentication in cybersecurity, particularly for email, is a crucial method to verify the legitimacy of email senders and prevent spoofing and phishing attacks. It involves using protocols like SPF, DKIM, and DMARC to ensure emails are actually from the claimed sender and haven't been tampered with. These protocols work by checking the sender's domain, IP address, and message integrity, helping to block malicious emails and improve email deliverability.\n\n` +
+      `A chain of custody refers to the documented trail of digital evidence from its collection to its use in legal proceedings, ensuring its integrity and admissibility in court. It's a meticulous process of tracking who accessed, handled, or modified the evidence, when, and why. This documentation is crucial for proving the evidence's authenticity and preventing it from being compromised or deemed unreliable.`,
       references: [
         {
           title: 'Non-repudation',
           url: 'https://www.sciencedirect.com/topics/computer-science/nonrepudiation#:~:text=Nonrepudiation%20refers%20to%20the%20inability,and%20accountability%20in%20computing%20environments'
+        },
+        {
+          title: `Data Encryption Methods & Types: A Beginner's Guide`,
+          url: 'https://www.splunk.com/en_us/blog/learn/data-encryption-methods-types.html'
+        },
+        {
+          title: 'What is Code Signing?  How does Code Signing work?',
+          url: 'https://www.encryptionconsulting.com/education-center/what-is-code-signing/'
+        },
+        {
+          title: 'What is Email Authentication?',
+          url: 'https://www.proofpoint.com/us/threat-reference/email-authentication'
+        },
+        {
+          title: 'Why Chain of Custody is Key for Data Security and Business Growth',
+          url: 'https://www.grax.com/blog/why-chain-of-custody-is-key-for-data-security-and-business-growth/'
         }
       ],
       questionNumber: 10
@@ -403,11 +473,26 @@ const securityXQuiz = {
       question: 'A software development company wants to ensure that users can confirm the software is legitimate when installing it. Which of the following is the best way for the company to achieve this security objective?',
       answer: 'Code signing',
       distractors: ['Non-repudiation', 'Key escrow', 'Private keys'],
-      explanation: '(11) Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.',
+      explanation: '(11) Code signing uses a digital signature to verify that software has: Come from a trusted source (authenticity). Not been altered since it was signed (integrity). This allows users to confirm the software is legitimate during installation.\n\n' +
+      'Non-repudiation: This means the sender cannot deny sending the message, because the digital signature proves the email came from them and was not altered in transit.\n\n' +
+      `Key escrow is a system where encryption keys are securely stored by a trusted third party, allowing access to encrypted data under specific, authorized circumstances. It's a method for maintaining data accessibility while also potentially enabling access for law enforcement or in situations where the original key holder is unavailable.\n\n` +
+      'Private keys are a critical component of cybersecurity, particularly in cryptography and digital signatures. They are used to encrypt and decrypt data, and also to verify the authenticity of digital signatures. Private keys should be kept secret and secure, as their compromise can lead to serious security breaches.',
       references: [
         {
           title: 'What is code signing?',
           url: 'https://www.digicert.com/faq/code-signing-trust/what-is-code-signing'
+        },
+        {
+          title: 'Non-repudiation: Your Virtual Shield in Cybersecurity',
+          url: 'https://www.tripwire.com/state-of-security/nonrepudiation-your-virtual-shield-cybersecurity'
+        },
+        {
+          title: 'What is Escrow?  No, not related to mortgages!',
+          url: 'https://www.twingate.com/blog/glossary/escrow'
+        },
+        {
+          title: 'What is a Private Key and How Does it Work?',
+          url: 'https://www.1kosmos.com/authentication/private-key/'
         }
       ],
       questionNumber: 11
@@ -424,11 +509,31 @@ const securityXQuiz = {
         'Set up a DLP policy to alert for exfiltration on all application servers',
         'Enable nightly vulnerability scans'
       ],
-      explanation: '(12) A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.',
+      explanation: '(12) A. Configure firewall rules to block all external traffic -> This Restricts access so only internal users can connect, aligning with policy. B. Enable input validation for all fields -> Input validation is critical to prevent buffer overflow and other injection attacks.\n\n' +
+      'Automatic updates are crucial for cybersecurity because they promptly deliver software patches and security fixes, closing potential vulnerabilities that cybercriminals exploit. By enabling automatic updates, users ensure their systems are protected against the latest threats without needing to manually check for and install updates. This proactive approach to security helps minimize the risk of malware, data breaches, and other cyberattacks.\n\n' +
+      `To configure a security group to enable external traffic for cybersecurity, you need to add specific inbound rules to allow necessary traffic while ensuring outbound traffic is also managed securely. This involves identifying the type of traffic (e.g., HTTP, HTTPS, SSH), specifying the source (e.g., specific IP addresses, CIDR blocks, or other security groups), and defining the port(s) for communication. It's crucial to carefully consider security implications when allowing external traffic and restrict access to only what's needed.\n]n` +
+      `A Data Loss Prevention (DLP) policy designed to alert for exfiltration cyber security involves creating rules that monitor and detect the unauthorized movement of sensitive data outside of an organization's control. This policy aims to identify and prevent data breaches, ensuring sensitive information remains protected and within the organization's security perimeter.\n\n` +
+      'Nightly vulnerability scans are a crucial part of a comprehensive cyber security strategy, helping organizations identify and address potential security weaknesses in their systems and networks before they can be exploited by malicious actors. These automated scans proactively detect vulnerabilities, allowing for timely remediation and reducing the risk of cyberattacks.',
       references: [
         {
           title: 'Buffer Overflaw prevention',
           url: 'https://www.fortinet.com/resources/cyberglossary/buffer-overflow#:~:text=Application%20developers%20can%20prevent%20buffer,to%20detect%20and%20fix%20errors'
+        },
+        {
+          title: 'Harnessing Automatic Updates: Stay Current, Stay Safe',
+          url: 'https://www.lenovo.com/gb/en/glossary/automatic-updates/?orgRef=https%253A%252F%252Fwww.google.com%252F'
+        },
+        {
+          title: 'Steps to Configure AWS Security Groups',
+          url: 'https://skyhawk.security/steps-to-configure-aws-security-groups/'
+        },
+        {
+          title: 'How to prevent data exfiltration in the cloud?',
+          url: 'https://www.nightfall.ai/blog/dlp-101-how-to-prevent-data-exfiltration-in-the-cloud'
+        },
+        {
+          title: 'What is Vulnerability Scanning?',
+          url: 'https://www.beyondtrust.com/resources/glossary/vulnerability-scanning#:~:text=Vulnerability%20scanning%20is%20the%20process,hardware%2C%20software%2C%20and%20systems.'
         }
       ],
       questionNumber: 12
@@ -437,11 +542,31 @@ const securityXQuiz = {
       question: 'PKI can be used to support security requirements in the change management process. Which of the following capabilities does PKI provide for messages?',
       answer: 'Non-repudiation',
       distractors: ['Confidentiality', 'Delivery receipts', 'Attestation'],
-      explanation: '(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.',
+      explanation: '(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.\n\n' +
+      'Non-repudiation in cybersecurity refers to the assurance that a party involved in a transaction or communication cannot deny the authenticity of their signature or the sending of a message at a later time.\n\n' +
+      `Confidentiality in cybersecurity refers to protecting sensitive information from unauthorized access, ensuring that only authorized individuals can view or use it. It's a core principle of information security, alongside integrity and availability, often referred to as the CIA triad.\n\n` +
+      'Delivery receipts, in the context of cybersecurity, involve the confirmation that a message or document has been delivered successfully to the intended recipient. While beneficial for user experience and operational efficiency, they can also introduce potential cybersecurity risks if not properly secured.\n\n' +
+      'Attestation is the process of verifying the integrity, authenticity, and compliance of a system, identity, or workload—most often through cryptographic means.',
       references: [
         {
           title: 'Non-repudiation Definition',
           url: 'https://www.techtarget.com/searchsecurity/definition/nonrepudiation'
+        },
+        {
+          title: 'What is Non Repudiation?',
+          url: 'https://www.bitsight.com/glossary/non-repudiation-cyber-security#:~:text=Non%2Drepudiation%20in%20cybersecurity%20refers,message%20at%20a%20later%20time.'
+        },
+        {
+          title: 'What is the CIA Triad?  No, not that CIA!',
+          url: 'https://www.fortinet.com/resources/cyberglossary/cia-triad#:~:text=1.,data%E2%80%94whether%20intentional%20or%20accidental.'
+        },
+        {
+          title: 'What are Delivery Receipts?',
+          url: 'https://sendbird.com/learn/what-are-delivery-receipts'
+        },
+        {
+          title: 'What is attestation?',
+          url: 'https://www.oasis.security/glossary/attestation#:~:text=In%20cybersecurity%2C%20attestation%20is%20the,most%20often%20through%20cryptographic%20means.'
         }
       ],
       questionNumber: 13
@@ -450,11 +575,35 @@ const securityXQuiz = {
       question: 'Several unlabeled documents in a cloud document repository contain cardholder information. Which of the following configuration changes should be made to the DLP system to correctly label these documents in the future?',
       answer: 'Regular expressions',
       distractors: ['Digital rights management', 'Network traffic decryption', 'Watermarking'],
-      explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.',
+      explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.\n\n' +
+      `A regular expression (regex or regexp) is a sequence of characters that defines a search pattern. It's used to find, match, or validate specific text patterns within data, such as logs, files, or network traffic. Essentially, regex empowers security professionals to efficiently search for and analyze data by identifying patterns instead of specific words or phrases.\n\n` +
+      'Digital rights management (DRM) is the use of technology to control and manage access to copyrighted material. Another DRM meaning is taking control of digital content away from the person who possesses it and handing it to a computer program. DRM aims to protect the copyright holder’s rights and prevents content from unauthorized distribution and modification.\n\n' +
+      'Network traffic decryption involves intercepting and decrypting encrypted network traffic to inspect its contents for potential threats, such as malware or unauthorized access attempts. This process is crucial for maintaining a secure network environment, as it allows security systems to detect and respond to threats that may be hidden within encrypted communication.\n\n' +
+      'Digital watermarking is a cybersecurity technique used to embed imperceptible identifiers within digital content (like documents, images, or audio) to verify ownership, track usage, and prevent unauthorized access or distribution. It acts as a security measure to protect sensitive information, deter data leakage, and enable tracing of content back to its source.',
       references: [
         {
           title: 'Regex Known Gibberish',
           url: 'https://www.splunk.com/en_us/blog/security/regex-regular-expression.html#:~:text=Known%20as%20RegEx%20(or%20gibberish,a%20log%2C%20regex%20is%20invaluable'
+        },
+        {
+          title: 'Regular Expressions: A Quick Intro for Security Professionals',
+          url: 'https://dzone.com/articles/regular-expressions-a-quick-intro-for-security-pro'
+        },
+        {
+          title: 'What is Digital Rights Management (DRM)?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information.'
+        },
+        {
+          title: 'What is SSL Decryption?',
+          url: 'https://www.zscaler.com/resources/security-terms-glossary/what-is-ssl-decryption'
+        },
+        {
+          title: 'Decryption Basics',
+          url: 'https://docs.paloaltonetworks.com/network-security/decryption/administration/decryption-overview'
+        },
+        {
+          title: 'What is Digital Watermarking?',
+          url: 'https://www.digitalguardian.com/blog/digital-watermarking'
         }
       ],
       questionNumber: 14
@@ -462,12 +611,27 @@ const securityXQuiz = {
     {
       question: 'A systems administrator at a web-hosting provider has been tasked with renewing the public certificates of all customer sites. Which of the following would best support multiple domain names while minimizing the amount of certificates needed?',
       answer: 'SAN',
-      distractors: ['OCSP', 'CRL', 'CA'],
-      explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.',
+      distractors: ['OCSP', 'CRL', 'CAs'],
+      explanation: '(15) The Subject Alternative Name (SAN) extension in an SSL/TLS certificate allows multiple domain names to be secured using a single certificate. This is ideal for a web hosting provider managing many customer sites, such as: "www.customer1.com", "mail.customer1.com", "customer2.net". Instead of issuing separate certificates for each domain, a SAN certificate consolidates them, minimizing overhead and simplifying management.\n\n' +
+      'OCSP, or Online Certificate Status Protocol, is a security protocol used to verify the validity of digital certificates in real-time, primarily for SSL/TLS connections. It allows browsers to check if a certificate has been revoked by the issuing Certificate Authority (CA) before establishing a connection, adding a layer of security to online interactions.\n\n' +
+      `A Certificate Revocation List (CRL) in cyber security is a list of digital certificates that have been revoked by a Certificate Authority (CA) before their expiration date. It's a crucial component of Public Key Infrastructure (PKI), used to ensure the validity and trustworthiness of digital certificates, which are essential for secure online communication. Essentially, a CRL helps prevent the use of potentially compromised or untrusted certificates.\n\n` +
+      'Certificate Authorities (CAs) are vital for cybersecurity as they issue and manage digital certificates, which are essential for verifying the identity of websites and other entities online. These certificates enable secure communication and transactions by providing a chain of trust between users, websites, and other online services. Without CAs, the internet would be vulnerable to impersonation and fraud, making secure online activities like shopping and banking risky.',
       references: [
         {
           title: 'Subject Alternative Name',
           url: 'https://www.sectigo.com/knowledge-base/detail/Subject-Alternative-Name-SAN-1527076087222/kA01N000000zFKm'
+        },
+        {
+          title: 'What is OCSP?',
+          url: 'https://www.sectigo.com/resource-library/how-the-online-certificate-status-protocol-and-ocsp-stapling-work-more'
+        },
+        {
+          title: 'Waht is a certificate revocation list?',
+          url: 'https://www.portnox.com/cybersecurity-101/certificate-revocation-list/'
+        },
+        {
+          title: 'What is a certificate authority?',
+          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates.'
         }
       ],
       questionNumber: 15
@@ -481,11 +645,26 @@ const securityXQuiz = {
         `It verifies the recipient's identity`,
         'It ensures the code is free of malware'
       ],
-      explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.',
+      explanation: '(16) Digitally signed code uses cryptographic techniques to: Provide origin assurance – Confirms the software came from a trusted, verified publisher. Verify integrity – Ensures the code has not been modified or tampered with after it was signed. These are the two main security benefits of digital code signing.\n\n' +
+      'Checking code for malware is a critical component due to the potential for malicious code to cause significant damage, disruptions, and breaches.\n\n' +
+      `Digital signatures provide a secure way to verify the identity of a recipient in cybersecurity by cryptographically linking a digital message or document to the sender's identity. This process ensures both the authenticity of the sender and the integrity of the message. By using a digital signature, the recipient can be confident that the message or document has not been tampered with and that it genuinely originated from the claimed sender.\n\n` +
+      `Ensure confidentiality by encrypting the entire message with the recipient's public key. This means that only the recipient, who is in possession of the corresponding private key, can read the message. Verify the user's identity using the public key and checking it against a certificate authority.`,
       references: [
         {
           title: 'Securing Digital Trust',
           url: 'https://www.encryptionconsulting.com/securing-digital-trust-the-essentials-of-origin-verification/'
+        },
+        {
+          title: 'Malicious Code: What it is and How to prevent it?',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/malicious-code/'
+        },
+        {
+          title: 'Understanding Digital Signatures',
+          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature.'
+        },
+        {
+          title: 'How to overcome Vulnerabilities in Digital Signatures',
+          url: 'https://cybelangel.com/digital-signatures-are-the-cybersecurity-vulnerability-you-need-to-stop-ignoring/'
         }
       ],
       questionNumber: 16
@@ -499,11 +678,16 @@ const securityXQuiz = {
         'Reverse engineer the application to look for vulnerable code paths',
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
-      explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.',
+      explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.\n\n' +
+      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.',
       references: [
         {
           title: 'What is fuzz testing?',
           url: 'https://github.com/resources/articles/security/what-is-fuzz-testing'
+        },
+        {
+          title: 'Exploit Frameworks',
+          url: 'https://www.prosec-networks.com/en/blog/exploit-frameworks/'
         }
       ],
       questionNumber: 17
