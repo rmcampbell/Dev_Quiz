@@ -722,11 +722,36 @@ const securityXQuiz = {
         'Recommend thread-safe processes in the code to eliminate race conditions',
         'Move the batch processing from client side to server side to remove client processing inconsistencies'
       ],
-      explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.`,
+      explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.\n\n` +
+      'To use memory-safe functions to prevent integer overflow and improve cybersecurity, you can utilize libraries, built-in functions, and secure coding practices.\n\n' +
+      'Thread safety is a crucial concept in concurrent programming, and its importance extends significantly to cybersecurity. In multi-threaded applications, multiple threads can access and modify shared data simultaneously. If these operations are not handled carefully, it can lead to vulnerabilities that attackers can exploit.\n\n' +
+      `Eliminating race conditions involves preventing vulnerabilities that arise when a system's outcome depends on the unpredictable timing or sequence of events. Race conditions can be exploited by attackers to gain unauthorized access, manipulate data, or cause denial of service.\n\n` +
+      'Batch processing from client-side to server-side involves grouping multiple requests from a client and sending them as a single batch to the server for processing. This approach aims to improve efficiency by reducing network overhead and potentially optimizing server resource utilization.\n\n' +
+      'One of the most common security vulnerabilities in client-side rendering is cross-site scripting (XSS). XSS occurs when an attacker injects malicious scripts into your web application, which then get executed in the browser of unsuspecting users.',
       references: [
         {
           title: 'Exception Handler',
           url: 'https://www.theserverside.com/definition/exception-handler'
+        },
+        {
+          title: 'Preventing Integer Overflow and Underflow Vulnerabilities',
+          url: 'https://www.infosecinstitute.com/resources/secure-coding/how-to-mitigate-integer-overflow-and-underflow-vulnerabilities/'
+        },
+        {
+          title: 'What is Thread-Safey and How to Achieve It?',
+          url: 'https://www.baeldung.com/java-thread-safety'
+        },
+        {
+          title: 'What is a Race Condition Vulnerability?',
+          url: 'https://www.indusface.com/learning/what-is-a-race-condition-vulnerability/'
+        },
+        {
+          title: 'Client-Side vs Server-Side Form Input Validation',
+          url: 'https://surveyjs.io/stay-updated/blog/client-server-data-validation#:~:text=Because%20server%2Dside%20validation%20occurs,for%20feedback%20on%20their%20input.&text=With%20server%2Dside%20validation%2C%20the,even%20if%20it%20is%20invalid'
+        },
+        {
+          title: 'The Power of Consistency in Cybersecurity: Why It Matters',
+          url: 'https://medium.com/@psychomong/the-power-of-consistency-in-cybersecurity-why-it-matters-8b85cfea740e'
         }
       ],
       questionNumber: 18
@@ -742,11 +767,16 @@ const securityXQuiz = {
         'TOCTOU remediation in SET USERACL',
         'Database connection over encrypted channels'
       ],
-      explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.',
+      explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.\n\n' +
+      'Salted hashing is a crucial technique used to enhance password security by adding a unique, random string (the "salt") to a password before hashing it. This prevents attackers from using pre-computed hash tables (like rainbow tables) to crack passwords, making it significantly harder to compromise user accounts even if the database is breached.',
       references: [
         {
           title: 'Vulnerability remediation',
           url: 'https://www.upguard.com/blog/vulnerability-remediation'
+        },
+        {
+          title: 'What is Salted Password Hashing',
+          url: 'https://www.geeksforgeeks.org/ethical-hacking/what-is-salted-password-hashing/'
         }
       ],
       questionNumber: 19
@@ -1481,7 +1511,7 @@ const securityXQuiz = {
       explanation: `(66) A machine-learning-based data security service is a service that leverages machine learning (ML) algorithms to enhance data security measures, including data protection, threat detection, and incident response. It's a proactive and adaptable approach that uses vast datasets to learn and identify patterns and anomalies that might indicate security threats, thus improving the speed and accuracy of threat detection and mitigation.`,
       references: [
         {
-          title: '',
+          title: 'Machine-learning, they are taking over!',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/artificial-intelligence/machine-learning/'
         }
       ],
