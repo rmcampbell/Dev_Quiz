@@ -533,7 +533,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is Vulnerability Scanning?',
-          url: 'https://www.beyondtrust.com/resources/glossary/vulnerability-scanning#:~:text=Vulnerability%20scanning%20is%20the%20process,hardware%2C%20software%2C%20and%20systems.'
+          url: 'https://www.beyondtrust.com/resources/glossary/vulnerability-scanning#:~:text=Vulnerability%20scanning%20is%20the%20process,hardware%2C%20software%2C%20and%20systems'
         }
       ],
       questionNumber: 12
@@ -554,11 +554,11 @@ const securityXQuiz = {
         },
         {
           title: 'What is Non Repudiation?',
-          url: 'https://www.bitsight.com/glossary/non-repudiation-cyber-security#:~:text=Non%2Drepudiation%20in%20cybersecurity%20refers,message%20at%20a%20later%20time.'
+          url: 'https://www.bitsight.com/glossary/non-repudiation-cyber-security#:~:text=Non%2Drepudiation%20in%20cybersecurity%20refers,message%20at%20a%20later%20time'
         },
         {
           title: 'What is the CIA Triad?  No, not that CIA!',
-          url: 'https://www.fortinet.com/resources/cyberglossary/cia-triad#:~:text=1.,data%E2%80%94whether%20intentional%20or%20accidental.'
+          url: 'https://www.fortinet.com/resources/cyberglossary/cia-triad#:~:text=1.,data%E2%80%94whether%20intentional%20or%20accidental'
         },
         {
           title: 'What are Delivery Receipts?',
@@ -566,7 +566,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is attestation?',
-          url: 'https://www.oasis.security/glossary/attestation#:~:text=In%20cybersecurity%2C%20attestation%20is%20the,most%20often%20through%20cryptographic%20means.'
+          url: 'https://www.oasis.security/glossary/attestation#:~:text=In%20cybersecurity%2C%20attestation%20is%20the,most%20often%20through%20cryptographic%20means'
         }
       ],
       questionNumber: 13
@@ -591,7 +591,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is Digital Rights Management (DRM)?',
-          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information.'
+          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information'
         },
         {
           title: 'What is SSL Decryption?',
@@ -631,7 +631,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is a certificate authority?',
-          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates.'
+          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates'
         }
       ],
       questionNumber: 15
@@ -660,7 +660,7 @@ const securityXQuiz = {
         },
         {
           title: 'Understanding Digital Signatures',
-          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature.'
+          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature'
         },
         {
           title: 'How to overcome Vulnerabilities in Digital Signatures',
@@ -768,7 +768,11 @@ const securityXQuiz = {
         'Database connection over encrypted channels'
       ],
       explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.\n\n' +
-      'Salted hashing is a crucial technique used to enhance password security by adding a unique, random string (the "salt") to a password before hashing it. This prevents attackers from using pre-computed hash tables (like rainbow tables) to crack passwords, making it significantly harder to compromise user accounts even if the database is breached.',
+      'Salted hashing is a crucial technique used to enhance password security by adding a unique, random string (the "salt") to a password before hashing it. This prevents attackers from using pre-computed hash tables (like rainbow tables) to crack passwords, making it significantly harder to compromise user accounts even if the database is breached.\n\n' +
+      'The more accurate and commonly used term is SHA, which stands for Secure Hash Algorithm. SHA functions are a family of cryptographic hash functions widely used in cybersecurity. In essence, a SHA function is a one-way mathematical algorithm that takes any input data (of any size) and produces a unique, fixed-length output string called a hash value or message digest. This hash value acts like a digital fingerprint for the original data.\n\n' +
+      '"atomic execution of subroutines" means that a subroutine call is treated as a single, indivisible operation. This is particularly crucial in concurrent or multi-threaded environments, where multiple threads or processes might attempt to access and modify shared resources simultaneously.\n\n' +
+      `A Time-of-Check to Time-of-Use (TOCTOU) vulnerability in the context of SET USERACL could arise if a system checks a user's permissions to perform an action, and then an attacker is able to modify the user's ACLs between the check and the actual action being performed. This window of opportunity could be exploited to grant unauthorized permissions to the user, allowing them to perform actions they shouldn't be able to.\n\n` +
+      'Encrypting database connections, often referred to as using encrypted channels or data-in-transit encryption, is a crucial security practice. It ensures that data being exchanged between a database server and a client application (like a website, application, or database tool) is transformed into an unreadable format, preventing unauthorized access, modification, or theft during transmission.',
       references: [
         {
           title: 'Vulnerability remediation',
@@ -777,6 +781,22 @@ const securityXQuiz = {
         {
           title: 'What is Salted Password Hashing',
           url: 'https://www.geeksforgeeks.org/ethical-hacking/what-is-salted-password-hashing/'
+        },
+        {
+          title: 'Cryptographic Hash Functions: A Hands on Introduction',
+          url: 'https://medium.com/@mohaisen/cryptographic-hash-functions-a-hands-on-introduction-100c93a79f65'
+        },
+        {
+          title: 'Atomic Action',
+          url: 'https://www.sciencedirect.com/topics/computer-science/atomic-action#:~:text=The%20atomic%20execution%20of%20a,but%20only%20before%20and%20after'
+        },
+        {
+          title: 'How to mitigate the risk of a TOCTTOU attack',
+          url: 'https://www.techtarget.com/searchsecurity/answer/How-to-mitigate-the-risk-of-a-TOCTTOU-attack'
+        },
+        {
+          title: 'What is data encryption definition and Why Should a Database Have it?',
+          url: 'https://www.druva.com/glossary/what-is-data-encryption-definition-and-related-faqs'
         }
       ],
       questionNumber: 19
@@ -785,11 +805,26 @@ const securityXQuiz = {
       question: 'A senior cybersecurity engineer is solving a digital certificate issue in which the CA denied certificate issuance due to failed subject identity validation. At which of the following steps within the PKI enrollment process would the denial have occurred?',
       answer: 'RA',
       distractors: ['OCSP', 'IdP', 'CA'],
-      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.',
+      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.\n\n' +
+      `The Online Certificate Status Protocol (OCSP) is a method for verifying the validity of digital certificates in real-time. It's used to check if a certificate, commonly used for secure websites (HTTPS), has been revoked by the Certificate Authority (CA). OCSP acts as an alternative to Certificate Revocation Lists (CRLs), offering a potentially faster and more efficient way to ensure certificate validity during the TLS/SSL handshake.\n\n` +
+      'An Identity Provider (IdP) is a system that manages and verifies user identities, acting as a trusted entity that authenticates users and grants access to various applications and services. IdPs are crucial for secure access management, especially in the context of single sign-on (SSO) and multi-factor authentication (MFA).\n\n' +
+      'A certificate authority (CA) is a trusted entity that issues digital certificates to authenticate content sent from web servers. These certificates are data files used to cryptographically link an entity with a public key.',
       references: [
         {
           title: 'What is a Registration Authority?',
           url: 'https://www.keyfactor.com/blog/what-is-a-registration-authority/'
+        },
+        {
+          title: 'What is the Online Certificate Status Protocol (OCSP)?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/ocsp'
+        },
+        {
+          title: 'What is an Identity Provider',
+          url: 'https://www.cloudflare.com/learning/access-management/what-is-an-identity-provider/'
+        },
+        {
+          title: 'What is a Certificate Authority?',
+          url: 'https://www.techtarget.com/searchsecurity/definition/certificate-authority#:~:text=A%20certificate%20authority%20(CA)%20is,entity%20with%20a%20public%20key'
         }
       ],
       questionNumber: 20
