@@ -637,7 +637,7 @@ const securityXQuiz = {
       questionNumber: 15
     },
     {
-      question: 'Which of the following best explain why organizations prefer to utilize code that is digitally signed?',
+      question: 'Which of the following best explains why organizations prefer to utilize code that is digitally signed?',
       answer: ['It provides origin assurance', 'It verifies integrity'],
       distractors: [
         'It provides increased confidentiality',
@@ -702,7 +702,7 @@ const securityXQuiz = {
           url: 'https://www.geeksforgeeks.org/computer-networks/what-is-reverse-engineering-technique-in-cybersecurity/'
         },
         {
-          tite: 'Identifying Vulnerable Code',
+          title: 'Identifying Vulnerable Code',
           url: 'https://www.infosecinstitute.com/resources/secure-coding/identifying-vulnerable-code/'
         },
         {
