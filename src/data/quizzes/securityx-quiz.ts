@@ -4624,11 +4624,11 @@ const securityXQuiz = {
       ],
       explanation: '(243)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 243
     },
     {
@@ -4639,11 +4639,11 @@ const securityXQuiz = {
       distractors: ['Apply code stylometry', 'Use IoC extractions', 'Leverage malware detonation'],
       explanation: '(244)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 244
     },
     {
@@ -4658,11 +4658,11 @@ const securityXQuiz = {
       ],
       explanation: '(245)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 245
     },
     {
@@ -4677,11 +4677,11 @@ const securityXQuiz = {
       ],
       explanation: '(246)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 246
     },
     {
@@ -4698,11 +4698,11 @@ const securityXQuiz = {
       ],
       explanation: '(247)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 247
     },
     {
@@ -4711,11 +4711,11 @@ const securityXQuiz = {
       distractors: ['CWPP', 'XCCDF', 'CMDB'],
       explanation: '(248)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 248
     },
     {
@@ -4728,11 +4728,11 @@ const securityXQuiz = {
       ],
       explanation: '(249)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 249
     },
     {
@@ -4745,11 +4745,11 @@ const securityXQuiz = {
       distractors: ['SBoM', 'CASB', 'GRC'],
       explanation: '(250)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 250
     },
     {
@@ -4764,11 +4764,11 @@ const securityXQuiz = {
       ],
       explanation: '(251)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 251
     },
     {
@@ -4781,11 +4781,11 @@ const securityXQuiz = {
       ],
       explanation: '(252)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 252
     },
     {
@@ -4798,11 +4798,11 @@ const securityXQuiz = {
       ],
       explanation: '(253)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 253
     },
     {
@@ -4823,11 +4823,11 @@ const securityXQuiz = {
       ],
       explanation: '(254)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 254
     },
     {
@@ -4842,11 +4842,11 @@ const securityXQuiz = {
       ],
       explanation: '(255)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 255
     },
     {
@@ -4859,11 +4859,11 @@ const securityXQuiz = {
       ],
       explanation: '(256)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 256
     },
     {
@@ -4885,11 +4885,11 @@ const securityXQuiz = {
       ],
       explanation: '(257)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 257
     },
     {
@@ -4902,11 +4902,11 @@ const securityXQuiz = {
       ],
       explanation: '(258)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 258
     },
     {
@@ -4915,11 +4915,11 @@ const securityXQuiz = {
       distractors: ['Smishing', 'Automated exploit generation', 'Spear phishing'],
       explanation: '(259)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 259
     },
     {
@@ -4928,11 +4928,11 @@ const securityXQuiz = {
       distractors: ['TLS', 'SPF', 'DNSSEC', 'MX'],
       explanation: '(260)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 260
     },
     {
@@ -4945,11 +4945,11 @@ const securityXQuiz = {
       ],
       explanation: '(261)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 261
     },
     {
@@ -4958,11 +4958,11 @@ const securityXQuiz = {
       distractors: ['D3FEND', 'OWASP', 'COPPA', 'CAPEC'],
       explanation: '(262)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 262
     },
     {
@@ -4975,11 +4975,11 @@ const securityXQuiz = {
       ],
       explanation: '(263)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 263
     },
     {
@@ -4988,11 +4988,11 @@ const securityXQuiz = {
       distractors: ['Root cause analysis', 'Communication plan', 'Lessons learned'],
       explanation: '(264)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 264
     },
     {
@@ -5004,11 +5004,11 @@ const securityXQuiz = {
       distractors: ['Conditional forwarders', 'Root hints', 'CNAME records', 'SRV records'],
       explanation: '(265)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 265
     },
     {
@@ -5021,11 +5021,11 @@ const securityXQuiz = {
       ],
       explanation: '(266)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 266
     },
     {
@@ -5038,11 +5038,11 @@ const securityXQuiz = {
       distractors: ['Data loss prevention', 'Storage area network', 'Baseline template'],
       explanation: '(267)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 267
     },
     {
@@ -5055,11 +5055,11 @@ const securityXQuiz = {
       distractors: ['EDR', 'CSP', 'CASB'],
       explanation: '(268)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 268
     },
     {
@@ -5078,11 +5078,11 @@ const securityXQuiz = {
       ],
       explanation: '(269)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 269
     },
     {
@@ -5095,11 +5095,11 @@ const securityXQuiz = {
       ],
       explanation: '(270)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 270
     },
     {
@@ -5115,11 +5115,11 @@ const securityXQuiz = {
       ],
       explanation: '(271)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 271
     },
     {
@@ -5133,11 +5133,11 @@ const securityXQuiz = {
       ],
       explanation: '(272)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 272
     },
     {
@@ -5150,11 +5150,11 @@ const securityXQuiz = {
       ],
       explanation: '(273)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 273
     },
     {
@@ -5165,11 +5165,11 @@ const securityXQuiz = {
       distractors: ['APIs', 'Base64 encoding', 'Sandboxing'],
       explanation: '(274)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 274
     },
     {
@@ -5182,11 +5182,11 @@ const securityXQuiz = {
       ],
       explanation: '(275)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 275
     },
     {
@@ -5199,11 +5199,11 @@ const securityXQuiz = {
       distractors: ['ASLR', 'NX', 'SED', 'SELinux', 'Shell restriction'],
       explanation: '(276)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 276
     },
     {
@@ -5216,11 +5216,11 @@ const securityXQuiz = {
       distractors: ['NAT gateway', 'Reverse proxy', 'NIDS'],
       explanation: '(277)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 277
     },
     {
@@ -5233,11 +5233,11 @@ const securityXQuiz = {
       ],
       explanation: '(278)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 278
     },
     {
@@ -5246,11 +5246,11 @@ const securityXQuiz = {
       distractors: ['Remediation', 'Response', 'Recovery'],
       explanation: '(279)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 279
     },
     {
@@ -5263,11 +5263,11 @@ const securityXQuiz = {
       ],
       explanation: '(280)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 280
     },
     {
@@ -5281,11 +5281,11 @@ const securityXQuiz = {
       distractors: ['NGFW', 'UTM', 'UEBA', 'HIPS'],
       explanation: '(281)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 281
     },
     {
@@ -5299,11 +5299,11 @@ const securityXQuiz = {
       ],
       explanation: '(282)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 282
     },
     {
@@ -5316,11 +5316,11 @@ const securityXQuiz = {
       ],
       explanation: '(283)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 283
     },
     {
@@ -5333,11 +5333,11 @@ const securityXQuiz = {
       ],
       explanation: '(284)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 284
     },
     {
@@ -5346,11 +5346,11 @@ const securityXQuiz = {
       distractors: ['Code reviews', 'Supply chain visibility', 'Software audits'],
       explanation: '(285)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 285
     },
     {
@@ -5359,11 +5359,11 @@ const securityXQuiz = {
       distractors: ['tangible', 'consistent', 'conserved'],
       explanation: '(286)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 286
     },
     {
@@ -5376,11 +5376,11 @@ const securityXQuiz = {
       distractors: ['PaaS', 'IaaS', 'Private'],
       explanation: '(287)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 287
     },
     {
@@ -5389,11 +5389,11 @@ const securityXQuiz = {
       distractors: ['X-Forwarded-Proto', 'Cache-Control', 'Strict Transport Security', 'Content-Security-Policy'],
       explanation: '(288)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 288
     },
     {
@@ -5402,11 +5402,11 @@ const securityXQuiz = {
       distractors: ['MSA', 'ISA', 'MOU'],
       explanation: '(289)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 289
     },
     {
@@ -5420,11 +5420,11 @@ const securityXQuiz = {
       ],
       explanation: '(290)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 290
     },
     {
@@ -5443,11 +5443,11 @@ const securityXQuiz = {
       ],
       explanation: '(291)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 291
     },
     {
@@ -5461,11 +5461,11 @@ const securityXQuiz = {
       ],
       explanation: '(292)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 292
     },
     {
@@ -5474,11 +5474,11 @@ const securityXQuiz = {
       distractors: ['Signing', 'Access control', 'HIPS'],
       explanation: '(293)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 293
     },
     {
@@ -5487,11 +5487,11 @@ const securityXQuiz = {
       distractors: ['Legal hold', 'Checksum', 'E-discovery'],
       explanation: '(294)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 294
     },
     {
@@ -5500,11 +5500,11 @@ const securityXQuiz = {
       distractors: ['objdump', 'Strings', 'dd'],
       explanation: '(295)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 295
     },
     {
@@ -5513,11 +5513,11 @@ const securityXQuiz = {
       distractors: ['Encryption', 'Tokenization', 'Scrubbing', 'Substitution'],
       explanation: '(296)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 296
     },
     {
@@ -5526,11 +5526,11 @@ const securityXQuiz = {
       distractors: ['No-execute', 'Total memory encryption', 'Virtual memory protection'],
       explanation: '(297)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 297
     },
     {
@@ -5544,11 +5544,11 @@ const securityXQuiz = {
       distractors: ['CN', 'CA', 'CRL', 'Issuer'],
       explanation: '(298)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 298
     },
     {
@@ -5561,11 +5561,11 @@ const securityXQuiz = {
       ],
       explanation: '(299)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 299
     },
     {
@@ -5583,11 +5583,11 @@ const securityXQuiz = {
       ],
       explanation: '(300)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 300
     }
     // {
