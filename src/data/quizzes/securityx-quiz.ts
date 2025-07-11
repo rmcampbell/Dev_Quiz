@@ -533,7 +533,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is Vulnerability Scanning?',
-          url: 'https://www.beyondtrust.com/resources/glossary/vulnerability-scanning#:~:text=Vulnerability%20scanning%20is%20the%20process,hardware%2C%20software%2C%20and%20systems.'
+          url: 'https://www.beyondtrust.com/resources/glossary/vulnerability-scanning#:~:text=Vulnerability%20scanning%20is%20the%20process,hardware%2C%20software%2C%20and%20systems'
         }
       ],
       questionNumber: 12
@@ -554,11 +554,11 @@ const securityXQuiz = {
         },
         {
           title: 'What is Non Repudiation?',
-          url: 'https://www.bitsight.com/glossary/non-repudiation-cyber-security#:~:text=Non%2Drepudiation%20in%20cybersecurity%20refers,message%20at%20a%20later%20time.'
+          url: 'https://www.bitsight.com/glossary/non-repudiation-cyber-security#:~:text=Non%2Drepudiation%20in%20cybersecurity%20refers,message%20at%20a%20later%20time'
         },
         {
           title: 'What is the CIA Triad?  No, not that CIA!',
-          url: 'https://www.fortinet.com/resources/cyberglossary/cia-triad#:~:text=1.,data%E2%80%94whether%20intentional%20or%20accidental.'
+          url: 'https://www.fortinet.com/resources/cyberglossary/cia-triad#:~:text=1.,data%E2%80%94whether%20intentional%20or%20accidental'
         },
         {
           title: 'What are Delivery Receipts?',
@@ -566,7 +566,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is attestation?',
-          url: 'https://www.oasis.security/glossary/attestation#:~:text=In%20cybersecurity%2C%20attestation%20is%20the,most%20often%20through%20cryptographic%20means.'
+          url: 'https://www.oasis.security/glossary/attestation#:~:text=In%20cybersecurity%2C%20attestation%20is%20the,most%20often%20through%20cryptographic%20means'
         }
       ],
       questionNumber: 13
@@ -591,7 +591,7 @@ const securityXQuiz = {
         },
         {
           title: 'What is Digital Rights Management (DRM)?',
-          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information.'
+          url: 'https://www.fortinet.com/resources/cyberglossary/digital-rights-management-drm#:~:text=File%20privacy%3A%20DRM%20helps%20organizations,reading%20confidential%20or%20sensitive%20information'
         },
         {
           title: 'What is SSL Decryption?',
@@ -631,13 +631,13 @@ const securityXQuiz = {
         },
         {
           title: 'What is a certificate authority?',
-          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates.'
+          url: 'https://www.ssl.com/article/what-is-a-certificate-authority-ca/#:~:text=A%20certificate%20authority%20is%20a,documents%20known%20as%20digital%20certificates'
         }
       ],
       questionNumber: 15
     },
     {
-      question: 'Which of the following best explain why organizations prefer to utilize code that is digitally signed?',
+      question: 'Which of the following best explains why organizations prefer to utilize code that is digitally signed?',
       answer: ['It provides origin assurance', 'It verifies integrity'],
       distractors: [
         'It provides increased confidentiality',
@@ -660,7 +660,7 @@ const securityXQuiz = {
         },
         {
           title: 'Understanding Digital Signatures',
-          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature.'
+          url: 'https://www.cisa.gov/news-events/news/understanding-digital-signatures#:~:text=Digital%20signatures%20create%20a%20virtual,part%20of%20the%20digital%20signature'
         },
         {
           title: 'How to overcome Vulnerabilities in Digital Signatures',
@@ -679,7 +679,11 @@ const securityXQuiz = {
         'Analyze the use of an HTTP intercepting proxy to dynamically uncover issues'
       ],
       explanation: '(17) Fuzz testing (fuzzing) is a proactive dynamic application security testing technique where the system is bombarded with random, malformed, or unexpected inputs to discover: "Buffer overflows", "Input validation issues", "Memory corruption", "Remote code execution flaws". Since the report is about remote code execution, fuzzing is ideal to uncover other vulnerable paths in the same component or similar logic areas.\n\n' +
-      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.',
+      'Exploitation frameworks are crucial tools in cybersecurity for uncovering vulnerabilities. They enable security professionals to simulate real-world attacks, identify weaknesses, and test security measures in a controlled environment. By using these frameworks, organizations can proactively address vulnerabilities before attackers can exploit them, improving their overall security posture.\n\n' +
+      `Software Composition Analysis (SCA) tools are essential for identifying known vulnerabilities within the open-source and third-party components of software projects. These tools scan applications to detect security flaws, license compliance issues, and even malicious components within the software's supply chain. By flagging these vulnerabilities, SCA tools enable developers and security teams to proactively address risks and strengthen overall application security.\n\n` +
+      `Reverse engineering in cybersecurity involves analyzing an application to understand its functionality, identify vulnerabilities, and potentially create countermeasures. This process can be used by security professionals to enhance security by finding flaws and by malicious actors to exploit them. It involves examining compiled code, understanding data handling, and potentially recreating the application's logic.\n\n` +
+      'Vulnerable code paths refer to specific sections of software code that contain weaknesses, or vulnerabilities, that can be exploited by attackers to gain unauthorized access, execute malicious code, or cause other security breaches. These vulnerabilities often arise from insecure coding practices, insufficient input validation, or misconfigurations.\n\n' +
+      `An HTTP intercepting proxy is a security tool that sits between a user's browser and a web server, allowing for the interception, inspection, and modification of HTTP traffic. This capability is valuable for cybersecurity in several ways, including: testing web application security, identifying and mitigating vulnerabilities, and enhancing online privacy and security.`,
       references: [
         {
           title: 'What is fuzz testing?',
@@ -688,6 +692,22 @@ const securityXQuiz = {
         {
           title: 'Exploit Frameworks',
           url: 'https://www.prosec-networks.com/en/blog/exploit-frameworks/'
+        },
+        {
+          title: 'What is Software Composition Analysis?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-sca'
+        },
+        {
+          title: 'What is Reverse Engineering Technique in Cybersecurity?',
+          url: 'https://www.geeksforgeeks.org/computer-networks/what-is-reverse-engineering-technique-in-cybersecurity/'
+        },
+        {
+          title: 'Identifying Vulnerable Code',
+          url: 'https://www.infosecinstitute.com/resources/secure-coding/identifying-vulnerable-code/'
+        },
+        {
+          title: 'What is an intercepting proxy?',
+          url: 'https://www.pakiki.co.nz/blog/what-is-an-intercepting-proxy/'
         }
       ],
       questionNumber: 17
@@ -702,11 +722,36 @@ const securityXQuiz = {
         'Recommend thread-safe processes in the code to eliminate race conditions',
         'Move the batch processing from client side to server side to remove client processing inconsistencies'
       ],
-      explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.`,
+      explanation: `(18) Exception Handlers are mechanisms within a program's code that allow it to gracefully respond to unexpected events or errors that occur during execution. These errors, often called exceptions, can disrupt the normal flow of a program. Exception handling provides a way to manage these disruptions, potentially allowing the program to continue running or to recover from the error.\n\n` +
+      'To use memory-safe functions to prevent integer overflow and improve cybersecurity, you can utilize libraries, built-in functions, and secure coding practices.\n\n' +
+      'Thread safety is a crucial concept in concurrent programming, and its importance extends significantly to cybersecurity. In multi-threaded applications, multiple threads can access and modify shared data simultaneously. If these operations are not handled carefully, it can lead to vulnerabilities that attackers can exploit.\n\n' +
+      `Eliminating race conditions involves preventing vulnerabilities that arise when a system's outcome depends on the unpredictable timing or sequence of events. Race conditions can be exploited by attackers to gain unauthorized access, manipulate data, or cause denial of service.\n\n` +
+      'Batch processing from client-side to server-side involves grouping multiple requests from a client and sending them as a single batch to the server for processing. This approach aims to improve efficiency by reducing network overhead and potentially optimizing server resource utilization.\n\n' +
+      'One of the most common security vulnerabilities in client-side rendering is cross-site scripting (XSS). XSS occurs when an attacker injects malicious scripts into your web application, which then get executed in the browser of unsuspecting users.',
       references: [
         {
           title: 'Exception Handler',
           url: 'https://www.theserverside.com/definition/exception-handler'
+        },
+        {
+          title: 'Preventing Integer Overflow and Underflow Vulnerabilities',
+          url: 'https://www.infosecinstitute.com/resources/secure-coding/how-to-mitigate-integer-overflow-and-underflow-vulnerabilities/'
+        },
+        {
+          title: 'What is Thread-Safey and How to Achieve It?',
+          url: 'https://www.baeldung.com/java-thread-safety'
+        },
+        {
+          title: 'What is a Race Condition Vulnerability?',
+          url: 'https://www.indusface.com/learning/what-is-a-race-condition-vulnerability/'
+        },
+        {
+          title: 'Client-Side vs Server-Side Form Input Validation',
+          url: 'https://surveyjs.io/stay-updated/blog/client-server-data-validation#:~:text=Because%20server%2Dside%20validation%20occurs,for%20feedback%20on%20their%20input.&text=With%20server%2Dside%20validation%2C%20the,even%20if%20it%20is%20invalid'
+        },
+        {
+          title: 'The Power of Consistency in Cybersecurity: Why It Matters',
+          url: 'https://medium.com/@psychomong/the-power-of-consistency-in-cybersecurity-why-it-matters-8b85cfea740e'
         }
       ],
       questionNumber: 18
@@ -722,11 +767,36 @@ const securityXQuiz = {
         'TOCTOU remediation in SET USERACL',
         'Database connection over encrypted channels'
       ],
-      explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.',
+      explanation: '(19) Remediating code vulnerabilities involves identifying and fixing weaknesses in software that could be exploited by attackers. This process often includes patching, updating, or reconfiguring code to address identified security flaws. Remediation strategies can also involve compensating controls, such as implementing additional security measures to mitigate the risk of exploitation until a permanent fix can be applied.\n\n' +
+      'Salted hashing is a crucial technique used to enhance password security by adding a unique, random string (the "salt") to a password before hashing it. This prevents attackers from using pre-computed hash tables (like rainbow tables) to crack passwords, making it significantly harder to compromise user accounts even if the database is breached.\n\n' +
+      'The more accurate and commonly used term is SHA, which stands for Secure Hash Algorithm. SHA functions are a family of cryptographic hash functions widely used in cybersecurity. In essence, a SHA function is a one-way mathematical algorithm that takes any input data (of any size) and produces a unique, fixed-length output string called a hash value or message digest. This hash value acts like a digital fingerprint for the original data.\n\n' +
+      '"atomic execution of subroutines" means that a subroutine call is treated as a single, indivisible operation. This is particularly crucial in concurrent or multi-threaded environments, where multiple threads or processes might attempt to access and modify shared resources simultaneously.\n\n' +
+      `A Time-of-Check to Time-of-Use (TOCTOU) vulnerability in the context of SET USERACL could arise if a system checks a user's permissions to perform an action, and then an attacker is able to modify the user's ACLs between the check and the actual action being performed. This window of opportunity could be exploited to grant unauthorized permissions to the user, allowing them to perform actions they shouldn't be able to.\n\n` +
+      'Encrypting database connections, often referred to as using encrypted channels or data-in-transit encryption, is a crucial security practice. It ensures that data being exchanged between a database server and a client application (like a website, application, or database tool) is transformed into an unreadable format, preventing unauthorized access, modification, or theft during transmission.',
       references: [
         {
           title: 'Vulnerability remediation',
           url: 'https://www.upguard.com/blog/vulnerability-remediation'
+        },
+        {
+          title: 'What is Salted Password Hashing',
+          url: 'https://www.geeksforgeeks.org/ethical-hacking/what-is-salted-password-hashing/'
+        },
+        {
+          title: 'Cryptographic Hash Functions: A Hands on Introduction',
+          url: 'https://medium.com/@mohaisen/cryptographic-hash-functions-a-hands-on-introduction-100c93a79f65'
+        },
+        {
+          title: 'Atomic Action',
+          url: 'https://www.sciencedirect.com/topics/computer-science/atomic-action#:~:text=The%20atomic%20execution%20of%20a,but%20only%20before%20and%20after'
+        },
+        {
+          title: 'How to mitigate the risk of a TOCTTOU attack',
+          url: 'https://www.techtarget.com/searchsecurity/answer/How-to-mitigate-the-risk-of-a-TOCTTOU-attack'
+        },
+        {
+          title: 'What is data encryption definition and Why Should a Database Have it?',
+          url: 'https://www.druva.com/glossary/what-is-data-encryption-definition-and-related-faqs'
         }
       ],
       questionNumber: 19
@@ -735,11 +805,26 @@ const securityXQuiz = {
       question: 'A senior cybersecurity engineer is solving a digital certificate issue in which the CA denied certificate issuance due to failed subject identity validation. At which of the following steps within the PKI enrollment process would the denial have occurred?',
       answer: 'RA',
       distractors: ['OCSP', 'IdP', 'CA'],
-      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.',
+      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.\n\n' +
+      `The Online Certificate Status Protocol (OCSP) is a method for verifying the validity of digital certificates in real-time. It's used to check if a certificate, commonly used for secure websites (HTTPS), has been revoked by the Certificate Authority (CA). OCSP acts as an alternative to Certificate Revocation Lists (CRLs), offering a potentially faster and more efficient way to ensure certificate validity during the TLS/SSL handshake.\n\n` +
+      'An Identity Provider (IdP) is a system that manages and verifies user identities, acting as a trusted entity that authenticates users and grants access to various applications and services. IdPs are crucial for secure access management, especially in the context of single sign-on (SSO) and multi-factor authentication (MFA).\n\n' +
+      'A certificate authority (CA) is a trusted entity that issues digital certificates to authenticate content sent from web servers. These certificates are data files used to cryptographically link an entity with a public key.',
       references: [
         {
           title: 'What is a Registration Authority?',
           url: 'https://www.keyfactor.com/blog/what-is-a-registration-authority/'
+        },
+        {
+          title: 'What is the Online Certificate Status Protocol (OCSP)?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/ocsp'
+        },
+        {
+          title: 'What is an Identity Provider',
+          url: 'https://www.cloudflare.com/learning/access-management/what-is-an-identity-provider/'
+        },
+        {
+          title: 'What is a Certificate Authority?',
+          url: 'https://www.techtarget.com/searchsecurity/definition/certificate-authority#:~:text=A%20certificate%20authority%20(CA)%20is,entity%20with%20a%20public%20key'
         }
       ],
       questionNumber: 20
@@ -1461,7 +1546,7 @@ const securityXQuiz = {
       explanation: `(66) A machine-learning-based data security service is a service that leverages machine learning (ML) algorithms to enhance data security measures, including data protection, threat detection, and incident response. It's a proactive and adaptable approach that uses vast datasets to learn and identify patterns and anomalies that might indicate security threats, thus improving the speed and accuracy of threat detection and mitigation.`,
       references: [
         {
-          title: '',
+          title: 'Machine-learning, they are taking over!',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/artificial-intelligence/machine-learning/'
         }
       ],
