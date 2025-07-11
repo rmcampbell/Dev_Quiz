@@ -234,7 +234,7 @@ const securityXQuiz = {
         },
         {
           title: 'What are some common characters to prevent command injection attacks?',
-          url: 'https://eitca.org/cybersecurity/eitc-is-wapt-web-applications-penetration-testing/overthewire-natas/overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/examination-review-overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/what-are-some-common-characters-or-sequences-that-are-blocked-or-sanitized-to-prevent-command-injection-attacks/' 
+          url: 'https://eitca.org/cybersecurity/eitc-is-wapt-web-applications-penetration-testing/overthewire-natas/overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/examination-review-overthewire-natas-walkthrough-level-5-10-lfi-and-command-injection/what-are-some-common-characters-or-sequences-that-are-blocked-or-sanitized-to-prevent-command-injection-attacks/'
         },
         {
           title: 'The Importance of URL Encoding in Web Security',
@@ -542,7 +542,7 @@ const securityXQuiz = {
       question: 'PKI can be used to support security requirements in the change management process. Which of the following capabilities does PKI provide for messages?',
       answer: 'Non-repudiation',
       distractors: ['Confidentiality', 'Delivery receipts', 'Attestation'],
-      explanation: '(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender’s private key to sign messages.\n\n' +
+      explanation: `(13) PKI (Public Key Infrastructure) supports several security goals, and one of its key features is non-repudiation — ensuring that: A sender cannot deny having sent a message. This is achieved through digital signatures, which use a sender's private key to sign messages.\n\n` +
       'Non-repudiation in cybersecurity refers to the assurance that a party involved in a transaction or communication cannot deny the authenticity of their signature or the sending of a message at a later time.\n\n' +
       `Confidentiality in cybersecurity refers to protecting sensitive information from unauthorized access, ensuring that only authorized individuals can view or use it. It's a core principle of information security, alongside integrity and availability, often referred to as the CIA triad.\n\n` +
       'Delivery receipts, in the context of cybersecurity, involve the confirmation that a message or document has been delivered successfully to the intended recipient. While beneficial for user experience and operational efficiency, they can also introduce potential cybersecurity risks if not properly secured.\n\n' +
@@ -577,7 +577,7 @@ const securityXQuiz = {
       distractors: ['Digital rights management', 'Network traffic decryption', 'Watermarking'],
       explanation: '(14) DLP (Data Loss Prevention) systems use pattern matching to identify sensitive information like:"Credit card numbers", "Social Security numbers", "Bank account details". To detect cardholder information, DLP systems typically rely on: Regular expressions (regex) to match patterns such as the 16-digit format of credit card numbers. Additional logic like Luhn checks to validate numbers. By configuring the DLP system with appropriate regex patterns, it can automatically identify and label documents containing cardholder data in the future.\n\n' +
       `A regular expression (regex or regexp) is a sequence of characters that defines a search pattern. It's used to find, match, or validate specific text patterns within data, such as logs, files, or network traffic. Essentially, regex empowers security professionals to efficiently search for and analyze data by identifying patterns instead of specific words or phrases.\n\n` +
-      'Digital rights management (DRM) is the use of technology to control and manage access to copyrighted material. Another DRM meaning is taking control of digital content away from the person who possesses it and handing it to a computer program. DRM aims to protect the copyright holder’s rights and prevents content from unauthorized distribution and modification.\n\n' +
+      `Digital rights management (DRM) is the use of technology to control and manage access to copyrighted material. Another DRM meaning is taking control of digital content away from the person who possesses it and handing it to a computer program. DRM aims to protect the copyright holder's rights and prevents content from unauthorized distribution and modification.\n\n` +
       'Network traffic decryption involves intercepting and decrypting encrypted network traffic to inspect its contents for potential threats, such as malware or unauthorized access attempts. This process is crucial for maintaining a secure network environment, as it allows security systems to detect and respond to threats that may be hidden within encrypted communication.\n\n' +
       'Digital watermarking is a cybersecurity technique used to embed imperceptible identifiers within digital content (like documents, images, or audio) to verify ownership, track usage, and prevent unauthorized access or distribution. It acts as a security measure to protect sensitive information, deter data leakage, and enable tracing of content back to its source.',
       references: [
@@ -805,7 +805,7 @@ const securityXQuiz = {
       question: 'A senior cybersecurity engineer is solving a digital certificate issue in which the CA denied certificate issuance due to failed subject identity validation. At which of the following steps within the PKI enrollment process would the denial have occurred?',
       answer: 'RA',
       distractors: ['OCSP', 'IdP', 'CA'],
-      explanation: '(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject’s identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn’t proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.\n\n' +
+      explanation: `(20) RA (Registration Authority) (✅ Correct Answer): Verifies the subject's identity during enrollment. CA: Issues or denies certificates, but relies on the RA for identity validation. If the RA fails the subject, the CA doesn't proceed. OCSP: Checks revocation status of an already issued certificate. Not part of the issuance process. IdP (Identity Provider): Used in federated identity or SSO systems, not standard PKI enrollment.\n\n` +
       `The Online Certificate Status Protocol (OCSP) is a method for verifying the validity of digital certificates in real-time. It's used to check if a certificate, commonly used for secure websites (HTTPS), has been revoked by the Certificate Authority (CA). OCSP acts as an alternative to Certificate Revocation Lists (CRLs), offering a potentially faster and more efficient way to ensure certificate validity during the TLS/SSL handshake.\n\n` +
       'An Identity Provider (IdP) is a system that manages and verifies user identities, acting as a trusted entity that authenticates users and grants access to various applications and services. IdPs are crucial for secure access management, especially in the context of single sign-on (SSO) and multi-factor authentication (MFA).\n\n' +
       'A certificate authority (CA) is a trusted entity that issues digital certificates to authenticate content sent from web servers. These certificates are data files used to cryptographically link an entity with a public key.',
@@ -833,7 +833,7 @@ const securityXQuiz = {
       question: 'An internal user can send encrypted emails successfully to all recipients, except one. at an external organization. When the internal user attempts to send encrypted emails to this external recipient, a security error message appears. The issue does not affect unencrypted emails. The external recipient can send encrypted emails to internal users. Which of the following is the most likely cause of the issue?',
       answer: `The external recipient's email address and the email address associated with the external recipient's public key are mismatched`,
       distractors: [
-        'The validity dates of the external recipient’s private key do not match the SSH keys with which the internal user is accessing the system',
+        `The validity dates of the external recipient's private key do not match the SSH keys with which the internal user is accessing the system`,
         'The external recipient has an expired public/private key pair that has not been revoked by the CA',
         `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
@@ -2314,7 +2314,7 @@ const securityXQuiz = {
       questionNumber: 115
     },
     {
-      question: `A company's SIEM is designed to associate the company’s asset inventory with user events. Given the following report:\n\n` +
+      question: `A company's SIEM is designed to associate the company's asset inventory with user events. Given the following report:\n\n` +
         `![Question 116](${imgPath(116)})\n\n` +
         'Which of the following should a security engineer investigate first as part of a log audit?',
       answer: 'Unauthorized usage attempts of the administrator account',
@@ -2575,7 +2575,7 @@ const securityXQuiz = {
       questionNumber: 130
     },
     {
-      question: 'A company’s help desk is experiencing a large number of calls from the finance department stating access issues to www.bank.com. The security operations center reviewed the following security logs:\n\n' +
+      question: `A company's help desk is experiencing a large number of calls from the finance department stating access issues to www.bank.com. The security operations center reviewed the following security logs:\n\n` +
         `![Question 131](${imgPath(131)})\n\n` +
         'Which of the following is most likely the cause of the issue?',
       answer: 'The DNS record has been poisoned',
@@ -2737,7 +2737,7 @@ const securityXQuiz = {
       questionNumber: 139
     },
     {
-      question: 'Emails that the marketing department is sending to customers are going to the customers’ spam folders. The security team is investigating the issue and discovers that the certificates used by the email server were reissued, but DNS records had not been updated. Which of the following should the security team update in order to fix this issue?',
+      question: `Emails that the marketing department is sending to customers are going to the customers' spam folders. The security team is investigating the issue and discovers that the certificates used by the email server were reissued, but DNS records had not been updated. Which of the following should the security team update in order to fix this issue?`,
       answer: ['DMARC', 'SPF', 'DKIM'],
       distractors: ['DNSSEC', 'SASE', 'SAN', 'SOA', 'MX'],
       explanation: '(140) DMARC, DKIM, and SPF are email authentication protocols that work together to improve email security and reduce spoofing. DMARC provides a policy for how receiving email servers should handle emails that fail DKIM or SPF authentication. DKIM uses cryptographic signatures to verify email content and authenticity, while SPF defines authorized IP addresses for a domain.',
@@ -3462,7 +3462,7 @@ const securityXQuiz = {
       questionNumber: 180
     },
     {
-      question: 'An organization recently migrated data to a new file management system. The architect decides to use a discretionary authorization model on the new system. Which of the following best explains the architect’s choice?',
+      question: `An organization recently migrated data to a new file management system. The architect decides to use a discretionary authorization model on the new system. Which of the following best explains the architect's choice?`,
       answer: 'The permissions were not able to be migrated to the new system, and several stakeholders were made responsible for granting appropriate access',
       distractors: [
         'The responsibility of migrating data to the new file management system was outsourced to the vendor providing the platform',
@@ -3611,7 +3611,7 @@ const securityXQuiz = {
       question: 'A company reduced its staff 60 days ago, and applications are now starting to fail. The security analyst is investigating to determine if there is malicious intent for the application failures. The security analyst reviews the following logs:\n\n\n' +
         `![Question 190](${imgPath(190)})\n\n` +
         'Which of the following is the most likely reason for the application failures?',
-      answer: 'The user’s account was set as a service account',
+      answer: `The user's account was set as a service account`,
       distractors: [
         `The user's home directory was deleted`,
         'The user does not have sudo access',
@@ -3816,7 +3816,7 @@ const securityXQuiz = {
       question: 'A security analyst is reviewing the following authentication logs:\n\n' +
         `![Question 200](${imgPath(200)})\n\n` +
         'Which of the following should the analyst do first?',
-      answer: 'Disable User1’s account',
+      answer: `Disable User1's account`,
       distractors: [`Disable User2's account`, `Disable User12's account`, `Disable User8's account`],
       explanation: '(200) Disabling user accounts is a crucial cybersecurity practice to mitigate risks associated with unauthorized access and data breaches. When employees leave or accounts become inactive, disabling them prevents former employees, malicious actors, or even automated scripts from exploiting those accounts to access sensitive information or systems. This practice is especially important for accounts with high privileges or those that have remained inactive for extended periods.',
       references: [
@@ -3915,7 +3915,7 @@ const securityXQuiz = {
       questionNumber: 205
     },
     {
-      question: 'A company wants to perform threat modeling on an internally developed, business-critical application. The Chief Information Security Officer (CISO) is most concerned that the application should maintain 99.999% availability and authorized users should only be able to gain access to data they are explicitly authorized to view. Which of the following threat-modeling frameworks directly addresses the CISO’s concerns about this system?',
+      question: `A company wants to perform threat modeling on an internally developed, business-critical application. The Chief Information Security Officer (CISO) is most concerned that the application should maintain 99.999% availability and authorized users should only be able to gain access to data they are explicitly authorized to view. Which of the following threat-modeling frameworks directly addresses the CISO's concerns about this system?`,
       answer: 'STRIDE',
       distractors: ['CAPEC', 'ATT&CK', 'TAXII'],
       explanation: `(206) STRIDE is a security framework developed by Microsoft that helps in identifying potential threats to a system by categorizing them into six threat types: Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege. It's a mnemonic device to help security professionals systematically assess vulnerabilities and risks in a system.`,
@@ -3997,7 +3997,7 @@ const securityXQuiz = {
       question: 'A subcontractor develops safety critical avionics software for a major aircraft manufacturer. After an incident, a third-party investigator recommends the company begin to employ formal methods in the development life cycle. Which of the following findings from the investigation most directly supports the investigator\'s recommendation?',
       answer: 'The codebase lacks traceability to functional and non-functional requirements',
       distractors: [
-        'The system’s bill of materials failed to include commercial and open-source libraries',
+        `The system's bill of materials failed to include commercial and open-source libraries`,
         'The company lacks dynamic and interactive application security testing standards',
         'The implemented software inefficiently manages compute and memory resources'
       ],
@@ -4057,7 +4057,7 @@ const securityXQuiz = {
       questionNumber: 213
     },
     {
-      question: 'A company hosts a platform-as-a-service solution with a web-based front end, through which customers interact with data sets. A security administrator needs to deploy controls to prevent application-focused attacks. Which of the following most directly supports the administrator’s objective?',
+      question: `A company hosts a platform-as-a-service solution with a web-based front end, through which customers interact with data sets. A security administrator needs to deploy controls to prevent application-focused attacks. Which of the following most directly supports the administrator's objective?`,
       answer: 'Creating WAF policies for relevant programming languages',
       distractors: [
         'Improving security dashboard visualization on SIEM',
@@ -4608,6 +4608,987 @@ const securityXQuiz = {
         }
       ],
       questionNumber: 242
+    },
+    {
+      question: 'An external SaaS solution user reports a bug associated with the role-based access control module. This bug\n' +
+        'allows users to bypass system logic associated with client segmentation in the multitenant deployment model.\n' +
+        'When assessing the bug report, the developer finds that the same bug was previously identified and addressed in\n' +
+        'an earlier release. The developer then determines the bug was reintroduced when an existing software component\n' +
+        'was integrated from a prior version of the platform. Which of the following is the best way to prevent this scenario?',
+      answer: 'Regression testing',
+      distractors: [
+        'Code signing',
+        'Automated test and retest',
+        'User acceptance testing',
+        'Software composition analysis'
+      ],
+      explanation: '(243)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 243
+    },
+    {
+      question: 'After several companies in the financial industry were affected by a similar incident, they shared information about\n' +
+        'threat intelligence and the malware used for exploitation. Which of the following should the companies do to best\n' +
+        'indicate whether the attacks are being conducted by the same actor?',
+      answer: 'Look for common TTPs',
+      distractors: ['Apply code stylometry', 'Use IoC extractions', 'Leverage malware detonation'],
+      explanation: '(244)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 244
+    },
+    {
+      question: 'Which of the following most likely explains the reason a security engineer replaced ECC with a lattice-based cryptographic technique?',
+      answer: 'It is currently considered a robust PQC technique.',
+      distractors: [
+        'It is computationally efficient and provides perfect forward secrecy.',
+        'It is more resilient to brute-force attacks than ECC.',
+        'It supports ephemeral key exchange and digital signatures.',
+        'It is currently considered a robust PQC technique.',
+        'It enables processing on data while remaining in an encrypted state.'
+      ],
+      explanation: '(245)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 245
+    },
+    {
+      question: 'An administrator reviews the following log and determines the root cause of a site-to-site tunnel failure:\n\n' +
+        `![Question 246](${imgPath(246)})\n\n` +
+        'Which of the following actions should the administrator take to most effectively correct the failure?',
+      answer: 'Add a new subnet as a permitted initiator.',
+      distractors: [
+        'Enable perfect forward secrecy on the remote peer.',
+        'Update the cipher suites configured for use on the server side.',
+        'Disable IKE version 1 and run IKE version 2.'
+      ],
+      explanation: '(246)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 246
+    },
+    {
+      question: 'A security architect is mitigating a vulnerability that previously led to a web application data breach. An analysis into the root cause of the issue finds the following:\n\n' +
+        "`- An administrator's account was hijacked and used on several Autonomous System Numbers within 30 minutes`\n\n" +
+        '`- All administrators use named accounts that require multifactor authentication`\n\n' +
+        '`- Single sign-on is used for all company applications`\n\n' +
+        'Which of the following should the security architect do to mitigate the issue?',
+      answer: 'Enable context-based authentication when network locations change on administrator login attempts.',
+      distractors: [
+        'Configure token theft detections on the single sign-on system with automatic account lockouts.',
+        'Decentralize administrator accounts and force unique passwords for each application.',
+        `Enforce biometric authentication requirements for the administrator's named accounts.`
+      ],
+      explanation: '(247)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 247
+    },
+    {
+      question: 'An organization currently has IDS, firewall, and DLP systems in place. The systems administrator needs to integrate the tools in the environment to reduce response time. Which of the following should the administrator use?',
+      answer: 'SOAR',
+      distractors: ['CWPP', 'XCCDF', 'CMDB'],
+      explanation: '(248)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 248
+    },
+    {
+      question: 'A company migrating to a remote work model requires that company-owned devices connect to a VPN before logging in to the device itself. The VPN gateway requires that a specific key extension is deployed to the machine certificates in the internal PKI. Which of the following best explains this requirement?',
+      answer: 'The VPN client selected the certificate with the correct key usage without user interaction.',
+      distractors: [
+        'The certificate is an additional factor to meet regulatory MFA requirements for VPN access.',
+        'The internal PKI certificate deployment allows for Wi-Fi connectivity before logging in to other systems.',
+        'The server connection uses SSL VPN, which uses certificates for secure communication.'
+      ],
+      explanation: '(249)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 249
+    },
+    {
+      question: 'A company that uses several cloud applications wants to property identify:\n\n' +
+        '`- All the devices potentially affected by a given vulnerability`\n\n' +
+        '`- All the internal servers utilizing the same physical switch`\n\n' +
+        '`- The number of endpoints using a particular operating system`\n\n' +
+        'Which of the following is the best way to meet the requirements?',
+      answer: 'CMDB',
+      distractors: ['SBoM', 'CASB', 'GRC'],
+      explanation: '(250)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 250
+    },
+    {
+      question: 'An external threat actor attacks public infrastructure providers. In response to the attack and during follow-up activities, various providers share information obtained during response efforts. After the attack, energy sector companies share their status and response data:\n\n' +
+        `![Question 251](${imgPath(251)})\n\n` +
+        'Which of the following is the most important issue to address to defend against future attacks?',
+      answer: 'Failure to integrate with the TIP',
+      distractors: [
+        'Failure to implement a UEBA system',
+        'Failure to implement a DLP system',
+        'Failure to join the industry ISAC'
+      ],
+      explanation: '(251)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 251
+    },
+    {
+      question: 'Which of the following best describes the challenges associated with widespread adoption of homomorphic encryption techniques?',
+      answer: 'Insufficient coprocessor support',
+      distractors: [
+        'Incomplete mathematical primitives',
+        'No use cases to drive adoption',
+        'Quantum computers not yet capable'
+      ],
+      explanation: '(252)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 252
+    },
+    {
+      question: `A company is migrating from company-owned phones to a BYOD strategy for mobile devices. The pilot program will start with the executive management team and be rolled out to the rest of the staff in phases. The company's Chief Financial Officer loses a phone multiple times a year. Which of the following will most likely secure the data on the lost device?`,
+      answer: 'Remotely wipe the device.',
+      distractors: [
+        'Require a VPN to be active to access company data.',
+        `Set up different profiles based on the person's risk.`,
+        'Require MFA to access company applications.'
+      ],
+      explanation: '(253)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 253
+    },
+    {
+      question: 'Company A acquired Company B. Both companies serve a user base in different geographic regions but now collectively serve a globally distributed user base. A security architect needs to design resilient monitoring systems with the following requirements:\n\n' +
+        '`- User data must remain on the systems of each respective company.`\n\n' +
+        '`- Low latency is needed for all users regardless of company location and user location.`\n\n' +
+        '`- Each company must have its own redundancy.`\n\n' +
+        'Which of the following practices are the most beneficial in meeting the requirements?',
+      answer: [
+        `Adding additional resources in each company's original region`,
+        'Implementing a network load balancer'
+      ],
+      distractors: [
+        `Replicating each company's system in the other company's region`,
+        'Deploying a reverse proxy',
+        'Utilizing an API gateway',
+        'Enabling automated vertical scaling'
+      ],
+      explanation: '(254)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 254
+    },
+    {
+      question: 'During a security assessment using an EDR solution, a security engineer generates the following report about the assets in the system:\n' +
+        `![Question 255](${imgPath(255)})\n\n` +
+        'After five days, the EDR console reports a blocked infection on the host `0WIN23` by a remote access Trojan. Which of the following most likely enabled the attempted infection?',
+      answer: "`0WIN29's` EDR has an unknown vulnerability that was exploited by the attacker.",
+      distractors: [
+        '`0WIN23` uses a legacy version of Windows that is not supported by the EDR.',
+        '`LN002` was not supported by the EDR solution and propagates the RAT.',
+        '`MAC005` spreads the malware through other hosts in the network.'
+      ],
+      explanation: '(255)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 255
+    },
+    {
+      question: 'A security engineer must ensure that sensitive corporate information is not exposed if a company laptop is stolen. Which of the following actions best addresses this requirement?',
+      answer: 'Utilizing desktop as a service for all company data and multifactor authentication',
+      distractors: [
+        'Using explicit allow lists of specific IP addresses and deploying single sign-on',
+        'Deploying mobile device management and requiring stronger passwords',
+        'Updating security mobile reporting policies and monitoring data breaches'
+      ],
+      explanation: '(256)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 256
+    },
+    {
+      question: 'A company discovers intellectual property data on commonly known collaboration web applications that allow the use of slide templates. The systems administrator is reviewing the configurations of each tool to determine how to prevent this issue. The following security solutions are deployed:\n\n' +
+        '`- CASB`\n\n' +
+        '`- SASE`\n\n' +
+        '`- WAF`\n\n' +
+        '`- EDR`\n\n' +
+        '`- Firewall`\n\n' +
+        '`- IDS`\n\n' +
+        '`- SIEM`\n\n' +
+        '`- DLP endpoints`\n\n' +
+        'Which of the following should the administrator do to address the issue?',
+      answer: 'Enforce a policy to block unauthorized web applications within CASB.',
+      distractors: [
+        'Enable blocking for all WAF policies.',
+        'Create an alert within the SIEM for outgoing network traffic to the suspected website.',
+        'Configure DLP endpoints to block sensitive data to removable storage.'
+      ],
+      explanation: '(257)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 257
+    },
+    {
+      question: 'After some employees are caught uploading data to online personal storage accounts, a company becomes concerned about data leaks related to sensitive, internal documentation. Which of the following would the company most likely do to decrease this type of risk?',
+      answer: 'Implement a cloud access security broker.',
+      distractors: [
+        'Improve firewall rules to block source IP addresses.',
+        'Create SIEM rules to raise alerts for access to those platforms.',
+        'Deploy a FIM solution to trigger when files are accessed.'
+      ],
+      explanation: '(258)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 258
+    },
+    {
+      question: `A global company's Chief Financial Officer (CFO) receives a phone call from someone claiming to be the Chief Executive Officer (CEO). The caller claims to be stranded and in desperate need of money. The CFO is suspicious, but the caller's voice sounds similar to the CEO's. Which of the following best describes this type of attack?`,
+      answer: 'Deepfake',
+      distractors: ['Smishing', 'Automated exploit generation', 'Spear phishing'],
+      explanation: '(259)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 259
+    },
+    {
+      question: 'A cloud engineer wants to configure mail security protocols to support email authenticity and enable the flow of email security information to a third-party platform for further analysis. Which of the following must be configured to achieve these requirements?',
+      answer: ['DMARC', 'DKIM'],
+      distractors: ['TLS', 'SPF', 'DNSSEC', 'MX'],
+      explanation: '(260)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 260
+    },
+    {
+      question: 'A company is preparing to move a new version of a web application to production. No issues were reported during security scanning or quality assurance in the CI/CD pipeline. Which of the following actions should the company take next?',
+      answer: 'Perform a peer review on the test branch.',
+      distractors: [
+        'Merge the test branch to the main branch.',
+        'Perform threat modeling on the production application.',
+        'Conduct unit testing on the submitted code.'
+      ],
+      explanation: '(261)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 261
+    },
+    {
+      question: `A SOC team receives notifications that align with playbook incidents. The team wants to analyze the potential threat actor's TTPs. Which of the following will best assist the SOC team?`,
+      answer: 'ATT&CK',
+      distractors: ['D3FEND', 'OWASP', 'COPPA', 'CAPEC'],
+      explanation: '(262)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 262
+    },
+    {
+      question: 'Which of the following best describes the reason PQC preparation is important?',
+      answer: 'To protect data against decryption due to increases in computational resource availability',
+      distractors: [
+        'To have larger key lengths available through key stretching',
+        'To improve encryption performance and speed using lightweight cryptography',
+        'To leverage asymmetric encryption for large amounts of data'
+      ],
+      explanation: '(263)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 263
+    },
+    {
+      question: 'After investigating a recent security incident, a SOC analyst is charged with creating a reference guide for the entire team to use. Which of the following should the analyst create to address future incidents?',
+      answer: 'Runbook',
+      distractors: ['Root cause analysis', 'Communication plan', 'Lessons learned'],
+      explanation: '(264)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 264
+    },
+    {
+      question: 'A DNS forward lookup zone named comptia.org must:\n\n' +
+        '`- Ensure the DNS is protected from on-path attacks.`\n\n' +
+        '`- Ensure zone transfers use mutual authentication and are authenticated and negotiated.`\n\n' +
+        'Which of the following should the security architect configure to meet these requirements?',
+      answer: ['Public keys', 'DNSSEC'],
+      distractors: ['Conditional forwarders', 'Root hints', 'CNAME records', 'SRV records'],
+      explanation: '(265)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 265
+    },
+    {
+      question: `A security architect is implementing a SOAR solution in an organization's cloud production environment to support detection capabilities. Which of the following will be the most likely benefit?`,
+      answer: 'Improved security operations center performance',
+      distractors: [
+        'Automated firewall log collection tasks',
+        'Optimized cloud resource utilization',
+        'Increased risk visibility'
+      ],
+      explanation: '(266)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 266
+    },
+    {
+      question: 'A cloud security architect has been tasked with finding a solution for hardening VMs. The solution must meet the following requirements:\n\n' +
+        '`- Data needs to be stored outside of the VMs.`\n\n' +
+        '`- No unauthorized modifications to the VMs are allowed.`\n\n' +
+        '`- If a change needs to be done, a new VM needs to be deployed.`\n\n' +
+        'Which of the following is the best solution?',
+      answer: 'Immutable system',
+      distractors: ['Data loss prevention', 'Storage area network', 'Baseline template'],
+      explanation: '(267)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 267
+    },
+    {
+      question: 'After the latest risk assessment, the Chief Information Security Officer (CISO) decides to meet with the development and security teams to find a way to reduce the security task workload. The CISO would like to:\n' +
+        '`- Have a solution that uses an API to communicate with other security tools.`\n\n' +
+        '`- Use the latest technology possible.`\n\n' +
+        '`- Have the highest controls possible on the solution.`\n\n' +
+        'Which of following is the best option to meet these requirements?',
+      answer: 'SOAR',
+      distractors: ['EDR', 'CSP', 'CASB'],
+      explanation: '(268)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 268
+    },
+    {
+      question: 'A new, online file hosting service is being offered. The service has the following security requirements:\n\n' +
+        '`- Threats to customer data integrity and availability should be remediated first.`\n\n' +
+        '`- The environment should be dynamic to match increasing customer demands.`\n\n' +
+        '`- The solution should not interfere with customers ability to access their data at anytime.`\n\n' +
+        '`- Security analysts should focus on high-risk items.`\n\n' +
+        'Which of the following would best satisfy the requirements?',
+      answer: 'Implementing a SOAR solution to address known threats',
+      distractors: [
+        'Expanding the use of IPS and NGFW devices throughout the environment',
+        'Increasing the number of analysts to identify risks that need remediation',
+        'Implementing a SOAR solution to address known threats',
+        'Integrating enterprise threat feeds in the existing SIEM'
+      ],
+      explanation: '(269)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 269
+    },
+    {
+      question: 'A university issues badges through a homegrown identity management system to all staff and students. Each week during the summer, temporary summer school students arrive and need to be issued a badge to access minimal campus resources. The security team received a report from an outside auditor indicating the homegrown system is not consistent with best practices in the security field. Which of the following should the security team recommend first?',
+      answer: 'Working with procurement and creating a requirements document to select a new IAM system/vendor',
+      distractors: [
+        'Investigating a potential threat identified in logs related to the identity management system',
+        'Updating the identity management system to use discretionary access control',
+        'Beginning research on two-factor authentication to later introduce into the identity management system'
+      ],
+      explanation: '(270)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 270
+    },
+    {
+      question: 'Which of the following are risks associated with vendor lock-in?',
+      answer: ['The vendor can change product offerings.', 'The client experiences decreased quality of service.'],
+      distractors: [
+        'The client can seamlessly move data.',
+        'The vendor can change product offerings.',
+        'The client receives a sufficient level of service.',
+        'The client experiences decreased quality of service.',
+        'The client can leverage a multicloud approach.',
+        'The client experiences increased interoperability.'
+      ],
+      explanation: '(271)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 271
+    },
+    {
+      question: 'Due to budget constraints, an organization created a policy that only permits vulnerabilities rated high and critical according to CVSS to be fixed or mitigated. A security analyst notices that many vulnerabilities that were previously scored as medium are now breaching higher thresholds. Upon further investigation, the analyst notices certain ratings are not aligned with the approved system categorization. Which of the following can the analyst do to get a better picture of the risk while adhering to the organizations policy?',
+      answer: 'Align the impact subscore requirements to the predetermined system categorization.',
+      distractors: [
+        'Align the exploitability metrics to the predetermined system categorization.',
+        'Align the remediation levels to the predetermined system categorization.',
+        'Align the impact subscore requirements to the predetermined system categorization.',
+        'Align the attack vectors to the predetermined system categorization.'
+      ],
+      explanation: '(272)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 272
+    },
+    {
+      question: 'An IT department is currently working to implement an enterprise DLP solution. Due diligence and best practices must be followed in regard to mitigating risk. Which of the following ensures that authorized modifications are well planned and executed?',
+      answer: 'Change management',
+      distractors: [
+        'Risk management',
+        'Network management',
+        'Configuration management'
+      ],
+      explanation: '(273)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 273
+    },
+    {
+      question: 'A security architect wants to prevent security impacts from input into data fields, such as the following:\n' +
+        "`'AND 1=1#`\n\n" +
+        'Which of the following would best accomplish this objective?',
+      answer: 'Coding standards',
+      distractors: ['APIs', 'Base64 encoding', 'Sandboxing'],
+      explanation: '(274)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 274
+    },
+    {
+      question: 'A software development company needs to mitigate third-party risks to its software supply chain. Which of the following techniques should the company use in the development environment to best meet this objective?',
+      answer: 'Performing software composition analysis',
+      distractors: [
+        'Requiring multifactor authentication',
+        'Establishing coding standards and monitoring for compliance',
+        'Implementing a robust unit and regression-testing scheme'
+      ],
+      explanation: '(275)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 275
+    },
+    {
+      question: 'A mobile device hardware manufacturer receives the following requirements from a company that wants to produce and sell a new mobile platform:\n\n' +
+        '`- The platform should store biometric data.`\n\n' +
+        '`- The platform should prevent unapproved firmware from being loaded.`\n\n' +
+        '`- A tamper-resistant, hardware-based counter should track if unapproved firmware was loaded.`\n\n' +
+        'Which of the following should the hardware manufacturer implement?',
+      answer: ['eFuse', 'Secure boot', 'Secure enclave'],
+      distractors: ['ASLR', 'NX', 'SED', 'SELinux', 'Shell restriction'],
+      explanation: '(276)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 276
+    },
+    {
+      question: 'Based on a recent security audit, a company discovered the perimeter strategy is inadequate for its recent growth. To address this issue, the company is looking for a solution that includes the following requirements:\n\n' +
+        '`- Collapse of multiple network security technologies into a single footprint`\n\n' +
+        '`- Support for multiple VPNs with different security contexts`\n\n' +
+        '`- Support for application layer security (Layer 7 of the OSI Model)`\n\n' +
+        'Which of the following technologies would be the most appropriate solution given these requirements?',
+      answer: 'NGFW',
+      distractors: ['NAT gateway', 'Reverse proxy', 'NIDS'],
+      explanation: '(277)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 277
+    },
+    {
+      question: 'A security administrator has isolated a computer system because it was targeted by a ransomware attack. Which of the following should the security administrator do to recover from this attack in the most secure way?',
+      answer: 'Restore the system from a baseline snapshot.',
+      distractors: [
+        'Check if file versioning is enabled and restore the files.',
+        'Determine if the encryption key can be recovered. If it can, restore the files.',
+        'Seek approval from senior leadership to pay the ransom and unencrypt the files with the provided key.'
+      ],
+      explanation: '(278)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 278
+    },
+    {
+      question: 'A user from the sales department opened a suspicious file attachment. The sales department then contacted the SOC to investigate a number of unresponsive systems, and the team successfully identified the file and the origin of the attack. Which of the following is the next step of the incident response plan?',
+      answer: 'Containment',
+      distractors: ['Remediation', 'Response', 'Recovery'],
+      explanation: '(279)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 279
+    },
+    {
+      question: 'A security manager has written an incident response playbook for insider attacks and is ready to begin testing it. Which of the following should the manager conduct to test the playbook?',
+      answer: 'Threat emulation',
+      distractors: [
+        'Automated vulnerability scanning',
+        'Centralized logging, data analytics, and visualization',
+        'Threat hunting'
+      ],
+      explanation: '(280)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 280
+    },
+    {
+      question: 'The Chief Security Officer (CSO) requested the security team implement technical controls that meet the following requirements:\n\n' +
+        '`- Monitors traffic to and from both local NAS and cloud-based file repositories`\n\n' +
+        '`- Prevents on-site staff who are accessing sensitive customer PII documents on file repositories from accidentally or deliberately sharing sensitive documents on personal SaaS solutions`\n\n' +
+        '`- Uses document attributes to reduce false positives`\n\n' +
+        '`- Is agentless and not installed on staff desktops or laptops`\n\n' +
+        `Which of the following when installed and configured would best meet the CSO's requirements?`,
+      answer: ['DLP', 'CASB'],
+      distractors: ['NGFW', 'UTM', 'UEBA', 'HIPS'],
+      explanation: '(281)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 281
+    },
+    {
+      question: `A security engineer needs to select the architecture for a cloud database that will protect an organization's sensitive data. The engineer has a choice between a single-tenant or a multitenant database architecture offered by a cloud vendor. Which of the following best describes the security benefits of the single-tenant option?`,
+      answer: ['High degree of privacy', 'Full control and ability to customize'],
+      distractors: [
+        'Most cost-effective',
+        'Ease of backup and restoration',
+        'Low resilience to side-channel attacks',
+        'Increased geographic diversity'
+      ],
+      explanation: '(282)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 282
+    },
+    {
+      question: 'The information security manager at a 24-hour manufacturing facility is reviewing a contract for potential risks to the organization. The contract pertains to the support of printers and multifunction devices during non-standard business hours. Which of the following will the security manager most likely identify as a risk?',
+      answer: 'The lack of an NDA with the company that supports its devices',
+      distractors: [
+        'Print configurations settings for locked print jobs',
+        'The lack of an MSA to govern other services provided by the service provider',
+        'The lack of chain of custody for devices prior to deployment at the company'
+      ],
+      explanation: '(283)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 283
+    },
+    {
+      question: `A penetration tester discovers a condition that causes unexpected behavior in a web application. This results in the dump of the interpreter's debugging information, which includes the interpreter's version, full path of binary files, and the user ID running the process. Which of the following actions would best mitigate this risk?`,
+      answer: 'Include routines in the application for message handling.',
+      distractors: [
+        'Adopt a compiled programming language instead.',
+        'Perform SAST vulnerability scans on every build.',
+        'Validate user-generated input.'
+      ],
+      explanation: '(284)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 284
+    },
+    {
+      question: 'A security architect is analyzing an old application that is not covered for maintenance anymore because the software company is no longer in business. Which of the following techniques should have been implemented to prevent these types of risks?',
+      answer: 'Source code escrows',
+      distractors: ['Code reviews', 'Supply chain visibility', 'Software audits'],
+      explanation: '(285)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 285
+    },
+    {
+      question: 'To bring digital evidence in a court of law, the evidence must be:',
+      answer: 'material',
+      distractors: ['tangible', 'consistent', 'conserved'],
+      explanation: '(286)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 286
+    },
+    {
+      question: 'A cloud security architect has been tasked with selecting the appropriate solution given the following:\n\n' +
+        '`- The solution must allow the lowest RTO possible.`\n\n' +
+        '`- The solution must have the least shared responsibility possible.`\n\n' +
+        '`- Patching should be a responsibility of the CSP.`\n\n' +
+        'Which of the following solutions can best fulfill the requirements?',
+      answer: 'SaaS',
+      distractors: ['PaaS', 'IaaS', 'Private'],
+      explanation: '(287)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 287
+    },
+    {
+      question: `A security analyst wants to keep track of all outbound web connections from workstations. The analyst's company uses an on-premises web filtering solution that forwards the outbound traffic to a perimeter firewall. When the security analyst gets the connection events from the firewall, the source IP of the outbound web traffic is the translated IP of the web filtering solution. Considering this scenario involving source NAT, which of the following would be the best option to inject in the HTTP header to include the real source IP from workstations?`,
+      answer: 'X-Forwarded-For',
+      distractors: ['X-Forwarded-Proto', 'Cache-Control', 'Strict Transport Security', 'Content-Security-Policy'],
+      explanation: '(288)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 288
+    },
+    {
+      question: 'A security team is creating tickets to track the progress of remediation. Which of the following is used to specify the due dates for high- and critical-priority findings?',
+      answer: 'SLA',
+      distractors: ['MSA', 'ISA', 'MOU'],
+      explanation: '(289)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 289
+    },
+    {
+      question: 'An organization developed an incident response plan. Which of the following would be best to assess the effectiveness of the plan?',
+      answer: 'Performing a tabletop exercise',
+      distractors: [
+        'Requesting a third-party review',
+        'Generating a checklist by organizational unit',
+        'Establishing role succession and call lists',
+        'Creating a playbook'
+      ],
+      explanation: '(290)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 290
+    },
+    {
+      question: 'A few security incidents involving user authentication issues occurred recently. The security team needs to implement technical controls that ensure:\n\n' +
+        '`- User accounts are difficult to compromise.`\n\n' +
+        '`- Certain credentials are only used for specific applications.`\n\n' +
+        '`- Users are only able to perform functions specified for their specific roles.`\n\n' +
+        '`- Passwords are not the only requirement for user authentication.`\n\n' +
+        'The security team has enabled role-based access control and password complexity requirements throughout the organization. Which of the following additional actions does the security team need to take?',
+      answer: ['Enable MFA', 'Implement a privileged access management system'],
+      distractors: [
+        'Enable mandatory access control.',
+        'Require the length of passwords to be 15 characters or more.',
+        'Enable OAuth.',
+        'Require unsuccessful logins to be logged throughout the network.'
+      ],
+      explanation: '(291)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 291
+    },
+    {
+      question: 'An organization is looking to establish more robust security measures by implementing PKI. Which of the following should the security analyst implement when considering mutual authentication?',
+      answer: 'Public keys on both endpoints',
+      distractors: [
+        'Perfect forward secrecy on both endpoints',
+        'Shared secret for both endpoints',
+        'A common public key on each endpoint',
+        'A common private key on each endpoint'
+      ],
+      explanation: '(292)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 292
+    },
+    {
+      question: 'A company was recently infected by malware. During the root cause analysis, the company determined that several users were installing their own applications. To prevent further compromises, the company has decided it will only allow authorized applications to run on its systems. Which of the following should the company implement?',
+      answer: 'Permit listing',
+      distractors: ['Signing', 'Access control', 'HIPS'],
+      explanation: '(293)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 293
+    },
+    {
+      question: 'A security consultant has been asked to recommend best practices for preserving digital evidence. Which of the following can be used to show the evidence has not been tampered with?',
+      answer: 'Hash value',
+      distractors: ['Legal hold', 'Checksum', 'E-discovery'],
+      explanation: '(294)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 294
+    },
+    {
+      question: 'A cyberanalyst has been tasked with recovering PDF files from a provided image file. Which of the following is the best file-carving tool for PDF recovery?',
+      answer: 'Foremost',
+      distractors: ['objdump', 'Strings', 'dd'],
+      explanation: '(295)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 295
+    },
+    {
+      question: 'An organization handles sensitive information that must be displayed on call center technicians screens to verify the identities of remote callers. The technicians use three randomly selected fields of information to complete the identity verification process. Some of the fields contain PII that are unique identifiers for the remote callers. Which of the following should be implemented to identify remote callers while also reducing the risk that technicians could improperly use the identification information?',
+      answer: 'Data masking',
+      distractors: ['Encryption', 'Tokenization', 'Scrubbing', 'Substitution'],
+      explanation: '(296)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 296
+    },
+    {
+      question: 'A junior developer is informed about the impact of new malware on an Advanced RISC Machine (ARM) CPU, and the code must be fixed accordingly. Based on the debug, the malware is able to insert itself in another process memory location. Which of the following technologies can the developer enable on the ARM architecture to prevent this type of malware?',
+      answer: 'Execute never',
+      distractors: ['No-execute', 'Total memory encryption', 'Virtual memory protection'],
+      explanation: '(297)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 297
+    },
+    {
+      question: 'A security engineer is creating a single CSR for the following web server hostnames:\n\n' +
+        '`- wwwint.internal`\n\n' +
+        '`- www.company.com`\n\n' +
+        '`- home.internal`\n\n' +
+        '`- www.internal`\n\n' +
+        'Which of the following would meet the requirement?',
+      answer: 'SAN',
+      distractors: ['CN', 'CA', 'CRL', 'Issuer'],
+      explanation: '(298)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 298
+    },
+    {
+      question: 'An analyst has prepared several possible solutions to a successful attack on the company. The solutions need to be implemented with the least amount of downtime. Which of the following should the analyst perform?',
+      answer: 'Implement every solution one at a time in a virtual lab, running an attack simulation each time while collecting metrics. Roll back each solution and then implement the next. Choose the best solution based on the best metrics.',
+      distractors: [
+        'Implement all the solutions at once in a virtual lab and then run the attack simulation. Collect the metrics and then choose the best solution based on the metrics.',
+        'Implement every solution one at a time in a virtual lab, running a metric collection each time. After the collection, run the attack simulation, roll back each solution, and then implement the next. Choose the best solution based on the best metrics.',
+        'Implement all the solutions at once in a virtual lab and then collect the metrics. After collection, run the attack simulation. Choose the best solution based on the best metrics.'
+      ],
+      explanation: '(299)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 299
+    },
+    {
+      question: 'A security architect examines a section of code and discovers the following:\n\n' +
+        '`char username[20]`\n\n' +
+        '`char password[20]`\n\n' +
+        '`gets(username)`\n\n' +
+        '`checkUserExists(username)`\n\n' +
+        'Which of the following changes should the security architect require before approving the code for release?',
+      answer: 'Prevent more than 20 characters from being entered.',
+      distractors: [
+        'Allow only alphanumeric characters for the username.',
+        'Make the password variable longer to support more secure passwords.',
+        'Add a password parameter to the checkUserExists function.'
+      ],
+      explanation: '(300)',
+      references: [
+            {
+              title: '',
+              url: ''
+            }
+          ],
+      questionNumber: 300
     }
     // {
     //   question: '',
@@ -4617,7 +5598,721 @@ const securityXQuiz = {
     //     '',
     //     ''
     //   ],
-    //   explanation: '',
+    //   explanation: '(301)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 301
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(302)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 302
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(303)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 303
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(304)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 304
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(305)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 305
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(306)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 306
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(307)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 307
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(308)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 308
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(309)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 309
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(310)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 310
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(311)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 311
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(312)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 312
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(313)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 313
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(314)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 314
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(315)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 315
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(316)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 316
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(317)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 317
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(318)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 318
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(319)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 319
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(320)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 320
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(321)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 321
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(322)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 322
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(323)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 323
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(324)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 324
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(325)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 325
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(326)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 326
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(327)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 327
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(328)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 328
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(329)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 329
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(330)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 330
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(331)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 331
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(332)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 332
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(333)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 333
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(334)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 334
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(335)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 335
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(336)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 336
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(337)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 337
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(338)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 338
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(339)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 339
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(340)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 340
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(341)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 341
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(342)',
+    //   references: [
+    //         {
+    //           title: '',
+    //           url: ''
+    //         }
+    //       ],
+    //   questionNumber: 342
+    // },
+    // {
+    //   question: '',
+    //   answer: '',
+    //   distractors: [
+    //     '',
+    //     '',
+    //     ''
+    //   ],
+    //   explanation: '(243)',
     //   references: [
     //         {
     //           title: '',
