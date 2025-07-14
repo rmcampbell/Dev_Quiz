@@ -5736,12 +5736,12 @@ const securityXQuiz = {
     //   questionNumber: 308
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A company recently migrated its critical web application to a cloud provider’s environment. As part of the company’s risk management program, the company intends to conduct an external penetration test. According to the scope of work and the rules of engagement, the penetration tester will validate the web application’s security and check for opportunities to expose sensitive company information in the newly migrated cloud environment. Which of the following should be the first consideration prior to engaging in the test?',
+    //   answer: 'Obtain agreement between the company and the cloud provider to conduct penetration testing.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Prepare a redundant server to ensure the critical web application’s availability during the test.',
+    //     'Ensure the latest patches and signatures are deployed on the web server.',
+    //     'Create an NDA between the external penetration tester and the company.'
     //   ],
     //   explanation: '(309)',
     //   references: [
@@ -5753,12 +5753,12 @@ const securityXQuiz = {
     //   questionNumber: 309
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A technician is reviewing the logs and notices a large number of files were transferred to remote sites over the course of three months. This activity then stopped. The files were transferred via TLS-protected HTTP sessions from systems that do not send traffic to those sites. The technician will define this threat as:',
+    //   answer: 'an advanced persistent threat.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'a decrypting RSA using an obsolete and weakened encryption attack.',
+    //     'a zero-day attack.',
+    //     'an on-path attack.'
     //   ],
     //   explanation: '(310)',
     //   references: [
@@ -5770,12 +5770,13 @@ const securityXQuiz = {
     //   questionNumber: 310
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'The management team at a company with a large, aging server environment is conducting a server risk assessment in order to create a replacement strategy. The replacement strategy will be based upon the likelihood a server will fail, regardless of the criticality of the application running on a particular server. Which of the following should be used to prioritize the server replacements?',
+    //   answer: 'MTBF',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'SLE',
+    //     'MTTR',
+    //     'TCO',
+    //     'MSA'
     //   ],
     //   explanation: '(311)',
     //   references: [
@@ -5787,12 +5788,14 @@ const securityXQuiz = {
     //   questionNumber: 311
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A company created an external application for its customers. A security researcher now reports that the application has a serious LDAP injection vulnerability that could be leveraged to bypass authentication and authorization. Which of the following actions would best resolve the issue? (Choose two.)',
+    //   answer: 'Conduct input sanitization, Deploy a WAF',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Deploy a SIEM',
+    //     'Use containers',
+    //     'Patch the OS',
+    //     'Deploy a reverse proxy',
+    //     'Deploy an IDS'
     //   ],
     //   explanation: '(312)',
     //   references: [
@@ -5804,12 +5807,12 @@ const securityXQuiz = {
     //   questionNumber: 312
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'Due to reports of malware targeting companies in the same industry, an organization wants to develop a comprehensive list of IoCs to determine if its systems might be affected in a similar attack. Which of the following would be best to use to develop this list?',
+    //   answer: 'Sandbox detonation',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Simulators',
+    //     'Antivirus',
+    //     'Endpoint detection and response'
     //   ],
     //   explanation: '(313)',
     //   references: [
@@ -5821,12 +5824,12 @@ const securityXQuiz = {
     //   questionNumber: 313
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A firewall administrator needs to ensure all traffic across the company network is inspected. The administrator gathers data and finds the following information regarding the typical traffic in the network: Which of the following is the best solution to ensure the administrator can complete the assigned task?',
+    //   answer: 'SSL/TLS decryption',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'A full-tunnel VPN',
+    //     'Web content filtering',
+    //     'An endpoint DLP solution'
     //   ],
     //   explanation: '(314)',
     //   references: [
@@ -5838,12 +5841,12 @@ const securityXQuiz = {
     //   questionNumber: 314
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'Which of the following is a security concern for DNP3?',
+    //   answer: 'Authentication is not allocated.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Free-form messages require support.',
+    //     'Available function codes are not standardized.',
+    //     'It is an open source protocol.'
     //   ],
     //   explanation: '(315)',
     //   references: [
@@ -5855,12 +5858,12 @@ const securityXQuiz = {
     //   questionNumber: 315
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security administrator needs to develop a remediation plan to address a large number of vulnerability scan results. Which of the following should the administrator use to determine the vulnerabilities that should be addressed first?',
+    //   answer: 'CVSS',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'CPE',
+    //     'CCE',
+    //     'CVE'
     //   ],
     //   explanation: '(316)',
     //   references: [
@@ -5872,12 +5875,13 @@ const securityXQuiz = {
     //   questionNumber: 316
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An organization is researching the automation capabilities for systems within an OT network. A security analyst wants to assist with creating secure coding practices and would like to learn about the programming languages used on the PLCs. Which of the following programming languages is the most relevant for PLCs?',
+    //   answer: 'Ladder Logic',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Rust',
+    //     'C',
+    //     'Python',
+    //     'Java'
     //   ],
     //   explanation: '(317)',
     //   references: [
@@ -5889,12 +5893,13 @@ const securityXQuiz = {
     //   questionNumber: 317
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An organization’s senior security architect would like to develop cyberdefensive strategies based on standardized adversary techniques, tactics, and procedures commonly observed. Which of the following would best support this objective?',
+    //   answer: 'MITRE ATT&CK',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'OSINT analysis',
+    //     'The Diamond Model of Intrusion Analysis',
+    //     'Deepfake generation',
+    //     'Closed-source intelligence reporting,
     //   ],
     //   explanation: '(318)',
     //   references: [
@@ -5906,12 +5911,18 @@ const securityXQuiz = {
     //   questionNumber: 318
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A company is looking for a solution to hide data stored in databases. The solution must meet the following requirements:
+
+    //• Be efficient at protecting the production environment
+    //• Not require any change to the application
+    //• Act at the presentation layer
+
+    //Which of the following techniques should be used?',
+    //   answer: 'Masking',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Steganography',
+    //     'Algorithmic',
+    //     'Random substitution'
     //   ],
     //   explanation: '(319)',
     //   references: [
@@ -5923,12 +5934,12 @@ const securityXQuiz = {
     //   questionNumber: 319
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A software developer is working on a piece of code required by a new software package. The code should use a protocol to verify the validity of a remote identity. Which of the following should the developer implement in the code?',
+    //   answer: 'OCSP',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'RSA',
+    //     'HSTS',
+    //     'CRL'
     //   ],
     //   explanation: '(320)',
     //   references: [
@@ -5940,12 +5951,12 @@ const securityXQuiz = {
     //   questionNumber: 320
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An organization is developing a disaster recovery plan that requires data to be backed up and available at a moment’s notice. Which of the following should the organization consider first to address this requirement?',
+    //   answer: 'Identify critical business processes and determine associated software and hardware requirements.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Implement a change management plan to ensure systems are using the appropriate versions.',
+    //     'Hire additional on-call staff to be deployed if an event occurs.',
+    //     'Design an appropriate warm site for business continuity.'
     //   ],
     //   explanation: '(321)',
     //   references: [
@@ -5957,12 +5968,14 @@ const securityXQuiz = {
     //   questionNumber: 321
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security analyst is performing a review of a web application. During testing as a standard user, the following error log appears:
+    // `![Question 322](${imgPath(322)})\n\n` +
+    // Which of the following best describes the analyst’s findings and a potential mitigation technique?',
+    //   answer: 'The findings indicate information disclosure. The displayed error message should be modified.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'The findings indicate unsecure references. All potential user input needs to be properly sanitized.',
+    //     'The findings indicate unsecure protocols. All cookies should be marked as HttpOnly.',
+    //     'The findings indicate a SQL injection. The database needs to be upgraded.'
     //   ],
     //   explanation: '(322)',
     //   references: [
@@ -5974,12 +5987,12 @@ const securityXQuiz = {
     //   questionNumber: 322
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'Which of the following is record-level encryption commonly used to do?',
+    //   answer: 'Protect database fields.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Protect individual files.',
+    //     'Encrypt individual packets.',
+    //     'Encrypt the master boot record.'
     //   ],
     //   explanation: '(323)',
     //   references: [
@@ -5991,12 +6004,15 @@ const securityXQuiz = {
     //   questionNumber: 323
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An auditor is reviewing the logs from a web application to determine the source of an incident. The web application architecture includes an internet-accessible application load balancer, a number of web servers in a private subnet, application servers, and one database server in a tiered configuration. The application load balancer cannot store the logs. The following are sample log snippets:
+    // `![Question 324](${imgPath(324)})\n\n` +
+    // Which of the following should the auditor recommend to ensure future incidents can be traced back to the sources?',
+    //   answer: 'Enable the X-Forwarded-For header at the load balancer.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Install a software-based HIDS on the application servers.',
+    //     'Install a certificate signed by a trusted CA.',
+    //     'Use stored procedures on the database server.',
+    //     'Store the value of the $_SERVER['REMOTE_ADDR'] received by the web servers.'
     //   ],
     //   explanation: '(324)',
     //   references: [
@@ -6008,12 +6024,19 @@ const securityXQuiz = {
     //   questionNumber: 324
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An organization that performs real-time financial processing is implementing a new backup solution. Given the following business requirements:
+
+    // • The backup solution must reduce the risk for potential backup compromise
+    // • The backup solution must be resilient to a ransomware attack
+    // • The time to restore from backups is less important than the backup data integrity
+    // • Multiple copies of production data must be maintained.
+
+    // Which of the following backup strategies best meets these requirements?',
+    //   answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
+    //     'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
+    //     'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally'
     //   ],
     //   explanation: '(325)',
     //   references: [
@@ -6025,12 +6048,16 @@ const securityXQuiz = {
     //   questionNumber: 325
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A system of globally distributed certificate servers connected to HSMs provide certificate security services for a publicly available PKI. These services include OCSP, certificate revocation list issuance, and certificate signing/issuance. The HSMs are all physical devices. All other servers are virtualized. Each global site has a network load balancer, and the sites are configured to load balance between sites.
+
+    // Users report occasional but persistent log-on failures to different PKI-enabled websites. There is no apparent pattern to the failures. Some OCSP responses must be signed by the HSM. Each HSM is connected to a physical server containing multiple VMs for the local site with CAT 6e network cable. The backplane connecting the VMs is fiber based.
+
+    // Which of the following would best reduce the OCSP response time in order to rule out the connection between the certificate server and HSM as a cause of the user-reported issues?',
+    //   answer: 'Shorten the time the duration certificates are valid to 72 hours and implement ACME.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Virtualize the HSMs and convert the virtualized servers to physical systems.',
+    //     'Replace the copper-based network infrastructure with fiber.',
+    //     'Reduce the number of global sites while increasing the number of HSMs.'
     //   ],
     //   explanation: '(326)',
     //   references: [
