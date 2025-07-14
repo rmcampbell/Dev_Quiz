@@ -5591,12 +5591,12 @@ const securityXQuiz = {
       questionNumber: 300
     }
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security manager is creating a connection between two networks that process data at different classification levels. The main goal of this connection is to pass data from the higher classification side to the lower classification side without causing spillage. Only approved fie types and content will be allowed. Which of the following technologies would best meet this objective?',
+    //   answer: 'Cross-domain solution',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Network access control',
+    //     'File integrity monitoring',
+    //     'Microsegmentation'
     //   ],
     //   explanation: '(301)',
     //   references: [
@@ -5608,12 +5608,12 @@ const securityXQuiz = {
     //   questionNumber: 301
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security consultant has been asked to identify a simple, secure solution for a small business with a single access point. A single SSID and no guest access will be used. The customer facility is located in a crowded area of town. The customer has asked that the solution require low administrative overhead. Which of the following should the security consultant recommend?',
+    //   answer: 'WPA3-Personal',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'WPA2-TKIP',
+    //     'WPA2-Enterprise',
+    //     'WPA3-Enterprise'
     //   ],
     //   explanation: '(302)',
     //   references: [
@@ -5625,12 +5625,12 @@ const securityXQuiz = {
     //   questionNumber: 302
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security team is concerned with attacks that are taking advantage of return-oriented programming against the company’s public-facing applications. Which of the following should the company implement on the public-facing servers?',
+    //   answer: 'ASLR',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'IDS',
+    //     'TPM',
+    //     'HSM'
     //   ],
     //   explanation: '(303)',
     //   references: [
@@ -5642,12 +5642,12 @@ const securityXQuiz = {
     //   questionNumber: 303
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'An organization is prioritizing efforts to remediate or mitigate risks identified during the latest assessment. For one of the risks, a full remediation was not possible, but the organization was able to successfully apply mitigations to reduce the likelihood of the impact. Which of the following should the organization perform next?',
+    //   answer: 'Assess the residual risk.',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Update the organization's threat model.',
+    //     'Move to the next risk in the register.',
+    //     'Recalculate the magnitude of the impact.'
     //   ],
     //   explanation: '(304)',
     //   references: [
@@ -5659,12 +5659,12 @@ const securityXQuiz = {
     //   questionNumber: 304
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A third-party organization has implemented a system that allows it to analyze customers’ data and deliver analysis results without being able to see the raw data. Which of the following is the organization implementing?',
+    //   answer: 'Homomorphic encryption',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Asynchronous keys',
+    //     'Data lake',
+    //     'Machine learning'
     //   ],
     //   explanation: '(305)',
     //   references: [
@@ -5676,12 +5676,19 @@ const securityXQuiz = {
     //   questionNumber: 305
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A cloud security engineer is setting up a cloud-hosted WAF. The engineer needs to implement a solution to protect the multiple websites the organization hosts. The organization websites are:
+
+    // • www.mycompany.org
+    // • www.mycompany.com
+    // • campus.mycompany.com
+    // • wiki.mycompany.org
+
+    // The solution must save costs and be able to protect all websites. Users should be able to notify the cloud security engineer of any on-path attacks. Which of the following is the best solution?',
+    //   answer: 'Purchase one SAN certificate',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'Implement self-signed certificates.',
+    //     'Purchase one certificate for each website',
+    //     'Purchase one wildcard certificate'
     //   ],
     //   explanation: '(306)',
     //   references: [
@@ -5693,12 +5700,13 @@ const securityXQuiz = {
     //   questionNumber: 306
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security engineer is assessing a legacy server and needs to determine if FTP is running and on which port. The service cannot be turned off, as it would impact a critical application’s ability to function. Which of the following commands would provide the information necessary to create a firewall rule to prevent that service from being exploited?',
+    //   answer: 'systemctl list-unit-file --type service ftpd',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'service --status-all | grep ftpd',
+    //     'chkconfig --list',
+    //     'netstat -tulpn',
+    //     'service ftpd status'
     //   ],
     //   explanation: '(307)',
     //   references: [
@@ -5710,12 +5718,13 @@ const securityXQuiz = {
     //   questionNumber: 307
     // },
     // {
-    //   question: '',
-    //   answer: '',
+    //   question: 'A security administrator wants to detect a potential forged sender claim in the envelope of an email. Which of the following should the security administrator implement? (Choose two).',
+    //   answer: 'DMARC, SPF',
     //   distractors: [
-    //     '',
-    //     '',
-    //     ''
+    //     'MX record',
+    //     'DNSSEC',
+    //     'S/MIME',
+    //     'TLS'
     //   ],
     //   explanation: '(308)',
     //   references: [
