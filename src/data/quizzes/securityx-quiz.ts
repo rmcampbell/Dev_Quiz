@@ -4831,7 +4831,7 @@ const securityXQuiz = {
       questionNumber: 254
     },
     {
-      question: 'During a security assessment using an EDR solution, a security engineer generates the following report about the assets in the system:\n' +
+      question: 'During a security assessment using an EDR solution, a security engineer generates the following report about the assets in the system:\n\n' +
         `![Question 255](${imgPath(255)})\n\n` +
         'After five days, the EDR console reports a blocked infection on the host `0WIN23` by a remote access Trojan. Which of the following most likely enabled the attempted infection?',
       answer: "`0WIN29's` EDR has an unknown vulnerability that was exploited by the attacker.",
@@ -5712,24 +5712,24 @@ const securityXQuiz = {
       ],
       questionNumber: 307
     },
-    // {
-    //   question: 'A security administrator wants to detect a potential forged sender claim in the envelope of an email. Which of the following should the security administrator implement? (Choose two).',
-    //   answer: ['DMARC', 'SPF'],
-    //   distractors: [
-    //     'MX record',
-    //     'DNSSEC',
-    //     'S/MIME',
-    //     'TLS'
-    //   ],
-    //   explanation: '(308)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 308
-    // },
+    {
+      question: 'A security administrator wants to detect a potential forged sender claim in the envelope of an email. Which of the following should the security administrator implement?',
+      answer: ['DMARC', 'SPF'],
+      distractors: [
+        'MX record',
+        'DNSSEC',
+        'S/MIME',
+        'TLS'
+      ],
+      explanation: '(308)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 308
+    },
     {
       question: 'A company recently migrated its critical web application to a cloud provider’s environment. As part of the company’s risk management program, the company intends to conduct an external penetration test. According to the scope of work and the rules of engagement, the penetration tester will validate the web application’s security and check for opportunities to expose sensitive company information in the newly migrated cloud environment. Which of the following should be the first consideration prior to engaging in the test?',
       answer: 'Obtain agreement between the company and the cloud provider to conduct penetration testing.',
@@ -5782,25 +5782,25 @@ const securityXQuiz = {
       ],
       questionNumber: 311
     },
-    // {
-    //   question: 'A company created an external application for its customers. A security researcher now reports that the application has a serious LDAP injection vulnerability that could be leveraged to bypass authentication and authorization. Which of the following actions would best resolve the issue? (Choose two.)',
-    //   answer: ['Conduct input sanitization', 'Deploy a WAF'],
-    //   distractors: [
-    //     'Deploy a SIEM',
-    //     'Use containers',
-    //     'Patch the OS',
-    //     'Deploy a reverse proxy',
-    //     'Deploy an IDS'
-    //   ],
-    //   explanation: '(312)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 312
-    // },
+    {
+      question: 'A company created an external application for its customers. A security researcher now reports that the application has a serious LDAP injection vulnerability that could be leveraged to bypass authentication and authorization. Which of the following actions would best resolve the issue?',
+      answer: ['Conduct input sanitization', 'Deploy a WAF'],
+      distractors: [
+        'Deploy a SIEM',
+        'Use containers',
+        'Patch the OS',
+        'Deploy a reverse proxy',
+        'Deploy an IDS'
+      ],
+      explanation: '(312)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 312
+    },
     {
       question: 'Due to reports of malware targeting companies in the same industry, an organization wants to develop a comprehensive list of IoCs to determine if its systems might be affected in a similar attack. Which of the following would be best to use to develop this list?',
       answer: 'Sandbox detonation',
@@ -6132,25 +6132,25 @@ const securityXQuiz = {
       ],
       questionNumber: 330
     },
-    // {
-    //   question: 'A security engineer reviews the SIEM logs after a server crash. The following list of events represents the timeline of actions collected from the SIEM:
-    // `![Question 331](${imgPath(331)})\n\n` +
-    // Which of the following best describes this type of attack?',
-    //   answer: 'Credential dumping',
-    //   distractors: [
-    //     'Lateral movement',
-    //     'Data exfiltration',
-    //     'Bin use'
-    //   ],
-    //   explanation: '(331)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 331
-    // },
+    {
+      question: 'A security engineer reviews the SIEM logs after a server crash. The following list of events represents the timeline of actions collected from the SIEM:\n\n' +
+      `![Question 331](${imgPath(331)})\n\n` +
+      'Which of the following best describes this type of attack?',
+      answer: 'Credential dumping',
+      distractors: [
+        'Lateral movement',
+        'Data exfiltration',
+        'Bin use'
+      ],
+      explanation: '(331)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 331
+    },
     {
       question: 'An organization hires a security consultant to establish a SOC that includes a threat-modeling function. During initial activities, the consultant works with system engineers to identify antipatterns within the environment. Which of the following is most critical for the engineers to disclose to the consultant during this phase?',
       answer: 'Network and data flow diagrams covering the production environment',
@@ -6186,44 +6186,44 @@ const securityXQuiz = {
       ],
       questionNumber: 333
     },
-    // {
-    //   question: 'While investigating an email server that crashed, an analyst reviews the following log files:
-    // `![Question 334](${imgPath(334)})\n\n` +
-    // Which of the following is most likely the root cause?',
-    //   answer: 'The administrator's account credentials were intercepted and reused.',
-    //   distractors: [
-    //     'The backup process did not complete and caused cascading failure.',
-    //     'A hardware failure in the storage array caused the mailboxes to be inaccessible.',
-    //     'A user with low privileges was able to escalate and erase all mailboxes.'
-    //   ],
-    //   explanation: '(334)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 334
-    // },
-    // {
-    //   question: 'An incident response analyst finds the following content inside of a log file that was collected from a compromised server:
-    // `![Question 335](${imgPath(335)})\n\n` +
-    // Which of the following is the best action to prevent future compromise?',
-    //   answer: 'Improving file-parsing capabilities to stop external entities from executing commands',
-    //   distractors: [
-    //     'Blocking the processing of external files by forwarding them to another server for processing',
-    //     'Implementing an allow list for all text boxes throughout the web application',
-    //     'Filtering inserted characters for all user inputs and allowing only ASCII characters'
-    //   ],
-    //   explanation: '(335)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 335
-    // },
+    {
+      question: 'While investigating an email server that crashed, an analyst reviews the following log files:\n\n' +
+      `![Question 334](${imgPath(334)})\n\n` +
+      'Which of the following is most likely the root cause?',
+      answer: `The administrator's account credentials were intercepted and reused.`,
+      distractors: [
+        'The backup process did not complete and caused cascading failure.',
+        'A hardware failure in the storage array caused the mailboxes to be inaccessible.',
+        'A user with low privileges was able to escalate and erase all mailboxes.'
+      ],
+      explanation: '(334)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 334
+    },
+    {
+      question: 'An incident response analyst finds the following content inside of a log file that was collected from a compromised server:\n\n' +
+      `![Question 335](${imgPath(335)})\n\n` +
+      'Which of the following is the best action to prevent future compromise?',
+      answer: 'Improving file-parsing capabilities to stop external entities from executing commands',
+      distractors: [
+        'Blocking the processing of external files by forwarding them to another server for processing',
+        'Implementing an allow list for all text boxes throughout the web application',
+        'Filtering inserted characters for all user inputs and allowing only ASCII characters'
+      ],
+      explanation: '(335)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 335
+    },
     // {
     //   question: 'A company isolates its ОТ systems from other areas of the corporate network. These systems are required to report usage information over the internet to the vendor. Which of the following best prevents compromise or sabotage? (Choose two.)',
     //   answer: 'Implementing allow lists, Implementing a site-to-site IPSec VPN',
@@ -6281,25 +6281,25 @@ const securityXQuiz = {
     //       ],
     //   questionNumber: 338
     // },
-    // {
-    //   question: 'During a security review for the CI/CD process, a security engineer discovers the following information in a testing repository from the company:
-    // `![Question 339](${imgPath(339)})\n\n` +
-    // Which of the following options is the best countermeasure to prevent this issue in the future?,
-    //   answer: 'Using a secrets management platform to share and manage confidential information',
-    //   distractors: [
-    //     'Performing an application penetration test over the testing environment before moving to production',
-    //     'Changing the repository technology to avoid inclusion of confidential information',
-    //     'Automating the upload process of code to the repository and improving the software development life cycle'
-    //   ],
-    //   explanation: '(339)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 339
-    // },
+    {
+      question: 'During a security review for the CI/CD process, a security engineer discovers the following information in a testing repository from the company:\n\n' +
+      `![Question 339](${imgPath(339)})\n\n` +
+      'Which of the following options is the best countermeasure to prevent this issue in the future?',
+      answer: 'Using a secrets management platform to share and manage confidential information',
+      distractors: [
+        'Performing an application penetration test over the testing environment before moving to production',
+        'Changing the repository technology to avoid inclusion of confidential information',
+        'Automating the upload process of code to the repository and improving the software development life cycle'
+      ],
+      explanation: '(339)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 339
+    },
     // {
     //   question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:
     // • Access to the system document repository must be MFA enabled.
@@ -6322,24 +6322,24 @@ const securityXQuiz = {
     //   questionNumber: 340
     // },
     {
-    question: 'Based on the results of a SAST report on a legacy application, a security engineer is reviewing the following snippet of code flagged as vulnerable:\n\n' +
-    `![Question 341](${imgPath(341)})\n\n` +
+      question: 'Based on the results of a SAST report on a legacy application, a security engineer is reviewing the following snippet of code flagged as vulnerable:\n\n' +
+      `![Question 341](${imgPath(341)})\n\n` +
       'Which of the following is the vulnerable line of code that must be changed?',
-    answer: 'Line [10]',
-    distractors: [
-      'Line [02]',
-      'Line [04]',
-      'Line [07]',
-      'Line [08]'
-    ],
-    explanation: '(341)',
-    references: [
-      {
-        title: '',
-        url: ''
-      }
-     ],
-     questionNumber: 341
+      answer: 'Line [10]',
+      distractors: [
+        'Line [02]',
+        'Line [04]',
+        'Line [07]',
+        'Line [08]'
+      ],
+      explanation: '(341)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 341
     },
     {
       question: 'A company detects suspicious activity associated with inbound connections. Security detection tools are unable to categorize this activity. Which of the following is the best solution to help the company overcome this challenge?',
