@@ -6335,7 +6335,7 @@ const securityXQuiz = {
         }
       ],
       questionNumber: 339
-    }
+    },
     // {
     //   question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:
     // • Access to the system document repository must be MFA enabled.
