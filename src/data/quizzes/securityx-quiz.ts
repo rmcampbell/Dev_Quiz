@@ -6025,7 +6025,7 @@ const securityXQuiz = {
       '`- The time to restore from backups is less important than the backup data integrity`\n\n' +
       '`- Multiple copies of production data must be maintained.`\n\n' +
       'Which of the following backup strategies best meets these requirements?',
-    answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
+      answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
       distractors: [
         'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
         'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
@@ -6036,11 +6036,11 @@ const securityXQuiz = {
       ],
       explanation: '(325)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 325
     },
     // {
@@ -6068,7 +6068,7 @@ const securityXQuiz = {
     // {
     //   question: 'An administrator brings the company's fleet of mobile devices into its PKI in order to align device WLAN NAC configurations with existing workstations and laptops. Thousands of devices need to be reconfigured in a cost-effective, time-efficient, and secure manner. Which of the following actions best achieve this goal? (Choose two.)',
     //   answer: 'Using the existing MDM solution to integrate with directory services for authentication and enrollment, Configuring SCEP on the CA with an OTP for bulk device enrollment',
-     //   distractors: [
+    //   distractors: [
     //     'Deploying netAuth extended key usage certificate templates',
     //     'Deploying serverAuth extended key usage certificate templates',
     //     'Deploying clientAuth extended key usage certificate templates',
@@ -6310,11 +6310,11 @@ const securityXQuiz = {
       ],
       explanation: '(338)',
       references: [
-            {
-              title: '',
-              url: ''
-            }
-          ],
+        {
+          title: '',
+          url: ''
+        }
+      ],
       questionNumber: 338
     },
     {
