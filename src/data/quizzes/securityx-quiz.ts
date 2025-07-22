@@ -5967,7 +5967,7 @@ const securityXQuiz = {
       `![Question 322](${imgPath(322)})\n\n` +
       `Which of the following best describes the analyst’s findings and a potential mitigation technique?`,
       answer: 'The findings indicate information disclosure. The displayed error message should be modified.',
-      distractors: [
+      distrators: [
         'The findings indicate unsecure references. All potential user input needs to be properly sanitized.',
         'The findings indicate unsecure protocols. All cookies should be marked as HttpOnly.',
         'The findings indicate a SQL injection. The database needs to be upgraded.'
@@ -6335,7 +6335,7 @@ const securityXQuiz = {
         }
       ],
       questionNumber: 339
-    },
+    }
     // {
     //   question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:
     // • Access to the system document repository must be MFA enabled.
