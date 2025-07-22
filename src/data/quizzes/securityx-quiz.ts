@@ -6018,38 +6018,40 @@ const securityXQuiz = {
     //       ],
     //   questionNumber: 324
     // },
+    {
+      question: 'An organization that performs real-time financial processing is implementing a new backup solution. Given the following business requirements:\n\n' +
+      '`- The backup solution must reduce the risk for potential backup compromise`\n\n' +
+      '`- The backup solution must be resilient to a ransomware attack`\n\n' +
+      '`- The time to restore from backups is less important than the backup data integrity`\n\n' +
+      '`- Multiple copies of production data must be maintained.`\n\n' +
+      'Which of the following backup strategies best meets these requirements?',
+      answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
+      distractors: [
+        'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
+        'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
+        'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally',
+        'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
+        'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
+        'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally'
+      ],
+      explanation: '(325)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 325
+    },
     // {
-    //   question: 'An organization that performs real-time financial processing is implementing a new backup solution. Given the following business requirements:
-
-    // • The backup solution must reduce the risk for potential backup compromise
-    // • The backup solution must be resilient to a ransomware attack
-    // • The time to restore from backups is less important than the backup data integrity
-    // • Multiple copies of production data must be maintained.
-
-    // Which of the following backup strategies best meets these requirements?',
-    //   answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
-    //   distractors: [
-    //     'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
-    //     'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
-    //     'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally'
-    //   ],
-    //   explanation: '(325)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 325
-    // },
-    // {
-    //   question: 'A system of globally distributed certificate servers connected to HSMs provide certificate security services for a publicly available PKI. These services include OCSP, certificate revocation list issuance, and certificate signing/issuance. The HSMs are all physical devices. All other servers are virtualized. Each global site has a network load balancer, and the sites are configured to load balance between sites.
-
-    // Users report occasional but persistent log-on failures to different PKI-enabled websites. There is no apparent pattern to the failures. Some OCSP responses must be signed by the HSM. Each HSM is connected to a physical server containing multiple VMs for the local site with CAT 6e network cable. The backplane connecting the VMs is fiber based.
-
-    // Which of the following would best reduce the OCSP response time in order to rule out the connection between the certificate server and HSM as a cause of the user-reported issues?',
+    //   question: 'A system of globally distributed certificate servers connected to HSMs provide certificate security services for a publicly available PKI. These services include OCSP, certificate revocation list issuance, and certificate signing/issuance. The HSMs are all physical devices. All other servers are virtualized. Each global site has a network load balancer, and the sites are configured to load balance between sites.' +
+    // 'Users report occasional but persistent log-on failures to different PKI-enabled websites. There is no apparent pattern to the failures. Some OCSP responses must be signed by the HSM. Each HSM is connected to a physical server containing multiple VMs for the local site with CAT 6e network cable. The backplane connecting the VMs is fiber based.' +
+    // 'Which of the following would best reduce the OCSP response time in order to rule out the connection between the certificate server and HSM as a cause of the user-reported issues?',
     //   answer: 'Shorten the time the duration certificates are valid to 72 hours and implement ACME.',
     //   distractors: [
+    //     'Virtualize the HSMs and convert the virtualized servers to physical systems.',
+    //     'Replace the copper-based network infrastructure with fiber.',
+    //     'Reduce the number of global sites while increasing the number of HSMs.',
     //     'Virtualize the HSMs and convert the virtualized servers to physical systems.',
     //     'Replace the copper-based network infrastructure with fiber.',
     //     'Reduce the number of global sites while increasing the number of HSMs.'
@@ -6081,6 +6083,23 @@ const securityXQuiz = {
     //       ],
     //   questionNumber: 327
     // },
+    {
+      question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
+      answer: 'Adversary emulation engagement',
+      distractors: [
+        'Dark web monitoring',
+        'Supply chain risk consultation',
+        'Tabletop exercises'
+      ],
+      explanation: '(328)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 328
+    },
     {
       question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
       answer: 'Adversary emulation engagement',
@@ -6259,28 +6278,45 @@ const securityXQuiz = {
       ],
       questionNumber: 337
     },
-    // {
-    //   question: 'A company plans to deploy a new online application that provides video training for its customers. As part of the design, the application must be:
-    // • Fast for all users
-    // • Available for users worldwide
-    // • Protected against attacks
-    // Which of the following are the best components the company should use to meet these requirements? (Choose two.)',
-    //   answer: 'WAF, CDN',
-    //   distractors: [
-    //     'IPS',
-    //     'SASE',
-    //     'VPN',
-    //     'CASB'
-    //   ],
-    //   explanation: '(338)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 338
-    // },
+    {
+      question: `An organization is implementing Zero Trust architecture. A systems administrator must increase the effectiveness of the organization's context-aware access system. Which of the following is the best way to improve the effectiveness of the system?`,
+      answer: 'Microsegmentation',
+      distractors: [
+        'Secure zone architecture',
+        'Always-on VPN',
+        'RADIUS'
+      ],
+      explanation: '(337)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 337
+    },
+    {
+      question: 'A company plans to deploy a new online application that provides video training for its customers. As part of the design, the application must be:\n\n' +
+      '`- Fast for all users`\n\n' +
+      '`- Available for users worldwide`\n\n' +
+      '`- Protected against attacks`\n\n' +
+      'Which of the following are the best components the company should use to meet these requirements?',
+      answer: 'WAF, CDN',
+      distractors: [
+        'IPS',
+        'SASE',
+        'VPN',
+        'CASB'
+      ],
+      explanation: '(338)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 338
+    },
     {
       question: 'During a security review for the CI/CD process, a security engineer discovers the following information in a testing repository from the company:\n\n' +
       `![Question 339](${imgPath(339)})\n\n` +
