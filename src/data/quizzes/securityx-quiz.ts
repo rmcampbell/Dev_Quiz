@@ -6100,23 +6100,6 @@ const securityXQuiz = {
       ],
       questionNumber: 328
     },
-    {
-      question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
-      answer: 'Adversary emulation engagement',
-      distractors: [
-        'Dark web monitoring',
-        'Supply chain risk consultation',
-        'Tabletop exercises'
-      ],
-      explanation: '(328)',
-      references: [
-        {
-          title: '',
-          url: ''
-        }
-      ],
-      questionNumber: 328
-    },
     // {
     //   question: 'A company finds logs with modified time stamps when compared to other systems. The security team decides to improve logging and auditing for incident response. Which of the following should the team do to best accomplish this goal?',
     //   answer: 'Implement a central logging server, allowing only log ingestion.',
