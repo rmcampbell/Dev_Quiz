@@ -5967,7 +5967,7 @@ const securityXQuiz = {
       `![Question 322](${imgPath(322)})\n\n` +
       `Which of the following best describes the analyst’s findings and a potential mitigation technique?`,
       answer: 'The findings indicate information disclosure. The displayed error message should be modified.',
-      distrators: [
+      distractors: [
         'The findings indicate unsecure references. All potential user input needs to be properly sanitized.',
         'The findings indicate unsecure protocols. All cookies should be marked as HttpOnly.',
         'The findings indicate a SQL injection. The database needs to be upgraded.'
@@ -6083,23 +6083,6 @@ const securityXQuiz = {
     //       ],
     //   questionNumber: 327
     // },
-    {
-      question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
-      answer: 'Adversary emulation engagement',
-      distractors: [
-        'Dark web monitoring',
-        'Supply chain risk consultation',
-        'Tabletop exercises'
-      ],
-      explanation: '(328)',
-      references: [
-        {
-          title: '',
-          url: ''
-        }
-      ],
-      questionNumber: 328
-    },
     {
       question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
       answer: 'Adversary emulation engagement',
