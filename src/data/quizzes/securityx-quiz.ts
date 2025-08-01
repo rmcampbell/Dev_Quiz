@@ -5367,11 +5367,11 @@ const securityXQuiz = {
         'Perform SAST vulnerability scans on every build.',
         'Validate user-generated input.'
       ],
-      explanation: '(284)',
+      explanation: '(284) Application message handling refers to the process by which an application receives, processes, and responds to messages. These messages can be user interactions, system events, or data from other applications. Effective message handling is crucial for application responsiveness, correct functionality, and user experience.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Message Handling: Overview',
+          url: 'https://www.sap.com/design-system/fiori-design-web/foundations/best-practices/global-patterns/messaging/messaging?external'
         }
       ],
       questionNumber: 284
@@ -5380,11 +5380,11 @@ const securityXQuiz = {
       question: 'A security architect is analyzing an old application that is not covered for maintenance anymore because the software company is no longer in business. Which of the following techniques should have been implemented to prevent these types of risks?',
       answer: 'Source code escrows',
       distractors: ['Code reviews', 'Supply chain visibility', 'Software audits'],
-      explanation: '(285)',
+      explanation: `(285) Source code escrow is a legal agreement that safeguards a software application's source code by depositing it with a neutral third party (the escrow agent). This ensures that if the software vendor fails to meet their obligations (like continued support or bankruptcy), the client can still access and maintain the software. It protects both the software developer's intellectual property and the client's investment in the software.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Source Code Escrow',
+          url: 'https://vaultinum.com/blog/what-is-a-source-code-escrow-all-you-need-to-know'
         }
       ],
       questionNumber: 285
@@ -5393,11 +5393,11 @@ const securityXQuiz = {
       question: 'To bring digital evidence in a court of law, the evidence must be:',
       answer: 'material',
       distractors: ['tangible', 'consistent', 'conserved'],
-      explanation: '(286)',
+      explanation: `(286) Material digital evidence refers to electronically stored or transmitted information that can be used as evidence in legal proceedings. It encompasses a wide range of data found on various devices like computers, phones, and other electronic devices. This includes not only active data but also deleted files, metadata, and even data stored in a device's RAM. Essentially, any information in binary form that can help establish facts in a case is considered digital evidence.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Digital Evidence, How It Is Done!',
+          url: 'https://www.forensicsciencesimplified.org/digital/how.html'
         }
       ],
       questionNumber: 286
