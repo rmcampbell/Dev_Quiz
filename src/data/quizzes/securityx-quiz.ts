@@ -5084,11 +5084,16 @@ const securityXQuiz = {
         'Increasing the number of analysts to identify risks that need remediation',
         'Integrating enterprise threat feeds in the existing SIEM'
       ],
-      explanation: '(269)',
+      explanation: '(269) To effectively address cybersecurity threats, a multifaceted approach is needed, encompassing prevention, detection, and response strategies. Key measures include regularly updating software, using strong passwords and multi-factor authentication, being cautious of phishing attempts, and implementing robust security protocols like firewalls and encryption.\n\n' +
+      'Security Orchestration, Automation, and Response (SOAR) is a powerful security solution that combines disparate security tools, automates repetitive tasks, and orchestrates workflows. It empowers security teams to manage and respond to security incidents more efficiently, consolidate and analyze threat intelligence, and streamline overall security operations. By integrating automation and orchestration, SOAR platforms dramatically reduce manual effort and accelerate incident resolution.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Cyber Risk Mitigation Strategies',
+          url: 'https://www.dataguard.com/blog/cyber-risk-mitigation-strategies/'
+        },
+        {
+          title: 'What is Security Orchestration, Automation and Response?',
+          url: 'https://swimlane.com/blog/what-is-soar/'
         }
       ],
       questionNumber: 269
@@ -5101,11 +5106,11 @@ const securityXQuiz = {
         'Updating the identity management system to use discretionary access control',
         'Beginning research on two-factor authentication to later introduce into the identity management system'
       ],
-      explanation: '(270)',
+      explanation: '(270)  Procurement Requirements Document (PRD) outlines the specific needs and expectations for a product or service being procured. It serves as a foundational document for the entire procurement process, ensuring clarity and alignment between the buyer and potential suppliers. The PRD details the functional and technical requirements, specifications, and other relevant information needed for vendors to submit informed bids or proposals.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Role of Procurement Documents in Managing Projects',
+          url: 'https://ramp.com/blog/procurement-documents'
         }
       ],
       questionNumber: 270
@@ -5119,11 +5124,12 @@ const securityXQuiz = {
         'The client can leverage a multicloud approach.',
         'The client experiences increased interoperability.'
       ],
-      explanation: '(271)',
+      explanation: '(271) his is a common occurrence as businesses adapt to market demands, technological advancements, and internal strategies. Vendors may introduce new products, discontinue old ones, or modify existing offerings to stay competitive and meet evolving customer needs.\n\n' +
+      'Vendor lock-in is a significant business risk that affects various industries. In IT, it often occurs when a company becomes overly reliant on a specific software provider, such as for cloud computing or CRM. This reliance can lead to escalating costs, diminished performance, and increased security vulnerabilities over time, as the infographic below reveals.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is vendor lock and how to avoid it',
+          url: 'https://dashdevs.com/blog/how-to-avoid-vendor-lock-in-traps/'
         }
       ],
       questionNumber: 271
@@ -5136,11 +5142,16 @@ const securityXQuiz = {
         'Align the remediation levels to the predetermined system categorization.',
         'Align the attack vectors to the predetermined system categorization.'
       ],
-      explanation: '(272)',
+      explanation: '(272) the impact subscore of a vulnerability assessment (like the one used in the Common Vulnerability Scoring System, CVSS) focuses on the potential consequences of a successful exploit on an information system. It specifically evaluates the potential damage to confidentiality, integrity, and availability.\n\n' +
+      'System categorization in cybersecurity involves organizing and classifying information systems based on their sensitivity, criticality, and the potential impact of a security breach. This process is foundational for building an effective cybersecurity strategy and ensuring regulatory compliance.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'VISS - Vulnerability Impact Scoring System',
+          url: 'https://github.com/zoom/viss'
+        },
+        {
+          title: `RMF's System Categorization: Step by Step`,
+          url: 'https://www.itdojo.com/rmfs-system-categorization-step-by-step/'
         }
       ],
       questionNumber: 272
@@ -5153,11 +5164,11 @@ const securityXQuiz = {
         'Network management',
         'Configuration management'
       ],
-      explanation: '(273)',
+      explanation: '(273) a structured approach to handling modifications to IT systems and security protocols. It ensures that changes are implemented safely, minimizing risks and maintaining a secure environment. Effective change management in cybersecurity involves risk mitigation, adherence to security policies, controlled authorization, minimized disruptions, and clear communication.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Change Management?',
+          url: 'https://asq.org/quality-resources/change-management#:~:text=Quality%20Glossary%20Definition%3A%20Change%20management,its%20internal%20and%20external%20processes'
         }
       ],
       questionNumber: 273
@@ -5168,11 +5179,11 @@ const securityXQuiz = {
         'Which of the following would best accomplish this objective?',
       answer: 'Coding standards',
       distractors: ['APIs', 'Base64 encoding', 'Sandboxing'],
-      explanation: '(274)',
+      explanation: '(274) Secure coding standards are a set of guidelines that developers follow to minimize vulnerabilities and build more secure software. They encompass various practices, from input validation and authentication to data protection and secure communication, to prevent common coding errors that can be exploited by attackers.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are secure coding standards?',
+          url: 'https://www.perforce.com/blog/qac/secure-coding-standards'
         }
       ],
       questionNumber: 274
@@ -5185,11 +5196,11 @@ const securityXQuiz = {
         'Establishing coding standards and monitoring for compliance',
         'Implementing a robust unit and regression-testing scheme'
       ],
-      explanation: '(275)',
+      explanation: '(275) Software Composition Analysis (SCA) is a crucial cybersecurity practice that involves identifying and managing the open-source and third-party components within a software application. By performing SCA, organizations can detect vulnerabilities, assess license compliance, and mitigate potential risks associated with using third-party code.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Software Composition Analysis (SCA)?',
+          url: 'https://www.blackduck.com/glossary/what-is-software-composition-analysis.html#:~:text=Software%20composition%20analysis%20(SCA)%20is,license%20compliance%2C%20and%20code%20quality'
         }
       ],
       questionNumber: 275
@@ -5202,11 +5213,21 @@ const securityXQuiz = {
         'Which of the following should the hardware manufacturer implement?',
       answer: ['eFuse', 'Secure boot', 'Secure enclave'],
       distractors: ['ASLR', 'NX', 'SED', 'SELinux', 'Shell restriction'],
-      explanation: '(276)',
+      explanation: `(276) eFuse, or electronic fuse, is a type of non-volatile memory used for storing critical security data like cryptographic keys or configuration settings on a chip. It's "one-time programmable," meaning once programmed, the data cannot be changed, providing a secure way to store sensitive information. This permanence makes eFuses ideal for applications like secure boot processes and preventing unauthorized access to hardware.\n\n` +
+      'Secure Boot is a feature that ensures only trusted software, like the operating system, runs when a computer starts up. It works by verifying the digital signatures of each component in the boot sequence against a database of trusted keys, preventing unauthorized software, including malware, from loading. This establishes a "chain of trust" that protects the system from unauthorized access and tampering.\n\n' +
+      `A Secure Enclave is a hardware-based security feature that isolates sensitive data and operations from the rest of a computer system, creating a trusted environment for handling confidential information. It's essentially a dedicated, secure subsystem within a processor, designed to protect data like encryption keys, biometric data (like fingerprints and face recognition), and PINs, even if the main system is compromised. This isolation and protection are crucial for modern security architectures, particularly in devices like smartphones and computers.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'eFuse technology in network adapators',
+          url: 'https://www.linkedin.com/pulse/efuse-technology-network-adapters-embedded-alternative-david-zhu-h4v9c/'
+        },
+        {
+          title: 'What is secure boot?',
+          url: 'https://www.geeksforgeeks.org/computer-networks/what-is-secure-boot/'
+        },
+        {
+          title: 'What is a secure enclave?',
+          url: 'https://www.anjuna.io/resources/what-is-a-secure-enclave'
         }
       ],
       questionNumber: 276
@@ -5219,11 +5240,11 @@ const securityXQuiz = {
         'Which of the following technologies would be the most appropriate solution given these requirements?',
       answer: 'NGFW',
       distractors: ['NAT gateway', 'Reverse proxy', 'NIDS'],
-      explanation: '(277)',
+      explanation: '(277) Next-generation firewalls (NGFWs) are a critical component of modern cybersecurity, providing enhanced protection against advanced threats beyond traditional firewall capabilities. They incorporate features like application control, intrusion prevention, and deep packet inspection to offer a more robust defense against a wider range of attacks, including those hidden in encrypted traffic or targeting specific applications and users.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Next Generation Firewall (NGFW)?',
+          url: 'https://www.cloudflare.com/learning/security/what-is-next-generation-firewall-ngfw/'
         }
       ],
       questionNumber: 277
@@ -5236,11 +5257,11 @@ const securityXQuiz = {
         'Determine if the encryption key can be recovered. If it can, restore the files.',
         'Seek approval from senior leadership to pay the ransom and unencrypt the files with the provided key.'
       ],
-      explanation: '(278)',
+      explanation: `(278) A baseline snapshot of a virtual machine acts as a point-in-time copy, capturing the VM's state at a specific moment. It serves as a safety net for testing and development, allowing users to revert to a known good state if changes don't go as planned. Snapshots are useful for upgrading applications, testing new software, or making configuration changes. They are not meant to be long-term backups, but rather a quick way to revert to a previous state.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'VMware snapshot',
+          url: 'https://www.techtarget.com/searchvmware/definition/VMware-snapshot'
         }
       ],
       questionNumber: 278
@@ -5249,11 +5270,11 @@ const securityXQuiz = {
       question: 'A user from the sales department opened a suspicious file attachment. The sales department then contacted the SOC to investigate a number of unresponsive systems, and the team successfully identified the file and the origin of the attack. Which of the following is the next step of the incident response plan?',
       answer: 'Containment',
       distractors: ['Remediation', 'Response', 'Recovery'],
-      explanation: '(279)',
+      explanation: '(279) a crucial phase of incident response, focusing on limiting the spread and impact of a security incident. It involves taking immediate actions to isolate affected systems, prevent further damage, and control the situation until the root cause can be eradicated and systems restored. Effective containment is vital for minimizing damage, preventing data breaches from becoming disasters, and maintaining business operations.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The role of incident response in Cybersecurity',
+          url: 'https://reliaquest.com/cyber-knowledge/incident-response-containment/#:~:text=Containment%20is%20the%20most%20decisive,recovery%20efforts%20can%20fall%20apart'
         }
       ],
       questionNumber: 279
@@ -5266,11 +5287,11 @@ const securityXQuiz = {
         'Centralized logging, data analytics, and visualization',
         'Threat hunting'
       ],
-      explanation: '(280)',
+      explanation: `(280) A security practice where an organization simulates real-world cyberattacks to test their defenses and incident response capabilities. It involves mimicking the tactics, techniques, and procedures (TTPs) of specific threat actors to identify vulnerabilities and improve the organization's security posture. Effectively, it's like hiring a burglar to test how well your security system works, rather than just checking the locks.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Threat Emulation vs Penetration Testing: Understanding the Differences',
+          url: 'https://www.wolfandco.com/resources/blog/threat-emulation-penetration-testing-understanding-differences/#:~:text=Threat%20emulation%20(also%20referred%20to,%2C%20real%2Dworld%20criminal%20actions'
         }
       ],
       questionNumber: 280
@@ -5284,11 +5305,16 @@ const securityXQuiz = {
         `Which of the following when installed and configured would best meet the CSO's requirements?`,
       answer: ['DLP', 'CASB'],
       distractors: ['NGFW', 'UTM', 'UEBA', 'HIPS'],
-      explanation: '(281)',
+      explanation: `(281) Data Loss Prevention (DLP) in cybersecurity refers to a set of tools and strategies designed to prevent sensitive information from leaving an organization's control. It's a crucial component of a comprehensive data security strategy, protecting against accidental leaks, malicious theft, and unauthorized access. DLP systems monitor data in motion (transmitting across networks), at rest (stored on devices or in databases), and in use (being accessed or processed) to identify and prevent sensitive data from leaving the organization.\n\n` +
+      'A cloud access security broker (CASB) is an on-premises or cloud-based security policy enforcement point that is placed between cloud service consumers and cloud service providers to combine and interject enterprise security policies as cloud-based resources are accessed.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Data Loss Prevention?',
+          url: 'https://www.linkedin.com/posts/cyberhaven_what-is-data-loss-prevention-activity-7351702700729753601-G0Eo/'
+        },
+        {
+          title: 'What is a CASB?',
+          url: 'https://www.netskope.com/security-defined/what-is-casb'
         }
       ],
       questionNumber: 281
@@ -5302,11 +5328,16 @@ const securityXQuiz = {
         'Low resilience to side-channel attacks',
         'Increased geographic diversity'
       ],
-      explanation: '(282)',
+      explanation: '(282) Critical aspects of cloud data privacy include the use of encryption techniques and proper data access control. Implementing these principles in the cloud entails ensuring sensitive data encryption, secure management of private keys and certificates, and encrypting data both at rest and in transit.\n\n' +
+      'Achieving full control and the ability to customize your cloud security posture is a key concern for many organizations, especially those dealing with sensitive data or operating in highly regulated industries. While public cloud environments offer benefits like scalability and elasticity, they often come with a shared responsibility model where the cloud provider manages the underlying infrastructure and customers are responsible for securing their data and applications.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Cloud Privacy Guide',
+          url: 'https://www.hivenet.com/post/the-ultimate-guide-to-ensuring-data-privacy-in-the-cloud-strategies-best-practices#:~:text=Critical%20aspects%20of%20cloud%20data,at%20rest%20and%20in%20transit'
+        },
+        {
+          title: 'Which cloud deployment model offers the highest level of control and security?',
+          url: 'https://askfilo.com/user-question-answers-smart-solutions/which-cloud-deployment-model-offers-the-highest-level-of-3134303936353030#:~:text=Explanation%3A,dedicated%20to%20a%20single%20organization'
         }
       ],
       questionNumber: 282
@@ -5319,11 +5350,11 @@ const securityXQuiz = {
         'The lack of an MSA to govern other services provided by the service provider',
         'The lack of chain of custody for devices prior to deployment at the company'
       ],
-      explanation: '(283)',
+      explanation: '(283) non-disclosure agreement (NDA) is a legal contract that protects sensitive client information from being misused or leaked by a cyber security service provider. It outlines what information is considered confidential and defines the responsibilities of both the client and the provider regarding its handling.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How to integrate NDAs into vendor risk management',
+          url: 'https://www.upguard.com/blog/ndas-and-vendor-risk-management'
         }
       ],
       questionNumber: 283
