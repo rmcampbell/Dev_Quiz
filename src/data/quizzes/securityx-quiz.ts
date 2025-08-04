@@ -5526,11 +5526,11 @@ const securityXQuiz = {
       question: 'A security consultant has been asked to recommend best practices for preserving digital evidence. Which of the following can be used to show the evidence has not been tampered with?',
       answer: 'Hash value',
       distractors: ['Legal hold', 'Checksum', 'E-discovery'],
-      explanation: '(294)',
+      explanation: `(294) A hash value, also known as a checksum, hash code, or simply a hash, is a unique value of a fixed length derived from data using a mathematical algorithm. It's essentially a fingerprint for digital data, representing the contents of a file, string, or even entire hard drive contents. Hash values are used for various purposes, including ensuring data integrity, password storage, and in blockchain technology.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Hashing Algorithm?',
+          url: 'https://www.sentinelone.com/cybersecurity-101/cybersecurity/hashing/'
         }
       ],
       questionNumber: 294
@@ -5539,11 +5539,11 @@ const securityXQuiz = {
       question: 'A cyberanalyst has been tasked with recovering PDF files from a provided image file. Which of the following is the best file-carving tool for PDF recovery?',
       answer: 'Foremost',
       distractors: ['objdump', 'Strings', 'dd'],
-      explanation: '(295)',
+      explanation: '(295) Foremost is a forensic data recovery program for Linux that recovers files using their headers, footers, and data structures through a process known as file carving. Although written for law enforcement use, the program and its source code are freely available and can be used as a general data recovery tool.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Foremost',
+          url: 'https://www.kali.org/tools/foremost/'
         }
       ],
       questionNumber: 295
@@ -5552,11 +5552,11 @@ const securityXQuiz = {
       question: 'An organization handles sensitive information that must be displayed on call center technicians screens to verify the identities of remote callers. The technicians use three randomly selected fields of information to complete the identity verification process. Some of the fields contain PII that are unique identifiers for the remote callers. Which of the following should be implemented to identify remote callers while also reducing the risk that technicians could improperly use the identification information?',
       answer: 'Data masking',
       distractors: ['Encryption', 'Tokenization', 'Scrubbing', 'Substitution'],
-      explanation: '(296)',
+      explanation: '(296) Data masking is a cybersecurity technique that protects sensitive information by replacing it with fictitious, but realistic, data. This process, also known as data obfuscation or anonymization, ensures that even if unauthorized individuals access the masked data, they cannot decipher or access the original sensitive information. Data masking is crucial for safeguarding Personally Identifiable Information (PII), financial records, and other sensitive data while still allowing it to be used for testing, analysis, or other non-production purposes.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Data Masking?',
+          url: 'https://aws.amazon.com/what-is/data-masking/'
         }
       ],
       questionNumber: 296
@@ -5568,8 +5568,8 @@ const securityXQuiz = {
       explanation: '(297)',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Security: NX Bit',
+          url: 'https://medium.com/@boutnaru/security-nx-bit-non-executable-18759fd2802e'
         }
       ],
       questionNumber: 297
@@ -5583,11 +5583,11 @@ const securityXQuiz = {
         'Which of the following would meet the requirement?',
       answer: 'SAN',
       distractors: ['CN', 'CA', 'CRL', 'Issuer'],
-      explanation: '(298)',
+      explanation: '(298) A Subject Alternative Name (SAN) is a certificate that secures multiple domain names, subdomains, or IP addresses. It is a way of telling your web browser that one certificate works for multiple sites. Some people call them Unified Communications Certificates (UCC), multi-domain certificates, or Exchange certificates.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Adding Subject Alternative Name',
+          url: 'https://www.encryptionconsulting.com/adding-subject-alternative-name-into-additional-attributes/'
         }
       ],
       questionNumber: 298
@@ -5600,11 +5600,11 @@ const securityXQuiz = {
         'Implement every solution one at a time in a virtual lab, running a metric collection each time. After the collection, run the attack simulation, roll back each solution, and then implement the next. Choose the best solution based on the best metrics.',
         'Implement all the solutions at once in a virtual lab and then collect the metrics. After collection, run the attack simulation. Choose the best solution based on the best metrics.'
       ],
-      explanation: '(299)',
+      explanation: `(299) An attack simulation is a cybersecurity testing method that mimics real-world cyberattacks to assess an organization's security posture and identify vulnerabilities. It helps organizations understand how their defenses would hold up against different types of attacks and identify areas for improvement.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Breach and Attack Simulation',
+          url: 'https://www.picussecurity.com/breach-and-attack-simulation'
         }
       ],
       questionNumber: 299
@@ -5622,11 +5622,11 @@ const securityXQuiz = {
         'Make the password variable longer to support more secure passwords.',
         'Add a password parameter to the checkUserExists function.'
       ],
-      explanation: '(300)',
+      explanation: '(300) Securing code for release involves implementing a range of practices throughout the software development lifecycle to minimize vulnerabilities and ensure a secure product. This includes secure coding practices, dependency management, code reviews, and vulnerability management. A secure development environment and a strong release process are also crucial.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Devops Best Practices',
+          url: 'https://www.atlassian.com/devops/what-is-devops/devops-best-practices'
         }
       ],
       questionNumber: 300
@@ -5639,11 +5639,11 @@ const securityXQuiz = {
         'File integrity monitoring',
         'Microsegmentation'
       ],
-      explanation: '(301)',
+      explanation: '(301) A Cross-Domain Solution (CDS) is a system that enables controlled access and data transfer between networks with different security classifications or trust levels. It acts as a secure bridge, allowing information exchange while preventing unauthorized access and maintaining data integrity and confidentiality.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Cross Domain Solution?',
+          url: 'https://docs.aws.amazon.com/whitepapers/latest/cross-domain-solutions/what-is-a-cross-domain-solution.html'
         }
       ],
       questionNumber: 301
