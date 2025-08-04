@@ -5656,11 +5656,11 @@ const securityXQuiz = {
         'WPA2-Enterprise',
         'WPA3-Enterprise'
       ],
-      explanation: '(302)',
+      explanation: '(302) WPA3 Personal is the latest Wi-Fi security protocol designed to offer enhanced protection for home and small office networks compared to WPA2. It utilizes stronger encryption and authentication methods, including SAE (Simultaneous Authentication of Equals) for password-based authentication and Hash-to-Element for password element generation, making it more resilient to attacks like brute-force and offline dictionary attacks.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is WPA3 vs WPA2?',
+          url: 'https://www.portnox.com/cybersecurity-101/wpa3/'
         }
       ],
       questionNumber: 302
@@ -5673,11 +5673,11 @@ const securityXQuiz = {
         'TPM',
         'HSM'
       ],
-      explanation: '(303)',
+      explanation: '(303) Address Space Layout Randomization (ASLR) is a security technique used in cybersecurity to make it harder for attackers to exploit memory corruption vulnerabilities. It achieves this by randomly arranging the memory addresses of key data areas within a process, including the base of the executable, stack, heap, and libraries. This randomness makes it difficult for attackers to predict where specific code or data will be located, hindering their ability to execute malicious code or redirect program execution.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Address Space Layout Randomization',
+          url: 'https://www.techtarget.com/searchsecurity/definition/address-space-layout-randomization-ASLR'
         }
       ],
       questionNumber: 303
@@ -5690,11 +5690,11 @@ const securityXQuiz = {
         'Move to the next risk in the register.',
         'Recalculate the magnitude of the impact.'
       ],
-      explanation: '(304)',
+      explanation: `(304) residual risk refers to the level of risk that remains after all security controls and risk mitigation efforts have been implemented. It's the "leftover" risk, the potential for a security incident to occur even with security measures in place.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is residual risk?',
+          url: 'https://www.techtarget.com/searchsecurity/definition/residual-risk'
         }
       ],
       questionNumber: 304
@@ -5707,11 +5707,11 @@ const securityXQuiz = {
         'Data lake',
         'Machine learning'
       ],
-      explanation: '(305)',
+      explanation: '(305) Homomorphic encryption is a form of encryption that allows computations to be performed directly on ciphertext (encrypted data) without needing to decrypt it first. This capability has significant implications for cybersecurity, particularly in protecting sensitive data during processing and storage, even when outsourced to untrusted environments like cloud services.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is homomorphic encryption?',
+          url: 'https://www.splunk.com/en_us/blog/learn/homomorphic-encryption.html'
         }
       ],
       questionNumber: 305
@@ -5729,11 +5729,11 @@ const securityXQuiz = {
         'Purchase one certificate for each website',
         'Purchase one wildcard certificate'
       ],
-      explanation: '(306)',
+      explanation: '(306) In cybersecurity, a SAN certificate means an SSL/TLS certificate that is capable of securing multiple domains or subject alternative names (SAN) under a single certificate. A user can customize the SAN certificate anytime during its validity period to add multiple subject names (up to 250) to the certificate.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How to order a TSL/SSL?',
+          url: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.digicert.com/faq/public-trust-and-certificates/how-do-i-order-a-tls-ssl-certificate%23:~:text%3DAll%2520of%2520our%2520products%2520can,be%2520happy%2520to%2520assist%2520you.&ved=2ahUKEwjS7sbKzfGOAxWJweYEHZdjFeYQgMkKegQIdhBV&usg=AOvVaw3YnkF7ZW1O4YE3yJJ6VZuj'
         }
       ],
       questionNumber: 306
@@ -5747,11 +5747,11 @@ const securityXQuiz = {
         'netstat -tulpn',
         'service ftpd status'
       ],
-      explanation: '(307)',
+      explanation: `(307) list-unit-files is one of systemctl's Unit File Commands. As its name says, it lists all the unit files installed on the system.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Manage systemd with systemctl on Linux',
+          url: 'https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units'
         }
       ],
       questionNumber: 307
@@ -5765,11 +5765,16 @@ const securityXQuiz = {
         'S/MIME',
         'TLS'
       ],
-      explanation: '(308)',
+      explanation: '(308) DMARC, which stands for Domain-based Message Authentication, Reporting, and Conformance, is a cybersecurity protocol that helps prevent email spoofing and phishing attacks. It works by authenticating emails sent from a domain and instructing receiving servers on how to handle emails that fail authentication checks. By implementing DMARC, organizations can significantly reduce the risk of their domain being used for malicious purposes, enhancing their overall email security posture.\n\n' +
+      'Sender Policy Framework (SPF) is a cybersecurity protocol used to authenticate email senders, helping to prevent email spoofing and phishing attacks. It works by specifying which mail servers are authorized to send emails on behalf of a domain, which the receiving mail server then verifies.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is DMARC?',
+          url: 'https://www.proofpoint.com/us/threat-reference/dmarc'
+        },
+        {
+          title: 'What is SPF?',
+          url: 'https://www.darktrace.com/cyber-ai-glossary/sender-policy-framework-spf'
         }
       ],
       questionNumber: 308
@@ -5782,11 +5787,11 @@ const securityXQuiz = {
         'Ensure the latest patches and signatures are deployed on the web server.',
         'Create an NDA between the external penetration tester and the company.'
       ],
-      explanation: '(309)',
+      explanation: '(309) A penetration testing agreement, also known as a penetration testing contract, is a legally binding document outlining the terms and conditions for conducting a simulated cyberattack on a system or network. It ensures both the client and the penetration testing company are on the same page regarding the scope, objectives, and execution of the test.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Penetration Testing contract',
+          url: 'https://www.getastra.com/blog/security-audit/penetration-testing-contract/'
         }
       ],
       questionNumber: 309
@@ -5799,11 +5804,11 @@ const securityXQuiz = {
         'a zero-day attack.',
         'an on-path attack.'
       ],
-      explanation: '(310)',
+      explanation: '(310) An Advanced Persistent Threat (APT) is a prolonged, targeted cyberattack where an attacker gains access to a system and remains undetected for an extended period, often with the goal of stealing data or disrupting operations. APTs are characterized by their sophistication, stealth, and persistence, and are typically backed by substantial resources, often from nation-states or well-funded criminal organizations.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is APT?',
+          url: 'https://www.imperva.com/learn/application-security/apt-advanced-persistent-threat/'
         }
       ],
       questionNumber: 310
@@ -5817,11 +5822,11 @@ const securityXQuiz = {
         'TCO',
         'MSA'
       ],
-      explanation: '(311)',
+      explanation: '(311)  MTBF (Mean Time Between Failures) is a crucial metric for evaluating the reliability and availability of security systems. It represents the average time a system operates without experiencing a failure, indicating how frequently a component is expected to fail. A higher MTBF suggests a more stable and reliable security environment, minimizing disruptions and downtime caused by unexpected outages.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Mean Time Between Failure (MTBF)',
+          url: 'https://www.splunk.com/en_us/blog/learn/mean-time-between-failure.html'
         }
       ],
       questionNumber: 311
@@ -5836,11 +5841,16 @@ const securityXQuiz = {
         'Deploy a reverse proxy',
         'Deploy an IDS'
       ],
-      explanation: '(312)',
+      explanation: '(312) Input sanitization is the process of validating and cleaning user input to prevent security vulnerabilities, primarily by removing or encoding potentially harmful characters or code. This is crucial for web applications and systems to prevent attacks like cross-site scripting (XSS), SQL injection, and remote file inclusion (RFI).\n\n' +
+      'A web application firewall (WAF) can be deployed in various ways, including cloud-based (fully managed or self-managed), on-premises, or as a hybrid solution. The best approach depends on factors like application location, management preferences, and desired architectural flexibility.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How to Use Input Sanitization to Prevent Web Attacks',
+          url: 'https://www.esecurityplanet.com/endpoint/prevent-web-attacks-using-input-sanitization/'
+        },
+        {
+          title: 'Web Application Firewall',
+          url: 'https://www.appviewx.com/education-center/web-application-firewall/'
         }
       ],
       questionNumber: 312
@@ -5853,11 +5863,11 @@ const securityXQuiz = {
         'Antivirus',
         'Endpoint detection and response'
       ],
-      explanation: '(313)',
+      explanation: '(313) Sandbox detonation in cybersecurity refers to the process of safely executing suspicious files or code within a controlled, isolated environment (a sandbox) to analyze their behavior and identify potential threats. This technique allows security teams to "detonate" malicious code without risking damage to the actual production environment.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Sandbox, and setting it up.',
+          url: 'https://www.proofpoint.com/us/threat-reference/sandbox'
         }
       ],
       questionNumber: 313
@@ -5872,11 +5882,11 @@ const securityXQuiz = {
         'Web content filtering',
         'An endpoint DLP solution'
       ],
-      explanation: '(314)',
+      explanation: '(314) SSL Decryption, also referred to as SSL Visibility, is the process of decrypting traffic at scale and routing it to various inspection tools which identify threats inbound to applications, as well as outbound from users to the internet.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The importance of tls ssl decryption for network security',
+          url: 'https://blog.gigamon.com/2023/10/06/the-importance-of-tls-ssl-decryption-for-network-security/'
         }
       ],
       questionNumber: 314
@@ -5889,11 +5899,11 @@ const securityXQuiz = {
         'Available function codes are not standardized.',
         'It is an open source protocol.'
       ],
-      explanation: '(315)',
+      explanation: `(315) The error message "Authentication not allocated DNP3" indicates a problem with the DNP3 Secure Authentication (DNP3-SA) configuration between your DNP3 devices. This means one device is trying to use secure authentication, but the other isn't properly configured for it or the settings don't match.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are the best practices for implementing DNP3?',
+          url: 'https://www.linkedin.com/advice/3/what-best-practices-implementing-dnp3-secure'
         }
       ],
       questionNumber: 315
@@ -5906,11 +5916,11 @@ const securityXQuiz = {
         'CCE',
         'CVE'
       ],
-      explanation: '(316)',
+      explanation: `(316) The Common Vulnerability Scoring System (CVSS) is a framework used to assess and communicate the severity of software vulnerabilities. It provides a numerical score (0.0 to 10.0) that helps organizations prioritize vulnerabilities for remediation. CVSS scores are based on the characteristics of a vulnerability and its potential impact, but don't directly represent overall risk.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is the Common Vulnerability Scoring System?',
+          url: 'https://www.balbix.com/insights/understanding-cvss-scores/'
         }
       ],
       questionNumber: 316
@@ -5924,11 +5934,11 @@ const securityXQuiz = {
         'Python',
         'Java'
       ],
-      explanation: '(317)',
+      explanation: '(317) Ladder logic has evolved into a programming language that represents a program by a graphical diagram based on the circuit diagrams of relay logic hardware. Ladder logic is used to develop software for programmable logic controllers (PLCs) used in industrial control applications.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Ladder Logic Symbols',
+          url: 'https://www.solisplc.com/tutorials/ladder-logic-symbols'
         }
       ],
       questionNumber: 317
@@ -5942,11 +5952,11 @@ const securityXQuiz = {
         'Deepfake generation',
         'Closed-source intelligence reporting'
       ],
-      explanation: '(318)',
+      explanation: '(318) The MITRE ATT&CK framework is a globally accessible knowledge base that documents adversary tactics, techniques, and procedures (TTPs) used in cyberattacks. It provides a structured way for cybersecurity professionals to understand, assess, and defend against cyber threats. By categorizing these TTPs, ATT&CK helps organizations improve their threat detection, strengthen their defenses, and better understand how attackers operate.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Mitre ATT&CK',
+          url: 'https://www.mitre.org/focus-areas/cybersecurity/mitre-attack'
         }
       ],
       questionNumber: 318
@@ -5963,11 +5973,11 @@ const securityXQuiz = {
         'Algorithmic',
         'Random substitution'
       ],
-      explanation: '(319)',
+      explanation: `(319) Data masking in cybersecurity involves replacing sensitive information with fictional or altered data to protect it while still allowing its use in non-production environments like development and testing. It's a crucial technique for maintaining data usability without exposing real sensitive information.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Data Masking?',
+          url: 'https://aws.amazon.com/what-is/data-masking/'
         }
       ],
       questionNumber: 319
@@ -5980,11 +5990,11 @@ const securityXQuiz = {
         'HSTS',
         'CRL'
       ],
-      explanation: '(320)',
+      explanation: `(320) OCSP, or Online Certificate Status Protocol, is a cybersecurity protocol used to verify the revocation status of digital certificates in real-time. It's a critical component of secure online transactions, particularly when using SSL/TLS certificates to establish trust between websites and users. OCSP allows clients to query a Certificate Authority (CA) and receive an immediate response about whether a certificate is still valid or has been revoked.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is OCSP?',
+          url: 'https://www.ssldragon.com/blog/what-is-ocsp/'
         }
       ],
       questionNumber: 320
@@ -5997,11 +6007,11 @@ const securityXQuiz = {
         'Hire additional on-call staff to be deployed if an event occurs.',
         'Design an appropriate warm site for business continuity.'
       ],
-      explanation: '(321)',
+      explanation: `(321)  business-critical processes involves safeguarding the essential systems and data that are vital for an organization's operations and continuity. This includes identifying, protecting, detecting, responding to, and recovering from cyber threats that could disrupt these core functions.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Cyber Security: Protect your most critical assets!',
+          url: 'https://www.dataguard.com/blog/protect-critical-assets-in-cyber-security-first/'
         }
       ],
       questionNumber: 321
@@ -6016,11 +6026,11 @@ const securityXQuiz = {
         'The findings indicate unsecure protocols. All cookies should be marked as HttpOnly.',
         'The findings indicate a SQL injection. The database needs to be upgraded.'
       ],
-      explanation: '(322)',
+      explanation: '(322) Information Exposure Through an Error Message is a security weakness where an application or system reveals sensitive information to end users (and therefore, to attackers) in error messages.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'CWE 209',
+          url: 'https://www.veracode.com/security/java/cwe-209/'
         }
       ],
       questionNumber: 322
@@ -6053,11 +6063,11 @@ const securityXQuiz = {
         'Use stored procedures on the database server.',
         `Store the value of the $_SERVER['REMOTE_ADDR'] received by the web servers.`
       ],
-      explanation: '(324)',
+      explanation: `(324) The X-Forwarded-For (XFF) header is a standard HTTP header used by proxies and load balancers to identify the originating IP address of a client connecting to a web server. It's a de-facto standard, meaning it's widely used but not formally part of the official HTTP specification. Essentially, it allows a server to see the real client IP address even when the request has passed through one or more proxy servers.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'HTTP headers and Classic Load Balancers',
+          url: 'https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/x-forwarded-headers.html'
         }
       ],
       questionNumber: 324
@@ -6075,11 +6085,11 @@ const securityXQuiz = {
         'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
         'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally'
       ],
-      explanation: '(325)',
+      explanation: `(325) An immutable database is a type of database where data, once written, cannot be modified or deleted. Instead of overwriting existing entries when changes occur, new entries are appended to the database, creating a permanent and tamper-proof record of all information and its history. This contrasts with traditional, mutable databases where data can be altered or removed directly.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is immutable data?',
+          url: 'https://www.tibco.com/glossary/what-is-immutable-data'
         }
       ],
       questionNumber: 325
@@ -6094,11 +6104,11 @@ const securityXQuiz = {
         'Replace the copper-based network infrastructure with fiber.',
         'Reduce the number of global sites while increasing the number of HSMs.'
       ],
-      explanation: '(326)',
+      explanation: '(326) The validity period of a certificate is the time frame during which it can be used to establish a secure connection, such as an SSL/TLS certificate. While the validity period for SSL/TLS certificates used to be longer, industry standards now limit them to a maximum of 398 days (approximately 13 months).',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How long are digital certificates valid?',
+          url: 'https://www.sectigo.com/resource-library/how-long-are-digital-certificates-valid'
         }
       ],
       questionNumber: 326
@@ -6112,11 +6122,16 @@ const securityXQuiz = {
         'Deploying clientAuth extended key usage certificate templates',
         'Submitting a CSR to the CA to obtain a single certificate that can be used across all devices'
       ],
-      explanation: '(327)',
+      explanation: '(327) MDM (Mobile Device Management) solution integration with directory services allows organizations to leverage their existing user and group information for device management and security. This integration streamlines device enrollment, authentication, and policy assignment, improving efficiency and security.\n]n' +
+      'Configuring SCEP (Simple Certificate Enrollment Protocol) on your Certificate Authority (CA) and integrating it with One-Time Passwords (OTPs) is a robust way to automate secure certificate enrollment for a large number of devices.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Optimizing Directory Management and MDM Integration',
+          url: 'https://www.trio.so/blog/directory-management/'
+        },
+        {
+          title: 'Configure Simple Certificate Enrollment',
+          url: 'https://docs.paloaltonetworks.com/prisma-sd-wan/deployment/understand-installation-workflow/configure-simple-certificate-enrollment-protocol'
         }
       ],
       questionNumber: 327
@@ -6129,11 +6144,11 @@ const securityXQuiz = {
         'Supply chain risk consultation',
         'Tabletop exercises'
       ],
-      explanation: '(328)',
+      explanation: '(328) Adversary emulation identifies gaps in security controls by simulating real-world attack scenarios. It tests the effectiveness of existing measures under conditions that mimic actual cyber threats. By doing so, it exposes vulnerabilities that might otherwise remain undetected, thus enabling timely remediation.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Adversary Emulation?',
+          url: 'https://blogs.stickmancyber.com/cybersecurity-blog/what-is-adversary-emulation-and-why-you-should-get-it-done'
         }
       ],
       questionNumber: 328
@@ -6146,11 +6161,11 @@ const securityXQuiz = {
         'Change the log solution and integrate it with the existing SIEM.',
         'Rotate and back up logs every 24 hours, encrypting the backups.'
       ],
-      explanation: '(329)',
+      explanation: '(329) A centralized log server simplifies IT management by aggregating and standardizing log files from diverse sources like switches, routers, firewalls, workstations, and applications across a network into a single platform.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Microservices Logging: Best practices, Importances and Challenges',
+          url: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.groundcover.com/microservices-observability/microservices-logging&ved=2ahUKEwirpIj4h_KOAxXxIjQIHbvVMhsQFnoECCUQAw&usg=AOvVaw2p6FWyZX-Rk5EQIfkkqfYZ'
         }
       ],
       questionNumber: 329
@@ -6163,11 +6178,11 @@ const securityXQuiz = {
         'Implement a business continuity process that includes reverting manual business processes.',
         'Carry out a tabletop exercise to update and verify the RACI matrix with IT and critical business functions.'
       ],
-      explanation: '(330)',
+      explanation: `(330) Regular disaster recovery (DR) testing is crucial for verifying the effectiveness of an organization's DR plan and ensuring business continuity in the face of disruptions. Testing should be conducted at least twice a year, with more frequent testing (quarterly or monthly) recommended for high-risk industries or after significant changes to operations.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Disaster Recovery Testing: Where to Start',
+          url: 'https://warrenaverett.com/insights/disaster-recovery-testing/'
         }
       ],
       questionNumber: 330
