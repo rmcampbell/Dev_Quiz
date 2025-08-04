@@ -5410,11 +5410,11 @@ const securityXQuiz = {
         'Which of the following solutions can best fulfill the requirements?',
       answer: 'SaaS',
       distractors: ['PaaS', 'IaaS', 'Private'],
-      explanation: '(287)',
+      explanation: '(287) SaaS security refers to the measures, practices, and technologies used to protect software-as-a-service (SaaS) applications and the data they contain from cyber threats. This includes safeguarding user data, ensuring data integrity and availability, and managing access controls within the SaaS environment. SaaS security is a shared responsibility between the SaaS provider and the customer, with each party playing a crucial role in maintaining a secure environment.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'SaaS Security',
+          url: 'https://cybeready.com/category/complete-guide-to-saas-security/'
         }
       ],
       questionNumber: 287
@@ -5423,11 +5423,11 @@ const securityXQuiz = {
       question: `A security analyst wants to keep track of all outbound web connections from workstations. The analyst's company uses an on-premises web filtering solution that forwards the outbound traffic to a perimeter firewall. When the security analyst gets the connection events from the firewall, the source IP of the outbound web traffic is the translated IP of the web filtering solution. Considering this scenario involving source NAT, which of the following would be the best option to inject in the HTTP header to include the real source IP from workstations?`,
       answer: 'X-Forwarded-For',
       distractors: ['X-Forwarded-Proto', 'Cache-Control', 'Strict Transport Security', 'Content-Security-Policy'],
-      explanation: '(288)',
+      explanation: '(288) The HTTP X-Forwarded-For (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are X-Forwarded Headers?',
+          url: 'https://requestly.com/blog/what-are-x-forwarded-headers-and-why-it-is-used/'
         }
       ],
       questionNumber: 288
@@ -5436,11 +5436,11 @@ const securityXQuiz = {
       question: 'A security team is creating tickets to track the progress of remediation. Which of the following is used to specify the due dates for high- and critical-priority findings?',
       answer: 'SLA',
       distractors: ['MSA', 'ISA', 'MOU'],
-      explanation: '(289)',
+      explanation: `(289) A Service Level Agreement (SLA) in cybersecurity is a formal agreement that outlines the performance expectations and responsibilities between a security service provider and a client. It defines metrics, response times, and other key aspects of security services to ensure accountability and minimize risk. Essentially, it's a contract that specifies what a security provider will do, how well they will do it, and what happens if they fail to meet those standards.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Understanding SLAs',
+          url: 'https://www.linkedin.com/pulse/understanding-service-level-agreements-slas-cybersecurity-seconize-kx9gc#:~:text=A%20risk%20register%20is%20a,be%20taken%20within%20specific%20timeframes'
         }
       ],
       questionNumber: 289
@@ -5454,11 +5454,11 @@ const securityXQuiz = {
         'Establishing role succession and call lists',
         'Creating a playbook'
       ],
-      explanation: '(290)',
+      explanation: `(290) a discussion-based simulation where participants analyze a hypothetical cyber incident to assess and improve their organization's preparedness and response plans. These exercises help identify weaknesses in security procedures, enhance communication, and strengthen overall cybersecurity posture.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Introduction to Tabletop Exercises',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/tabletop-exercise/'
         }
       ],
       questionNumber: 290
@@ -5477,11 +5477,16 @@ const securityXQuiz = {
         'Enable OAuth.',
         'Require unsuccessful logins to be logged throughout the network.'
       ],
-      explanation: '(291)',
+      explanation: '(291) MFA stands for Multi-Factor Authentication, a security method that requires users to provide more than one authentication factor to verify their identity when accessing an account or system. Instead of relying solely on a password, MFA adds an extra layer of security by combining different types of verification methods.\n\n' +
+      `PAM stands for Privileged Access Management. It's a security framework and set of technologies focused on controlling, monitoring, and securing access to privileged accounts within an organization's IT infrastructure. These accounts, often held by administrators and other privileged users, have elevated permissions and access to sensitive data and systems. PAM solutions help organizations minimize the risk of cyberattacks and data breaches by implementing strict controls over these powerful accounts.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is MFA?',
+          url: 'https://www.fortinet.com/resources/cyberglossary/multi-factor-authentication'
+        },
+        {
+          title: 'What is privileged access management?',
+          url: 'https://www.cyberark.com/what-is/privileged-access-management/'
         }
       ],
       questionNumber: 291
@@ -5495,11 +5500,11 @@ const securityXQuiz = {
         'A common public key on each endpoint',
         'A common private key on each endpoint'
       ],
-      explanation: '(292)',
+      explanation: '(292) Public key cryptography is a cybersecurity method that uses two mathematically related keys: a public key for encryption and a private key for decryption. This system ensures secure communication and data protection by allowing anyone to encrypt messages using the public key, but only the holder of the corresponding private key can decrypt them.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'How does Public Key Encryption work?',
+          url: 'https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/'
         }
       ],
       questionNumber: 292
@@ -5508,11 +5513,11 @@ const securityXQuiz = {
       question: 'A company was recently infected by malware. During the root cause analysis, the company determined that several users were installing their own applications. To prevent further compromises, the company has decided it will only allow authorized applications to run on its systems. Which of the following should the company implement?',
       answer: 'Permit listing',
       distractors: ['Signing', 'Access control', 'HIPS'],
-      explanation: '(293)',
+      explanation: `(293) a "permit list," also known as an "allow list" or "whitelist," is a security measure that specifies which entities are allowed to access a system or resource. It's the opposite of a blacklist, which restricts access. A permit list is often used to control access to networks, applications, or specific files, enhancing security by limiting access to only authorized entities.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Application Allowlist?',
+          url: 'https://www.sentinelone.com/cybersecurity-101/endpoint-security/application-whitelisting/'
         }
       ],
       questionNumber: 293
