@@ -4622,11 +4622,11 @@ const securityXQuiz = {
         'User acceptance testing',
         'Software composition analysis'
       ],
-      explanation: '(243)',
+      explanation: `(243) Regression testing is a software testing technique that involves re-running previously executed tests to verify that modifications to the code haven't introduced new defects or negatively impacted existing functionalities. In simpler terms, it's about making sure that while adding new features or fixing bugs, the previously working parts of the software don't break or become vulnerable to attacks.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Regression Testing?',
+          url: 'https://www.spiceworks.com/tech/devops/articles/what-is-regression-testing/'
         }
       ],
       questionNumber: 243
@@ -4637,11 +4637,11 @@ const securityXQuiz = {
         'indicate whether the attacks are being conducted by the same actor?',
       answer: 'Look for common TTPs',
       distractors: ['Apply code stylometry', 'Use IoC extractions', 'Leverage malware detonation'],
-      explanation: '(244)',
+      explanation: '(244) TTPs, which stands for Tactics, Techniques, and Procedures, describe how cyber attackers operate and execute attacks. They provide a structured way to understand and categorize the methods, strategies, and specific actions used by threat actors. By analyzing TTPs, security teams can improve threat detection, response, and overall defense strategies.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are tactics, techniques, and procedures (TTPs)?',
+          url: 'https://www.exabeam.com/explainers/what-are-ttps/what-are-ttps-and-how-understanding-them-can-help-prevent-the-next-incident/'
         }
       ],
       questionNumber: 244
@@ -4653,14 +4653,13 @@ const securityXQuiz = {
         'It is computationally efficient and provides perfect forward secrecy.',
         'It is more resilient to brute-force attacks than ECC.',
         'It supports ephemeral key exchange and digital signatures.',
-        'It is currently considered a robust PQC technique.',
         'It enables processing on data while remaining in an encrypted state.'
       ],
-      explanation: '(245)',
+      explanation: '(245) As quantum computing advances, traditional encryption methods like RSA and ECC become vulnerable to attacks from powerful quantum computers. To address this emerging threat, post-quantum cryptography (PQC) focuses on developing new cryptographic algorithms resistant to both classical and quantum attacks.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Post Quantum Cryptography Explained',
+          url: `https://www.boozallen.com/insights/ai-research/post-quantum-cryptography-explained.html#:~:text=In%20the%20future%2C%20adversaries%20could,user's%20privately%20known%20secret%20key`
         }
       ],
       questionNumber: 245
@@ -4675,7 +4674,7 @@ const securityXQuiz = {
         'Update the cipher suites configured for use on the server side.',
         'Disable IKE version 1 and run IKE version 2.'
       ],
-      explanation: '(246)',
+      explanation: `(246) the concept of a "permitted initiator" refers to an entity, whether it's a user, device, or process, that is explicitly authorized to initiate certain actions or access specific resources within a system or network. It's a fundamental element of access control, which aims to prevent unauthorized access and protect an organization's digital assets.`,
       references: [
         {
           title: '',
@@ -4696,11 +4695,11 @@ const securityXQuiz = {
         'Decentralize administrator accounts and force unique passwords for each application.',
         `Enforce biometric authentication requirements for the administrator's named accounts.`
       ],
-      explanation: '(247)',
+      explanation: `(247) Context-based authentication, also known as adaptive authentication or risk-based authentication, is a security method that evaluates multiple contextual factors about a user's login attempt to determine the legitimacy of the request. It goes beyond traditional authentication (like passwords) by considering factors such as location, device, time of day, network, and user behavior to assess risk and grant or deny access accordingly.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Context-Based Authentication?',
+          url: 'https://www.ninjaone.com/it-hub/remote-access/what-is-context-based-authentication/'
         }
       ],
       questionNumber: 247
@@ -4709,11 +4708,11 @@ const securityXQuiz = {
       question: 'An organization currently has IDS, firewall, and DLP systems in place. The systems administrator needs to integrate the tools in the environment to reduce response time. Which of the following should the administrator use?',
       answer: 'SOAR',
       distractors: ['CWPP', 'XCCDF', 'CMDB'],
-      explanation: '(248)',
+      explanation: '(248) SOAR, which stands for Security Orchestration, Automation, and Response, is a cybersecurity technology that helps organizations automate and streamline their incident response processes. It does this by integrating various security tools, automating repetitive tasks, and providing a platform for managing and tracking security incidents.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is SOAR?  Not Flying Through the Sky like an Eagle!',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-soar'
         }
       ],
       questionNumber: 248
@@ -4726,11 +4725,11 @@ const securityXQuiz = {
         'The internal PKI certificate deployment allows for Wi-Fi connectivity before logging in to other systems.',
         'The server connection uses SSL VPN, which uses certificates for secure communication.'
       ],
-      explanation: '(249)',
+      explanation: '(249) A VPN connection uses encryption keys to secure data transmitted between your device and the VPN server, and again between the VPN server and the destination website or service. These keys, often called session keys, are unique to each VPN connection and are used to encrypt and decrypt data, ensuring that only the intended recipient (you and the VPN server, or the VPN server and the destination) can read the information.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Why are Certificates Used for VPN?',
+          url: 'https://blog.vpntracker.com/why-are-certificates-used-for-vpn-best-practice-authentication/'
         }
       ],
       questionNumber: 249
@@ -4743,11 +4742,11 @@ const securityXQuiz = {
         'Which of the following is the best way to meet the requirements?',
       answer: 'CMDB',
       distractors: ['SBoM', 'CASB', 'GRC'],
-      explanation: '(250)',
+      explanation: '(250) A Configuration Management Database (CMDB) plays a crucial role by providing a centralized repository for IT assets and their relationships, enabling organizations to better manage and protect their infrastructure. By maintaining an accurate inventory of hardware, software, and their connections, the CMDB supports various cybersecurity functions, including vulnerability management, incident response, and compliance reporting.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The Hidden Power of the CMDB',
+          url: 'https://blog.qualys.com/qualys-insights/2024/04/24/unveiling-the-hidden-power-of-the-cmdb-in-cybersecurity'
         }
       ],
       questionNumber: 250
@@ -4762,11 +4761,11 @@ const securityXQuiz = {
         'Failure to implement a DLP system',
         'Failure to join the industry ISAC'
       ],
-      explanation: '(251)',
+      explanation: '(251) A Threat Intelligence Platform (TIP) is a cybersecurity tool that centralizes and analyzes threat data from various sources, helping organizations understand, anticipate, and respond to cyber threats more effectively. It acts as a central hub for threat intelligence, providing actionable insights to security teams.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a TIP?',
+          url: 'https://www.anomali.com/resources/what-is-a-tip'
         }
       ],
       questionNumber: 251
@@ -4779,11 +4778,11 @@ const securityXQuiz = {
         'No use cases to drive adoption',
         'Quantum computers not yet capable'
       ],
-      explanation: '(252)',
+      explanation: '(252) Coprocessors play a significant role in cybersecurity, particularly in providing a secure and tamper-resistant environment for sensitive data and operations. They are essentially dedicated processors designed to assist the main CPU by offloading specific tasks, often involving cryptography, which can significantly enhance system performance and security.',
       references: [
         {
-          title: '',
-          url: ''
+          title: `Supporting strong CyberSecurity Health for Next Gen PC's`,
+          url: 'https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/white-papers/supporting-strong-cyber-security-health-for-next-gen-pcs.pdf'
         }
       ],
       questionNumber: 252
@@ -4796,11 +4795,11 @@ const securityXQuiz = {
         `Set up different profiles based on the person's risk.`,
         'Require MFA to access company applications.'
       ],
-      explanation: '(253)',
+      explanation: '(253) Remote wiping is a crucial cybersecurity measure that allows administrators to erase data from a device remotely, typically in cases of loss, theft, or suspected compromise. This feature is often part of Mobile Device Management (MDM) solutions and helps prevent data breaches and ensure compliance with security regulations.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Remote wipe data protection: how it works',
+          url: 'https://preyproject.com/blog/what-is-remote-wipe-and-why-you-might-need-it'
         }
       ],
       questionNumber: 253
@@ -4821,11 +4820,11 @@ const securityXQuiz = {
         'Utilizing an API gateway',
         'Enabling automated vertical scaling'
       ],
-      explanation: '(254)',
+      explanation: '(254) Network load balancers enhance cybersecurity by distributing network traffic across multiple servers, preventing overload and single points of failure. They act as a gatekeeper, filtering malicious traffic and protecting against DDoS attacks. By distributing traffic, they minimize the impact of attacks and ensure service availability.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Network Load Balancer?',
+          url: 'https://www.vmware.com/topics/network-load-balancer'
         }
       ],
       questionNumber: 254
@@ -4840,11 +4839,11 @@ const securityXQuiz = {
         '`LN002` was not supported by the EDR solution and propagates the RAT.',
         '`MAC005` spreads the malware through other hosts in the network.'
       ],
-      explanation: '(255)',
+      explanation: '(255) The "unknown vulnerability" exploited by attackers in a zero-day attack refers to a security flaw that was previously unknown to the software vendor and the public. This means the vendor had no chance to create and distribute a patch or fix before the attack occurred. Therefore, systems were vulnerable during this "zero day" period, before a fix was available.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What Is a Zero-Day Exploit?',
+          url: 'https://www.proofpoint.com/us/threat-reference/zero-day-exploit'
         }
       ],
       questionNumber: 255
@@ -4857,11 +4856,11 @@ const securityXQuiz = {
         'Deploying mobile device management and requiring stronger passwords',
         'Updating security mobile reporting policies and monitoring data breaches'
       ],
-      explanation: '(256)',
+      explanation: '(256) Desktop as a Service (DaaS) is a cloud-based service that delivers virtual desktops and applications to users over the internet, allowing them to access their work environment from any device. It essentially outsources desktop management to a cloud provider, offering benefits like enhanced security, cost savings, and improved business continuity.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Desktop as a Service and How can it help your organization?',
+          url: 'https://azure.microsoft.com/en-us/blog/what-is-desktop-as-a-service-daas-and-how-can-it-help-your-organization'
         }
       ],
       questionNumber: 256
@@ -4883,11 +4882,11 @@ const securityXQuiz = {
         'Create an alert within the SIEM for outgoing network traffic to the suspected website.',
         'Configure DLP endpoints to block sensitive data to removable storage.'
       ],
-      explanation: '(257)',
+      explanation: '(257) A Cloud Access Security Broker (CASB) can be used to block unauthorized web applications by creating and enforcing policies that restrict access to specific applications. CASBs act as an intermediary between users and cloud applications, allowing organizations to define and enforce security policies, including access control, data loss prevention (DLP), and threat protection.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Secure your network with contextual web filtering using CASB',
+          url: 'https://www.manageengine.com/cloud-security/casb/web-content-filtering.html'
         }
       ],
       questionNumber: 257
@@ -4900,11 +4899,11 @@ const securityXQuiz = {
         'Create SIEM rules to raise alerts for access to those platforms.',
         'Deploy a FIM solution to trigger when files are accessed.'
       ],
-      explanation: '(258)',
+      explanation: '(258) A Cloud Access Security Broker (CASB) is a security solution that acts as an intermediary between users and cloud services, providing a layer of security and control over cloud applications and data. CASBs help organizations enforce security policies, protect sensitive data, and ensure compliance across various cloud environments, including SaaS, IaaS, and PaaS.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a cloud access security broker?',
+          url: 'https://www.microsoft.com/en-us/security/business/security-101/what-is-a-cloud-access-security-broker-casb'
         }
       ],
       questionNumber: 258
@@ -4913,11 +4912,11 @@ const securityXQuiz = {
       question: `A global company's Chief Financial Officer (CFO) receives a phone call from someone claiming to be the Chief Executive Officer (CEO). The caller claims to be stranded and in desperate need of money. The CFO is suspicious, but the caller's voice sounds similar to the CEO's. Which of the following best describes this type of attack?`,
       answer: 'Deepfake',
       distractors: ['Smishing', 'Automated exploit generation', 'Spear phishing'],
-      explanation: '(259)',
+      explanation: '(259) Deepfake is a form of artificial intelligence (AI) that can be used to create convincing hoax images, sounds, and videos. The term "deepfake" combines the deep learning concept with something fake. Deepfake compiles hoaxed images and sounds and stitches them together using machine learning algorithms.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a DEEPFAKE Attack?',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/social-engineering/deepfake-attack/'
         }
       ],
       questionNumber: 259
@@ -4926,11 +4925,16 @@ const securityXQuiz = {
       question: 'A cloud engineer wants to configure mail security protocols to support email authenticity and enable the flow of email security information to a third-party platform for further analysis. Which of the following must be configured to achieve these requirements?',
       answer: ['DMARC', 'DKIM'],
       distractors: ['TLS', 'SPF', 'DNSSEC', 'MX'],
-      explanation: '(260)',
+      explanation: '(260) DMARC, which stands for Domain-based Message Authentication, Reporting, and Conformance, is a cybersecurity protocol that helps prevent email spoofing and phishing attacks. It works by authenticating emails sent from a domain and instructing receiving servers on how to handle emails that fail authentication checks. By implementing DMARC, organizations can significantly reduce the risk of their domain being used for malicious purposes, enhancing their overall email security posture.\n\n' +
+      `DKIM, which stands for DomainKeys Identified Mail, is an email authentication method that helps prevent email spoofing and phishing. It allows an organization to claim responsibility for an email by attaching a digital signature, which can be verified by the recipient's server. This process helps ensure that the email is actually from the claimed sender and hasn't been tampered with during transit.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is DMARC?',
+          url: 'https://dmarc.org/'
+        },
+        {
+          title: 'What is DKIM?',
+          url: 'https://www.proofpoint.com/us/threat-reference/dkim'
         }
       ],
       questionNumber: 260
@@ -4943,11 +4947,11 @@ const securityXQuiz = {
         'Perform threat modeling on the production application.',
         'Conduct unit testing on the submitted code.'
       ],
-      explanation: '(261)',
+      explanation: `(261) Code peer review is a software development practice where one or more developers examine another developer's code to identify errors, improve code quality, and ensure adherence to coding standards. It's a collaborative process aimed at enhancing the overall project and the skills of individual team members.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Code Review?',
+          url: 'https://smartbear.com/learn/code-review/what-is-code-review/'
         }
       ],
       questionNumber: 261
@@ -4956,7 +4960,7 @@ const securityXQuiz = {
       question: `A SOC team receives notifications that align with playbook incidents. The team wants to analyze the potential threat actor's TTPs. Which of the following will best assist the SOC team?`,
       answer: 'ATT&CK',
       distractors: ['D3FEND', 'OWASP', 'COPPA', 'CAPEC'],
-      explanation: '(262)',
+      explanation: '(262) The MITRE ATT&CK framework is a globally-recognized knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations of cyberattacks. It helps organizations understand how attackers operate, improve threat detection, and strengthen their defenses.',
       references: [
         {
           title: '',
@@ -4976,8 +4980,8 @@ const securityXQuiz = {
       explanation: '(263)',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'MITRE ATT&CK',
+          url: 'https://www.mitre.org/focus-areas/cybersecurity/mitre-attack'
         }
       ],
       questionNumber: 263
@@ -4986,11 +4990,11 @@ const securityXQuiz = {
       question: 'After investigating a recent security incident, a SOC analyst is charged with creating a reference guide for the entire team to use. Which of the following should the analyst create to address future incidents?',
       answer: 'Runbook',
       distractors: ['Root cause analysis', 'Communication plan', 'Lessons learned'],
-      explanation: '(264)',
+      explanation: '(264) a detailed, step-by-step document that outlines procedures for handling specific security incidents or tasks. It provides clear instructions for security teams to follow, ensuring consistent and efficient responses to cyber threats. Runbooks are essential for incident response, automation, and training purposes.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Runbook?',
+          url: 'https://www.pagerduty.com/resources/automation/learn/what-is-a-runbook/#:~:text=Runbooks%20are%20created%20to%20provide,a%20runbook%20as%20a%20recipe'
         }
       ],
       questionNumber: 264
@@ -5002,11 +5006,16 @@ const securityXQuiz = {
         'Which of the following should the security architect configure to meet these requirements?',
       answer: ['Public keys', 'DNSSEC'],
       distractors: ['Conditional forwarders', 'Root hints', 'CNAME records', 'SRV records'],
-      explanation: '(265)',
+      explanation: '(265) a public key is a large numerical value that is used to encrypt data. The key can be generated by a software program, but more often, it is provided by a trusted, designated authority and made available to everyone through a publicly accessible repository or directory.\n\n' +
+      'DNSSEC, or Domain Name System Security Extensions, is a suite of protocols that add a layer of security to the Domain Name System (DNS). It works by digitally signing DNS records, allowing resolvers to verify the authenticity and integrity of the data received. This helps protect against various DNS-based attacks like cache poisoning, DNS spoofing, and man-in-the-middle attacks.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a public key and how does it work?',
+          url: 'https://www.techtarget.com/searchsecurity/definition/public-key'
+        },
+        {
+          title: 'What is DNS security?',
+          url: 'https://www.cloudflare.com/learning/dns/dns-security/'
         }
       ],
       questionNumber: 265
@@ -5019,11 +5028,11 @@ const securityXQuiz = {
         'Optimized cloud resource utilization',
         'Increased risk visibility'
       ],
-      explanation: '(266)',
+      explanation: `(266) To ensure your SOC operates efficiently, it's crucial to review your existing security processes. Document your workflows for incident detection, analysis, and response, and identify any gaps or inefficiencies.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: '8 Vital Steps to Building a Security Operations Center (SOC)',
+          url: 'https://www.forescout.com/blog/8-vital-steps-to-building-a-security-operations-center-soc/#:~:text=To%20ensure%20your%20SOC%20operates,identify%20any%20gaps%20or%20inefficiencies'
         }
       ],
       questionNumber: 266
@@ -5036,28 +5045,28 @@ const securityXQuiz = {
         'Which of the following is the best solution?',
       answer: 'Immutable system',
       distractors: ['Data loss prevention', 'Storage area network', 'Baseline template'],
-      explanation: '(267)',
+      explanation: '(267) An immutable system is one where software, from the operating system upwards, cannot be changed easily by its users and, therefore, by bad actors. Security is a significant advantage of immutable systems, but with immutability come the difficulties of making necessary changes after the software is instantiated.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'The power of an immutable desktop',
+          url: 'https://techhq.com/news/what-is-an-immutable-desktop-and-a-transactional-configuration/#:~:text=An%20immutable%20system%20is%20one,after%20the%20software%20is%20instantiated'
         }
       ],
       questionNumber: 267
     },
     {
-      question: 'After the latest risk assessment, the Chief Information Security Officer (CISO) decides to meet with the development and security teams to find a way to reduce the security task workload. The CISO would like to:\n' +
+      question: 'After the latest risk assessment, the Chief Information Security Officer (CISO) decides to meet with the development and security teams to find a way to reduce the security task workload. The CISO would like to:\n\n' +
         '`- Have a solution that uses an API to communicate with other security tools.`\n\n' +
         '`- Use the latest technology possible.`\n\n' +
         '`- Have the highest controls possible on the solution.`\n\n' +
         'Which of following is the best option to meet these requirements?',
       answer: 'SOAR',
       distractors: ['EDR', 'CSP', 'CASB'],
-      explanation: '(268)',
+      explanation: '(268) Security orchestration, automation and response (SOAR) technology helps coordinate, execute and automate tasks between various people and tools all within a single platform. This allows organizations to not only quickly respond to cybersecurity attacks but also observe, understand and prevent future incidents, thus improving their overall security posture.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is SOAR?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-soar'
         }
       ],
       questionNumber: 268
@@ -5073,7 +5082,6 @@ const securityXQuiz = {
       distractors: [
         'Expanding the use of IPS and NGFW devices throughout the environment',
         'Increasing the number of analysts to identify risks that need remediation',
-        'Implementing a SOAR solution to address known threats',
         'Integrating enterprise threat feeds in the existing SIEM'
       ],
       explanation: '(269)',
@@ -5672,28 +5680,28 @@ const securityXQuiz = {
       ],
       questionNumber: 305
     },
-    // {
-    //   question: 'A cloud security engineer is setting up a cloud-hosted WAF. The engineer needs to implement a solution to protect the multiple websites the organization hosts. The organization websites are:
-    // '• www.mycompany.org\n\n' +
-    // '• www.mycompany.com\n\n' +
-    // '• campus.mycompany.com\n\n' +
-    // '• wiki.mycompany.org\n\n' +
-    // The solution must save costs and be able to protect all websites. Users should be able to notify the cloud security engineer of any on-path attacks. Which of the following is the best solution?',
-    //   answer: 'Purchase one SAN certificate',
-    //   distractors: [
-    //     'Implement self-signed certificates.',
-    //     'Purchase one certificate for each website',
-    //     'Purchase one wildcard certificate'
-    //   ],
-    //   explanation: '(306)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 306
-    // },
+    {
+      question: 'A cloud security engineer is setting up a cloud-hosted WAF. The engineer needs to implement a solution to protect the multiple websites the organization hosts. The organization websites are:\n\n' +
+      '`- www.mycompany.org`\n\n' +
+      '`- www.mycompany.com`\n\n' +
+      '`- campus.mycompany.com`\n\n' +
+      '`- wiki.mycompany.org`\n\n' +
+      'The solution must save costs and be able to protect all websites. Users should be able to notify the cloud security engineer of any on-path attacks. Which of the following is the best solution?',
+      answer: 'Purchase one SAN certificate',
+      distractors: [
+        'Implement self-signed certificates.',
+        'Purchase one certificate for each website',
+        'Purchase one wildcard certificate'
+      ],
+      explanation: '(306)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 306
+    },
     {
       question: 'A security engineer is assessing a legacy server and needs to determine if FTP is running and on which port. The service cannot be turned off, as it would impact a critical application’s ability to function. Which of the following commands would provide the information necessary to create a firewall rule to prevent that service from being exploited?',
       answer: 'systemctl list-unit-file --type service ftpd',
@@ -5819,7 +5827,9 @@ const securityXQuiz = {
       questionNumber: 313
     },
     {
-      question: 'A firewall administrator needs to ensure all traffic across the company network is inspected. The administrator gathers data and finds the following information regarding the typical traffic in the network: Which of the following is the best solution to ensure the administrator can complete the assigned task?',
+      question: 'A firewall administrator needs to ensure all traffic across the company network is inspected. The administrator gathers data and finds the following information regarding the typical traffic in the network: Which of the following is the best solution to ensure the administrator can complete the assigned task?\n\n' +
+      `![Question 314](${imgPath(314)})\n\n` +
+      'Which of the following is the best solution to ensure the administrator can complete the assigned task?',
       answer: 'SSL/TLS decryption',
       distractors: [
         'A full-tunnel VPN',
@@ -5888,7 +5898,7 @@ const securityXQuiz = {
       questionNumber: 317
     },
     {
-      question: 'An organization’s senior security architect would like to develop cyberdefensive strategies based on standardized adversary techniques, tactics, and procedures commonly observed. Which of the following would best support this objective?',
+      question: `An organization’s senior security architect would like to develop cyberdefensive strategies based on standardized adversary techniques, tactics, and procedures commonly observed. Which of the following would best support this objective?`,
       answer: 'MITRE ATT&CK',
       distractors: [
         'OSINT analysis',
@@ -5905,29 +5915,27 @@ const securityXQuiz = {
       ],
       questionNumber: 318
     },
-    // {
-    //   question: 'A company is looking for a solution to hide data stored in databases. The solution must meet the following requirements:
-
-    //• Be efficient at protecting the production environment
-    //• Not require any change to the application
-    //• Act at the presentation layer
-
-    //Which of the following techniques should be used?',
-    //   answer: 'Masking',
-    //   distractors: [
-    //     'Steganography',
-    //     'Algorithmic',
-    //     'Random substitution'
-    //   ],
-    //   explanation: '(319)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 319
-    // },
+    {
+      question: 'A company is looking for a solution to hide data stored in databases. The solution must meet the following requirements:\n\n' +
+      '`• Be efficient at protecting the production environment`\n\n' +
+      '`• Not require any change to the application`\n\n' +
+      '`• Act at the presentation layer`\n\n' +
+      'Which of the following techniques should be used?',
+      answer: 'Masking',
+      distractors: [
+        'Steganography',
+        'Algorithmic',
+        'Random substitution'
+      ],
+      explanation: '(319)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 319
+    },
     {
       question: 'A software developer is working on a piece of code required by a new software package. The code should use a protocol to verify the validity of a remote identity. Which of the following should the developer implement in the code?',
       answer: 'OCSP',
@@ -5989,35 +5997,35 @@ const securityXQuiz = {
         'Encrypt individual packets.',
         'Encrypt the master boot record.'
       ],
-      explanation: '(323)',
+      explanation: '(323) To protect database fields, implement a multi-layered approach that includes encryption, access controls, and regular security assessments. Encryption secures sensitive data at rest and in transit, while access controls limit who can view or modify the data. Regularly patching systems and monitoring database activity are also crucial for maintaining a secure environment.',
+      references: [
+        {
+          title: 'What is Data Protection and Privacy?',
+          url: 'https://cloudian.com/guides/data-protection/data-protection-and-privacy-7-ways-to-protect-user-data/#:~:text=By%20protecting%20data%2C%20companies%20can,%2C%20encryption%2C%20and%20endpoint%20protection'
+        }
+      ],
+      questionNumber: 323
+    },
+    {
+      question: 'An auditor is reviewing the logs from a web application to determine the source of an incident. The web application architecture includes an internet-accessible application load balancer, a number of web servers in a private subnet, application servers, and one database server in a tiered configuration. The application load balancer cannot store the logs. The following are sample log snippets:\n\n' +
+      `![Question 324](${imgPath(324)})\n\n` +
+      'Which of the following should the auditor recommend to ensure future incidents can be traced back to the sources?',
+      answer: 'Enable the X-Forwarded-For header at the load balancer.',
+      distractors: [
+        'Install a software-based HIDS on the application servers.',
+        'Install a certificate signed by a trusted CA.',
+        'Use stored procedures on the database server.',
+        `Store the value of the $_SERVER['REMOTE_ADDR'] received by the web servers.`
+      ],
+      explanation: '(324)',
       references: [
         {
           title: '',
           url: ''
         }
       ],
-      questionNumber: 323
+      questionNumber: 324
     },
-    // {
-    //   question: 'An auditor is reviewing the logs from a web application to determine the source of an incident. The web application architecture includes an internet-accessible application load balancer, a number of web servers in a private subnet, application servers, and one database server in a tiered configuration. The application load balancer cannot store the logs. The following are sample log snippets:
-    // `![Question 324](${imgPath(324)})\n\n` +
-    // Which of the following should the auditor recommend to ensure future incidents can be traced back to the sources?',
-    //   answer: 'Enable the X-Forwarded-For header at the load balancer.',
-    //   distractors: [
-    //     'Install a software-based HIDS on the application servers.',
-    //     'Install a certificate signed by a trusted CA.',
-    //     'Use stored procedures on the database server.',
-    //     'Store the value of the $_SERVER['REMOTE_ADDR'] received by the web servers.'
-    //   ],
-    //   explanation: '(324)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 324
-    // },
     {
       question: 'An organization that performs real-time financial processing is implementing a new backup solution. Given the following business requirements:\n\n' +
       '`- The backup solution must reduce the risk for potential backup compromise`\n\n' +
@@ -6027,9 +6035,6 @@ const securityXQuiz = {
       'Which of the following backup strategies best meets these requirements?',
       answer: 'Creating a secondary, immutable database and adding live data on a continuous basis',
       distractors: [
-        'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
-        'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
-        'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally',
         'Utilizing two connected storage arrays and ensuring the arrays constantly sync',
         'Enabling remote journaling on the databases to ensure real-time transactions are mirrored',
         'Setting up anti-tampering on the databases to ensure data cannot be changed unintentionally'
@@ -6043,46 +6048,43 @@ const securityXQuiz = {
       ],
       questionNumber: 325
     },
-    // {
-    //   question: 'A system of globally distributed certificate servers connected to HSMs provide certificate security services for a publicly available PKI. These services include OCSP, certificate revocation list issuance, and certificate signing/issuance. The HSMs are all physical devices. All other servers are virtualized. Each global site has a network load balancer, and the sites are configured to load balance between sites.' +
-    // 'Users report occasional but persistent log-on failures to different PKI-enabled websites. There is no apparent pattern to the failures. Some OCSP responses must be signed by the HSM. Each HSM is connected to a physical server containing multiple VMs for the local site with CAT 6e network cable. The backplane connecting the VMs is fiber based.' +
-    // 'Which of the following would best reduce the OCSP response time in order to rule out the connection between the certificate server and HSM as a cause of the user-reported issues?',
-    //   answer: 'Shorten the time the duration certificates are valid to 72 hours and implement ACME.',
-    //   distractors: [
-    //     'Virtualize the HSMs and convert the virtualized servers to physical systems.',
-    //     'Replace the copper-based network infrastructure with fiber.',
-    //     'Reduce the number of global sites while increasing the number of HSMs.',
-    //     'Virtualize the HSMs and convert the virtualized servers to physical systems.',
-    //     'Replace the copper-based network infrastructure with fiber.',
-    //     'Reduce the number of global sites while increasing the number of HSMs.'
-    //   ],
-    //   explanation: '(326)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 326
-    // },
-    // {
-    //   question: 'An administrator brings the company's fleet of mobile devices into its PKI in order to align device WLAN NAC configurations with existing workstations and laptops. Thousands of devices need to be reconfigured in a cost-effective, time-efficient, and secure manner. Which of the following actions best achieve this goal? (Choose two.)',
-    //   answer: 'Using the existing MDM solution to integrate with directory services for authentication and enrollment, Configuring SCEP on the CA with an OTP for bulk device enrollment',
-    //   distractors: [
-    //     'Deploying netAuth extended key usage certificate templates',
-    //     'Deploying serverAuth extended key usage certificate templates',
-    //     'Deploying clientAuth extended key usage certificate templates',
-    //     'Submitting a CSR to the CA to obtain a single certificate that can be used across all devices'
-    //   ],
-    //   explanation: '(327)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 327
-    // },
+    {
+      question: 'A system of globally distributed certificate servers connected to HSMs provide certificate security services for a publicly available PKI. These services include OCSP, certificate revocation list issuance, and certificate signing/issuance. The HSMs are all physical devices. All other servers are virtualized. Each global site has a network load balancer, and the sites are configured to load balance between sites.\n\n' +
+      '`- Users report occasional but persistent log-on failures to different PKI-enabled websites. There is no apparent pattern to the failures. Some OCSP responses must be signed by the HSM. Each HSM is connected to a physical server containing multiple VMs for the local site with CAT 6e network cable. The backplane connecting the VMs is fiber based.`\n\n' +
+      'Which of the following would best reduce the OCSP response time in order to rule out the connection between the certificate server and HSM as a cause of the user-reported issues?',
+      answer: 'Shorten the time the duration certificates are valid to 72 hours and implement ACME.',
+      distractors: [
+        'Virtualize the HSMs and convert the virtualized servers to physical systems.',
+        'Replace the copper-based network infrastructure with fiber.',
+        'Reduce the number of global sites while increasing the number of HSMs.'
+      ],
+      explanation: '(326)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 326
+    },
+    {
+      question: `An administrator brings the company's fleet of mobile devices into its PKI in order to align device WLAN NAC configurations with existing workstations and laptops. Thousands of devices need to be reconfigured in a cost-effective, time-efficient, and secure manner. Which of the following actions best achieve this goal?`,
+      answer: ['Using the existing MDM solution to integrate with directory services for authentication and enrollment', 'Configuring SCEP on the CA with an OTP for bulk device enrollment'],
+      distractors: [
+        'Deploying netAuth extended key usage certificate templates',
+        'Deploying serverAuth extended key usage certificate templates',
+        'Deploying clientAuth extended key usage certificate templates',
+        'Submitting a CSR to the CA to obtain a single certificate that can be used across all devices'
+      ],
+      explanation: '(327)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 327
+    },
     {
       question: 'The ISAC for the retail industry recently released a report regarding social engineering tactics in which small groups create distractions for employees while other malicious individuals install advanced card skimmers on the payment systems. The Chief Information Security Officer (CISO) thinks that security awareness training, technical control implementations, and governance already in place is adequate to protect from this threat. The board would like to test these controls. Which of the following should the CISO recommend?',
       answer: 'Adversary emulation engagement',
@@ -6100,23 +6102,23 @@ const securityXQuiz = {
       ],
       questionNumber: 328
     },
-    // {
-    //   question: 'A company finds logs with modified time stamps when compared to other systems. The security team decides to improve logging and auditing for incident response. Which of the following should the team do to best accomplish this goal?',
-    //   answer: 'Implement a central logging server, allowing only log ingestion.',
-    //   distractors: [
-    //     'Integrate a file-monitoring tool with the SIEM.',
-    //     'Change the log solution and integrate it with the existing SIEM.',
-    //     'Rotate and back up logs every 24 hours, encrypting the backups.'
-    //   ],
-    //   explanation: '(329)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 329
-    // },
+    {
+      question: 'A company finds logs with modified time stamps when compared to other systems. The security team decides to improve logging and auditing for incident response. Which of the following should the team do to best accomplish this goal?',
+      answer: 'Implement a central logging server, allowing only log ingestion.',
+      distractors: [
+        'Integrate a file-monitoring tool with the SIEM.',
+        'Change the log solution and integrate it with the existing SIEM.',
+        'Rotate and back up logs every 24 hours, encrypting the backups.'
+      ],
+      explanation: '(329)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 329
+    },
     {
       question: 'A company recently experienced a ransomware attack. Although the company performs systems and data backup on a schedule that aligns with its RPO requirements, the backup administrator could not recover critical systems and data from its offline backups to meet the RPO. Eventually, the systems and data were restored with information that was six months outside of RPO requirements. Which of the following actions should the company take to reduce the risk of a similar attack?',
       answer: 'Perform regular disaster recovery testing of IT and non-IT systems and process.',
@@ -6226,40 +6228,23 @@ const securityXQuiz = {
       ],
       questionNumber: 335
     },
-    // {
-    //   question: 'A company isolates its ОТ systems from other areas of the corporate network. These systems are required to report usage information over the internet to the vendor. Which of the following best prevents compromise or sabotage? (Choose two.)',
-    //   answer: 'Implementing allow lists, Implementing a site-to-site IPSec VPN',
-    //   distractors: [
-    //     'Monitoring network behaviors',
-    //     'Encrypting data at rest',
-    //     'Performing boot integrity checks',
-    //     'Executing daily health checks'
-    //   ],
-    //   explanation: '(336)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 336
-    // },
     {
-      question: `An organization is implementing Zero Trust architecture. A systems administrator must increase the effectiveness of the organization's context-aware access system. Which of the following is the best way to improve the effectiveness of the system?`,
-      answer: 'Microsegmentation',
+      question: 'A company isolates its ОТ systems from other areas of the corporate network. These systems are required to report usage information over the internet to the vendor. Which of the following best prevents compromise or sabotage?',
+      answer: ['Implementing allow lists', 'Implementing a site-to-site IPSec VPN'],
       distractors: [
-        'Secure zone architecture',
-        'Always-on VPN',
-        'RADIUS'
+        'Monitoring network behaviors',
+        'Encrypting data at rest',
+        'Performing boot integrity checks',
+        'Executing daily health checks'
       ],
-      explanation: '(337)',
+      explanation: '(336)',
       references: [
         {
           title: '',
           url: ''
         }
       ],
-      questionNumber: 337
+      questionNumber: 336
     },
     {
       question: `An organization is implementing Zero Trust architecture. A systems administrator must increase the effectiveness of the organization's context-aware access system. Which of the following is the best way to improve the effectiveness of the system?`,
@@ -6284,7 +6269,7 @@ const securityXQuiz = {
       '`- Available for users worldwide`\n\n' +
       '`- Protected against attacks`\n\n' +
       'Which of the following are the best components the company should use to meet these requirements?',
-      answer: 'WAF, CDN',
+      answer: ['WAF', 'CDN'],
       distractors: [
         'IPS',
         'SASE',
@@ -6319,27 +6304,27 @@ const securityXQuiz = {
       ],
       questionNumber: 339
     },
-    // {
-    //   question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:
-    // • Access to the system document repository must be MFA enabled.
-    // • Ongoing risk monitoring must be displayed on a system dashboard.
-    // • Staff must receive email notifications about periodic tasks.
-    // Which of the following best meets all of these requirements?',
-    //   answer: 'Implementing a GRC tool',
-    //   distractors: [
-    //     'Configuring a privileged access management system',
-    //     'Launching a vulnerability management program',
-    //     'Creating a risk register'
-    //   ],
-    //   explanation: '(340)',
-    //   references: [
-    //         {
-    //           title: '',
-    //           url: ''
-    //         }
-    //       ],
-    //   questionNumber: 340
-    // },
+    {
+      question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:\n\n' +
+      '`- Access to the system document repository must be MFA enabled.`\n\n' +
+      '`- Ongoing risk monitoring must be displayed on a system dashboard.`\n\n' +
+      '`- Staff must receive email notifications about periodic tasks.`\n\n' +
+      'Which of the following best meets all of these requirements?',
+      answer: 'Implementing a GRC tool',
+      distractors: [
+        'Configuring a privileged access management system',
+        'Launching a vulnerability management program',
+        'Creating a risk register'
+      ],
+      explanation: '(340)',
+      references: [
+        {
+          title: '',
+          url: ''
+        }
+      ],
+      questionNumber: 340
+    },
     {
       question: 'Based on the results of a SAST report on a legacy application, a security engineer is reviewing the following snippet of code flagged as vulnerable:\n\n' +
       `![Question 341](${imgPath(341)})\n\n` +
