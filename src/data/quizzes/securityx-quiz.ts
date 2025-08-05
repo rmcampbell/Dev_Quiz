@@ -6197,11 +6197,11 @@ const securityXQuiz = {
         'Data exfiltration',
         'Bin use'
       ],
-      explanation: '(331)',
+      explanation: '(331) Credential dumping is a technique where threat actors steal account login information and password material from a compromised system. This stolen information can then be used to gain unauthorized access, move laterally within a network, escalate privileges, and cause significant harm.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What Is Credential Dumping?',
+          url: 'https://www.ninjaone.com/it-hub/endpoint-security/what-is-credential-dumping/'
         }
       ],
       questionNumber: 331
@@ -6215,11 +6215,11 @@ const securityXQuiz = {
         'Results from the most recent software composition analysis',
         'A current inventory of cloud resources and SaaS products in use'
       ],
-      explanation: '(332)',
+      explanation: '(332) Network diagrams of a local area network (LAN) show components of a network and how they interact, including routers, switches, firewalls, endpoints, etc. Whereas, data-flow diagrams map out the flow of information for any process or system.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Creating Effective Network and Data Flow Diagrams',
+          url: 'https://kirkpatrickprice.com/blog/how-to-create-network-diagrams-data-flow-diagrams/#:~:text=A%20network%20flow%20diagram%20maps,%2C%20payment%2C%20and%20logistics%20systems'
         }
       ],
       questionNumber: 332
@@ -6232,11 +6232,16 @@ const securityXQuiz = {
         'Disable external connections to those systems for the next six months.',
         'Isolate the critical systems so they can only be remotely managed from the internet.'
       ],
-      explanation: '(333)',
+      explanation: '(333) To allow only specific connections through a firewall, you need to configure it with rules that explicitly permit those connections while blocking all others. This is often achieved through an "implicit deny" policy, where everything is blocked by default, and you create exceptions for the desired traffic.\n\n' +
+      'A VPN, or Virtual Private Network, creates a secure, encrypted connection between your device and the internet, often via a remote server. This connection masks your IP address, making your online activity more private and secure, particularly when using public Wi-Fi. Essentially, it acts as a tunnel, protecting your data from prying eyes and allowing you to bypass geographic restrictions or censorship.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are Firewall Rules? Ultimate Guide (+ Best Practices)',
+          url: 'https://www.esecurityplanet.com/networks/firewall-rules/#:~:text=be%20analyzed%20later.-,4%20Types%20of%20Firewall%20Rules,manage%20different%20types%20of%20traffic'
+        },
+        {
+          title: 'What is a VPN?',
+          url: 'https://aws.amazon.com/what-is/vpn/'
         }
       ],
       questionNumber: 333
@@ -6251,11 +6256,11 @@ const securityXQuiz = {
         'A hardware failure in the storage array caused the mailboxes to be inaccessible.',
         'A user with low privileges was able to escalate and erase all mailboxes.'
       ],
-      explanation: '(334)',
+      explanation: `(334) This refers to the process where an unauthorized party obtains a user's login details (username and password or other authentication tokens) and then uses those stolen credentials to gain access to accounts on the same or different systems.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Credential Compromise',
+          url: 'https://www.proofpoint.com/us/threat-reference/credential-compromise'
         }
       ],
       questionNumber: 334
@@ -6270,11 +6275,11 @@ const securityXQuiz = {
         'Implementing an allow list for all text boxes throughout the web application',
         'Filtering inserted characters for all user inputs and allowing only ASCII characters'
       ],
-      explanation: '(335)',
+      explanation: '(335) arsing is a data analysis process that gives a computer or application the capabilities to comprehend human-generated inputs or system-level data files. It involves dissecting the scalar data into elementary pieces for further analytics and interpretation.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'File Parser - what is it & what are the possible test scenarios?',
+          url: 'https://medium.com/singapore-gds/file-parser-what-is-it-what-are-the-possible-test-scenarios-067291ea7371'
         }
       ],
       questionNumber: 335
@@ -6288,11 +6293,16 @@ const securityXQuiz = {
         'Performing boot integrity checks',
         'Executing daily health checks'
       ],
-      explanation: '(336)',
+      explanation: '(336) Allow listing, also known as whitelisting, is a practice that permits only pre-approved software, email addresses, users, or other entities to access a network or system. This proactive approach focuses on allowing only trusted entities, unlike traditional methods that block known threats.\n\n' +
+      'A site-to-site IPsec VPN creates a secure, encrypted connection between two networks over the internet, allowing them to communicate as if they were directly connected. This type of VPN is commonly used to link branch offices to a main office or connect on-premises networks to cloud-based resources. IPsec (Internet Protocol Security) is a protocol suite that provides security services like authentication and encryption for network traffic.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Whitelist (Allowlist)?',
+          url: 'https://www.techtarget.com/whatis/definition/whitelist#:~:text=A%20whitelist%20(allowlist)%20is%20a,applications%2C%20while%20denying%20all%20others'
+        },
+        {
+          title: 'What is a Site-to-Site VPN?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-a-site-to-site-vpn'
         }
       ],
       questionNumber: 336
@@ -6305,11 +6315,11 @@ const securityXQuiz = {
         'Always-on VPN',
         'RADIUS'
       ],
-      explanation: '(337)',
+      explanation: '(337) Micro-segmentation is a network security strategy that divides a network into small, isolated segments, effectively creating a granular security perimeter around individual workloads, applications, or even specific services. This approach significantly reduces the attack surface and helps contain potential breaches by limiting the scope of lateral movement for attackers.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Microsegmentation: The Key to Modern Cybersecurity',
+          url: 'https://www.illumio.com/cybersecurity-101/microsegmentation'
         }
       ],
       questionNumber: 337
@@ -6327,11 +6337,16 @@ const securityXQuiz = {
         'VPN',
         'CASB'
       ],
-      explanation: '(338)',
+      explanation: '(338) A Web Application Firewall (WAF) is a security solution that acts as a reverse proxy, inspecting and filtering HTTP traffic to and from web applications. It protects against various web-based attacks like SQL injection, cross-site scripting, and malicious bots. WAFs are crucial for securing online businesses and ensuring the availability, security, and integrity of web applications and APIs.\n\n' +
+      'a Content Delivery Network (CDN) enhances security by mitigating threats like DDoS attacks, protecting against data breaches, and improving overall website resilience. CDNs achieve this by distributing traffic, caching content, and integrating security features like WAFs and bot management.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is a Web Application Firewall (WAF)?',
+          url: 'https://www.f5.com/glossary/web-application-firewall-waf#:~:text=A%20web%20application%20firewall%20(WAF)%20protects%20web%20applications%20from%20a,gateway%20to%20your%20valuable%20data'
+        },
+        {
+          title: 'What is a CDN (Content Delivery Network?',
+          url: 'https://aws.amazon.com/what-is/cdn/'
         }
       ],
       questionNumber: 338
@@ -6346,11 +6361,11 @@ const securityXQuiz = {
         'Changing the repository technology to avoid inclusion of confidential information',
         'Automating the upload process of code to the repository and improving the software development life cycle'
       ],
-      explanation: '(339)',
+      explanation: '(339) A secrets management platform is a system designed to securely store, manage, and control access to sensitive information, often referred to as secrets, within an organization. These platforms are crucial for safeguarding digital authentication credentials like passwords, API keys, certificates, and other confidential data used by applications and services.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is Secrets Management?',
+          url: 'https://www.sysdig.com/learn-cloud-native/what-is-secrets-management'
         }
       ],
       questionNumber: 339
@@ -6367,11 +6382,11 @@ const securityXQuiz = {
         'Launching a vulnerability management program',
         'Creating a risk register'
       ],
-      explanation: '(340)',
+      explanation: '(340) A GRC tool is a software solution designed to help organizations manage their Governance, Risk, and Compliance (GRC) activities in an integrated and efficient manner.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What are GRC tools?',
+          url: 'https://aws.amazon.com/what-is/grc/#:~:text=Governance%2C%20Risk%2C%20and%20Compliance%20(,its%20technological%20innovation%20and%20adoption'
         }
       ],
       questionNumber: 340
@@ -6387,11 +6402,11 @@ const securityXQuiz = {
         'Line [07]',
         'Line [08]'
       ],
-      explanation: '(341)',
+      explanation: '(341)  SAST report, generated by Static Application Security Testing tools, details potential security vulnerabilities discovered within application source code. These reports typically include a summary of findings, a list of vulnerabilities with descriptions and severity levels, and remediation suggestions. SAST reports are crucial for developers and security teams to identify and address security weaknesses early in the development lifecycle, ultimately improving the overall security posture of the application.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is SAST?',
+          url: 'https://www.blackduck.com/glossary/what-is-sast.html'
         }
       ],
       questionNumber: 341
@@ -6404,11 +6419,11 @@ const securityXQuiz = {
         'Monitor the dark web.',
         'Implement UEBA.'
       ],
-      explanation: '(342)',
+      explanation: `(342) An interactive honeypot is a security mechanism that simulates a real system to attract and engage malicious actors, providing valuable insights into their behavior and techniques. Unlike simpler honeypots that offer limited interaction, interactive honeypots allow for deeper engagement, potentially revealing more about the attacker's motives and methods.`,
       references: [
         {
-          title: '',
-          url: ''
+          title: 'Interaction Honeypot',
+          url: 'https://www.sciencedirect.com/topics/computer-science/interaction-honeypot'
         }
       ],
       questionNumber: 342
@@ -6422,11 +6437,11 @@ const securityXQuiz = {
         'SOAR',
         'Package monitoring'
       ],
-      explanation: '(343)',
+      explanation: '(343) Conditional access is a security feature that controls user access to resources based on specified conditions. It allows organizations to define policies that determine when and how users can access applications and data, enhancing security by considering factors like user identity, device state, location, and more.',
       references: [
         {
-          title: '',
-          url: ''
+          title: 'What is conditional access?',
+          url: 'https://oxfordcomputertraining.com/glossary/conditional-access/'
         }
       ],
       questionNumber: 343
