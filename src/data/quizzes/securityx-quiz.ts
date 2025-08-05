@@ -837,11 +837,27 @@ const securityXQuiz = {
         'The external recipient has an expired public/private key pair that has not been revoked by the CA',
         `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
-      explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.`,
+      explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.\n\n` +
+      `A recipient's private key is a unique, secret piece of information used to decrypt data encrypted with the corresponding public key. It's essential for secure communication, ensuring only the intended recipient can access the information. Private keys are paired with public keys to form a key pair, and are kept confidential by the recipient.\n\n` +
+      'Certificate Revocation List (CRL) - A CRL is a list of revoked certificates that is downloaded from the Certificate Authority (CA). Online Certificate Status Protocol (OCSP) - OCSP is a protocol for checking revocation of a single certificate interactively using an online service called an OCSP responder.\n\n' +
+      'If a public key of an external recipient has expired, it means the certificate associated with that key is no longer considered valid by relying parties.\n\n' +
+      `The certificate is the digital document that binds the public key to the owner's identity and is used to verify the owner's authenticity and permissions to establish secure communication.`,
       references: [
         {
           title: 'Resolving the SSH Key Mismatch',
           url: 'https://latisresearch.umn.edu/resolve-ssh-key-mismatch'
+        },
+        {
+          title: 'Difference between Private and Public Keys',
+          url: 'https://www.geeksforgeeks.org/computer-networks/difference-between-private-key-and-public-key/'
+        },
+        {
+          title: 'What is a Certificate Revocation List vs OCSP (Online Certificate Status Protocol)?',
+          url: 'https://www.keyfactor.com/blog/what-is-a-certificate-revocation-list-crl-vs-ocsp/'
+        },
+        {
+          title: 'Set Key Pair expiry date',
+          url: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://docs.digicert.com/en/software-trust-manager/keypairs/keypairs/set-keypair-expiry-date.html&ved=2ahUKEwjfu8z0o_SOAxXHCjQIHVZEIk8QFnoECB0QAw&usg=AOvVaw0KMjnWvNlfRLh1_1qCHn4W'
         }
       ],
       questionNumber: 21
@@ -850,11 +866,31 @@ const securityXQuiz = {
       question: 'A security administrator is setting up a virtualization solution that needs to run services from a single host. Each service should be the only one running in its environment. Each environment needs to have its own operating system as a base but share the kernel version and properties of the running host. Which of the following technologies would best meet these requirements',
       answer: 'Containers',
       distractors: ['Type 1 hypervisor', 'Type 2 hypervisor', 'Virtual desktop infrastructure', 'Emulation'],
-      explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.',
+      explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.\n\n' +
+      `A Type 1 hypervisor, also known as a bare-metal or native hypervisor, runs directly on the host's hardware, managing virtual machines (VMs) without needing a traditional operating system. This direct hardware access offers high performance and efficiency, making them ideal for enterprise environments and data centers.\n\n` +
+      'A type 2 hypervisor, also known as a hosted hypervisor, runs on top of an existing operating system (like Windows, Linux, or macOS). It acts as a software layer on the host OS, and guest operating systems run as processes within that software layer. This contrasts with type 1 hypervisors, which run directly on the hardware.\n\n' +
+      'Virtual Desktop Infrastructure (VDI) is a technology that allows users to access their desktop environment from a centralized server, rather than being installed on their local device. This means a user can access their desktop, including the operating system and applications, from any device with an internet connection. VDI is often used to improve security, simplify management, and reduce costs associated with traditional desktop environments.\n\n' +
+      `Emulator virtualization, often referred to as hardware-accelerated virtualization, allows emulators to leverage virtualization extensions in CPUs (like Intel's VT-x or AMD's AMD-V) to significantly improve performance. This approach bypasses the overhead associated with full software emulation, resulting in faster execution speeds for emulated systems.`,
       references: [
         {
           title: 'What are containers?',
           url: 'https://cloud.google.com/learn/what-are-containers'
+        },
+        {
+          title: 'What is a Type 1 Hypervisor?',
+          url: 'https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/'
+        },
+        {
+          title: 'What are Hypervisors?',
+          url: 'https://www.ibm.com/think/topics/hypervisors'
+        },
+        {
+          title: 'What is VDI?',
+          url: 'https://www.citrix.com/glossary/what-is-vdi-virtual-desktop-infrastructure.html'
+        },
+        {
+          title: 'Emulation vs Virtualization',
+          url: 'https://blog.purestorage.com/purely-educational/emulation-vs-virtualization/'
         }
       ],
       questionNumber: 22
@@ -863,11 +899,26 @@ const securityXQuiz = {
       question: 'A company has data it would like to aggregate from its PLCs for data visualization and predictive maintenance purposes. Which of the following is the most likely destination for the tag data from the PLCs?',
       answer: 'Local historian',
       distractors: ['External drive', 'Cloud storage', 'System aggregator'],
-      explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.',
+      explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.\n\n' +
+      `An external hard drive is a storage device that connects to your computer through a USB (Universal Serial Bus), Firewire or Thunderbolt connection. It provides extra storage capacity for backing up your data and storing files that you do not have room for on your computer's internal drive.\n\n` +
+      'Cloud storage is the practice of storing digital data on remote servers accessible over the internet, rather than on local devices. It allows users to access their files from any internet-connected device, offering a convenient alternative to traditional storage methods. Cloud storage providers manage and maintain the servers and infrastructure, ensuring data availability and security.\n\n' +
+      'A system aggregator is a device or process that combines data or functionality from multiple sources into a unified system. This can be done for various purposes, such as network monitoring, power management, or data analysis.',
       references: [
         {
           title: '',
           url: 'https://claroty.com/team82/research/hacking-ics-historians-the-pivot-point-from-it-to-ot'
+        },
+        {
+          title: 'What is an external drive?',
+          url: 'https://www.businessinsider.com/guides/tech/what-is-an-external-hard-drive'
+        },
+        {
+          title: 'What is cloud storage?',
+          url: 'https://cloud.google.com/learn/what-is-cloud-storage'
+        },
+        {
+          title: 'What is an Aggregator?',
+          url: 'https://embeddedcomputing.com/technology/iot/device-management/what-is-an-aggregator'
         }
       ],
       questionNumber: 23
@@ -876,11 +927,26 @@ const securityXQuiz = {
       question: 'Which of the following is the best way to protect the website browsing history for an executive who travels to foreign countries where internet usage is closely monitored?',
       answer: 'DOH',
       distractors: ['EAP-TLS', 'Geofencing', 'Private browsing mode'],
-      explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.',
+      explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.\n\n' +
+      'EAP-TLS (Extensible Authentication Protocol-Transport Layer Security) is a certificate-based authentication method used in 802.1X networks to provide strong security for network access. It uses digital certificates to verify the identity of both the client and the server, ensuring a secure connection.\n\n' +
+      'Geofencing is a location-based technology that uses GPS, Wi-Fi, or cell towers to create a virtual boundary around a real-world geographic area. When a mobile device enters or exits this virtual "fence," it triggers an action, such as sending a notification, displaying an ad, or automating a task.\n\n' +
+      `Private browsing mode, also known as incognito mode in some browsers, is a feature that allows users to browse the internet with increased privacy by preventing the browser from saving browsing history, cookies, and other temporary data. While it enhances local privacy, it doesn't make browsing completely anonymous or prevent websites, internet service providers, or employers from tracking activity.`,
       references: [
         {
           title: 'DNS over HTTPS. Just think Homer',
           url: 'https://blog.netwrix.com/dns-over-https'
+        },
+        {
+          title: 'What is 802.1x and EAP?',
+          url: 'https://www.portnox.com/cybersecurity-101/8021x-eap-tls/'
+        },
+        {
+          title: 'Leveraging Geofence for Cybersecurity',
+          url: 'https://preyproject.com/blog/geofencing-cybersecurity'
+        },
+        {
+          title: `Private Borwsing Mode what it does and doesn't do`,
+          url: 'https://theconversation.com/private-browsing-what-it-does-and-doesnt-do-to-shield-you-from-prying-eyes-on-the-web-142445#:~:text=In%20particular%2C%20it%20(%20private%20browsing%20mode,when%20you%20fill%20out%20an%20online%20form'
         }
       ],
       questionNumber: 24
@@ -906,11 +972,16 @@ const securityXQuiz = {
       question: 'A retail organization wants to properly test and verify its capabilities to detect and/or prevent specific TTPs as mapped to the MITRE ATTACK framework specific to APTs. Which of the following should be used by the organization to accomplish this goal?',
       answer: 'Penetration test',
       distractors: ['Tabletop exercise', 'Sandbox detonation', 'Honeypot'],
-      explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.`,
+      explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.\n\n` +
+      `A tabletop exercise (TTX) is a discussion-based session where participants simulate a response to a hypothetical emergency situation in a relaxed, informal setting. It's a valuable tool for assessing emergency plans, identifying potential weaknesses, and enhancing team coordination without the pressure of a real-life crisis.`,
       references: [
         {
           title: 'Penetration Testing',
           url: 'https://www.cloudflare.com/learning/security/glossary/what-is-penetration-testing/#:~:text=Penetration%20testing%20(or%20pen%20testing,attackers%20could%20take%20advantage%20of'
+        },
+        {
+          title: 'What is a Tabletop Exercise?',
+          url: 'https://www.bitsight.com/glossary/cybersecurity-tabletop-exercise'
         }
       ],
       questionNumber: 26
