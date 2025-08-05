@@ -6050,7 +6050,7 @@ const securityXQuiz = {
           url: 'https://cloudian.com/guides/data-protection/data-protection-and-privacy-7-ways-to-protect-user-data/#:~:text=By%20protecting%20data%2C%20companies%20can,%2C%20encryption%2C%20and%20endpoint%20protection'
         }
       ],
-      questionNumber: 323
+      questionNumber: 324
     },
     {
       question: 'An auditor is reviewing the logs from a web application to determine the source of an incident. The web application architecture includes an internet-accessible application load balancer, a number of web servers in a private subnet, application servers, and one database server in a tiered configuration. The application load balancer cannot store the logs. The following are sample log snippets:\n\n' +
