@@ -6306,9 +6306,9 @@ const securityXQuiz = {
     },
     {
       question: 'A company must meet the following security requirements when implementing controls in order to be compliant with government policy:\n\n' +
-      '`• Access to the system document repository must be MFA enabled.`\n\n' +
-      '`• Ongoing risk monitoring must be displayed on a system dashboard.`\n\n' +
-      '`• Staff must receive email notifications about periodic tasks.`\n\n' +
+      '`- Access to the system document repository must be MFA enabled.`\n\n' +
+      '`- Ongoing risk monitoring must be displayed on a system dashboard.`\n\n' +
+      '`- Staff must receive email notifications about periodic tasks.`\n\n' +
       'Which of the following best meets all of these requirements?',
       answer: 'Implementing a GRC tool',
       distractors: [
