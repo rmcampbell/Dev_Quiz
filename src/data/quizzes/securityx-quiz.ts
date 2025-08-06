@@ -959,11 +959,21 @@ const securityXQuiz = {
         'Tune alerts to Identify changes to administrative groups',
         'Perform binary hash comparisons to identify infected devices'
       ],
-      explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
+      explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.\n\n' +
+      'Indicators of compromise (IOC) are clues that a network or endpoint has been breached. Effective monitoring systems are vital for swift IOC detection and threat mitigation.\n\n' +
+      'Command and control (C&C) refers to the communication infrastructure that attackers use to control compromised systems or networks. This infrastructure enables attackers to remotely activate malware, execute commands, exfiltrate sensitive data and coordinate other operations. C&C mechanisms are essential for the operation of botnets, ransomware campaigns and other cyber attacks. Without this infrastructure, attackers would not be able to interact effectively with infected devices.',
       references: [
         {
           title: 'Netflow Log Collection',
           url: 'https://www.manageengine.com/log-management/siem/log-netflow-collection-processing.html'
+        },
+        {
+          title: 'What are indicators of compromise?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/indicators-of-compromise-iocs'
+        },
+        {
+          title: 'What is C&C? Definitely not the Music Group!',
+          url: 'https://www.secuinfra.com/en/glossary/command-and-control-cc/'
         }
       ],
       questionNumber: 25
