@@ -961,7 +961,9 @@ const securityXQuiz = {
       ],
       explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.\n\n' +
       'Indicators of compromise (IOC) are clues that a network or endpoint has been breached. Effective monitoring systems are vital for swift IOC detection and threat mitigation.\n\n' +
-      'Command and control (C&C) refers to the communication infrastructure that attackers use to control compromised systems or networks. This infrastructure enables attackers to remotely activate malware, execute commands, exfiltrate sensitive data and coordinate other operations. C&C mechanisms are essential for the operation of botnets, ransomware campaigns and other cyber attacks. Without this infrastructure, attackers would not be able to interact effectively with infected devices.',
+      'Command and control (C&C) refers to the communication infrastructure that attackers use to control compromised systems or networks. This infrastructure enables attackers to remotely activate malware, execute commands, exfiltrate sensitive data and coordinate other operations. C&C mechanisms are essential for the operation of botnets, ransomware campaigns and other cyber attacks. Without this infrastructure, attackers would not be able to interact effectively with infected devices.\n\n' +
+      'Tuning alerts to identify changes involves adjusting the configuration of your security tools (like SIEMs or other detection systems) to minimize false positives and optimize the focus on genuine security threats. This often involves creating or modifying rules and thresholds to filter out benign events and highlight potentially malicious or unusual activities.\n\n' +
+      'Binary hash comparisons involve using hash functions to compare binary data, typically for tasks like duplicate detection, file integrity checks, or similarity analysis. These comparisons rely on the principle that similar inputs should produce similar hash values, while significantly different inputs should result in distinct hashes. Different hashing algorithms and comparison methods exist, each with its own strengths and weaknesses.',
       references: [
         {
           title: 'Netflow Log Collection',
@@ -974,6 +976,14 @@ const securityXQuiz = {
         {
           title: 'What is C&C? Definitely not the Music Group!',
           url: 'https://www.secuinfra.com/en/glossary/command-and-control-cc/'
+        },
+        {
+          title: 'Alert Tuning Best Practices',
+          url: 'https://www.prophetsecurity.ai/blog/security-operations-center-soc-best-practices-alert-tuning'
+        },
+        {
+          title: 'Binary Hashing: Motivations and Algorithms',
+          url: 'https://riverloopsecurity.com/blog/2019/11/binary-hashing-intro/'
         }
       ],
       questionNumber: 25
@@ -983,7 +993,9 @@ const securityXQuiz = {
       answer: 'Penetration test',
       distractors: ['Tabletop exercise', 'Sandbox detonation', 'Honeypot'],
       explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.\n\n` +
-      `A tabletop exercise (TTX) is a discussion-based session where participants simulate a response to a hypothetical emergency situation in a relaxed, informal setting. It's a valuable tool for assessing emergency plans, identifying potential weaknesses, and enhancing team coordination without the pressure of a real-life crisis.`,
+      `A tabletop exercise (TTX) is a discussion-based session where participants simulate a response to a hypothetical emergency situation in a relaxed, informal setting. It's a valuable tool for assessing emergency plans, identifying potential weaknesses, and enhancing team coordination without the pressure of a real-life crisis.\n\n` +
+      'Sandboxing is a technique in which you create an isolated test environment, a “sandbox,” in which to execute or “detonate” a suspicious file or URL that is attached to an email or otherwise reaches your network and then observe what happens.\n\n' +
+      `a honeypot is a decoy system or network resource designed to attract and deflect cyberattacks, allowing security teams to study attacker behavior and gather intelligence on new threats. It's a deliberate lure, mimicking real systems but isolated and monitored, to identify and analyze attacks without compromising actual data or systems.`,
       references: [
         {
           title: 'Penetration Testing',
@@ -992,6 +1004,14 @@ const securityXQuiz = {
         {
           title: 'What is a Tabletop Exercise?',
           url: 'https://www.bitsight.com/glossary/cybersecurity-tabletop-exercise'
+        },
+        {
+          title: 'How Sandboxes detonate-to-detect Malware?',
+          url: 'https://www.ultimatewindowssecurity.com/webinars/register.aspx?id=1392'
+        },
+        {
+          title: 'Honeypots in Cybersecurity',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/exposure-management/honeypots/'
         }
       ],
       questionNumber: 26
@@ -1000,11 +1020,31 @@ const securityXQuiz = {
       question: 'IoCs were missed during a recent security incident due to the reliance on a signature-based detection platform. A security engineer must recommend a solution that can be implemented to address this shortcoming. Which of the following would be the most appropriate recommendation?',
       answer: 'UEBA',
       distractors: ['FIM', 'SASE', 'CSPM', 'EAP'],
-      explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
+      explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.\n\n' +
+      'File Integrity Monitoring (FIM) is a security process that tracks and analyzes changes to files, directories, and system configurations. It works by comparing the current state of files against a known, trusted baseline, alerting security teams to unauthorized or unexpected modifications. This helps detect potential malicious activity, policy violations, or misconfigurations.\n\n' +
+      'SASE, which stands for Secure Access Service Edge, is a cloud-based architecture that converges network and security services into a unified, global network. It supports the dynamic needs of modern workforces by combining network security functions with software-defined wide area networking (SD-WAN). Essentially, SASE secures access to applications and data, regardless of location or device, through a single, cloud-delivered platform.\n\n' +
+      'Cloud Security Posture Management (CSPM) is a cybersecurity solution that identifies and addresses risks within cloud environments. It provides visibility, continuous monitoring, threat detection, and remediation workflows to manage misconfigurations and vulnerabilities across various cloud services. CSPM is crucial for maintaining security and compliance in the increasingly cloud-dependent landscape.\n\n' +
+      `Extensible Authentication Protocol, is a framework for authentication in network security, especially in WPA2-Enterprise Wi-Fi and VPNs. It's not a specific authentication method, but rather a container for various methods like EAP-TLS, EAP-TTLS, and PEAP. These methods enhance security by verifying user credentials through different means like certificates or tokens, making them more secure than basic password-based systems.`,
       references: [
         {
           title: 'What is UEBA?',
           url: 'https://www.fortinet.com/resources/cyberglossary/what-is-ueba'
+        },
+        {
+          title: 'What is File Integrity Monitoring?',
+          url: 'https://www.beyondtrust.com/resources/glossary/file-integrity-monitoring'
+        },
+        {
+          title: 'What is SASE?',
+          url: 'https://www.zscaler.com/resources/security-terms-glossary/what-is-sase'
+        },
+        {
+          title: 'What is Cloud Security Posture Management?',
+          url: 'https://www.wiz.io/academy/what-is-cloud-security-posture-management-cspm'
+        },
+        {
+          title: 'What is EAP?',
+          url: 'https://doubleoctopus.com/security-wiki/protocol/extensible-authentication-protocol/'
         }
       ],
       questionNumber: 27
@@ -1026,6 +1066,10 @@ const securityXQuiz = {
         {
           title: 'File Integrity Monitoring Unraveled',
           url: 'https://www.youtube.com/watch?v=NK96Txxt9qo&t=58'
+        },
+        {
+          title: 'data in transit vs in motion vs at rest',
+          url: 'https://www.mimecast.com/blog/data-in-transit-vs-motion-vs-rest/'
         }
       ],
       questionNumber: 28
