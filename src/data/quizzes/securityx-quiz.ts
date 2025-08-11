@@ -837,11 +837,27 @@ const securityXQuiz = {
         'The external recipient has an expired public/private key pair that has not been revoked by the CA',
         `The internal user's company email servers have an incorrect implementation of OCSP and CRL settings`
       ],
-      explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.`,
+      explanation: `(21) A "public key mismatch" error indicates a problem with the keys used for secure communication, often in the context of SSH, SSL, or Wi-Fi connections. It means the public key being used (the one that can be shared) doesn't match the expected public key derived from the private key. This can cause authentication failures or prevent secure communication.\n\n` +
+      `A recipient's private key is a unique, secret piece of information used to decrypt data encrypted with the corresponding public key. It's essential for secure communication, ensuring only the intended recipient can access the information. Private keys are paired with public keys to form a key pair, and are kept confidential by the recipient.\n\n` +
+      'Certificate Revocation List (CRL) - A CRL is a list of revoked certificates that is downloaded from the Certificate Authority (CA). Online Certificate Status Protocol (OCSP) - OCSP is a protocol for checking revocation of a single certificate interactively using an online service called an OCSP responder.\n\n' +
+      'If a public key of an external recipient has expired, it means the certificate associated with that key is no longer considered valid by relying parties.\n\n' +
+      `The certificate is the digital document that binds the public key to the owner's identity and is used to verify the owner's authenticity and permissions to establish secure communication.`,
       references: [
         {
           title: 'Resolving the SSH Key Mismatch',
           url: 'https://latisresearch.umn.edu/resolve-ssh-key-mismatch'
+        },
+        {
+          title: 'Difference between Private and Public Keys',
+          url: 'https://www.geeksforgeeks.org/computer-networks/difference-between-private-key-and-public-key/'
+        },
+        {
+          title: 'What is a Certificate Revocation List vs OCSP (Online Certificate Status Protocol)?',
+          url: 'https://www.keyfactor.com/blog/what-is-a-certificate-revocation-list-crl-vs-ocsp/'
+        },
+        {
+          title: 'Set Key Pair expiry date',
+          url: 'https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://docs.digicert.com/en/software-trust-manager/keypairs/keypairs/set-keypair-expiry-date.html&ved=2ahUKEwjfu8z0o_SOAxXHCjQIHVZEIk8QFnoECB0QAw&usg=AOvVaw0KMjnWvNlfRLh1_1qCHn4W'
         }
       ],
       questionNumber: 21
@@ -850,11 +866,31 @@ const securityXQuiz = {
       question: 'A security administrator is setting up a virtualization solution that needs to run services from a single host. Each service should be the only one running in its environment. Each environment needs to have its own operating system as a base but share the kernel version and properties of the running host. Which of the following technologies would best meet these requirements',
       answer: 'Containers',
       distractors: ['Type 1 hypervisor', 'Type 2 hypervisor', 'Virtual desktop infrastructure', 'Emulation'],
-      explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.',
+      explanation: '(22) A container is a package of software and its dependencies — such as code, system tools, settings, and libraries — that can run reliably on any operating system and infrastructure.\n\n' +
+      `A Type 1 hypervisor, also known as a bare-metal or native hypervisor, runs directly on the host's hardware, managing virtual machines (VMs) without needing a traditional operating system. This direct hardware access offers high performance and efficiency, making them ideal for enterprise environments and data centers.\n\n` +
+      'A type 2 hypervisor, also known as a hosted hypervisor, runs on top of an existing operating system (like Windows, Linux, or macOS). It acts as a software layer on the host OS, and guest operating systems run as processes within that software layer. This contrasts with type 1 hypervisors, which run directly on the hardware.\n\n' +
+      'Virtual Desktop Infrastructure (VDI) is a technology that allows users to access their desktop environment from a centralized server, rather than being installed on their local device. This means a user can access their desktop, including the operating system and applications, from any device with an internet connection. VDI is often used to improve security, simplify management, and reduce costs associated with traditional desktop environments.\n\n' +
+      `Emulator virtualization, often referred to as hardware-accelerated virtualization, allows emulators to leverage virtualization extensions in CPUs (like Intel's VT-x or AMD's AMD-V) to significantly improve performance. This approach bypasses the overhead associated with full software emulation, resulting in faster execution speeds for emulated systems.`,
       references: [
         {
           title: 'What are containers?',
           url: 'https://cloud.google.com/learn/what-are-containers'
+        },
+        {
+          title: 'What is a Type 1 Hypervisor?',
+          url: 'https://aws.amazon.com/compare/the-difference-between-type-1-and-type-2-hypervisors/'
+        },
+        {
+          title: 'What are Hypervisors?',
+          url: 'https://www.ibm.com/think/topics/hypervisors'
+        },
+        {
+          title: 'What is VDI?',
+          url: 'https://www.citrix.com/glossary/what-is-vdi-virtual-desktop-infrastructure.html'
+        },
+        {
+          title: 'Emulation vs Virtualization',
+          url: 'https://blog.purestorage.com/purely-educational/emulation-vs-virtualization/'
         }
       ],
       questionNumber: 22
@@ -863,11 +899,26 @@ const securityXQuiz = {
       question: 'A company has data it would like to aggregate from its PLCs for data visualization and predictive maintenance purposes. Which of the following is the most likely destination for the tag data from the PLCs?',
       answer: 'Local historian',
       distractors: ['External drive', 'Cloud storage', 'System aggregator'],
-      explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.',
+      explanation: '(23) A local historian is specifically designed to collect, store, and manage time-series data from PLCs. It is optimized for high-speed data collection and is commonly used for data visualization and predictive maintenance because it maintains historical context and trends. Given that the question emphasizes aggregating PLC data for visualization and predictive maintenance, D. Local historian is indeed the most appropriate and accurate answer.\n\n' +
+      `An external hard drive is a storage device that connects to your computer through a USB (Universal Serial Bus), Firewire or Thunderbolt connection. It provides extra storage capacity for backing up your data and storing files that you do not have room for on your computer's internal drive.\n\n` +
+      'Cloud storage is the practice of storing digital data on remote servers accessible over the internet, rather than on local devices. It allows users to access their files from any internet-connected device, offering a convenient alternative to traditional storage methods. Cloud storage providers manage and maintain the servers and infrastructure, ensuring data availability and security.\n\n' +
+      'A system aggregator is a device or process that combines data or functionality from multiple sources into a unified system. This can be done for various purposes, such as network monitoring, power management, or data analysis.',
       references: [
         {
           title: '',
           url: 'https://claroty.com/team82/research/hacking-ics-historians-the-pivot-point-from-it-to-ot'
+        },
+        {
+          title: 'What is an external drive?',
+          url: 'https://www.businessinsider.com/guides/tech/what-is-an-external-hard-drive'
+        },
+        {
+          title: 'What is cloud storage?',
+          url: 'https://cloud.google.com/learn/what-is-cloud-storage'
+        },
+        {
+          title: 'What is an Aggregator?',
+          url: 'https://embeddedcomputing.com/technology/iot/device-management/what-is-an-aggregator'
         }
       ],
       questionNumber: 23
@@ -876,11 +927,26 @@ const securityXQuiz = {
       question: 'Which of the following is the best way to protect the website browsing history for an executive who travels to foreign countries where internet usage is closely monitored?',
       answer: 'DOH',
       distractors: ['EAP-TLS', 'Geofencing', 'Private browsing mode'],
-      explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.',
+      explanation: '(24) DOH (DNS over HTTPS):\n DNS over HTTPS encrypts DNS queries, preventing third parties (like governments or ISPs in foreign countries) from seeing which websites the executive is trying to visit. This helps protect privacy by obscuring the domain names being accessed, which are typically exposed during DNS resolution.\n\n' +
+      'EAP-TLS (Extensible Authentication Protocol-Transport Layer Security) is a certificate-based authentication method used in 802.1X networks to provide strong security for network access. It uses digital certificates to verify the identity of both the client and the server, ensuring a secure connection.\n\n' +
+      'Geofencing is a location-based technology that uses GPS, Wi-Fi, or cell towers to create a virtual boundary around a real-world geographic area. When a mobile device enters or exits this virtual "fence," it triggers an action, such as sending a notification, displaying an ad, or automating a task.\n\n' +
+      `Private browsing mode, also known as incognito mode in some browsers, is a feature that allows users to browse the internet with increased privacy by preventing the browser from saving browsing history, cookies, and other temporary data. While it enhances local privacy, it doesn't make browsing completely anonymous or prevent websites, internet service providers, or employers from tracking activity.`,
       references: [
         {
           title: 'DNS over HTTPS. Just think Homer',
           url: 'https://blog.netwrix.com/dns-over-https'
+        },
+        {
+          title: 'What is 802.1x and EAP?',
+          url: 'https://www.portnox.com/cybersecurity-101/8021x-eap-tls/'
+        },
+        {
+          title: 'Leveraging Geofence for Cybersecurity',
+          url: 'https://preyproject.com/blog/geofencing-cybersecurity'
+        },
+        {
+          title: `Private Borwsing Mode what it does and doesn't do`,
+          url: 'https://theconversation.com/private-browsing-what-it-does-and-doesnt-do-to-shield-you-from-prying-eyes-on-the-web-142445#:~:text=In%20particular%2C%20it%20(%20private%20browsing%20mode,when%20you%20fill%20out%20an%20online%20form'
         }
       ],
       questionNumber: 24
@@ -893,11 +959,31 @@ const securityXQuiz = {
         'Tune alerts to Identify changes to administrative groups',
         'Perform binary hash comparisons to identify infected devices'
       ],
-      explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.',
+      explanation: '(25) NetFlow logs track network traffic patterns, helping detect anomalies like sudden spikes in outbound connections, which may indicate ransomware exfiltrating data or contacting command-and-control (C&C) servers. Ransomware often generates abnormal egress traffic as it sends encrypted data to attackers, making NetFlow analysis critical for early detection.\n\n' +
+      'Indicators of compromise (IOC) are clues that a network or endpoint has been breached. Effective monitoring systems are vital for swift IOC detection and threat mitigation.\n\n' +
+      'Command and control (C&C) refers to the communication infrastructure that attackers use to control compromised systems or networks. This infrastructure enables attackers to remotely activate malware, execute commands, exfiltrate sensitive data and coordinate other operations. C&C mechanisms are essential for the operation of botnets, ransomware campaigns and other cyber attacks. Without this infrastructure, attackers would not be able to interact effectively with infected devices.\n\n' +
+      'Tuning alerts to identify changes involves adjusting the configuration of your security tools (like SIEMs or other detection systems) to minimize false positives and optimize the focus on genuine security threats. This often involves creating or modifying rules and thresholds to filter out benign events and highlight potentially malicious or unusual activities.\n\n' +
+      'Binary hash comparisons involve using hash functions to compare binary data, typically for tasks like duplicate detection, file integrity checks, or similarity analysis. These comparisons rely on the principle that similar inputs should produce similar hash values, while significantly different inputs should result in distinct hashes. Different hashing algorithms and comparison methods exist, each with its own strengths and weaknesses.',
       references: [
         {
           title: 'Netflow Log Collection',
           url: 'https://www.manageengine.com/log-management/siem/log-netflow-collection-processing.html'
+        },
+        {
+          title: 'What are indicators of compromise?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/indicators-of-compromise-iocs'
+        },
+        {
+          title: 'What is C&C? Definitely not the Music Group!',
+          url: 'https://www.secuinfra.com/en/glossary/command-and-control-cc/'
+        },
+        {
+          title: 'Alert Tuning Best Practices',
+          url: 'https://www.prophetsecurity.ai/blog/security-operations-center-soc-best-practices-alert-tuning'
+        },
+        {
+          title: 'Binary Hashing: Motivations and Algorithms',
+          url: 'https://riverloopsecurity.com/blog/2019/11/binary-hashing-intro/'
         }
       ],
       questionNumber: 25
@@ -906,11 +992,26 @@ const securityXQuiz = {
       question: 'A retail organization wants to properly test and verify its capabilities to detect and/or prevent specific TTPs as mapped to the MITRE ATTACK framework specific to APTs. Which of the following should be used by the organization to accomplish this goal?',
       answer: 'Penetration test',
       distractors: ['Tabletop exercise', 'Sandbox detonation', 'Honeypot'],
-      explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.`,
+      explanation: `(26) Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system's defenses which attackers could take advantage of.\n\n` +
+      `A tabletop exercise (TTX) is a discussion-based session where participants simulate a response to a hypothetical emergency situation in a relaxed, informal setting. It's a valuable tool for assessing emergency plans, identifying potential weaknesses, and enhancing team coordination without the pressure of a real-life crisis.\n\n` +
+      'Sandboxing is a technique in which you create an isolated test environment, a “sandbox,” in which to execute or “detonate” a suspicious file or URL that is attached to an email or otherwise reaches your network and then observe what happens.\n\n' +
+      `a honeypot is a decoy system or network resource designed to attract and deflect cyberattacks, allowing security teams to study attacker behavior and gather intelligence on new threats. It's a deliberate lure, mimicking real systems but isolated and monitored, to identify and analyze attacks without compromising actual data or systems.`,
       references: [
         {
           title: 'Penetration Testing',
           url: 'https://www.cloudflare.com/learning/security/glossary/what-is-penetration-testing/#:~:text=Penetration%20testing%20(or%20pen%20testing,attackers%20could%20take%20advantage%20of'
+        },
+        {
+          title: 'What is a Tabletop Exercise?',
+          url: 'https://www.bitsight.com/glossary/cybersecurity-tabletop-exercise'
+        },
+        {
+          title: 'How Sandboxes detonate-to-detect Malware?',
+          url: 'https://www.ultimatewindowssecurity.com/webinars/register.aspx?id=1392'
+        },
+        {
+          title: 'Honeypots in Cybersecurity',
+          url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/exposure-management/honeypots/'
         }
       ],
       questionNumber: 26
@@ -919,11 +1020,31 @@ const securityXQuiz = {
       question: 'IoCs were missed during a recent security incident due to the reliance on a signature-based detection platform. A security engineer must recommend a solution that can be implemented to address this shortcoming. Which of the following would be the most appropriate recommendation?',
       answer: 'UEBA',
       distractors: ['FIM', 'SASE', 'CSPM', 'EAP'],
-      explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.',
+      explanation: '(27) UEBA (User and Entity Behavior Analytics), as it provides advanced, behavioral-based detection that can identify suspicious activities, even those not matching known attack signatures.\n\n' +
+      'File Integrity Monitoring (FIM) is a security process that tracks and analyzes changes to files, directories, and system configurations. It works by comparing the current state of files against a known, trusted baseline, alerting security teams to unauthorized or unexpected modifications. This helps detect potential malicious activity, policy violations, or misconfigurations.\n\n' +
+      'SASE, which stands for Secure Access Service Edge, is a cloud-based architecture that converges network and security services into a unified, global network. It supports the dynamic needs of modern workforces by combining network security functions with software-defined wide area networking (SD-WAN). Essentially, SASE secures access to applications and data, regardless of location or device, through a single, cloud-delivered platform.\n\n' +
+      'Cloud Security Posture Management (CSPM) is a cybersecurity solution that identifies and addresses risks within cloud environments. It provides visibility, continuous monitoring, threat detection, and remediation workflows to manage misconfigurations and vulnerabilities across various cloud services. CSPM is crucial for maintaining security and compliance in the increasingly cloud-dependent landscape.\n\n' +
+      `Extensible Authentication Protocol, is a framework for authentication in network security, especially in WPA2-Enterprise Wi-Fi and VPNs. It's not a specific authentication method, but rather a container for various methods like EAP-TLS, EAP-TTLS, and PEAP. These methods enhance security by verifying user credentials through different means like certificates or tokens, making them more secure than basic password-based systems.`,
       references: [
         {
           title: 'What is UEBA?',
           url: 'https://www.fortinet.com/resources/cyberglossary/what-is-ueba'
+        },
+        {
+          title: 'What is File Integrity Monitoring?',
+          url: 'https://www.beyondtrust.com/resources/glossary/file-integrity-monitoring'
+        },
+        {
+          title: 'What is SASE?',
+          url: 'https://www.zscaler.com/resources/security-terms-glossary/what-is-sase'
+        },
+        {
+          title: 'What is Cloud Security Posture Management?',
+          url: 'https://www.wiz.io/academy/what-is-cloud-security-posture-management-cspm'
+        },
+        {
+          title: 'What is EAP?',
+          url: 'https://doubleoctopus.com/security-wiki/protocol/extensible-authentication-protocol/'
         }
       ],
       questionNumber: 27
@@ -940,11 +1061,35 @@ const securityXQuiz = {
         'Install SIEM within a SOC',
         'Configure SOAR to monitor and intercept files and data leaving the network'
       ],
-      explanation: '(28) File Integrity Monitoring (FIM) is a security process that verifies the integrity of critical assets like files, directories, databases, and OS components by comparing them to a baseline and detecting unauthorized changes. It helps identify potential cyberattacks, data breaches, and malware infections by monitoring for any drift from the established baseline.',
+      explanation: '(28) File Integrity Monitoring (FIM) is a security process that verifies the integrity of critical assets like files, directories, databases, and OS components by comparing them to a baseline and detecting unauthorized changes. It helps identify potential cyberattacks, data breaches, and malware infections by monitoring for any drift from the established baseline.\n\n' +
+      `SOAR in cybersecurity stands for Security Orchestration, Automation, and Response. It's a set of tools and technologies designed to enhance an organization's ability to detect, investigate, and respond to security threats. SOAR platforms integrate various security tools, automate repetitive tasks, and coordinate incident responses, ultimately improving overall security operations.\n\n` +
+      'A file hash is a unique signature for data that helps to identify it in a verifiable way. A file hash can be used for various purposes, including protecting the integrity of files, software, and data (i.e., proving that no one has tampered with the data) and deduping (de-duplicating) data.\n\n' +
+      'A Security Information and Event Management (SIEM) system is a crucial component of a Security Operations Center (SOC), providing numerous benefits that enhance threat detection, incident response, and overall security posture. SIEM solutions centralize log data, correlate events, and offer real-time analysis, enabling SOC teams to identify, investigate, and respond to security incidents more effectively.\n\n' +
+      'SOAR (Security Orchestration, Automation, and Response) can be leveraged to enhance DLP (Data Loss Prevention) capabilities by automating and streamlining the detection, investigation, and remediation of data breaches. SOAR platforms can integrate with DLP systems to automate responses to policy violations, reducing manual effort and improving incident response times.',
       references: [
         {
           title: 'File Integrity Monitoring Unraveled',
           url: 'https://www.youtube.com/watch?v=NK96Txxt9qo&t=58'
+        },
+        {
+          title: 'data in transit vs in motion vs at rest',
+          url: 'https://www.mimecast.com/blog/data-in-transit-vs-motion-vs-rest/'
+        },
+        {
+          title: 'What is SOAR?  Youtube explanation',
+          url: 'https://www.google.com/search?q=SOAR+cybersecurity&rlz=1C1GCEA_enUS1093US1093&oq=SOAR&gs_lcrp=EgZjaHJvbWUqDggCEEUYJxg7GIAEGIoFMhcIABBFGDkYQxiDARixAxjJAxiABBiKBTIGCAEQRRhAMg4IAhBFGCcYOxiABBiKBTIOCAMQRRgnGDsYgAQYigUyDQgEEC4YrwEYxwEYgAQyDQgFEC4YrwEYxwEYgAQyEggGEC4YQxivARjHARiABBiKBTINCAcQLhivARjHARiABNIBCDIzMDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:37e50ae8,vid:k_yIsL9l4Bw,st:0'
+        },
+        {
+          title: 'Why file hashing is important?',
+          url: 'https://www.linkedin.com/pulse/why-file-hash-important-ashok-bhadrappa/'
+        },
+        {
+          title: 'Difference between SIEM and SOC',
+          url: 'https://www.comodo.com/difference-between-siem-and-soc.php'
+        },
+        {
+          title: 'Comparing Cyber Platforms: XDR, EDR, SIEM, SOAR, DLP',
+          url: 'https://www.apriorit.com/dev-blog/enhancing-cybersecurity-platform-xdr-edr-siem-irm-soar-dlp'
         }
       ],
       questionNumber: 28
@@ -963,11 +1108,41 @@ const securityXQuiz = {
         'Network microsegmentation based on data types, and a network access control system enforcing mandatory access control based on the user principal',
         'A rule-based access control strategy enforced by the SSO system with rules managed by the internal LDAP and applied on a per-system basis'
       ],
-      explanation: '(29) Data classification and tagging are processes for organizing data assets based on defined criteria to improve organization, security, and discoverability. Data classification involves categorizing data based on its type, sensitivity, and business value. Tagging is a specific technique used within data classification, where labels or keywords are assigned to data assets to make them easier to find and manage.',
+      explanation: '(29) Data classification and tagging are processes for organizing data assets based on defined criteria to improve organization, security, and discoverability. Data classification involves categorizing data based on its type, sensitivity, and business value. Tagging is a specific technique used within data classification, where labels or keywords are assigned to data assets to make them easier to find and manage.\n\n' +
+      `Role-Based Access Control (RBAC) is a security method that restricts system access based on a user's role within an organization, ensuring they only have access to the resources needed for their job. This approach simplifies access management by grouping permissions into roles, which are then assigned to users, making it more efficient and less error-prone than managing individual user permissions.\n\n` +
+      `Microsegmentation is a cybersecurity practice that divides a network into small, isolated segments, each with its own security policies, to limit the impact of security breaches and enhance overall network security. It's a key component of zero trust architectures. By breaking down the network into smaller, more manageable pieces, microsegmentation helps prevent the lateral movement of threats and reduces the overall attack surface.\n\n` +
+      'Mandatory Access Control (MAC) is a security model where access to resources is strictly controlled by a central authority, typically the operating system or a security kernel. Unlike Discretionary Access Control (DAC), where resource owners can grant or revoke access at their discretion, MAC policies are centrally managed and cannot be overridden by individual users or even resource owners. This makes MAC a suitable choice for environments requiring high security, such as government agencies, military organizations, and financial institutions dealing with highly sensitive data.\n\n' +
+      `Rule-based access control (RuBAC) is a security system that regulates access to resources (like files, systems, or physical locations) based on a set of pre-defined rules. Unlike role-based access control (RBAC) which focuses on user roles, RuBAC relies on specific conditions or attributes to grant or deny access, regardless of the user's role.\n\n` +
+      'A Single Sign-On (SSO) system allows users to access multiple applications and services with a single set of login credentials. Instead of needing to remember separate usernames and passwords for each application, users authenticate once through the SSO system and then gain access to all authorized resources. This improves user experience, enhances security, and simplifies IT management.\n\n' +
+      `LDAP (Lightweight Directory Access Protocol) is a protocol used to access and maintain distributed directory information services. It's a standard protocol for accessing and managing user information, often used for authentication and authorization in various applications and systems.`,
       references: [
         {
           title: 'Introduction to Data Tagging',
           url: 'https://www.cybersecuritytribe.com/articles/an-introduction-to-data-tagging-and-classification-in-the-cloud#:~:text=Data%20tagging%20and%20classification%20entail,%2C%20access%20control%2C%20and%20protection'
+        },
+        {
+          title: 'What is role-based access control (RBAC)?',
+          url: 'https://www.sailpoint.com/identity-library/what-is-role-based-access-control?igaag=154934678859&igaat=&igacm=11910645009&igacr=691526169108&igakw=data%20access%20security&igamt=p&igant=g&campaignid=11910645009&utm_source=google&utm_network=g&utm_medium=cpc&utm_content=ams-das&utm_term=data%20access%20security&utm_id=7012J000001Fba9&gad_source=1&gad_campaignid=11910645009&gbraid=0AAAAADyJpaz-iSeiCKYkl-FSYeBKkVE4T&gclid=Cj0KCQjwndHEBhDVARIsAGh0g3CHLdmu680CW0iKwPmsJ9Wu0xSShJHICb1vXcjHclyXNz-lls7AtfQaAsQOEALw_wcB'
+        },
+        {
+          title: 'Microsegmentation with Security inclusion',
+          url: 'https://www.linkedin.com/posts/dr-chase-cunningham_cisa-microsegmenation-microsegmentation-activity-7357524702816268288-z2kt/'
+        },
+        {
+          title: '7 best practices for Mandatory Access Control',
+          url: 'https://www.jit.io/resources/app-security/7-best-practices-for-mandatory-access-control'
+        },
+        {
+          title: 'Rule-based vs Role-Based Access Control',
+          url: 'https://budibase.com/blog/app-building/difference-between-rule-based-role-based-access-control/'
+        },
+        {
+          title: 'What is single sign on?',
+          url: 'https://www.cloudflare.com/learning/access-management/what-is-sso/#:~:text=Single%20sign%2Don%20(SSO)%20is%20a%20technology%20which%20combines,username%2C%20password%2C%20etc.)'
+        },
+        {
+          title: 'What is LDAP Authentication?',
+          url: 'https://www.redhat.com/en/topics/security/what-is-ldap-authentication'
         }
       ],
       questionNumber: 29
@@ -980,11 +1155,31 @@ const securityXQuiz = {
         'A group of politically motivated hackers',
         'Disgruntled employees who were recently terminated'
       ],
-      explanation: '(30) An Advanced Persistent Threat (APT) is a sophisticated, sustained cyberattack where an intruder gains unauthorized access to a network and remains undetected for an extended period to steal sensitive data or disrupt operations. While APTs can be conducted by various actors, they are often linked to nation-states, meaning they are sponsored or supported by governments.',
+      explanation: '(30) An Advanced Persistent Threat (APT) is a sophisticated, sustained cyberattack where an intruder gains unauthorized access to a network and remains undetected for an extended period to steal sensitive data or disrupt operations. While APTs can be conducted by various actors, they are often linked to nation-states, meaning they are sponsored or supported by governments.\n\n' +
+      'Organized cybercrime refers to criminal activities carried out by groups with a structured hierarchy and defined roles, leveraging technology to achieve their goals. These groups engage in a range of cybercrimes, including financial fraud, data breaches, ransomware attacks, and the sale of stolen data, often with the aim of financial gain.\n\n' +
+      `A ransomware campaign is a coordinated cyberattack where malicious actors use ransomware to encrypt a victim's data, demanding a ransom payment for its decryption. These campaigns are not just about encrypting data; they have evolved to include threats to IT infrastructure and even real-world violence. Effective ransomware mitigation involves preventing initial access, maintaining robust data backups, and implementing comprehensive security practices.\n\n` +
+      'Politically motivated hackers, often called hacktivists, use computer hacking to promote a political or social cause. They differ from cybercriminals, who are motivated by financial gain. Hacktivists employ various tactics like website defacement, DDoS attacks, and data leaks, often targeting governments, corporations, and other organizations they view as opposing their beliefs. These actions can have significant impacts, ranging from raising awareness to causing significant disruption.\n\n' +
+      'A disgruntled employee is someone who is unhappy and dissatisfied with their job or workplace, leading to negative behaviors and decreased productivity. They may express discontent through complaining, negativity, or disengagement, potentially impacting their own performance and the overall work environment.',
       references: [
         {
           title: 'APT Cyber Espionage',
           url: 'https://www.lookout.com/blog/mobile-apt-cyber-espionage'
+        },
+        {
+          title: 'What is Organized Crime',
+          url: 'https://sherloc.unodc.org/cld/en/education/tertiary/cybercrime/module-13/key-issues/criminal-groups-engaging-in-cyber-organized-crime.html#:~:text=Cyber%20organized%20crime%20can%20include,typically%20associated%20with%20organized%20crime'
+        },
+        {
+          title: 'What is ransomware?',
+          url: 'https://cloud.google.com/security/resources/insights/what-ransomware'
+        },
+        {
+          title: 'Understanding Hacktivisits',
+          url: 'https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/understanding-hacktivists-the-overlap-of-ideology-and-cybercrime'
+        },
+        {
+          title: 'Disgruntled Employee: Meaning, Threats, & Ways to Deal',
+          url: 'https://www.hrlineup.com/disgruntled-employee-meaning-threats-ways-to-deal/'
         }
       ],
       questionNumber: 30
@@ -993,11 +1188,25 @@ const securityXQuiz = {
       question: `The company's client service team is receiving a large number of inquiries from clients regarding a new vulnerability. Which of the following would provide the customer service team with a consistent message to deliver directly to clients?`,
       answer: 'Response playbook',
       distractors: ['Communication plan', 'Disaster recovery procedure', 'Automated runbook'],
-      explanation: '(31) An incident response playbook is a structured set of guidelines and procedures that organizations follow to detect, respond to, and recover from cybersecurity incidents. It provides a step-by-step approach for handling specific types of threats, ensuring a swift and coordinated response to minimize damage and downtime.',
+      explanation: '(31) An incident response playbook is a structured set of guidelines and procedures that organizations follow to detect, respond to, and recover from cybersecurity incidents. It provides a step-by-step approach for handling specific types of threats, ensuring a swift and coordinated response to minimize damage and downtime.\n\n' +
+      'A communication plan is a strategy for informing and engaging stakeholders during a cyber incident or security breach. It outlines how to communicate with internal and external parties, ensuring timely, accurate, and consistent messaging. This plan is crucial for maintaining trust, managing reputation, and facilitating effective incident response.\n\n' +
+      'Disaster recovery (DR) procedures outline how an organization restores its IT systems and data following a disruptive event. These procedures are crucial for business continuity and minimizing downtime. Key aspects include risk assessment, business impact analysis, backup and recovery strategies, communication plans, and regular testing.',
       references: [
         {
           title: 'Incident Response Playbooks',
           url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-an-incident-response-playbook#:~:text=An%20incident%20response%20playbook%20is,to%20minimize%20damage%20and%20downtime'
+        },
+        {
+          title: 'The Five Steps of a Cyber Incident Response Communication Plan',
+          url: 'https://thecyberexpress.com/cyber-incident-response-communication-plan/#:~:text=In%20addition%20to%20notifying%20stakeholders,phone%20calls%2C%20and%20social%20media'
+        },
+        {
+          title: 'What is a Disaster Recovery Plan?',
+          url: 'https://www.druva.com/glossary/what-is-a-disaster-recovery-plan-definition-and-related-faqs'
+        },
+        {
+          title: 'What are Runbooks?',
+          url: 'https://www.cutover.com/blog/what-are-automated-runbooks'
         }
       ],
       questionNumber: 31
@@ -1006,11 +1215,26 @@ const securityXQuiz = {
       question: 'A company wants to use a process to embed a sign of ownership covertly inside a proprietary document without adding any identifying attributes. Which of the following would be best to use as part of the process to support copyright protections of the document?',
       answer: 'Steganography',
       distractors: ['E-signature', 'Watermarking', 'Cryptography'],
-      explanation: '(32) Steganography is the practice of concealing information within another message or physical object to avoid detection. Steganography can be used to hide virtually any type of digital content, including text, image, video, or audio content. That hidden data is then extracted at its destination.',
+      explanation: '(32) Steganography is the practice of concealing information within another message or physical object to avoid detection. Steganography can be used to hide virtually any type of digital content, including text, image, video, or audio content. That hidden data is then extracted at its destination.\n\n' +
+      'An e-signature, or electronic signature, is a legally binding way to sign documents digitally. It replaces the traditional handwritten signature on paper documents, streamlining workflows and enhancing efficiency. eSignatures are widely accepted, including in the US and EU, and are often used for contracts, agreements, and other legal documents.\n\n' +
+      'Watermarking is the process of embedding information (a watermark) into a digital asset like an image, video, or document, often to protect intellectual property or verify authenticity. Watermarks can be visible, like a semi-transparent overlay, or invisible, detected only by specialized software.\n\n' +
+      `Cryptography is the practice and study of techniques for secure communication in the presence of adversaries. It encompasses methods for concealing information, ensuring its integrity, and verifying its authenticity. Essentially, it's about creating and analyzing protocols that protect sensitive information from unauthorized access or modification.`,
       references: [
         {
           title: 'What is Steganography?  Definitely not a Dinosaur!',
           url: 'https://www.kaspersky.com/resource-center/definitions/what-is-steganography'
+        },
+        {
+          title: 'What is an electronic signature?',
+          url: 'https://www.docusign.com/blog/what-electronic-signature'
+        },
+        {
+          title: 'What is Watermarking?  And should I use one?',
+          url: 'https://www.dropbox.com/resources/what-is-watermarking'
+        },
+        {
+          title: 'What is Cryptography?',
+          url: 'https://aws.amazon.com/what-is/cryptography/'
         }
       ],
       questionNumber: 32
@@ -1019,11 +1243,31 @@ const securityXQuiz = {
       question: 'Which of the following utilizes policies that route packets to ensure only specific types of traffic are being sent to the correct destination based on application usage?',
       answer: 'SDN',
       distractors: ['DNSSEC', 'pcap', 'vmstat', 'VPC'],
-      explanation: '(33) Software Defined Networking (SDN) is a networking approach that uses software to manage and control network devices, separating the control plane from the data plane. This separation allows for a more centralized and flexible way to manage and configure networks. SDN enables network administrators to use software to program and manage network devices, making it easier to automate tasks, improve security, and optimize network performance.',
+      explanation: '(33) Software Defined Networking (SDN) is a networking approach that uses software to manage and control network devices, separating the control plane from the data plane. This separation allows for a more centralized and flexible way to manage and configure networks. SDN enables network administrators to use software to program and manage network devices, making it easier to automate tasks, improve security, and optimize network performance.\n\n' +
+      `DNSSEC, or Domain Name System Security Extensions, is a suite of extensions to the DNS (Domain Name System) that provides origin authentication and data integrity for DNS responses. Essentially, it helps ensure that the information you receive from a DNS server is legitimate and hasn't been tampered with during transmission.\n\n` +
+      'PCAP generally refers to Packet Capture, a network analysis method for intercepting and logging network traffic. It also refers to the pcap file format, a standard for storing captured packets. Additionally, "PCAP" can also stand for several other things, including the Parent-Child Assistance Program and the Pennsylvania Customer Assistance Program.\n\n' +
+      'vmstat is a command-line utility used to report virtual memory statistics and system activity, including CPU usage, memory, paging, block I/O, interrupts, and context switches. It provides near-real-time monitoring of system resources.\n\n' +
+      'A Virtual Private Cloud (VPC) is a logically isolated section of a public cloud (like AWS, Google Cloud, or Azure) that allows you to create your own private network environment within that public cloud. It provides a way to control and secure your cloud resources, including virtual machines, databases, and applications, by defining your own IP address ranges, subnets, and network gateways.',
       references: [
         {
           title: 'Software Defined Networking',
           url: 'https://www.vmware.com/topics/software-defined-networking'
+        },
+        {
+          title: 'What is DNSSEC, and How Does it Work?',
+          url: 'https://www.akamai.com/blog/trends/dnssec-how-it-works-key-considerations#:~:text=DNSSEC%20works%20by%20adding%20cryptographic,such%20as%20AAAA%20and%20MX'
+        },
+        {
+          title: 'What is a PCAP file?',
+          url: 'https://www.sysdig.com/learn-cloud-native/what-is-a-pcap-file'
+        },
+        {
+          title: 'VMSTAT, How to use the command',
+          url: 'https://phoenixnap.com/kb/vmstat-command'
+        },
+        {
+          title: 'VPC Overview',
+          url: 'https://cloud.google.com/vpc/docs/overview'
         }
       ],
       questionNumber: 33
@@ -1040,11 +1284,16 @@ const securityXQuiz = {
         'Which methods can be implemented to increase speed of offline backup recovery?',
         'Which user roles are most often targeted by spear phishing attacks?'
       ],
-      explanation: '(34) UEBA (User and Entity Behavior Analytics) functions as a technical control by analyzing user and machine behavior to detect suspicious activity. It uses machine learning to identify anomalies and deviations from established baselines, alerting security teams to potential threats. This proactive approach complements traditional security measures by providing a layer of detection for sophisticated attacks and insider threats.',
+      explanation: '(34) UEBA (User and Entity Behavior Analytics) functions as a technical control by analyzing user and machine behavior to detect suspicious activity. It uses machine learning to identify anomalies and deviations from established baselines, alerting security teams to potential threats. This proactive approach complements traditional security measures by providing a layer of detection for sophisticated attacks and insider threats.\n\n' +
+      'A spear phishing campaign is a highly targeted phishing attack that aims to trick specific individuals or groups within an organization into revealing sensitive information or taking actions that compromise their security. Unlike general phishing, which targets a broad audience, spear phishing involves in-depth research on the target to create personalized, convincing emails that are difficult to detect as malicious.',
       references: [
         {
           title: 'User Entity and Behavior Analytics',
           url: 'https://www.varonis.com/blog/user-entity-behavior-analytics-ueba'
+        },
+        {
+          title: '19 types of phishing attacks',
+          url: 'https://www.fortinet.com/resources/cyberglossary/types-of-phishing-attacks'
         }
       ],
       questionNumber: 34
