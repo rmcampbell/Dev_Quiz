@@ -1620,11 +1620,26 @@ const securityXQuiz = {
       question: 'A company hired a third-party consultant to run a cybersecurity incident simulation in order to identify security gaps and prepare stakeholders for a potential incident. Which of the following best describes this activity?',
       answer: 'Tabletop exercise',
       distractors: ['Walk-through review', 'Lessons learned', 'Business impact analysis'],
-      explanation: '(45) A tabletop exercise is a discussion-based activity where participants gather to simulate a real-world incident, like a cyberattack, without physically enacting the response. It focuses on clarifying roles, discussing strategies, and evaluating existing plans in a low-stress environment.',
+      explanation: '(45) A tabletop exercise is a discussion-based activity where participants gather to simulate a real-world incident, like a cyberattack, without physically enacting the response. It focuses on clarifying roles, discussing strategies, and evaluating existing plans in a low-stress environment.\n\n' +
+      'A walkthrough review in cybersecurity is a structured, step-by-step examination of a security plan or process, often used to verify understanding and identify potential gaps. Unlike tabletop exercises, which focus on dynamic scenarios, walkthroughs emphasize clarity and execution of specific procedures. This process helps ensure teams are prepared to respond to incidents effectively.\n\n' +
+      `Lessons learned focus on improving an organization's security posture by analyzing past incidents, identifying weaknesses, and implementing preventative measures. This includes proactive security measures, employee training, robust incident response plans, and continuous monitoring to stay ahead of evolving threats.\n\n` +
+      'A business impact analysis (BIA) in cybersecurity is a process for identifying how disruptions to business operations, specifically those caused by cyber incidents, would impact the organization. It assesses the criticality of business functions, the resources needed for recovery, and the potential consequences of disruptions. This analysis informs the development of strategies, solutions, and plans to ensure business continuity and resilience in the face of cyber threats.',
       references: [
         {
           title: 'Tabletop Exercises',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/tabletop-exercise/'
+        },
+        {
+          title: 'What are Walkthroughs?',
+          url: 'https://www.walkme.com/glossary/walkthroughs/'
+        },
+        {
+          title: 'Principle D2 Lessons Learned',
+          url: 'https://www.ncsc.gov.uk/collection/cyber-assessment-framework/caf-objective-d/principle-d2-lessons-learned'
+        },
+        {
+          title: 'What is a BIA in cyber security?',
+          url: 'https://www.geeksforgeeks.org/ethical-hacking/what-is-bia-in-cyber-security/'
         }
       ],
       questionNumber: 45
