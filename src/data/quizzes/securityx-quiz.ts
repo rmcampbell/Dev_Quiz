@@ -1285,7 +1285,11 @@ const securityXQuiz = {
         'Which user roles are most often targeted by spear phishing attacks?'
       ],
       explanation: '(34) UEBA (User and Entity Behavior Analytics) functions as a technical control by analyzing user and machine behavior to detect suspicious activity. It uses machine learning to identify anomalies and deviations from established baselines, alerting security teams to potential threats. This proactive approach complements traditional security measures by providing a layer of detection for sophisticated attacks and insider threats.\n\n' +
-      'A spear phishing campaign is a highly targeted phishing attack that aims to trick specific individuals or groups within an organization into revealing sensitive information or taking actions that compromise their security. Unlike general phishing, which targets a broad audience, spear phishing involves in-depth research on the target to create personalized, convincing emails that are difficult to detect as malicious.',
+      'A spear phishing campaign is a highly targeted phishing attack that aims to trick specific individuals or groups within an organization into revealing sensitive information or taking actions that compromise their security. Unlike general phishing, which targets a broad audience, spear phishing involves in-depth research on the target to create personalized, convincing emails that are difficult to detect as malicious.\n\n' +
+      'Internal stakeholders are individuals or groups within an organization, while external stakeholders are those outside the organization who are affected by its actions. Internal stakeholders include employees, managers, and owners, while external stakeholders encompass customers, suppliers, creditors, the community, and government.\n\n' +
+      'A security breach is any incident that results in unauthorized access to computer data, applications, networks or devices. It results in information being accessed without authorization.\n\n' +
+      'Offline backup recovery refers to the process of restoring data from a backup that was created while the system was offline. This means the backup was taken when the database or system was shut down, preventing any modifications during the backup process. Offline backups are often used for databases where data consistency is crucial, and rollforward recovery (restoring to a specific point in time after the backup) is not supported.\n\n' +
+      'user roles define the specific access rights and permissions granted to individuals or groups within a system. These roles are crucial for maintaining security by limiting access to sensitive data and functionalities, ensuring that users only have the access necessary to perform their job functions.',
       references: [
         {
           title: 'User Entity and Behavior Analytics',
@@ -1294,6 +1298,26 @@ const securityXQuiz = {
         {
           title: '19 types of phishing attacks',
           url: 'https://www.fortinet.com/resources/cyberglossary/types-of-phishing-attacks'
+        },
+        {
+          title: 'What is Spearphishing?  No not what they do in the Ocean!',
+          url: 'https://www.arcyber.army.mil/Resources/Fact-Sheets/Article/2058996/phishing-and-spearphishing/#:~:text=In%20a%20spearphishing%20campaign%2C%20hackers,or%20about%20those%20close%20relations'
+        },
+        {
+          title: 'Internal and External Stakeholders: Types, Differences, and Roles',
+          url: 'https://maddevs.io/blog/internal-and-external-stakeholders-in-it/'
+        },
+        {
+          title: 'Breach or Data Breach',
+          url: 'https://www.directives.doe.gov/terms_definitions/breach-or-data-breach'
+        },
+        {
+          title: 'What is a cold backup (offline backup)?',
+          url: 'https://www.techtarget.com/searchdatabackup/definition/cold-backup'
+        },
+        {
+          title: 'User Roles and Permissions in Access Management',
+          url: 'https://kinde.com/learn/authentication/identity/users-roles-permissions-access-management/'
         }
       ],
       questionNumber: 34
@@ -1302,11 +1326,31 @@ const securityXQuiz = {
       question: 'Two companies that recently merged would like to unify application access between the companies, without initially merging internal authentication stores. Which of the following technical strategies would best meet this objective?',
       answer: 'Federation',
       distractors: ['RADIUS', 'TACACS+', 'MFA', 'ABAC'],
-      explanation: `(35) federation refers to a collaborative arrangement where multiple organizations share and mutually trust each other's security information and systems. This sharing allows for enhanced security measures and potentially reduces the attack surface by enabling dynamic defenses and intelligence sharing.`,
+      explanation: `(35) federation refers to a collaborative arrangement where multiple organizations share and mutually trust each other's security information and systems. This sharing allows for enhanced security measures and potentially reduces the attack surface by enabling dynamic defenses and intelligence sharing.\n\n` +
+      `RADIUS, generally refers to the Remote Authentication Dial-In User Service protocol, which is a widely used system for authentication, authorization, and accounting (AAA). It's a core component of many organizations' security stacks, ensuring that users and devices connecting to a network are properly authenticated. RADIUS is often used in conjunction with other security measures to protect sensitive data and prevent unauthorized access.\n\n` +
+      `TACACS+ is a network security protocol that provides robust authentication, authorization, and accounting (AAA) services. It's particularly valuable for securing network devices and enforcing granular control over user access, enhancing overall network security posture.\n\n` +
+      'Multi-factor authentication (MFA) in cybersecurity is a security process that requires users to provide two or more verification methods to gain access to an account or system. This layered approach adds significant protection against unauthorized access, even if one factor (like a password) is compromised. MFA is a crucial step in securing online accounts and data, and is recommended for all accounts, especially those storing sensitive information, according to a YouTube video from CyberDon.\n\n' +
+      'Attribute-Based Access Control (ABAC) is a cybersecurity approach that defines access permissions based on attributes associated with users, resources, and the environment. Instead of relying solely on roles or groups, ABAC uses a more granular, flexible, and dynamic method to control access to sensitive information and resources.',
       references: [
         {
           title: 'Active Directory and Federation',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/identity-protection/active-directory-federation-service-adfs/'
+        },
+        {
+          title: 'What is RADIUS (Remote Authentication Dial-In User Service)?',
+          url: 'https://www.cbtnuggets.com/blog/technology/networking/what-is-radius'
+        },
+        {
+          title: 'Radius vs TACACS+: A Comparative Breakdown',
+          url: 'https://www.portnox.com/blog/network-access-control/radius-vs-tacacs-the-complete-breakdown-for-decision-makers/'
+        },
+        {
+          title: 'What is Multi-Factor Authentication (MFA) and How Does It Work?',
+          url: 'https://www.onelogin.com/learn/what-is-mfa'
+        },
+        {
+          title: 'Attribute-Based Access Control: Pros, Cons & Use Cases',
+          url: 'https://www.digitalguardian.com/blog/attribute-based-access-control'
         }
       ],
       questionNumber: 35
@@ -1315,11 +1359,26 @@ const securityXQuiz = {
       question: 'An analyst needs to evaluate all images and documents that are publicly shared on a website. Which of the following would be the best tool to evaluate the metadata of these files?',
       answer: 'ExifTool',
       distractors: ['OllyDbg', 'Volatility', 'Ghidra'],
-      explanation: '(36) ExifTool is a powerful tool for cybersecurity professionals, enabling them to analyze various types of media files and extract valuable information for threat detection, incident response, and penetration testing.',
+      explanation: '(36) ExifTool is a powerful tool for cybersecurity professionals, enabling them to analyze various types of media files and extract valuable information for threat detection, incident response, and penetration testing.\n\n' +
+      'OllyDbg (named after its author, Oleh Yuschuk) is an x86 debugger that emphasizes binary code analysis, which is useful when source code is not available. It traces registers, recognizes procedures, API calls, switches, tables, constants and strings, as well as locates routines from object files and libraries.\n\n' +
+      'Volatility is an open-source memory forensics framework for incident response and malware analysis\n\n' +
+      'Ghidra, a reverse engineering tool developed by the NSA, is a disassembly tool that differs from debuggers like x64dbg. Ghidra allows malware analysts to inspect malware code without executing it, making it safer and more efficient for identifying functions of interest.',
       references: [
         {
           title: 'Metadata and Information Security',
           url: 'https://www.infosecinstitute.com/resources/general-security/metadata-and-information-security/'
+        },
+        {
+          title: 'OllyDbg: Debugger',
+          url: 'https://medium.com/@careertechnologymiraroad/ollydbg-debugger-7f6206f233d3'
+        },
+        {
+          title: 'How to Use Volatility for Memory Forensics and Analysis',
+          url: 'https://www.varonis.com/blog/how-to-use-volatility'
+        },
+        {
+          title: 'How to use Ghidra?',
+          url: 'https://www.varonis.com/blog/how-to-use-ghidra'
         }
       ],
       questionNumber: 36
@@ -1328,11 +1387,27 @@ const securityXQuiz = {
       question: 'An organization has deployed a cloud-based application that provides virtual event services globally to clients. During a typical event, thousands of users access various entry pages within a short period of time. The entry pages include sponsor-related content that is relatively static and is pulled from a database. When the first major event occurs, users report poor response time on the entry pages. Which of the following features is the most appropriate for the company to implement?',
       answer: 'Caching',
       distractors: ['Horizontal scalability', 'Vertical scalability', 'Containerization', 'Static code analysis'],
-      explanation: `(37) Caching can improve browser performance, but it also risks users' confidential or sensitive information being exposed to cyber criminals. Caching data could result in authentication data, browsing history, or session tokens being vulnerable, especially if a browser is left open or if another user has access to it.`,
+      explanation: `(37) Caching can improve browser performance, but it also risks users' confidential or sensitive information being exposed to cyber criminals. Caching data could result in authentication data, browsing history, or session tokens being vulnerable, especially if a browser is left open or if another user has access to it.\n\n` +
+      'Horizontal Scalability is defined as the ability to add servers to an existing pool in order to enhance performance or increase capacity, particularly crucial for real-time systems to ensure timely data processing, especially when the data ingress rate is uncontrollable.\n\n' +
+      'Vertical scalability in cybersecurity refers to enhancing the capacity and performance of a single security system or server by upgrading its hardware or software components. This approach focuses on maximizing the capabilities of the existing infrastructure to handle increased security demands, such as higher traffic volume or more complex threats.\n\n' +
+      'Containerization in cybersecurity refers to the practice of using containers to isolate and secure applications and their dependencies, enhancing overall security posture and reducing potential attack surfaces. It involves implementing various security measures throughout the container lifecycle, from image creation to runtime execution. This approach leverages isolation, reduced attack surfaces, and consistent deployment environments to improve application security.\n\n' +
+      'Static code analysis, also known as Static Application Security Testing (SAST), is a crucial cybersecurity technique that examines source code to identify potential vulnerabilities before the software is executed. It helps developers find and fix security flaws early in the development lifecycle, reducing the risk of cyberattacks. By analyzing code without running it, SAST tools can detect issues like buffer overflows, SQL injection, and cross-site scripting.',
       references: [
         {
           title: 'Caching to improve browser performance',
           url: 'https://www.fortinet.com/resources/cyberglossary/what-is-caching#:~:text=Caching%20can%20improve%20browser%20performance,user%20has%20access%20to%20it'
+        },
+        {
+          title: 'Horizontal scaling vs Vertical Scaling',
+          url: 'https://www.digitalocean.com/resources/articles/horizontal-scaling-vs-vertical-scaling'
+        },
+        {
+          title: 'What is Containerization?',
+          url: 'https://www.sentinelone.com/cybersecurity-101/cloud-security/what-is-containerization/'
+        },
+        {
+          title: 'Static Code Analysis',
+          url: 'https://owasp.org/www-community/controls/Static_Code_Analysis'
         }
       ],
       questionNumber: 37
@@ -1341,11 +1416,26 @@ const securityXQuiz = {
       question: `An organization's board of directors has asked the Chief Information Security Officer to build a third-party management program. Which of the following best explains a reason for this request?`,
       answer: 'Supply chain visibility',
       distractors: ['Risk transference', 'Support availability', 'Vulnerability management'],
-      explanation: `(38) Supply chain visibility (SCV) is the ability to track and monitor a product's journey from raw materials to the end customer, encompassing all stages of the supply chain. This includes order status, shipment status, and real-time location of goods, providing stakeholders with insights into inventory management, logistics, and potential disruptions.`,
+      explanation: `(38) Supply chain visibility (SCV) is the ability to track and monitor a product's journey from raw materials to the end customer, encompassing all stages of the supply chain. This includes order status, shipment status, and real-time location of goods, providing stakeholders with insights into inventory management, logistics, and potential disruptions.\n\n` +
+      'Risk transference involves shifting the responsibility for managing certain cybersecurity risks to a third party, typically through insurance policies or outsourcing services. This strategy allows organizations to mitigate potential financial losses associated with cyber incidents by transferring the risk to another entity.\n\n' +
+      `"availability", means ensuring that authorized users can access information and resources when needed, even during disruptions or attacks. It's a crucial part of the CIA Triad, alongside confidentiality and integrity, and focuses on maintaining uptime and preventing data loss.\n\n` +
+      `Vulnerability management in cybersecurity is a systematic process for identifying, assessing, and mitigating security weaknesses (vulnerabilities) in systems and software. It's a continuous cycle of discovering vulnerabilities, evaluating their potential impact, prioritizing remediation efforts, and verifying that fixes are effective. This process helps organizations reduce their attack surface and minimize the risk of cyberattacks.`,
       references: [
         {
           title: 'The Supply Chain Visibility',
           url: 'https://www.chrobinson.com/en-us/resources/blog/why-is-supply-chain-visibility-so/#:~:text=The%20goal%20of%20supply%20chain,be%20as%20efficient%20as%20possible'
+        },
+        {
+          title: 'The Complete Guid to Risk Transference in Cybersecurity',
+          url: 'https://cybersierra.co/blog/complete-guide-to-risk-transference-in-cybersecurity/'
+        },
+        {
+          title: 'What is the CIA Traid?',
+          url: 'https://kobalt.io/confidentiality-integrity-and-availability-in-cyber-security/'
+        },
+        {
+          title: 'What is Vulnerability Management?',
+          url: 'https://www.microsoft.com/en-in/security/business/security-101/what-is-vulnerability-management#:~:text=Vulnerability%20management%20is%20the%20process,risk%20profile%20of%20each%20vulnerability'
         }
       ],
       questionNumber: 38
@@ -1354,11 +1444,26 @@ const securityXQuiz = {
       question: `A company is rewriting a vulnerable application and adding the mprotect() system call in multiple parts of the application's code that was being leveraged by a recent exploitation tool. Which of the following should be enabled to ensure the application can leverage the new system call against similar attacks in the future?`,
       answer: 'NX bit',
       distractors: ['TPM', 'Secure boot', 'HSM'],
-      explanation: `(39) The NX bit, also known as No eXecute or Data Execution Prevention (DEP), is a CPU feature that prevents code from executing in certain memory regions, specifically those designated as data. It's a security measure that helps to mitigate vulnerabilities like buffer overflows and shellcode injection by preventing malicious code from being executed in unexpected locations.`,
+      explanation: `(39) The NX bit, also known as No eXecute or Data Execution Prevention (DEP), is a CPU feature that prevents code from executing in certain memory regions, specifically those designated as data. It's a security measure that helps to mitigate vulnerabilities like buffer overflows and shellcode injection by preventing malicious code from being executed in unexpected locations.\n\n` +
+      `A Trusted Platform Module (TPM) is a specialized chip on a computer's motherboard designed to secure hardware by providing cryptographic functions. It acts as a secure vault for sensitive information like encryption keys and passwords, enhancing overall system security. TPMs are crucial for functions like secure boot, encryption, and digital identity management.\n\n` +
+      'Secure Boot is a cybersecurity feature that ensures a device boots using only trusted software, preventing malware from taking control during the startup process. It works by verifying the digital signatures of each software component during the boot sequence, starting from the firmware and extending to the operating system and its applications.\n\n' +
+      'a Hardware Security Module (HSM) is a physical device designed to safeguard and manage digital keys, used for encryption, decryption, and authentication. HSMs provide a secure environment for performing cryptographic operations, protecting sensitive data from unauthorized access. They are tamper-resistant, meaning they can withstand both physical and virtual attacks.',
       references: [
         {
           title: 'Security with NX Bit',
           url: 'https://medium.com/@boutnaru/security-nx-bit-non-executable-18759fd2802e'
+        },
+        {
+          title: 'What is a Trusted Platform Module and Why Does it Matter?',
+          url: 'https://www.huntress.com/cybersecurity-101/topic/trusted-platform-module-tpm-cybersecurity-guide'
+        },
+        {
+          title: 'Secure Boot 101: Getting Started with Secure Boot',
+          url: 'https://nsfocusglobal.com/secure-boot-101-getting-started-with-secure-boot/'
+        },
+        {
+          title: 'What is an HSM?',
+          url: 'https://www.encryptionconsulting.com/education-center/what-is-an-hsm/'
         }
       ],
       questionNumber: 39
@@ -1367,11 +1472,26 @@ const securityXQuiz = {
       question: 'Which of the following items should be included when crafting a disaster recovery plan?',
       answer: 'Testing exercises',
       distractors: ['Redundancy', 'Autoscaling', 'Competitor locations'],
-      explanation: `(40) Cybersecurity testing exercises are simulated scenarios used to assess and improve an organization's ability to detect, respond to, and mitigate cyber threats. These exercises help organizations identify vulnerabilities, test their security controls, and enhance their incident response plans.`,
+      explanation: `(40) Cybersecurity testing exercises are simulated scenarios used to assess and improve an organization's ability to detect, respond to, and mitigate cyber threats. These exercises help organizations identify vulnerabilities, test their security controls, and enhance their incident response plans.\n\n` +
+      'redundancy means having backup systems and components in place to ensure operations continue even if primary systems fail or are compromised. This proactive approach minimizes downtime, prevents data loss, and mitigates the impact of cyberattacks by creating alternative paths and resources.\n\n' +
+      'Autoscaling refers to the dynamic adjustment of security resources (like firewalls, intrusion detection systems, or even entire security VPCs) based on real-time demand, enabling organizations to efficiently handle fluctuating traffic and security threats. This ensures optimal resource utilization, cost savings, and robust protection against attacks that may otherwise overwhelm static security infrastructure.\n\n' +
+      'major competitors are found in various locations, with significant concentrations in several key regions and cities.',
       references: [
         {
           title: 'Using a functional cybersecurity exercise to test incident response plans',
           url: 'https://www.isaca.org/resources/news-and-trends/industry-news/2024/using-a-functional-cybersecurity-exercise-to-test-incident-response-plans'
+        },
+        {
+          title: `Redundancy vs. Resiliency in IT:  What's the Difference?`,
+          url: 'https://www.splunk.com/en_us/blog/learn/redundancy-vs-resiliency.html'
+        },
+        {
+          title: 'What is Autoscaling?  And How does Autoscaling Work?',
+          url: 'https://gcore.com/learning/what-is-autoscaling'
+        },
+        {
+          title: 'Are Competitors Attacking your Cybersecurity System?  Protect Yourself Now!',
+          url: 'https://www.linkedin.com/pulse/competitors-attacking-your-cybersecurity-system-pmvsc/'
         }
       ],
       questionNumber: 40
@@ -1380,11 +1500,26 @@ const securityXQuiz = {
       question: 'A web application server is running a legacy operating system with an unpatched RCE vulnerability. The server cannot be upgraded until the corresponding application code is changed. Which of the following compensating controls would best prevent successful exploitation?',
       answer: 'Segmentation',
       distractors: ['CASB', 'UEBA', 'HIPS'],
-      explanation: '(41) Segmentation divides a computer network into smaller parts. The purpose is to improve network performance and security. Other terms that often mean the same thing are network segregation, network partitioning, and network isolation.',
+      explanation: '(41) Segmentation divides a computer network into smaller parts. The purpose is to improve network performance and security. Other terms that often mean the same thing are network segregation, network partitioning, and network isolation.\n\n' +
+      'A Cloud Access Security Broker (CASB) is a security solution that acts as a gatekeeper between users and cloud services, offering visibility and control over cloud application usage and data. It helps organizations enforce security policies, protect sensitive data, and detect threats in the cloud environment.\n\n' +
+      `User and Entity Behavior Analytics (UEBA) is a cybersecurity approach that uses advanced analytics to detect anomalous behavior of users and other entities (like devices and applications) within an organization's network. It establishes baseline behaviors and flags deviations from those baselines, helping to identify potential threats that might be missed by traditional security systems.\n\n` +
+      'a Host Intrusion Prevention System (HIPS) is a security software suite that protects individual devices (endpoints) by monitoring their activity and proactively preventing malicious attacks. HIPS acts as a safeguard for the operating system, monitoring processes, network connections, and file system changes in real-time to detect and block suspicious or malicious activity.',
       references: [
         {
           title: 'Segmentation and Dividing Networks',
           url: 'https://www.cisco.com/c/en/us/products/security/what-is-network-segmentation.html#:~:text=Segmentation%20divides%20a%20computer%20network,network%20partitioning%2C%20and%20network%20isolation'
+        },
+        {
+          title: 'Cloud Access Security Broker (CASB) Explained: What It Is and How It Works',
+          url: 'https://www.youtube.com/watch?v=OBn2oJy18cA'
+        },
+        {
+          title: 'Why UEBA is the Key to Zero Trust Security',
+          url: 'https://www.linkedin.com/posts/dtex-systems_why-is-ueba-the-lynchpin-of-zero-trust-security-activity-7351622927693316098-yGKA/'
+        },
+        {
+          title: 'Host Intrusion Prevention System',
+          url: 'https://www.larksuite.com/en_us/topics/cybersecurity-glossary/host-intrusion-prevention-system-hips'
         }
       ],
       questionNumber: 41
@@ -1393,11 +1528,26 @@ const securityXQuiz = {
       question: 'Which of the following is the reason why security engineers often cannot upgrade the security of embedded facility automation systems?',
       answer: 'They are constrained by available compute',
       distractors: ['They lack x86-64 processors', 'They lack EEPROM', 'They are not logic-bearing devices'],
-      explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.',
+      explanation: '(42) Embedded systems, by their nature, are often constrained by the available computing resources, especially in terms of memory and processing power. These constraints are a key characteristic of embedded systems, which are designed for specific tasks within other devices.\n\n' +
+      `While x86-64 processors have faced significant cybersecurity challenges, it's not accurate to say they lack security. They implement various hardware-level security features and manufacturers continually release microcode and firmware updates to address newly discovered vulnerabilities. However, the complexity of x86-64 architecture can present a larger attack surface compared to ARM, according to Axcient. Both architectures have their strengths and weaknesses regarding security, and ongoing research and development aim to enhance processor security across the board.\n\n` +
+      `EEPROM (Electrically Erasable Programmable Read-Only Memory) presents unique cybersecurity considerations due to its use in embedded systems and storage of sensitive data like encryption keys. While EEPROMs themselves don't inherently offer encryption, they can be secured using various techniques. These include physical security measures, write protection mechanisms, and encryption implemented either in the EEPROM itself or in the system using the EEPROM.\n\n` +
+      'Logic-bearing devices, such as ASICs, FPGAs, and microcontrollers, are crucial components in modern systems but also pose unique cyber security challenges. These devices, with their complex circuitry and potential for vulnerabilities, require specific security measures to protect against attacks throughout their lifecycle, from design to deployment.',
       references: [
         {
           title: 'Embedded Computing 101',
           url: 'https://dedicatedcomputing.com/embedded-computing-systems-101/'
+        },
+        {
+          title: 'Difference between X64 and x86 architecture',
+          url: 'https://www.geeksforgeeks.org/computer-organization-architecture/difference-between-x64-and-x86-architecture/'
+        },
+        {
+          title: 'EEPROM and Security: Harnessing Its Portential for Robust Data Protection',
+          url: 'https://nexusindustrialmemory.com/eeprom-and-security-harnessing-its-potential-for-robust-data-protection/'
+        },
+        {
+          title: 'Identifying, Classifying Riskiest Devices in OT-Heavy Environments',
+          url: 'https://nexusconnect.io/articles/identifying-classifying-riskiest-devices-in-ot-heavy-environments'
         }
       ],
       questionNumber: 42
@@ -1410,11 +1560,26 @@ const securityXQuiz = {
         'Uninstalling the impacted runtime engine',
         'Selectively blocking traffic on the affected port'
       ],
-      explanation: '(43) Configuring an Intrusion Prevention System (IPS) and a Web Application Firewall (WAF) involves setting up rules and policies to filter and monitor network traffic, protecting against various attacks and vulnerabilities. IPS focuses on network-level threats, while WAF specifically targets application-layer attacks like SQL injection and cross-site scripting.',
+      explanation: '(43) Configuring an Intrusion Prevention System (IPS) and a Web Application Firewall (WAF) involves setting up rules and policies to filter and monitor network traffic, protecting against various attacks and vulnerabilities. IPS focuses on network-level threats, while WAF specifically targets application-layer attacks like SQL injection and cross-site scripting.\n\n' +
+      'Shutting down the server and keeping it offline until the code is ready is a crucial step to protect the system and its data from ongoing threats. A system might be shut down and kept offline until a critical security patch or software update (new code) is developed, tested, and ready to be deployed to address known vulnerabilities, according to CISA.\n\n' +
+      'Runtime engines, which are the software environments responsible for executing applications and code, are a critical component of modern computing and cybersecurity threats targeting them can have significant consequences.\n\n' +
+      'Blocking traffic on a potentially compromised port is a crucial cybersecurity measure. It involves configuring firewalls or network security groups to deny incoming and outgoing traffic on specific ports, effectively isolating the affected system or service. This prevents malicious actors from exploiting vulnerabilities associated with that port and potentially spreading malware or launching further attacks.',
       references: [
         {
           title: 'The difference between the web is the Next Generation Firewall',
           url: 'https://www.f5.com/glossary/web-application-firewall-waf#:~:text=The%20difference%20between%20a%20web,is%20a%20next%2Dgeneration%20firewall'
+        },
+        {
+          title: '10 steps to cyber security',
+          url: 'https://www.gov.je/StayingSafe/BeSafeOnline/ProtectYourBusinessOnline/pages/10stepstocybersecurity.aspx#:~:text=7.,impact%20your%20systems%20and%20services'
+        },
+        {
+          title: 'Runtime Security',
+          url: 'https://www.imperva.com/learn/application-security/runtime-security/#:~:text=Runtime%20security%20involves%20protecting%20applications,from%20threats%20as%20they%20execute'
+        },
+        {
+          title: 'What is Port Blocking?',
+          url: 'https://cyberpedia.reasonlabs.com/EN/port%20blocking.html'
         }
       ],
       questionNumber: 43
