@@ -1592,11 +1592,26 @@ const securityXQuiz = {
         'Extract the private key from the certificate',
         'Compare the retrieved certificate with the embedded certificate'
       ],
-      explanation: '(44) Out-of-band certificate obtaining refers to securing a certificate through a communication channel separate from the primary network. This can be done by using a separate communication channel for exchanging the certificate or by using a physical medium like a storage device to transport the certificate.',
+      explanation: '(44) Out-of-band certificate obtaining refers to securing a certificate through a communication channel separate from the primary network. This can be done by using a separate communication channel for exchanging the certificate or by using a physical medium like a storage device to transport the certificate.\n\n' +
+      'Distinguished Encoding Rules (DER) are a crucial component in cyber security, particularly for handling digital certificates and cryptographic operations. DER is a subset of Basic Encoding Rules (BER), ensuring a unique and unambiguous way to represent data structures defined by Abstract Syntax Notation One (ASN.1). This uniqueness is essential for tasks like generating digital signatures, where identical data structures must always result in the same encoded form.\n\n' +
+      `A private key is a secret cryptographic key used to decrypt data that has been encrypted with a corresponding public key, or to digitally sign data. It's a crucial component of asymmetric encryption and plays a vital role in secure communication and digital signatures.\n\n` +
+      'Embedded certificate in cyber security refers to the integration of cryptographic certificates within embedded systems to enhance their security. These certificates, often containing public keys and digital signatures, are used to authenticate devices, encrypt communication, and ensure the integrity of software and data. This approach helps protect embedded systems, which are specialized computer systems within larger devices, from various cyber threats.',
       references: [
         {
           title: 'Out of Band Authentication',
           url: 'https://doubleoctopus.com/security-wiki/authentication/out-of-band-authentication/'
+        },
+        {
+          title: 'DER - Distinguished Encoding Rules',
+          url: 'https://terrytelford.com/glossary/der-distinguished-encoding-rules/'
+        },
+        {
+          title: 'Different between A Private Key and A Public Key',
+          url: 'https://www.geeksforgeeks.org/computer-networks/difference-between-private-key-and-public-key/'
+        },
+        {
+          title: `Certificate Management is "All About the Trust"`,
+          url: 'https://realtimelogic.com/articles/Certificate-Management-for-Embedded-Systems'
         }
       ],
       questionNumber: 44
