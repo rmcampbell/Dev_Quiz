@@ -1652,11 +1652,26 @@ const securityXQuiz = {
         'Assign attributes to each file and allow authorized users to share the files',
         'Assign roles to users and authorize access to files based on the roles'
       ],
-      explanation: '(46) Formal access authorization in cybersecurity is the process of granting or denying access to resources based on predefined policies and procedures. It ensures that only authorized users or entities can access specific systems, data, or applications. This process is crucial for maintaining the confidentiality, integrity, and availability of information assets.',
+      explanation: '(46) Formal access authorization in cybersecurity is the process of granting or denying access to resources based on predefined policies and procedures. It ensures that only authorized users or entities can access specific systems, data, or applications. This process is crucial for maintaining the confidentiality, integrity, and availability of information assets.\n\n' +
+      'IP whitelisting, also known as allowlisting, is a cybersecurity practice where a system or network only allows access to resources from a predefined list of trusted IP addresses. This approach enhances security by restricting access to authorized sources, mitigating risks associated with unauthorized connections.\n\n' +
+      `Discretionary Access Control (DAC): This model allows the owner of a file to determine who has access to it and what level of access they have (read, write, execute). This is common in systems like Windows (NTFS permissions) and Linux (file permissions using chmod and chown).\n\n` +
+      'To effectively manage user access to files, implement Role-Based Access Control (RBAC). This involves assigning users to specific roles (e.g., admin, manager, editor, viewer), and then granting each role the appropriate permissions to access or modify files.',
       references: [
         {
           title: 'Access Control',
           url: 'https://www.fortinet.com/resources/cyberglossary/access-control'
+        },
+        {
+          title: 'What is IP allowlisting (whitelisting)?',
+          url: 'https://nordlayer.com/blog/ip-whitelisting-for-cloud-security/'
+        },
+        {
+          title: 'What are file attributes?',
+          url: 'https://www.lenovo.com/us/en/glossary/file-attributes/?orgRef=https%253A%252F%252Fwww.google.com%252F'
+        },
+        {
+          title: 'What are User Permissions?',
+          url: 'https://frontegg.com/guides/user-permission'
         }
       ],
       questionNumber: 46
@@ -1669,11 +1684,26 @@ const securityXQuiz = {
         'Enable packet captures to continue to run for the source and destination related to the file transfer',
         'Disable login activity for those users after business hours'
       ],
-      explanation: '(47) To restrict uploading activity, you can control which file types are allowed, limit file sizes, and implement security measures like file type validation and malware detection. You can also restrict uploads based on the application or service being used, or by controlling which websites or domains users can upload to.',
+      explanation: '(47) To restrict uploading activity, you can control which file types are allowed, limit file sizes, and implement security measures like file type validation and malware detection. You can also restrict uploads based on the application or service being used, or by controlling which websites or domains users can upload to.\n\n' +
+      'Creating a firewall rule to prevent specific users from accessing sensitive data typically involves a combination of user-based access controls and network-level filtering. The specific implementation will depend on the firewall technology and the network environment.\n\n' +
+      'Packet capture is a networking practice involving the interception of data packets travelling over a network. Once the packets are captured, they can be stored by IT teams for further analysis.\n\n' +
+      'Time-based access control (TBAC) is a security mechanism that restricts access to resources based on time. It allows organizations to define when users can access specific systems or data, enhancing security by limiting access to designated periods. This approach can be used with various access control models like RBAC (Role-Based Access Control) and ABAC (Attribute-Based Access Control).',
       references: [
         {
           title: 'File Upload Restrictions',
           url: 'https://spyboy.blog/2025/02/02/bypassing-file-upload-restrictions-a-deep-dive-into-security-and-exploitation/'
+        },
+        {
+          title: 'Firewall Rules Explained: From Basics to Best Practices',
+          url: 'https://www.liquidweb.com/blog/best-practices-for-firewall-rules/'
+        },
+        {
+          title: 'What is Packet Capture (PCAP)?',
+          url: 'https://www.netscout.com/what-is/packet-capture'
+        },
+        {
+          title: 'What are Time Based Access Controls?',
+          url: 'https://www.zluri.com/blog/time-based-access-controls'
         }
       ],
       questionNumber: 47
@@ -1682,11 +1712,26 @@ const securityXQuiz = {
       question: 'A company recently acquired a SaaS company and performed a gap analysis. The results of the gap analysis Indicate security controls are absent throughout the SDLC and have led to several vulnerable production releases. Which of the following security tools best reduces the risk of vulnerable code being pushed to production in the future?',
       answer: 'Static application security testing',
       distractors: ['Regression testing', 'Code signing', 'Sandboxing'],
-      explanation: `(48) SAST (Static Application Security Testing) is a proactive cybersecurity technique that analyzes an application's source code, bytecode, or binaries before it is deployed to identify potential vulnerabilities. It helps developers and security professionals discover and fix security flaws early in the development process, preventing costly errors and enforcing compliance.`,
+      explanation: `(48) SAST (Static Application Security Testing) is a proactive cybersecurity technique that analyzes an application's source code, bytecode, or binaries before it is deployed to identify potential vulnerabilities. It helps developers and security professionals discover and fix security flaws early in the development process, preventing costly errors and enforcing compliance.\n\n` +
+      `Regression testing in cybersecurity ensures that security fixes, updates, or new features don't introduce new vulnerabilities or break existing security measures. It's crucial for maintaining a secure and reliable system, especially after code changes, bug fixes, or the introduction of new functionalities.\n\n` +
+      `Code signing in cybersecurity is a process where a digital signature is attached to software or scripts, ensuring the code's authenticity and integrity. It verifies that the software hasn't been tampered with since it was signed and that it comes from a legitimate developer. This helps users avoid malware and ensures they are downloading trustworthy software.\n\n` +
+      'Sandboxing in cybersecurity is a security mechanism that isolates potentially malicious software or code in a controlled, virtual environment (the sandbox) to analyze its behavior without risking the main system. This allows security professionals to safely study malware, test software, and develop countermeasures without compromising the integrity of the larger network or system.',
       references: [
         {
           title: 'Static Application Security Testing',
           url: 'https://www.blackduck.com/glossary/what-is-sast.html#:~:text=Static%20application%20security%20testing%20(SAST,before%20the%20code%20is%20compiled'
+        },
+        {
+          title: 'What is Regression Testing?',
+          url: 'https://cyrex.tech/security-explained-regression-testing/'
+        },
+        {
+          title: 'What is Code Signing?',
+          url: 'https://www.cyberark.com/what-is/code-signing/'
+        },
+        {
+          title: 'What is a Sandbox Environment?',
+          url: 'https://whatfix.com/blog/sandbox-environment/#:~:text=Sandboxes%20provide%20a%20safe%20space,fix%20bugs%2C%20and%20validate%20changes'
         }
       ],
       questionNumber: 48
@@ -1699,11 +1744,26 @@ const securityXQuiz = {
         'To generate unique identifiers for each file',
         'To preserve the chain of custody of files'
       ],
-      explanation: `(49) To validate file integrity, you can use checksums (also known as hashes) to verify if a file has been altered or corrupted. A checksum is a unique numerical representation of a file's content, and by comparing the checksum of a file to its expected checksum (from the source), you can confirm that the file remains unchanged.`,
+      explanation: `(49) To validate file integrity, you can use checksums (also known as hashes) to verify if a file has been altered or corrupted. A checksum is a unique numerical representation of a file's content, and by comparing the checksum of a file to its expected checksum (from the source), you can confirm that the file remains unchanged.\n\n` +
+      'Metadata tampering refers to the malicious alteration of metadata associated with digital files or data, potentially leading to security breaches, data manipulation, and compromised investigations. Metadata, which describes the data itself (origin, structure, etc.), can contain sensitive information that, if tampered with, can expose vulnerabilities and facilitate attacks.\n\n' +
+      'unique identifiers are crucial for distinguishing between various entities like files, users, and devices, ensuring proper tracking and security. Universally Unique Identifiers (UUIDs), also known as GUIDs, are a common method for creating these unique labels. They are 128-bit numbers that are, for practical purposes, guaranteed to be unique across systems and applications.\n\n' +
+      `The chain of custody refers to the documented chronological process of handling digital evidence from its initial acquisition to its final disposition, ensuring its integrity and admissibility in legal proceedings. It's a critical component of digital forensics and cyber security incident response.`,
       references: [
         {
           title: 'How to check and verify file integrity',
           url: 'https://www.techtarget.com/searchcontentmanagement/tip/How-to-check-and-verify-file-integrity#:~:text=Create%20a%20hash%20value%20%2D%2D,Algorithm%201%20and%20SHA%2D256'
+        },
+        {
+          title: 'Metadata Analysis',
+          url: 'https://fidelissecurity.com/cybersecurity-101/network-security/metadata-analysis/'
+        },
+        {
+          title: 'What is a Unique Identifier (UID), and Why Is It Important?',
+          url: 'https://www.coursera.org/articles/unique-identifier'
+        },
+        {
+          title: 'Protecting Sensitive Content with Chain of Custody',
+          url: 'https://www.kiteworks.com/risk-compliance-glossary/chain-of-custody/'
         }
       ],
       questionNumber: 49
@@ -1718,11 +1778,26 @@ const securityXQuiz = {
         'Impact',
         'Attack vector'
       ],
-      explanation: `(50) In the Common Vulnerability Scoring System (CVSS, the three main metric groups are Base, Temporal, and Environmental. Base metrics describe the intrinsic characteristics of a vulnerability, which remain constant over time and across different environments. Temporal metrics adjust the base score based on factors that change over time, such as the availability of exploits. Environmental metrics further refine the score to reflect an organization's specific environment and its unique vulnerabilities.`,
+      explanation: `(50) In the Common Vulnerability Scoring System (CVSS, the three main metric groups are Base, Temporal, and Environmental. Base metrics describe the intrinsic characteristics of a vulnerability, which remain constant over time and across different environments. Temporal metrics adjust the base score based on factors that change over time, such as the availability of exploits. Environmental metrics further refine the score to reflect an organization's specific environment and its unique vulnerabilities.\n\n` +
+      `availability refers to ensuring that information and resources are accessible to authorized users when needed. It's one of the three core principles of information security, alongside confidentiality and integrity. Maintaining availability involves preventing disruptions to systems, networks, and data, whether caused by technical failures, human error, or malicious attacks.\n\n` +
+      'The analysis conducted by an organizational official to determine the extent to which changes to the information system have affected the security state of the system.\n\n' +
+      `an attack vector is the path or method used by a cybercriminal to gain unauthorized access to a system or network. It's the "how" an attacker exploits a vulnerability to achieve their malicious goals. These goals can include stealing data, disrupting services, or gaining control of a system.`,
       references: [
         {
           title: 'CVS Scoring',
           url: 'https://www.balbix.com/insights/base-cvss-scores/'
+        },
+        {
+          title: 'Confidentiality, Integrity, and Availability',
+          url: 'https://www.datasunrise.com/knowledge-center/confidentiality-integrity-availability-examples/'
+        },
+        {
+          title: 'Impact of Cybersecurity Breaches',
+          url: 'https://www.youtube.com/watch?v=vJI8SoCiCO8&pp=0gcJCf8Ao7VqN5tD'
+        },
+        {
+          title: 'What is an Attack Vector?  16 Critical Examples',
+          url: 'https://www.upguard.com/blog/attack-vector'
         }
       ],
       questionNumber: 50
@@ -1735,11 +1810,21 @@ const securityXQuiz = {
         'Using a third-party audit report',
         'By choosing a major product'
       ],
-      explanation: `(51) A cybersecurity risk assessment is a systematic process aimed at identifying vulnerabilities and threats within an organization's IT environment, assessing the likelihood of a security event, and determining the potential impact of such occurrences.`,
+      explanation: `(51) A cybersecurity risk assessment is a systematic process aimed at identifying vulnerabilities and threats within an organization's IT environment, assessing the likelihood of a security event, and determining the potential impact of such occurrences.\n\n` +
+      'A third-party audit report is a comprehensive document that assesses the cybersecurity posture of an organization, particularly focusing on the risks introduced through its relationships with external entities (vendors, suppliers, and partners).\n\n' +
+      `Choosing the right cybersecurity products is crucial for safeguarding your organization's assets and maintaining a strong security posture. The two primary approaches are strategic "major product selection" and ad-hoc "random product selection." `,
       references: [
         {
           title: 'Cybersecurity Risk Assessment',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/advisory-services/cybersecurity-risk-assessment/'
+        },
+        {
+          title: 'What is Auditing?',
+          url: 'https://asq.org/quality-resources/auditing#:~:text=A%20third%2Dparty%20audit%20is,of%20a%20third%2Dparty%20audit'
+        },
+        {
+          title: '5 Steps for Successful Security Product Selection',
+          url: 'https://kpmg.co.il/technologyconsulting/blog/5-key-steps-for-a-successful-security-product-selection-process'
         }
       ],
       questionNumber: 51
@@ -1748,11 +1833,26 @@ const securityXQuiz = {
       question: 'A security engineer is performing a vulnerability management scan on multihomed Linux systems. The engineer notices that the vulnerability count is high due to the fact that each vulnerability is multiplied by the number of NICs on each system. Which of the following should the engineer do to deduplicate the vulnerabilities and to associate the vulnerabilities with a particular host?',
       answer: 'Deploy an agent',
       distractors: ['Use a SCAP scanner', 'Initiate a discovery scan', 'Perform an Nmap scan'],
-      explanation: '(52) The Deployment Agent is a software agent that must be deployed to all clients managed by the Management Center. The Deployment Agent runs as a Windows Service and performs tasks on the client when instructed by the Management Server.',
+      explanation: '(52) The Deployment Agent is a software agent that must be deployed to all clients managed by the Management Center. The Deployment Agent runs as a Windows Service and performs tasks on the client when instructed by the Management Server.\n\n' +
+      'SCAP (Security Content Automation Protocol) is a method for automating the management of security vulnerabilities and policy compliance. It uses specific standards to enable organizations to assess their systems against security benchmarks, detect vulnerabilities, and ensure compliance with security policies. SCAP helps organizations automate vulnerability management, measure security posture, and streamline compliance processes.\n\n' +
+      `A discovery scan in cybersecurity is a reconnaissance technique used to identify active devices and services on a network. It acts as the first step in a vulnerability assessment, mapping out the network's landscape before more in-depth scans are conducted. This process helps organizations understand their attack surface and potential vulnerabilities.\n\n` +
+      'Nmap (Network Mapper) is a crucial tool in cybersecurity, used for network discovery and security auditing. It helps identify devices, services, and vulnerabilities on a network, making it valuable for both security professionals and malicious actors. Nmap is a versatile tool, used for tasks like host discovery, port scanning, and vulnerability detection.',
       references: [
         {
           title: 'Deploy an Agent',
           url: 'https://hstechdocs.helpsystems.com/manuals/corects/impact/current/userguide/content/topics/appx_controlagents_deploy-agents.html'
+        },
+        {
+          title: 'What is a Security Content Automation Protocol (SCAP)?',
+          url: 'https://heimdalsecurity.com/blog/security-content-automation-protocol-scap/'
+        },
+        {
+          title: '3 Types of Vulnerability Scans: Discovery, Full, Compliance',
+          url: 'https://www.cbtnuggets.com/blog/technology/system-admin/3-types-of-vulnerability-scans-discovery-full-compliance'
+        },
+        {
+          title: 'How to Use Nmap: Commands and Tutorial Guide',
+          url: 'https://www.varonis.com/blog/nmap-commands#:~:text=At%20its%20core%2C%20Nmap%20is,operating%20systems%20they%20are%20running'
         }
       ],
       questionNumber: 52
@@ -1761,11 +1861,26 @@ const securityXQuiz = {
       question: 'Which of the following best describes a risk associated with using facial recognition to locally authenticate to a mobile device?',
       answer: 'Biometric impersonation',
       distractors: ['Data remanence', 'Deepfake', 'Metadata scraping'],
-      explanation: '(53) Biometric impersonation, also known as biometric spoofing, is a method used by fraudsters to mimic or forge biometric identifiers to gain unauthorized access to systems or accounts that rely on biometric authentication. This could involve imitating fingerprints, facial patterns, iris scans, or even voice patterns to deceive the security system into believing they are a legitimate user.',
+      explanation: '(53) Biometric impersonation, also known as biometric spoofing, is a method used by fraudsters to mimic or forge biometric identifiers to gain unauthorized access to systems or accounts that rely on biometric authentication. This could involve imitating fingerprints, facial patterns, iris scans, or even voice patterns to deceive the security system into believing they are a legitimate user.\n\n' +
+      'Data remanence refers to the residual data left on storage media even after attempts to delete or erase it. This leftover data, which may include fragments or entire copies of sensitive information, poses a significant security risk as it can be recovered by malicious actors. Understanding and mitigating data remanence is crucial for protecting sensitive data and preventing potential breaches.\n\n' +
+      'Deepfakes, AI-generated synthetic media that convincingly impersonate individuals, pose a growing cybersecurity threat. These manipulated videos and audio recordings can be used for fraud, disinformation campaigns, and to bypass security measures. Cybercriminals are leveraging deepfakes to target businesses, with voice cloning technology being used to impersonate executives and initiate fraudulent transactions.\n\n' +
+      'Metadata scraping in cybersecurity refers to the practice of automatically extracting structured data (metadata) from various online sources, like websites, documents, or network traffic, for security purposes. This can be used for both offensive and defensive strategies in cybersecurity, with applications ranging from monitoring for malicious activity to gathering intelligence on potential threats.',
       references: [
         {
           title: 'Biometric Spoofing',
           url: 'https://nordvpn.com/cybersecurity/glossary/biometric-spoofing/'
+        },
+        {
+          title: 'What is Data Remanance & How to Remove It in 5 Easy Steps',
+          url: 'https://jetico.com/blog/what-data-remanence-how-remove-it-5-easy-steps/'
+        },
+        {
+          title: 'How a new wave of deepfake-driven cyber crime targets businesses',
+          url: 'https://www.ibm.com/think/insights/new-wave-deepfake-cybercrime'
+        },
+        {
+          title: 'What is scraping?',
+          url: 'https://www.humansecurity.com/learn/topics/what-is-scraping/'
         }
       ],
       questionNumber: 53
@@ -1777,11 +1892,26 @@ const securityXQuiz = {
       'During the investigation, this modified firmware version was identified on several other controllers at the site. The official vendor firmware versions do not have this checksum.\n\n Which of the following stages of the `MITRE ATT&CK framework` for ICS includes this technique?',
       answer: 'Persistence',
       distractors: ['Evasion', 'Collection', 'Lateral movement'],
-      explanation: `(54) persistence refers to a threat actor's ability to maintain long-term access to a system or network, even after attempted removal or disruption. This allows attackers to remain undetected and hidden, potentially launching further attacks or stealing data over time.`,
+      explanation: `(54) Persistence refers to a threat actor's ability to maintain long-term access to a system or network, even after attempted removal or disruption. This allows attackers to remain undetected and hidden, potentially launching further attacks or stealing data over time.\n\n` +
+      'Evasion refers to techniques used by attackers to bypass security measures, allowing them to deliver malicious payloads or maintain access without being detected. These techniques can target various security systems, including firewalls, intrusion detection systems, and antivirus software, by manipulating data or exploiting vulnerabilities.\n\n' +
+      'Collection refers to the process of gathering, analyzing, and managing data to identify, understand, and respond to cyber threats. This involves various techniques and tools to collect information from diverse sources, including network logs, system configurations, user activity, and threat intelligence feeds. Effective collection is crucial for building a comprehensive threat picture, enabling organizations to proactively defend against attacks and improve their overall security posture.\n\n' +
+      `Lateral movement in cybersecurity refers to an attacker's ability to move from one compromised system to another within a network after gaining initial access. This "east-west" movement allows attackers to explore the network, escalate privileges, and ultimately reach high-value targets like sensitive data or critical systems.`,
       references: [
         {
           title: 'Persistence in Cybersecurity',
           url: 'https://www.beyondtrust.com/blog/entry/what-is-persistence-in-cybersecurity'
+        },
+        {
+          title: 'What is Devense Evasion in Cybersecurity?',
+          url: 'https://www.jit.io/resources/app-security/what-is-defense-evasion-in-cybersecurity'
+        },
+        {
+          title: 'Data Collection in Cybersecurity: More than Just Numbers',
+          url: 'https://www.peris.ai/post/data-collection-in-cybersecurity-more-than-just-numbers#:~:text=It%20involves%20the%20collection%2C%20storage,user%20actions%2C%20and%20threat%20intelligence'
+        },
+        {
+          title: 'What is Lateral Movement?',
+          url: 'https://www.illumio.com/cybersecurity-101/lateral-movement'
         }
       ],
       questionNumber: 54
@@ -1806,7 +1936,10 @@ const securityXQuiz = {
       explanation:
         '(55) Content Delivery Networks (CDNs) process static content such as images and scripts, dynamic content, and live streams, making them vital to global business. They add security layers against DDoS attacks and unauthorized access by moving traffic from origin servers.' +
         'Storage input/output (I/O) refers to the security considerations related to how data is input to and output from storage devices and systems. This includes measures to protect data in transit (e.g., encryption during I/O) and data at rest (e.g., secure storage media).' +
-        'Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.',
+        'Server clusters offers high availability and redundancy, but it also presents unique cybersecurity challenges. A well-secured cluster must address the same general security concerns as a single server, but also account for the complexities of distributed systems.\n\n' +
+        `"Bare-metal" refers to servers running directly on the underlying physical hardware, without a virtualization layer like a hypervisor. This dedicated environment offers distinct advantages and considerations regarding cybersecurity, particularly when loading applications.\n\n` +
+        `RAID on a backup server enhances availability and fault tolerance by protecting against drive failures, but it's not a substitute for a comprehensive backup strategy. While RAID minimizes downtime from hardware issues, it doesn't protect against data loss from other causes like malware, accidental deletion, or software errors.\n\n` +
+        'Redundant power systems are crucial because they ensure continuous operation and data protection by providing backup power sources in case of failure. This is especially vital for critical systems like servers, data centers, and other infrastructure where downtime can lead to significant losses.',
       references: [
         {
           title: 'Understanding the Basics',
@@ -1819,6 +1952,18 @@ const securityXQuiz = {
         {
           title: 'Server Clusters, A Complete Guide',
           url: 'https://www.fs.com/blog/a-complete-guide-to-server-clusters-6961.html'
+        },
+        {
+          title: 'Using bare metal as a cybersecurity strategy',
+          url: 'https://www.zenlayer.com/blog/using-bare-metal-as-a-cybersecurity-strategy/'
+        },
+        {
+          title: 'Understanding RAID and BackUps:  They Are Not The Same Thing!',
+          url: 'https://www.rkblack.com/understanding-raid-and-backups-they-are-not-the-same-thing/'
+        },
+        {
+          title: 'Redundancy & security systems',
+          url: 'https://info.verkada.com/video-storage/redundancy-and-security-systems/'
         }
       ],
       questionNumber: 55
