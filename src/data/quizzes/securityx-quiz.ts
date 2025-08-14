@@ -2059,7 +2059,7 @@ const securityXQuiz = {
     {
       question: 'An organization needs to classify its systems and data in accordance with external requirements. Which of the following roles is best qualified to perform this task?',
       answer: 'Data owner',
-      distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward',],
+      distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward'],
       explanation: '(59) The data owner defines the rules and criteria for access, while data custodians (often IT) implement the provisioning based on those rules. The individual or entity accountable for a specific dataset within an organization.\n\n' +
       'A system administrator, or sysadmin, is an IT professional responsible for the upkeep, configuration, and reliable operation of computer systems, particularly multi-user systems like servers. They ensure systems are functioning optimally, including managing hardware, software, networks, and security policies. Their work is crucial for maintaining uptime, performance, resources, and security to meet user needs within a set budget.\n\n' +
       `A data processor's cyber security is crucial because they handle personal data on behalf of a data controller, making them vulnerable to breaches that could expose sensitive information. Data processors have responsibilities to protect this data through appropriate technical and organizational measures, as defined by regulations like the GDPR.\n\n` +
@@ -2138,7 +2138,9 @@ const securityXQuiz = {
         'The Diffie-Hellman group on both sides matches but is a legacy group'
       ],
       explanation: '(61) In IKE (Internet Key Exchange), hash algorithms are used for data integrity and authentication, particularly in the creation of message digests and as part of pseudo-random functions (PRFs). They play a crucial role in ensuring the integrity of messages exchanged during the key exchange process.\n\n' +
-      `A remote VPN (Virtual Private Network) uses various protocols to establish a secure connection between a user's device and a remote network, such as a corporate network. While PPTP and L2TP are older protocols, more modern options like WireGuard, IKEv2, and OpenVPN are commonly used today due to their balance of speed and security. SSL/TLS connections are also used for specific applications and can be advantageous for accessing certain resources.`,
+      `A remote VPN (Virtual Private Network) uses various protocols to establish a secure connection between a user's device and a remote network, such as a corporate network. While PPTP and L2TP are older protocols, more modern options like WireGuard, IKEv2, and OpenVPN are commonly used today due to their balance of speed and security. SSL/TLS connections are also used for specific applications and can be advantageous for accessing certain resources.\n\n` +
+      'IPSec allows for supporting more than one cipher suite to enable flexibility and compatibility across diverse network environments and to facilitate cryptographic agility. While the ability to support multiple cipher suites in IPSec offers benefits in terms of compatibility and cryptographic agility, it is crucial to balance this flexibility with the need to maintain strong security by disabling weak or obsolete cipher suites and prioritizing the use of robust and current cryptographic algorithms.\n\n' +
+      'Diffie-Hellman groups define the strength of the cryptographic keys exchanged during the Diffie-Hellman key exchange process, which is used to establish a shared secret over an insecure channel. These groups are numerical values that correspond to the size of the prime number and generator used in the algorithm. Higher group numbers generally indicate stronger security but also require more computational resources.',
       references: [
         {
           title: `What is IKE?  Don't kick the Baby!`,
@@ -2147,6 +2149,14 @@ const securityXQuiz = {
         {
           title: 'What are the different types of VPN protocols?',
           url: 'https://www.paloaltonetworks.com/cyberpedia/types-of-vpn-protocols'
+        },
+        {
+          title: 'Using IPsec to protect data',
+          url: 'https://www.ncsc.gov.uk/guidance/using-ipsec-protect-data'
+        },
+        {
+          title: 'Security - Diffie-Hellman groups',
+          url: 'https://notes.networklessons.com/security-diffie-hellman-groups'
         }
       ],
       questionNumber: 61
@@ -2162,11 +2172,26 @@ const securityXQuiz = {
         'File-level encryption with cloud vendor-provided keys',
         'Disk-level encryption with a cross-signed certificate'
       ],
-      explanation: '(62) Disk-level encryption, like Full Disk Encryption (FDE), encrypts the entire drive, protecting data at rest. File-level encryption, on the other hand, encrypts individual files or directories. File-level encryption offers granular control and can protect files even if the system is compromised, while disk-level encryption protects the entire drive but may slow down the system.',
+      explanation: '(62) Disk-level encryption, like Full Disk Encryption (FDE), encrypts the entire drive, protecting data at rest. File-level encryption, on the other hand, encrypts individual files or directories. File-level encryption offers granular control and can protect files even if the system is compromised, while disk-level encryption protects the entire drive but may slow down the system.\n\n' +
+      'Disk encryption utilizes keys to protect data on storage devices. These keys are used to encrypt and decrypt the data, ensuring that only authorized users can access it. There are different types of keys and encryption methods used, depending on the specific implementation and security needs.\n\n' +
+      'Organizations must carefully evaluate the benefits and drawbacks of combining row-level encryption with a key escrow system. It requires choosing a reputable and trustworthy key escrow provider, establishing robust access controls, and implementing strong security measures to protect the escrowed keys. Row-level encryption coupled with a key escrow system offers a comprehensive approach to securing sensitive data within databases.\n\n' +
+      `Cloud vendor-provided keys, also known as provider-managed keys, are encryption keys that are generated and managed by the cloud service provider (CSP) on behalf of the customer. In this model, the customer doesn't have to worry about the complexities of key management, but they also have limited control over the keys.`,
       references: [
         {
           title: 'File encryption vs Disk encryption',
           url: 'https://axcrypt.net/blog/the-ultimate-guide-to-file-encryption-vs-disk-encryption-which-one-is-best-for-you/?srsltid=AfmBOoq1B_oloCqv-q9Hz-l6CSb2nGQ5yLTRjyQ5eLmrZpGPKpmNjpKz'
+        },
+        {
+          title: 'What is Full Disk Encryption (FDE) & How It Works',
+          url: 'https://www.bitdefender.com/en-us/business/infozone/what-is-full-disk-encryption-fde'
+        },
+        {
+          title: 'What is Key Escrow?',
+          url: 'https://utimaco.com/current-topics/blog/what-is-key-escrow'
+        },
+        {
+          title: `Cloud Encryption: What your Cloud Provider Covers -- and What's Still On You`,
+          url: 'https://cpl.thalesgroup.com/blog/encryption/cloud-encryption-key-management-byok-hyok'
         }
       ],
       questionNumber: 62
