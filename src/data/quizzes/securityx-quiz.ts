@@ -2175,7 +2175,8 @@ const securityXQuiz = {
       explanation: '(62) Disk-level encryption, like Full Disk Encryption (FDE), encrypts the entire drive, protecting data at rest. File-level encryption, on the other hand, encrypts individual files or directories. File-level encryption offers granular control and can protect files even if the system is compromised, while disk-level encryption protects the entire drive but may slow down the system.\n\n' +
       'Disk encryption utilizes keys to protect data on storage devices. These keys are used to encrypt and decrypt the data, ensuring that only authorized users can access it. There are different types of keys and encryption methods used, depending on the specific implementation and security needs.\n\n' +
       'Organizations must carefully evaluate the benefits and drawbacks of combining row-level encryption with a key escrow system. It requires choosing a reputable and trustworthy key escrow provider, establishing robust access controls, and implementing strong security measures to protect the escrowed keys. Row-level encryption coupled with a key escrow system offers a comprehensive approach to securing sensitive data within databases.\n\n' +
-      `Cloud vendor-provided keys, also known as provider-managed keys, are encryption keys that are generated and managed by the cloud service provider (CSP) on behalf of the customer. In this model, the customer doesn't have to worry about the complexities of key management, but they also have limited control over the keys.`,
+      `Cloud vendor-provided keys, also known as provider-managed keys, are encryption keys that are generated and managed by the cloud service provider (CSP) on behalf of the customer. In this model, the customer doesn't have to worry about the complexities of key management, but they also have limited control over the keys.\n\n` +
+      'disk-level encryption protects your data on the drive itself, while cross-signed certificates contribute to the security of the software and infrastructure that enable and manage that encryption. This layered approach enhances the overall security posture by strengthening trust relationships within the encryption ecosystem.',
       references: [
         {
           title: 'File encryption vs Disk encryption',
@@ -2192,6 +2193,10 @@ const securityXQuiz = {
         {
           title: `Cloud Encryption: What your Cloud Provider Covers -- and What's Still On You`,
           url: 'https://cpl.thalesgroup.com/blog/encryption/cloud-encryption-key-management-byok-hyok'
+        },
+        {
+          title: 'What is a self signed certificate?',
+          url: 'https://www.sectigo.com/resource-library/what-is-a-self-signed-certificate'
         }
       ],
       questionNumber: 62
@@ -2200,11 +2205,26 @@ const securityXQuiz = {
       question: `A security analyst discovers a new device on the company's dedicated IoT subnet during the most recent vulnerability scan. The scan results show numerous open ports and insecure protocols in addition to default usernames and passwords. A camera needs to transmit video to the security server in the IoT subnet. Which of the following should the security analyst recommend to securely operate the camera?`,
       answer: 'Harden the camera configuration',
       distractors: ['Send camera logs to the SIEM', `Encrypt the camera's video stream`, 'Place the camera on an isolated segment'],
-      explanation: '(63) Configuration hardening is the process of securing computer systems by adjusting their settings to reduce vulnerabilities and strengthen security. It involves removing unnecessary software, disabling services, limiting user privileges, and applying security patches. This proactive approach aims to make systems more resistant to cyber threats and reduce the potential attack surface.',
+      explanation: '(63) Configuration hardening is the process of securing computer systems by adjusting their settings to reduce vulnerabilities and strengthen security. It involves removing unnecessary software, disabling services, limiting user privileges, and applying security patches. This proactive approach aims to make systems more resistant to cyber threats and reduce the potential attack surface.\n\n' +
+      `SIEM (Security Information and Event Management) systems leverage logs to enhance cybersecurity by collecting, analyzing, and correlating security-related data from various sources. This centralized approach allows for real-time threat detection, incident investigation, and compliance monitoring. SIEMs parse and normalize logs, creating a unified view of security events across an organization's IT infrastructure.\n\n` +
+      `To secure a camera's video stream from cybersecurity threats, you should encrypt the video data in transit and at rest, use strong passwords, enable two-factor authentication, and keep firmware updated. Implement TLS/SSL encryption for data transfer, and consider using protocols like SRTP for real-time streaming.\n\n` +
+      'Isolating security cameras on a separate network segment is a fundamental cybersecurity best practice that significantly strengthens the overall security posture and reduces the risk of exploitation. Combined with other security measures like strong passwords, encryption, regular updates, and carefully configured firewalls, it provides a robust defense against potential threats.',
       references: [
         {
           title: 'Hardening Compute Systems',
           url: `https://www.tripwire.com/state-of-security/automation-action-proactively-hardening-systems-intrusion#:~:text=Configuration%20hardening%20is%20the%20process,posed%20by%20a%20system's%20configurations.`
+        },
+        {
+          title: 'How to Master Logs as a Beginner',
+          url: 'https://www.youtube.com/watch?v=GpG19jOYQVo'
+        },
+        {
+          title: 'Video Encryption',
+          url: 'https://www.gumlet.com/learn/video-encryption/'
+        },
+        {
+          title: 'Should the security camera network be separate from the Enterprise Network?',
+          url: 'https://www.lantronix.com/blog/security-camera-network-separate-enterprise-network/'
         }
       ],
       questionNumber: 63
@@ -2217,11 +2237,26 @@ const securityXQuiz = {
         'To ensure a consistent approach to assessment',
         'To ensure a consistent approach to risk'
       ],
-      explanation: `(64) Risk is highly relevant to cybersecurity because it's the foundation for understanding and managing vulnerabilities within an organization's systems and data. By identifying, assessing, and prioritizing risks, organizations can effectively allocate resources to implement security controls and mitigate potential threats. This proactive approach helps reduce the likelihood and impact of cyber incidents, protects sensitive data, and ensures compliance with regulatory requirements.`,
+      explanation: `(64) Risk is highly relevant to cybersecurity because it's the foundation for understanding and managing vulnerabilities within an organization's systems and data. By identifying, assessing, and prioritizing risks, organizations can effectively allocate resources to implement security controls and mitigate potential threats. This proactive approach helps reduce the likelihood and impact of cyber incidents, protects sensitive data, and ensures compliance with regulatory requirements.\n\n` +
+      `Cybersecurity risks pose significant threats to a business's objectives by impacting its financial health, operational efficiency, and reputation. These risks can manifest in various forms, including data breaches, ransomware attacks, malware infections, and insider threats, all of which can lead to substantial financial losses, operational disruptions, and damage to customer trust.\n\n` +
+      `A consistent approach to cybersecurity assessment is crucial for organizations to effectively manage risks, maintain compliance, and adapt to the evolving threat landscape. It involves establishing a structured and repeatable process for identifying vulnerabilities, assessing risks, and evaluating the effectiveness of security controls.\n\n` +
+      'By adopting a structured, comprehensive, and continuous approach to cybersecurity risk management, organizations can effectively enhance their security posture, comply with regulations, reduce costs and losses, improve decision-making, increase competitive advantage, and support growth and sustainability.',
       references: [
         {
           title: 'Why Risk Management is important?',
           url: 'https://www.evotix.com/resources/blog/reasons-why-risk-management-is-important#:~:text=of%20their%20employees.-,Importance%20of%20Risk%20Management%20in%20the%20Workplace,liabilities%2C%20to%20name%20a%20few'
+        },
+        {
+          title: 'Cyber Security Risks for Businesses - All you need to know',
+          url: 'https://www.dataguard.com/cyber-security/risks/'
+        },
+        {
+          title: 'What is Cyber Security Posture?',
+          url: 'https://www.balbix.com/insights/what-is-cyber-security-posture/'
+        },
+        {
+          title: '4 practical approaches to Cybersecurity Risk Management',
+          url: 'https://blogs.stickmancyber.com/cybersecurity-blog/beyond-fear-4-step-practical-approach-to-cybersecurity-risk-management'
         }
       ],
       questionNumber: 64
@@ -2238,11 +2273,31 @@ const securityXQuiz = {
         'Implement a captive portal solution',
         'Implement a RADIUS solution'
       ],
-      explanation: '(65) Mobile Device Management (MDM) is a cybersecurity solution that helps organizations secure, monitor, and manage mobile devices used by employees. It allows IT administrators to enforce security policies, manage device settings, and monitor device usage, ensuring devices connected to the corporate network adhere to security protocols. This helps protect sensitive data from unauthorized access, breaches, or loss.',
+      explanation: '(65) Mobile Device Management (MDM) is a cybersecurity solution that helps organizations secure, monitor, and manage mobile devices used by employees. It allows IT administrators to enforce security policies, manage device settings, and monitor device usage, ensuring devices connected to the corporate network adhere to security protocols. This helps protect sensitive data from unauthorized access, breaches, or loss.\n\n' +
+      'To lock down mobile devices for cybersecurity, organizations can leverage group policies, specifically through mobile device management (MDM) solutions like Microsoft Intune, to enforce security configurations and restrictions. These policies can manage various aspects, including access controls, data protection, and device features, ensuring a secure environment for company-owned and even BYOD devices.\n\n' +
+      `An Acceptable Use Policy (AUP) in cybersecurity outlines rules and guidelines for how employees, contractors, and other users can use an organization's IT resources, including networks, devices, and data. It establishes acceptable and unacceptable behaviors to protect the organization's assets and data from misuse, unauthorized access, and potential security breaches.\n\n` +
+      'A captive portal solution provides a secure way to manage network access by requiring users to authenticate or accept terms before gaining full internet access. This helps protect the network, comply with regulations, and gather valuable user data. However, captive portals are not without risks, such as potential vulnerabilities to attacks.\n\n' +
+      'RADIUS, or Remote Authentication Dial-In User Service, is a networking protocol that provides centralized authentication, authorization, and accounting (AAA) for users accessing a network. In cybersecurity, RADIUS solutions play a crucial role in managing and securing network access by verifying user identities, determining their permitted actions, and tracking their network usage.',
       references: [
         {
           title: 'Mobile Device Management',
           url: 'https://www.forcepoint.com/cyber-edu/mobile-device-management-mdm'
+        },
+        {
+          title: 'Group Policies for managing Mobile Devices',
+          url: 'https://support.kaspersky.com/KESMob/10sp4mr3/en-US/99958.htm'
+        },
+        {
+          title: 'Acceptable Use Policy: What it is and why you need it?',
+          url: 'https://www.mimecast.com/blog/acceptable-use-policy-guide/'
+        },
+        {
+          title: 'What is a Captive Portal?',
+          url: 'https://www.cloudi-fi.com/blog/what-is-a-captive-portal'
+        },
+        {
+          title: 'What is Radius?',
+          url: 'https://www.cbtnuggets.com/blog/technology/networking/what-is-radius'
         }
       ],
       questionNumber: 65
