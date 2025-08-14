@@ -1972,11 +1972,26 @@ const securityXQuiz = {
       question: 'An analyst is working to address a potential compromise of a corporate endpoint and discovers the attacker accessed a user\'s credentials. However, it is unclear if the system baseline was modified to achieve persistence. Which of the following would most likely support forensic activities in this scenario?',
       answer: 'Bit-level disk duplication',
       distractors: ['Software composition analysis', 'Side-channel analysis', 'SCAP scanner'],
-      explanation: '(56) Bit-level disk duplication, also known as a bit-by-bit copy or sector-by-sector clone, creates an exact replica of a hard drive by copying every single bit of data, including used, unused, and even logically bad sectors. This process ensures the copied disk is bit-for-bit identical to the original, preserving all data and features like drive size, formatting, and number of volumes.',
+      explanation: '(56) Bit-level disk duplication, also known as a bit-by-bit copy or sector-by-sector clone, creates an exact replica of a hard drive by copying every single bit of data, including used, unused, and even logically bad sectors. This process ensures the copied disk is bit-for-bit identical to the original, preserving all data and features like drive size, formatting, and number of volumes.\n\n' +
+      'Software Composition Analysis (SCA) is a security practice that identifies and manages open source and third-party components within a software application or system. It helps organizations understand the composition of their software, detect potential vulnerabilities, and ensure license compliance. SCA tools scan codebases and analyze dependencies to identify these components and flag potential risks.\n\n' +
+      'Side-channel analysis (SCA) is a security analysis technique that examines the physical characteristics of a system, like power consumption or timing, to extract secret information like cryptographic keys. It differs from traditional cryptanalysis, which focuses on attacking the algorithm itself, by exploiting implementation-specific vulnerabilities.\n\n' +
+      'SCAP stands for Security Content Automation Protocol. SCAP scans compare the system you are scanning to a baseline (benchmark) which are open security standards of security to find compliance or non-compliance of system.',
       references: [
         {
           title: 'Bit by Bit Hard Drive Copy',
           url: 'https://www.easeus.com/disk-copy/clone-resource/bit-for-bit-copy-hard-drive.html#:~:text=Making%20a%20bit%2Dby%2Dbit,sector%2Dby%2Dsector%20clone'
+        },
+        {
+          title: 'What is software composition analysis (SCA)?',
+          url: 'https://www.blackduck.com/glossary/what-is-software-composition-analysis.html'
+        },
+        {
+          title: 'Side-channel attacks explained: everything you need to know',
+          url: 'https://www.rambus.com/blogs/side-channel-attacks/'
+        },
+        {
+          title: 'SCAP & STIG Tutorial',
+          url: 'https://www.youtube.com/watch?v=6ehIeAxzXSY'
         }
       ],
       questionNumber: 56
@@ -1985,11 +2000,26 @@ const securityXQuiz = {
       question: 'A company is decommissioning old servers and hard drives that contain sensitive data. Which of the following best protects against data leakage?',
       answer: 'Purging',
       distractors: ['Clearing', 'Shredding', 'Degaussing'],
-      explanation: `(57) purging refers to the process of permanently and securely erasing data from storage media, making it irretrievable even with advanced laboratory techniques. It's a stronger method of data removal than "clearing," which may allow for data recovery in some cases.`,
+      explanation: `(57) purging refers to the process of permanently and securely erasing data from storage media, making it irretrievable even with advanced laboratory techniques. It's a stronger method of data removal than "clearing," which may allow for data recovery in some cases.\n\n` +
+      'To completely clear a hard drive, you need to format it, which essentially erases all data and prepares the drive for reuse. This can be done through Windows settings or using command prompt commands for more thorough cleaning. For SSDs, you may need to consider more advanced methods to ensure complete data removal.\n\n' +
+      `Shredding refers to the physical or digital process of destroying data to prevent unauthorized access and recovery, especially when dealing with sensitive information. It's a crucial step in maintaining data security and compliance with privacy regulations.\n\n` +
+      'Degaussing is a cybersecurity measure used for securely erasing data from magnetic storage devices by exposing them to a strong magnetic field. This process rearranges the magnetic particles on the storage medium, making the previously stored data unrecoverable. It is particularly effective for hard drives and magnetic tapes, but not for solid-state drives (SSDs) or USB flash drives.',
       references: [
         {
           title: 'Purge.  Not the Movie!',
           url: 'https://www.lenovo.com/in/en/glossary/purge/?orgRef=https%253A%252F%252Fwww.google.com%252F'
+        },
+        {
+          title: 'Wipe Clean Your Hard Drive',
+          url: 'https://www.youtube.com/watch?v=mjiO_L6rvk4'
+        },
+        {
+          title: 'What is Data Shredding?',
+          url: 'https://docudavit.com/delete-digital-files-safely/#:~:text=Shredding%20means%20removing%20specific%20files,specific%20type%20of%20data%20destruction'
+        },
+        {
+          title: 'Degaussing: An Introduction',
+          url: 'https://veritysystems.com/degaussing-an-introduction/'
         }
       ],
       questionNumber: 57
@@ -1998,11 +2028,30 @@ const securityXQuiz = {
       question: 'An engineer has had scaling issues with a web application hosted on premises and would like to move to a serverless architecture. Which of the following cloud benefits would be best to utilize for this project?',
       answer: 'Automation of resource provisioning',
       distractors: ['Cost savings for hosting', 'Eliminating need to patch', 'Providing geo-redundant hosting'],
-      explanation: `(58) Automated provisioning is an approach for controlling user access within an organization's IT systems, applications, and resources using software that automatically creates, modifies, and revokes accounts and their associated privileges without manual intervention.`,
+      explanation: `(58) Automated provisioning is an approach for controlling user access within an organization's IT systems, applications, and resources using software that automatically creates, modifies, and revokes accounts and their associated privileges without manual intervention.\n\n` +
+      `While serverless offers significant cost advantages, it's essential to understand the potential for increased costs with scale and to adopt strategies for optimization. According to the Serverless Team, monitoring resource usage, optimizing code and functions, implementing auto-scaling, and utilizing cost management tools are crucial for maximizing cost efficiency in serverless environments.\n\n` +
+      `The core appeal of serverless architecture lies in shifting infrastructure management, including patching, to the cloud provider. However, this doesn't entirely eliminate the need to consider and address security-related updates and vulnerabilities within your serverless environment.\n\n` +
+      'Providing geo-redundant hosting in a serverless architecture involves distributing your serverless application components across multiple geographical regions to ensure high availability and disaster recovery. This approach minimizes downtime and data loss in the event of a regional outage.',
       references: [
         {
           title: 'Automated Provisioning',
           url: 'https://www.strongdm.com/blog/automated-provisioning'
+        },
+        {
+          title: 'How does Serverless Architecture Slash Development Costs?',
+          url: 'https://www.a3logics.com/blog/how-does-serverless-architecture-slash-development-costs/'
+        },
+        {
+          title: 'Save money on Serverless: common costly mistakes and how to avoid them',
+          url: 'https://lumigo.io/blog/save-money-on-serverless-common-costly-mistakes-and-how-to-avoid-them/'
+        },
+        {
+          title: 'Understanding serverless architecture',
+          url: 'https://docs.aws.amazon.com/whitepapers/latest/optimizing-enterprise-economics-with-serverless/understanding-serverless-architectures.html'
+        },
+        {
+          title: 'High Availability and Disaster Recovery in Serverless Architecture',
+          url: 'https://medium.com/@niksacdev/high-availability-and-disaster-recovery-in-serverless-solutions-does-it-matter-a852fa4aaa44'
         }
       ],
       questionNumber: 58
@@ -2010,12 +2059,32 @@ const securityXQuiz = {
     {
       question: 'An organization needs to classify its systems and data in accordance with external requirements. Which of the following roles is best qualified to perform this task?',
       answer: 'Data owner',
-      distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward', ''],
-      explanation: '(59) The data owner defines the rules and criteria for access, while data custodians (often IT) implement the provisioning based on those rules. The individual or entity accountable for a specific dataset within an organization.',
+      distractors: ['Systems administrator', 'Data processor', 'Data custodian', 'Data steward',],
+      explanation: '(59) The data owner defines the rules and criteria for access, while data custodians (often IT) implement the provisioning based on those rules. The individual or entity accountable for a specific dataset within an organization.\n\n' +
+      'A system administrator, or sysadmin, is an IT professional responsible for the upkeep, configuration, and reliable operation of computer systems, particularly multi-user systems like servers. They ensure systems are functioning optimally, including managing hardware, software, networks, and security policies. Their work is crucial for maintaining uptime, performance, resources, and security to meet user needs within a set budget.\n\n' +
+      `A data processor's cyber security is crucial because they handle personal data on behalf of a data controller, making them vulnerable to breaches that could expose sensitive information. Data processors have responsibilities to protect this data through appropriate technical and organizational measures, as defined by regulations like the GDPR.\n\n` +
+      'A data custodian is responsible for the technical implementation and maintenance of security controls for data assets, ensuring their protection and proper handling according to policies set by the data owner. They are essentially the "doers" of data security, translating high-level security policies into actionable technical solutions.\n\n' +
+      `A Data Steward in cybersecurity is responsible for overseeing the management and protection of an organization's data assets, ensuring they are accurate, reliable, and secure. They play a critical role in implementing and enforcing data governance policies, particularly those related to security and compliance.`,
       references: [
         {
           title: 'Data Owner Responsibilities',
           url: 'https://www.montecarlodata.com/blog-data-owner-responsibilities/'
+        },
+        {
+          title: 'What Does a System Administrator Do?',
+          url: 'https://www.indeed.com/career-advice/careers/what-does-a-system-administrator-do'
+        },
+        {
+          title: 'Data Controller vs Data Processor: What is the Difference?',
+          url: 'https://www.digitalguardian.com/blog/data-controller-vs-data-processor-whats-difference'
+        },
+        {
+          title: 'Data Roles: A CISSP Guide on Owners, Custodians, Controllers & Users',
+          url: 'https://destcert.com/resources/data-roles/'
+        },
+        {
+          title: 'What is Data Stewardship?',
+          url: 'https://www.informatica.com/resources/articles/what-is-data-stewardship.html'
         }
       ],
       questionNumber: 59
@@ -2029,11 +2098,31 @@ const securityXQuiz = {
         'Token-based access for application users',
         'Address space layout randomization'
       ],
-      explanation: '(60) Tokenization using an Hardware Security Module (HSM) involves replacing sensitive data with unique tokens, while securely managing the cryptographic keys within the HSM. This process enhances cybersecurity by reducing the scope of data that needs to be protected and making it harder for attackers to compromise sensitive information.',
+      explanation: '(60) Tokenization using an Hardware Security Module (HSM) involves replacing sensitive data with unique tokens, while securely managing the cryptographic keys within the HSM. This process enhances cybersecurity by reducing the scope of data that needs to be protected and making it harder for attackers to compromise sensitive information.\n\n' +
+      'Combining self-encrypting drives (SEDs) with field-level encryption (FLE) offers a multi-layered approach to data security, providing robust protection for sensitive information at different levels within the storage infrastructure. An organization might use SEDs to encrypt the entire disk storing customer data while also implementing FLE for specific fields like Social Security numbers or credit card numbers within the customer database. This way, both the entire disk is protected, and access to the most sensitive individual data fields is further restricted and controlled, notes Splunk.\n\n' +
+      `Data minimization, the principle of collecting, processing, and retaining only necessary personal data, is a crucial aspect of privacy compliance and good data governance. While NX/XN technology (referring to the No-eXecute bit in CPUs like AMD's NX, Intel's XD, and ARM's XN) plays a role in system security by preventing execution of code in data memory areas and mitigating buffer overflow attacks, according to Wikipedia, it's not directly related to implementing data minimization practices or data retention policies.\n\n` +
+      'In access management, servers use token authentication to check the identity of a user, an API, a computer, or another server. A token is a symbolic item issued by a trusted source — think of how law enforcement agents carry a badge issued by their agency that legitimizes their authority.\n\n' +
+      `Address Space Layout Randomization (ASLR) is a security technique that randomizes the memory addresses of key areas within a program's address space, making it harder for attackers to predict where code and data are located in memory. This randomization applies to the base address of the executable, the heap, the stack, and loaded libraries. By introducing unpredictability, ASLR makes it significantly more difficult for attackers to exploit vulnerabilities like buffer overflows that rely on knowing specific memory addresses.`,
       references: [
         {
           title: 'HSM Tokenization',
           url: 'https://paylosophy.com/hsm-tokenization-appliance/'
+        },
+        {
+          title: 'Understanding the Value of Self Encrypting Drives',
+          url: 'https://phisonblog.com/understanding-the-value-of-self-encrypting-drives/'
+        },
+        {
+          title: 'NX Bit',
+          url: 'https://microsoft.fandom.com/wiki/NX_bit'
+        },
+        {
+          title: 'Understanding Token-Based Authentication: A Detailed Review',
+          url: 'https://frontegg.com/blog/token-based-authentication'
+        },
+        {
+          title: 'Six facts about address space layout randomization',
+          url: 'https://cloud.google.com/blog/topics/threat-intelligence/six-facts-about-address-space-layout-randomization-on-windows'
         }
       ],
       questionNumber: 60
@@ -2048,11 +2137,16 @@ const securityXQuiz = {
         'The IPSec settings allow more than one cipher suite on both devices',
         'The Diffie-Hellman group on both sides matches but is a legacy group'
       ],
-      explanation: '(61) In IKE (Internet Key Exchange), hash algorithms are used for data integrity and authentication, particularly in the creation of message digests and as part of pseudo-random functions (PRFs). They play a crucial role in ensuring the integrity of messages exchanged during the key exchange process.',
+      explanation: '(61) In IKE (Internet Key Exchange), hash algorithms are used for data integrity and authentication, particularly in the creation of message digests and as part of pseudo-random functions (PRFs). They play a crucial role in ensuring the integrity of messages exchanged during the key exchange process.\n\n' +
+      `A remote VPN (Virtual Private Network) uses various protocols to establish a secure connection between a user's device and a remote network, such as a corporate network. While PPTP and L2TP are older protocols, more modern options like WireGuard, IKEv2, and OpenVPN are commonly used today due to their balance of speed and security. SSL/TLS connections are also used for specific applications and can be advantageous for accessing certain resources.`,
       references: [
         {
           title: `What is IKE?  Don't kick the Baby!`,
           url: 'https://www.paloaltonetworks.com/cyberpedia/what-is-ike'
+        },
+        {
+          title: 'What are the different types of VPN protocols?',
+          url: 'https://www.paloaltonetworks.com/cyberpedia/types-of-vpn-protocols'
         }
       ],
       questionNumber: 61
