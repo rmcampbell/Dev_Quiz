@@ -38,7 +38,7 @@ const SelectQuizType: React.FC<SelectQuizTypeProps> = ({ selectedCategory, goBac
     <div className="select-quiz-styles">
       <h2 className="quiz-heading">Select Quiz Type</h2>
       <div className="select-btn-div">
-        {hasAcronyms && (
+       <!-- {hasAcronyms && (
           <button
             className="select-btns"
             onClick={() => selectQuizType('acronym')}
@@ -53,7 +53,7 @@ const SelectQuizType: React.FC<SelectQuizTypeProps> = ({ selectedCategory, goBac
           >
             Terms
           </button>
-        )}
+        )}-->
         <button
           className="select-btns"
           onClick={() => selectQuizType('multiple-choice')}
