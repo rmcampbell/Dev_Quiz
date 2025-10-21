@@ -1,0 +1,122 @@
+# .github/DISCUSSION_TEMPLATE/feature-request.yml
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature!
+        
+        Please fill out this template to help us understand your feature request better.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your feature request
+      options:
+        - label: I have searched existing discussions and issues to ensure this feature hasn't been requested before
+          required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: Describe the problem or limitation you're experiencing that this feature would solve
+      placeholder: "I'm always frustrated when..."
+      value: |
+        **What problem does this feature solve?**
+        
+        **Who would benefit from this feature?**
+        
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your ideal solution for this feature
+      placeholder: "I would like to see..."
+      value: |
+        **Detailed description of the proposed feature:**
+        
+        **How should it work?**
+        
+        **Any specific requirements or constraints?**
+        
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Describe any alternative solutions or workarounds you've considered
+      placeholder: "Alternatively, we could..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to you?
+      options:
+        - Low - Nice to have
+        - Medium - Would be helpful
+        - High - Important for my use case
+        - Critical - Blocking my workflow
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple - Minor enhancement
+        - Medium - Moderate development effort
+        - Complex - Significant development effort
+        - Unknown - Not sure
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Provide specific examples of how this feature would be used
+      placeholder: |
+        Example 1: As a [user type], I want to [action] so that [benefit]
+        Example 2: When [scenario], I need to [action] because [reason]
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups/Examples
+      description: If applicable, add mockups, screenshots, or examples to help visualize the feature
+      placeholder: "You can drag and drop images here or provide links to mockups/examples"
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical aspects, dependencies, or implementation details you'd like to mention
+      placeholder: "This might require changes to..."
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to contribute to implementing this feature?
+      options:
+        - label: I would be willing to implement this feature
+        - label: I would be willing to help with testing
+        - label: I would be willing to help with documentation
+        - label: I can provide feedback during development
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, links, or information about the feature request
+      placeholder: "Any additional information that might be helpful..."
+
+title: "[Feature Request] "
+labels: ["feature-request", "needs-triage"]
