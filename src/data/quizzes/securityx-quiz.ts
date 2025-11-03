@@ -2306,11 +2306,26 @@ const securityXQuiz = {
       question: 'A pharmaceutical company uses a cloud provider to host thousands of independent resources in object storage. The company needs a practical and effective means of discovering data, monitoring changes, and identifying suspicious activity. Which of the following would best meet these requirements?',
       answer: 'A machine-learning-based data security service',
       distractors: ['A cloud configuration assessment and compliance service', 'An automated data classification system', 'A file integrity monitoring service'],
-      explanation: `(66) A machine-learning-based data security service is a service that leverages machine learning (ML) algorithms to enhance data security measures, including data protection, threat detection, and incident response. It's a proactive and adaptable approach that uses vast datasets to learn and identify patterns and anomalies that might indicate security threats, thus improving the speed and accuracy of threat detection and mitigation.`,
+      explanation: `(66) A machine-learning-based data security service is a service that leverages machine learning (ML) algorithms to enhance data security measures, including data protection, threat detection, and incident response. It's a proactive and adaptable approach that uses vast datasets to learn and identify patterns and anomalies that might indicate security threats, thus improving the speed and accuracy of threat detection and mitigation.\n\n` +
+      `A cloud configuration assessment and compliance service is a cybersecurity process that evaluates a cloud environment's settings, security controls, and adherence to regulatory standards to identify vulnerabilities, misconfigurations, and risks. It involves a comprehensive review of security policies, access controls, and infrastructure to provide actionable recommendations for improving security posture, protecting sensitive data, and ensuring compliance with frameworks like NIST or HIPAA.\n\n` +
+      'A data classification system in cybersecurity categorizes data by sensitivity and importance to guide the implementation of appropriate security measures. This process helps organizations identify their most valuable information, apply tailored protection like access controls and encryption, and ensure compliance with regulations such as GDPR or HIPAA. By applying labels to data based on criteria like Public, Internal, Confidential, and Restricted, organizations can effectively manage risks, optimize resource allocation, and prevent data breaches.\n\n' +
+      'A File Integrity Monitoring (FIM) service is a cybersecurity solution that detects unauthorized modifications to critical digital assets by continuously monitoring files, operating systems, and configurations against a trusted baseline. It uses various verification methods to identify changes, issuing alerts to prompt security personnel for investigation and response. FIM is essential for discovering tampering, mitigating insider threats, deterring malware, and meeting strict regulatory compliance mandates like PCI DSS and HIPAA.',
       references: [
         {
           title: 'Machine-learning, they are taking over!',
           url: 'https://www.crowdstrike.com/en-us/cybersecurity-101/artificial-intelligence/machine-learning/'
+        },
+        {
+          title: 'Cloud Configuration Assessment',
+          url: 'https://getoppos.com/cloud-configuration-assessments/'
+        },
+        {
+          title: 'Data Classification Explained',
+          url: 'https://www.proofpoint.com/us/threat-reference/data-classification'
+        },
+        {
+          title: 'What is File Integrity Monitoring?',
+          url: 'https://www.beyondtrust.com/resources/glossary/file-integrity-monitoring'
         }
       ],
       questionNumber: 66
@@ -2319,11 +2334,31 @@ const securityXQuiz = {
       question: 'A security analyst is assessing a new application written in Java. The security analyst must determine which vulnerabilities exist during runtime. Which of the following would provide the most exhaustive list of vulnerabilities while meeting the objective?',
       answer: 'Dynamic analysis',
       distractors: ['Input validation', 'Static analysis', 'Fuzz testing', 'Side-channel analysis'],
-      explanation: `(67) Dynamic analysis in cybersecurity involves observing a program or system in real-time while it's running to identify potential vulnerabilities and malicious behavior. It complements static analysis, which examines code without execution, by providing insights into how software behaves under different conditions and inputs. This approach helps uncover runtime errors, security weaknesses, and performance issues that might not be apparent through static analysis alone.`,
+      explanation: `(67) Dynamic analysis in cybersecurity involves observing a program or system in real-time while it's running to identify potential vulnerabilities and malicious behavior. It complements static analysis, which examines code without execution, by providing insights into how software behaves under different conditions and inputs. This approach helps uncover runtime errors, security weaknesses, and performance issues that might not be apparent through static analysis alone.\n\n` +
+      `Input validation, also known as data validation, is the process of testing and ensuring that user or application-supplied input meets predefined rules (such as format, length and type) to prevent malicious or erroneous data entry.\n\n` +
+      'Static analysis is the process of examining code or software without executing it to find vulnerabilities, flaws, and bugs early in the development lifecycle. By analyzing the source code, bytecode, or binary, it can automatically detect issues like code injection, buffer overflows, and malware, allowing developers to fix them before they become costly problems in production. This technique, also known as Static Application Security Testing (SAST), is crucial for building more secure and compliant applications.\n\n' +
+      'Fuzz testing or fuzzing is an automated software testing method that injects invalid, malformed, or unexpected inputs into a system to reveal software defects and vulnerabilities. A fuzzing tool injects these inputs into the system and then monitors for exceptions such as crashes or information leakage.\n\n' +
+      'Side channel attacks are methods by which the encrypted data on a device or network can be obtained through observation and manipulation of the unintended outputs of the device such as power or electromagnetic radiation fluctuations, timing variances, or even discrepancies in sound or acoustic levels while the device is processing cryptographic functions.',
       references: [
         {
           title: 'Dynamic Analysis',
           url: 'https://www.vmray.com/glossary/dynamic-analysis/#:~:text=Dynamic%20analysis%20allows%20security%20analysts,conditions%2C%20inputs%2C%20and%20scenarios'
+        },
+        {
+          title: 'Essential Guide to Input Validation',
+          url: 'https://www.aptori.com/blog/the-essential-guide-to-input-validation-for-secure-software'
+        },
+        {
+          title: 'Effective Static source code analysis',
+          url: 'https://checkmarx.com/learn/sast/effective-static-source-code-analysis/'
+        },
+        {
+          title: 'What is fuzz testing?',
+          url: 'https://www.blackduck.com/glossary/what-is-fuzz-testing.html#:~:text=Definition,as%20crashes%20or%20information%20leakage'
+        },
+        {
+          title: 'Side-Channel Attack explained',
+          url: 'https://www.rambus.com/blogs/side-channel-attacks/'
         }
       ],
       questionNumber: 67
@@ -2332,11 +2367,17 @@ const securityXQuiz = {
       question: 'Recently, two large engineering companies in the same line of business decided to approach cyberthreats in a united way. Which of the following best describes this unified approach?',
       answer: 'MOU',
       distractors: ['SOW', 'NDA', 'SLA'],
-      explanation: '(68) A Memorandum of Understanding (MOU) in cybersecurity is a formal agreement between two or more parties outlining their mutual goals, expectations, and responsibilities related to cybersecurity collaboration. These agreements often facilitate information sharing, cooperation in areas like policy, strategy, and incident response, and can serve as a framework for broader partnerships.',
+      explanation: '(68) A Memorandum of Understanding (MOU) in cybersecurity is a formal agreement between two or more parties outlining their mutual goals, expectations, and responsibilities related to cybersecurity collaboration. These agreements often facilitate information sharing, cooperation in areas like policy, strategy, and incident response, and can serve as a framework for broader partnerships.\n\n' +
+      `Statement of Work (SOW) is a formal document that defines the specifics of a project, such as a penetration test, risk assessment, or security service. It clearly outlines the project's scope, deliverables, timeline, responsibilities, and cost, which helps prevent misunderstandings and provides a framework for holding a service provider accountable for specific cybersecurity tasks and outcomes.\n\n` +
+      '',
       references: [
         {
           title: 'Memorandum of Understanding.',
           url: 'https://corpslakes.erdc.dren.mil/partners/moumoa.cfm#:~:text=Memoranda%20of%20Understanding%2FAgreement%20(MOU%2FMOA)&text=These%20%E2%80%9Cagreements%20to%20agree%E2%80%9D%20or,which%20are%20not%20legally%20binding'
+        },
+        {
+          title: 'What is a SOW?',
+          url: 'https://www.linkedin.com/videos/kimsimmonds_what-is-an-sow-and-how-does-it-work-with-activity-7275092398009946112-hku4'
         }
       ],
       questionNumber: 68
