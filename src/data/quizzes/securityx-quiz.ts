@@ -2369,6 +2369,7 @@ const securityXQuiz = {
       distractors: ['SOW', 'NDA', 'SLA'],
       explanation: '(68) A Memorandum of Understanding (MOU) in cybersecurity is a formal agreement between two or more parties outlining their mutual goals, expectations, and responsibilities related to cybersecurity collaboration. These agreements often facilitate information sharing, cooperation in areas like policy, strategy, and incident response, and can serve as a framework for broader partnerships.\n\n' +
       `Statement of Work (SOW) is a formal document that defines the specifics of a project, such as a penetration test, risk assessment, or security service. It clearly outlines the project's scope, deliverables, timeline, responsibilities, and cost, which helps prevent misunderstandings and provides a framework for holding a service provider accountable for specific cybersecurity tasks and outcomes.\n\n` +
+      `A Non-Disclosure Agreement (NDA) is a legal contract that protects a client's sensitive information from being leaked or misused by a cybersecurity service provider. It defines confidential information and outlines the responsibilities of each party to prevent unauthorized disclosure during services like diagnostics or penetration testing.\n\n` +
       '',
       references: [
         {
@@ -2378,6 +2379,10 @@ const securityXQuiz = {
         {
           title: 'What is a SOW?',
           url: 'https://www.linkedin.com/videos/kimsimmonds_what-is-an-sow-and-how-does-it-work-with-activity-7275092398009946112-hku4'
+        },
+        {
+          title: 'NDA vs SOW vs MSA',
+          url: 'https://decode.agency/article/software-development-contracts/#:~:text=NDA%20%E2%80%93%20Allows%20you%20to%20share,required%20to%20build%20your%20software'
         }
       ],
       questionNumber: 68
